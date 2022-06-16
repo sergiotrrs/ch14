@@ -1,3 +1,11 @@
 Hola, qué tal
 
 Probando hacer desarrollos en mi rama
+
+EDIT: ya vi cómo es este ondón
+
+En esta branch voy a subir los proyectos que me he
+armado hasta ahora
+
+y código que necesita ir mejorando,
+pero que son prácticas del poderosísimo bootcamp
