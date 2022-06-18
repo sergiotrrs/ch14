@@ -1,0 +1,13 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    padding: 0cm;
+    margin: 4cm;
+    font-family: Impact;
+    font-kerning: calc(25);
+    font-weight: 655;
+    
+}
