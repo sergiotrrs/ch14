@@ -11,7 +11,7 @@ a=parseInt(prompt("Ingresa un número entre 100 y 200\nSi está fuera del rango 
 if(a<100 || a>200)
     a=150;
 console.log("Número:"+a);
-document.getElementsByTagName("p")[0].innerHTML="Numero:"+a;
+document.getElementsByTagName("p")[0].innerHTML="Número:"+a;
 
 if(a%3==0){
 	console.log("Es múltiplo de 3");

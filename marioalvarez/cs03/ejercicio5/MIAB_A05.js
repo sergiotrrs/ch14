@@ -12,7 +12,7 @@ a=parseInt(prompt("Ingresa el primer número","1"));
 b=parseInt(prompt("Ingresa el segundo número","2"));
 c=parseInt(prompt("Ingresa el tercer número","3"));
 */
-console.log("Numeros:")
+console.log("Números:")
 console.log(a+","+b+","+c);
 document.getElementsByTagName("p")[0].innerHTML=a+", "+b+", "+c;
 

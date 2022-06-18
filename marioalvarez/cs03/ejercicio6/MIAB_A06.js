@@ -7,8 +7,8 @@ let a=1;
 /*
 a=parseInt(prompt("Ingresa un número,"1"));
 */
-console.log("Numero:"+a);
-document.getElementsByTagName("p")[0].innerHTML="Numero: "+a;
+console.log("Número:"+a);
+document.getElementsByTagName("p")[0].innerHTML="Número: "+a;
 if(a%2==0){
 	console.log("Es par");
     document.getElementsByTagName("p")[0].innerHTML="Es par";

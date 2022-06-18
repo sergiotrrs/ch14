@@ -20,7 +20,7 @@ let numM=0;
 for(;;){
 	let numM=Math.round((limInf+limSup-1)/2);
 	if(numM==num){
-		document.getElementsByTagName("p")[2].innerHTML="Numero encontrado es "+num;
+		document.getElementsByTagName("p")[2].innerHTML="Número encontrado, es "+num;
 		console.log("Número encontrado, es "+numM);
 		break;	
 	}else{
