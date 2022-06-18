@@ -1,0 +1,12 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    background-color: lightsteelblue;
+    text-align: center;
+    font-size: xx-large;
+    padding: 35px;
+    margin: 30px;
+}
