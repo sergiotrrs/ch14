@@ -10,11 +10,15 @@ a=parseInt(prompt("Ingresa un número entre 100 y 200\nSi está fuera del rango 
 
 if(a<100 || a>200)
     a=150;
+console.log("Número:"+a);
+document.getElementsByTagName("p")[0].innerHTML="Numero:"+a;
 
 if(a%3==0){
-	console.log(a+" es multiplo de 3");
+	console.log("Es múltiplo de 3");
+    document.getElementsByTagName("p")[1].innerHTML="Es múltiplo de 3";
     //alert(a+" es multiplo de 3");
 }else{
-	console.log(a+" no es multiplo de 3");
+	console.log("No es múltiplo de 3");
+    document.getElementsByTagName("p")[1].innerHTML="Es múltiplo de 3";
     //alert(a+" no es multiplo de 3");
 }

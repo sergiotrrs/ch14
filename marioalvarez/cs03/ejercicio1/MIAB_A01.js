@@ -18,16 +18,29 @@ if(b<1 || b>100)
 if(c<1 || c>100)
     c=3;
 
+console.log("Números:");    
+console.log("a:"+a+", b:"+b+", c:"+c);
+
+document.getElementsByTagName("p")[0].innerHTML="a:"+a;
+document.getElementsByTagName("p")[1].innerHTML="b:"+b;
+document.getElementsByTagName("p")[2].innerHTML="c:"+c;
+
+let max=0;
 if(a>=b && a>=c){
-    console.log(a+" es el mayor");
-    //alert(a+" es el mayor");
+    max=a;
+    console.log("a:"+a+" es el mayor");
+    //alert("a:"+a+" es el mayor");
 }
 else if(b>=a && b>=c){
-    console.log(b+" es el mayor");
-    //alert(b+" es el mayor");
+    max=b;
+    console.log("b:"+b+" es el mayor");
+    //alert("b:"+b+" es el mayor");
 }
 else{
-    console.log(c+" es el mayor");
-    //alert(c+" es el mayor");
+    max=c;
+    console.log("c:"+c+" es el mayor");
+    //alert("c:"+c+" es el mayor");
 }
+
+document.getElementsByTagName("p")[3].innerHTML=max;
     
