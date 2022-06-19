@@ -1,0 +1,25 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    background-color: cadetblue;
+    color: black;
+    padding: 30px;
+    font-family: Verdana;
+    text-align: center;
+}
+
+h2 {
+    padding: 25px;
+    font-family: Verdana;
+    text-align: center;
+}
+
+t {
+    padding: 25px;
+    font-family: Verdana;
+    text-align: justify;
+    font-size: 14pt;
+}
