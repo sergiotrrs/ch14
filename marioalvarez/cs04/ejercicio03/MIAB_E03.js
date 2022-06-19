@@ -20,5 +20,12 @@ function product(arr){
 }
 
 array=[1,2,3,4];
-console.log("La suma de ["+array+"] es "+sum(array));
-console.log("El producto de ["+array+"] es "+product(array));
+let sumR=sum(array);
+let productR=product(array);
+console.log("La suma de ["+array+"] es "+sumR);
+console.log("El producto de ["+array+"] es "+productR);
+
+document.getElementsByTagName("p")[0].innerHTML="["+array+"]";
+
+document.getElementsByTagName("p")[1].innerHTML="La suma es "+sumR;
+document.getElementsByTagName("p")[2].innerHTML="La multiplicación es "+productR;

@@ -10,8 +10,10 @@ Complete the function to print out the string: This is a sentence.
 */
 
 let arr = ["This", "is", "a", "sentence."];
-function printOutString(value) {
-    console.log(value.join(" "));
+function printOutString() {
+    let msg=arr.join(" ");
+    document.getElementsByTagName("p")[1].innerHTML=msg;  
+    console.log(msg);
 }
-printOutString(arr);
+printOutString();
 
