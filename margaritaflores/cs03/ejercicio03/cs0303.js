@@ -1,4 +1,4 @@
-//Adivina el número 
+//Realiza un algoritmo para adivinar un número (1-100):
 let min = 1;
 let max = 100;
 let aleatorio = Math.floor (Math.random() * max - min + 1 ) + min;
