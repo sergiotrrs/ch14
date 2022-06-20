@@ -1,3 +1,5 @@
+console.log("Codigo de 01 cs04")
+
 // Usé Desestructuración de arreglos en JavaScript
 
 let arr = ["This", "is", "a", "sentence."];
