@@ -1,0 +1,22 @@
+/*para poner todos los espacios en 0 */
+*{
+    padding: 0; /*Espacio/contorno de un elemento */
+    margin: 0;;
+}
+
+h1{
+    background-color:cornflowerblue;
+    color:greenyellow;
+    padding: 20px;
+    text-align: center;
+}
+
+h2{
+    padding: 5px;
+    text-align: center;
+}
+
+h3{
+    padding: 5px;
+    text-align: center;
+}
