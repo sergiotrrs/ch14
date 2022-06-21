@@ -1,5 +1,3 @@
-//Exercise 3. Suma y multiplica todos los elementos de un arreglo
-
 let valores = [1, 2, 3, 4];
 let suma = 0;
 let multiplicar =1;

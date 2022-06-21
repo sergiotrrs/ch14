@@ -1,7 +1,3 @@
-/* Ejercicio 5. Elaborar un algoritmo para leer 3 números 
- y determinar sí uno es la suma de los otros dos
-*/
-
 let numX = parseInt(prompt("Escribe un número del 1 al 100"));
 let numY = parseInt(prompt("Escribe otro número del 1 al 100"));
 let numZ = parseInt(prompt("Escribe otro número del 1 al 100"));
