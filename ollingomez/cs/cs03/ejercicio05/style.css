@@ -1,0 +1,16 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+h2 {
+    padding: 5px;
+    text-align: center;
+}
+
+/* Se modifica el estilo del tag h1 */
+h1 {
+    background-color: black;
+    color: beige;
+    padding: 20px;
+}
