@@ -1,188 +1,89 @@
-function Main(){
-    // PROGRAMA QUE DESCUBRE TU NÚMERO del 1-100
-    
-    let opciones= []
-    
-    // Se cargan las posibilidades de número
-    
-    for (let i=0; i<=99; i++)
-      {
-        opciones[i]=(i+1)
-      }
+// Se cargan las posibilidades de número
+let opciones=[0,1,2,3,4,5,6,7,8,9]
+let primos=[1,2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,71,73,79,83,89,97]
+let inicio=0
+let final=0
+let medio
+let resuelto=false
+for (let i=0; i<=99; i++)
+  {
+    opciones[i]=(i+1)
+  }
+console.log(opciones)
+
+if (confirm("¿El número es par?")){
+  //Borra los impares
+  for (let i=0; i<=opciones.length-1; i++){
+    if (opciones[i]%2==1){
+      opciones.splice(i,1)  
+      i-- //El vector se acorta!
+    }
+  }
+  final=opciones.length-1
+
+  //Busqueda binaria
+busquedaBinaria(opciones)
+ 
+}else{
+  //Borra los pares
+  for (let i=0; i<=opciones.length-1; i++){
+    if (opciones[i]%2==0){
+      opciones.splice(i,1)
+      i--
+    }
+  }
+  
+  console.log(`Estos son los números primos: 
+${primos}`)
+  if (confirm("¿El número es un primo?")){
+    opciones=primos.slice()
     console.log(opciones)
-    
-    // PRIMERA ELIMINACIÓN DE POSIBILIDADES
-    if (confirm("¿Tu número es par?")){
-      for (let i=0; i<=99; i++){
-        //Se eliminan si su módulo 2 es 1 (números impares)
-        if (opciones[i]%2==1){
-          opciones.splice(i,1)  //El vector se acorta!
-        }
+  }else{
+    //Borra los primos
+    for (let i=0; i<=primos.length-1;i++){
+    if ((opciones.indexOf(primos[i]))!=-1){
+        opciones.splice(opciones.indexOf(primos[i]),1);
+    }
+  }
+}
+  //Busqueda binaria
+busquedaBinaria(opciones)
+}
+
+function busquedaBinaria(arreglo){
+  let resuelto=false
+  let medio=0
+    //Busqueda binaria
+    while (!resuelto){
+      medio=Math.floor((arreglo.length/2))
+  
+      if (arreglo.length<=3){
+        break;
       }
-      console.log(opciones)
-      //SEGUNDA ELIMINACIÓN
-      if (confirm("¿La suma de los dígitos es un número par?")){ //Criterio
-    
-        let a=49 //Al inicio el vector tiene 49 elementos y el 100
-        for(let j=0; j<=a;j++){
-          resultado=doblado(opciones[j]) //Se calcula la suma
-            if (resultado%2==1){
-            opciones.splice(j,1) //Elimina y acorta el vector
-              j-- //Como el longitud del vector se redujo, reducimos j
-              a-- //Reducimos el criterio de parada, también.
-            }
-        }
-        console.log(opciones)
-    
-        //TERCERA ELIMINACIÓN
-        if (confirm("¿La suma de los dígitos es menor o igual que 6")){
-          let b=23
-          for (let j=0; j<=b; j++){
-            resultado=doblado(opciones[j]) //Se calcula la suma
-            if (resultado>6){
-            opciones.splice(j,1) //Elimina y acorta el vector
-              j-- //Como el longitud del vector se redujo, reducimos j
-              b-- //Reducimos el criterio de parada, también.
-            }
-          }
-          console.log(opciones)
-    
-          //CUARTO CRITERIO
-          if (confirm("¿Tu  número es mayor o igual que el 22")){//El número es mayor o igual que el 22, inclusive
-            preguntaCorrido(opciones.indexOf(22),opciones.length,opciones)
-          }else{
-            //El número es menor que el 22, no inclusive
-            preguntaCorrido(0,opciones.indexOf(22),opciones)
-          }
-        } else{
-          //La suma es mayor que el 6
-          let b=23
-          for (let j=0; j<=b; j++){
-            resultado=doblado(opciones[j]) //Se calcula la suma
-            if (resultado<=6){
-            opciones.splice(j,1) //Elimina y acorta el vector
-              j-- //Como el longitud del vector se redujo, reducimos j
-              b-- //Reducimos el criterio de parada, también.
-            }
-          }
-          console.log(opciones)
-          if (confirm("¿Tu número es menor o igual que el 62?")){
-            //El número es mayor o igual que el 62
-            preguntaCorrido(0,opciones.indexOf(62)+1,opciones)
-          }else{
-            preguntaCorrido(opciones.indexOf(62)+1,opciones.length,opciones)
+      if (confirm(`¿Tu número es menor o igual que el ${arreglo[medio]}`)){
+        for (let i=0; i<=opciones.length-1; i++){
+          if (opciones[i]>opciones[medio]){
+            opciones.splice(i,1)
+            i--
           }
         }
       }else{
-        //Si la suma de sus dígitos no es un número par
-        let a=49 //Al inicio el vector tiene 49 elementos y el 100
-        for(let j=0; j<=a;j++){
-          resultado=doblado(opciones[j]) //Se calcula la suma
-            if (resultado%2!=1){
-            opciones.splice(j,1) //Elimina y acorta el vector
-              j-- //Como el longitud del vector se redujo, reducimos j
-              a-- //Reducimos el criterio de parada, también.
+        //Si son mayores, elimina los menores
+        for (let i=0; i<=arreglo.length-1; i++){
+           if (arreglo[i]<=arreglo[medio]){
+             arreglo.splice(i,1)
+             i--
             }
-        }
-        console.log(opciones)
-        
-        if (confirm("¿La suma de los dígitos es menor o igual que 9")){
-          let b=23
-          for (let j=0; j<=b; j++){
-            resultado=doblado(opciones[j]) //Se calcula la suma
-            if (resultado>9){
-            opciones.splice(j,1) //Elimina y acorta el vector
-              j-- //Como el longitud del vector se redujo, reducimos j
-              b-- //Reducimos el criterio de parada, también.
-            }
-          }
-          console.log(opciones)
-    
-          //CUARTO CRITERIO
-          if (confirm("¿Tu  número es mayor o igual que el 50")){//El número es mayor o igual que el 22, inclusive
-            preguntaCorrido(opciones.indexOf(50),opciones.length,opciones)
-          }else{
-            //El número es menor que el 22, no inclusive
-            preguntaCorrido(0,opciones.indexOf(50),opciones)
-          }
-        } else{
-          
-          let b=23
-          for (let j=0; j<=b; j++){
-            resultado=doblado(opciones[j]) //Se calcula la suma
-            if (!(resultado>9)){
-            opciones.splice(j,1) //Elimina y acorta el vector
-              j-- //Como el longitud del vector se redujo, reducimos j
-              b-- //Reducimos el criterio de parada, también.
-            }
-          }
-          console.log(opciones)
-    
-          //CUARTO CRITERIO
-          if (confirm("¿Tu  número es mayor o igual que el 78")){//El número es mayor o igual que el 22, inclusive
-            preguntaCorrido(opciones.indexOf(78),opciones.length,opciones)
-          }else{
-            //El número es menor que el 22, no inclusive
-            preguntaCorrido(0,opciones.indexOf(78),opciones)
-          }
-        } 
-        }
-        //Hasta aquí todo vien
-    }else{
-      //Si el número es IMPAR
-      for (let i=0; i<=99; i++){
-        if (opciones[i]%2==0){
-          opciones.splice(i,1)
-        }
-    }
-      console.log(opciones)
-      let primos=[1,2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,71,73,79,83,89,97]
-      console.log(`Estos son los números primos: 
-    ${primos}`)
-      if (confirm("¿Tu número es un primo?")){
-        //Si sí es un primo
-        
-      }else{
-        //si no es un primo
+         }
       }
-    
-      
+      console.log(arreglo)
     }
+  
+    //Tres oportunidades para adivinar
+    for (let j=0;j<=arreglo.length;j++){
+      if (confirm(`¿Tu número es el ${arreglo[j]}?`)){
+        console.log("Adiviné tu número")
+        break;
+      } 
     }
-      function doblado(a) {
-        let suma
-        let first
-        let second
-        let third
-        //Se requiere determinar el número de dígitos
-        switch (Number(a.toString().length)) {
-          case 1:
-            suma = a
-            break;
-          case 2:
-            first = a.toString().charAt(0)
-            second = a.toString().charAt(1)
-            suma = Number(first) + Number(second)
-            break;
-          case 3:
-            first = a.toString().charAt(0)
-            second = a.toString().charAt(1)
-            third = a.toString().charAt(2)
-            suma = Number(first) + Number(second) + Number(third)
-            break;
-        }
-    
-        return suma;
-      }
-      function preguntaCorrido(inicio,final, arreglo) {
-        //k es el índice desde donde empieza
-        //arreglo es el vector de números
-        for (k = inicio; k < final; k++) {
-          if (confirm(`¿Tu número es ${arreglo[k]}`)) {
-            console.log("¡Ja, adiviné tu número!")
-            break;
-          }
-        }
-      }
-    Main()
-    
+}
