@@ -8,3 +8,4 @@ for (let i = 0; i < people.length; i++) {
 
 people.splice(1,1);
 console.log(people);
+console.log("hola");
