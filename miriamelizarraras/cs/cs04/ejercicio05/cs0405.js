@@ -19,8 +19,8 @@ for (let i = 0; i <= people.length; i++) {
     if (people[i] === "Maria") {
         break;
     } 
+    console.log("se encontro a " + people[i]);
 }
-console.log("se encontro a " + people[i]);
 //7.	Write the command that gives the indexOf where "Maria" is located.
 people.indexOf(Maria)
 
