@@ -34,3 +34,4 @@ for (let index = 0; index < people.length; index++) {
 }
 console.log('------------------------------');
 console.log(people.indexOf('Maria'));
+console.log("Fin");
