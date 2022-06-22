@@ -1,0 +1,12 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    padding: 30 px;
+    margin:10cm;
+    font-size: xx-large;
+    text-align: center;
+    text-decoration: dotted;
+}
