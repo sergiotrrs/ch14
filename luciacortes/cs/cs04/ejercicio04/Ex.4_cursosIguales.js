@@ -1,4 +1,4 @@
-//Exercise4. Encontrar dos elementos iguales en el arreglo
+
 let curso1 = ['Math', 'English', 'Programming'];
 let curso2 = ['Geography', 'Spanish', 'Programming'];
 
