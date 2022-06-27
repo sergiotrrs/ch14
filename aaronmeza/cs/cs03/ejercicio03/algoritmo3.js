@@ -1,17 +1,30 @@
-numberToGuess  = Math.floor(Math.random() * 100);
 
-
-do{
-    numberUser = parseInt(prompt("Intenta adivinar el número que he pensado: "));
-
-    if( numberToGuess > numberUser){
-        console.log("El número que debes adivinar es mayor al que ingresaste :( ")
+const obtenerNumero = () => {
+    let min = 0;
+    let max = 100;
+    let esBuscado= true;
+    while(esBuscado) {
+      console.count('round');
+      let midPoint = Math.floor((min + max) / 2);
+      console.log(`min: ${min}, max: ${max}, midPoint: ${midPoint}`);
+      if(esIgual(midPoint)) {
+        alert(`The number is ${midPoint}`);
+        esBuscado= false;
+      } else if(mayorQue(midPoint, min, max)) {
+        min = midPoint + 1;
+      } else {
+        max = midPoint - 1;
+      }   
     }
-    else{
-        console.log("El número que debes adivinar es menor al que ingresaste :( ")
-    }
-    
-    
-}while(numberToGuess != numberUser);
-
-console.log(" Felicidades Adivinaste!!  el número es " + numberToGuess);
+  };
+  
+  obtenerNumero();
+  
+  function mayorQue(numero, min, max) {
+    return confirm(`Es el número mayor que ${numero} ( ${min} - ${max}) ?`);
+  }
+  
+  function esIgual(numero) {
+    return confirm(`El número es ${numero}?`);  
+  }
+  
