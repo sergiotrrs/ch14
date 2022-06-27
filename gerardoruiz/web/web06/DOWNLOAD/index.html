@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link  href="css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+    <!--NAV BAR-->
+    <nav class="navbar bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="https://img.freepik.com/free-vector/milk-cheese-farm-framed-retro-badge-logo_167715-979.jpg?t=st=1656092548~exp=1656093148~hmac=1886f18a0becbd387f44b4e21d604609485c6ac7117a6330527385b4ffd17190&w=900" alt="" width="30" height="24" class="d-inline-block align-text-top">
+          Bootstrap
+        </a>
+      </div>
+    </nav>
+
+    <h1 class="text-center">Hello, Cowboys!</h1>
+    <!--COLUMNAS UNIFORMES -->
+    <div class="container-md">
+      <div class="row justify-content-center" >
+
+        <div class="col-lg-4 col-md-6 text-center">
+
+          <button type="button" class="btn btn-primary">Primary</button>
+
+        </div>
+          
+        <div class="col-lg-4 col-md-6 text-center">
+          <button type="button" class="btn btn-secondary">Secondary</button>
+
+        </div>
+
+        <div class="col-lg-4 col-md-12 text-center">
+          <button type="button" class="btn btn-success">Success</button>
+
+        </div>
+        
+
+      </div>
+    </div>
+
+    <!--Carousel-->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://img.freepik.com/free-vector/vintage-rodeo-advertising-poster-template_225004-81.jpg?t=st=1656092174~exp=1656092774~hmac=d689296b4229b472aaca281dae80bd0c081677d748fd98e1ccae337ce4a1be9e&w=740" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://img.freepik.com/free-photo/bowling-alley-pins_263357-43.jpg?w=740" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://img.freepik.com/free-photo/empty-basketball-field_23-2149231721.jpg?w=740" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visible">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visible">Next</span>
+      </button>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"  crossorigin="anonymous"></script></script>
+  </body>
+</html>
