@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--Práctica de scripts embedded y external-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Este script embedded da la fecha de la fiesta-->
+    <script>
+        const date= new Date();
+        console.log(`Fiestaaaaa el día de hoy, ${date}`);
+    </script>
+</head>
+<body>
+    <h1>Feliz Cumple, Nancy!</h1>
+    <p id="cancion">Esperando a Cepillin...</p>
+    <p id="pastelSorpresa" onclick="pastelSorpresa()">¿Comer?</p>
+    <img class="pastelIMG" src="#" alt=""/>
+
+
+
+    <button id="button" onclick="abreSorpresa()">Pulsa para sorpresa</button>
+    <br>
+    <h3>Invitados</h3> 
+    <h5> <i> Vamos a dar dulceritos al clickear sus nombres </i></h5>
+    <p class="name" onclick="cambiarNombre(this), cambiarColor(this, 'blue' ) ">El Santi</p>
+    <p class="name" onclick="cambiarColor(this, 'green')">Tanix</p>
+    <p class="name" onclick="cambiarNombre(this), cambiarColor(this, 'brown')">Jerry</p>
+    <p class="name apelativo" onclick="cambiarNombre(this), cambiarColor(this, 'brown')">Benno</p>
+    <p class="name apelativo" onclick="cambiarNombre(this), cambiarColor(this, 'purple')">Montse</p>
+    <button onclick="obtenerClases()">Lista de clases?</button>
+    
+    <!-- Script interno  -->
+    <script>
+        console.log("Fiesta interna");
+    </script>
+    <!-- Script externo -->
+    <script src="scripts/fiesta.js"></script>
+</body>
+</html>
