@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- NavBar -->
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Titulo -->
+    <h1 class="text-center">Hello, Vaqueros</h1>
+    <!-- columnas uniformes -->
+    <div class="container-md">
+      <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-6 text-center">
+          <button type="button" class="btn btn-primary">Primary</button>
+        </div>
+        <div class="col-lg-4 col-md-6 text-center">
+          <button type="button" class="btn btn-secondary">Secondary</button>
+        </div>
+        <div class="col-lg-4 col-md-12 text-center">
+          <button type="button" class="btn btn-success">Success</button>
+        </div>
+      </div>
+    </div>
+    <!-- Carrusel with indicators -->
+    <div
+      id="carouselExampleIndicators"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://img.freepik.com/vector-gratis/marco-vaquero-botas-cuerda_83728-1643.jpg?t=st=1656092161~exp=1656092761~hmac=8861302a0e3428f34d76c5a3895e509dcccd01c36a0807d4e7bce7c5c12c17a8&w=900"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://img.freepik.com/vector-gratis/conjunto-fondo-salvaje-oeste-banners-dibujos-animados-occidentales_107791-11327.jpg?t=st=1656092161~exp=1656092761~hmac=388b0fbdf7449312a576e5567f7ad21568db106994b85b881e33b2e54b701ebf&w=740"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://img.freepik.com/vector-gratis/salvaje-oeste-queria-hombre-cartel-recompensa-elementos-vaquero-ilustracion-vectorial_1284-2408.jpg?t=st=1656092161~exp=1656092761~hmac=71adef28384819a895c668567c6f13349a2fd08283a4a9d00ce3e5dcdc67f798&w=740"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- Carrusel -->
+    <div
+      id="carouselExampleControls"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://img.freepik.com/vector-gratis/marco-vaquero-botas-cuerda_83728-1643.jpg?t=st=1656092161~exp=1656092761~hmac=8861302a0e3428f34d76c5a3895e509dcccd01c36a0807d4e7bce7c5c12c17a8&w=900"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://img.freepik.com/vector-gratis/conjunto-fondo-salvaje-oeste-banners-dibujos-animados-occidentales_107791-11327.jpg?t=st=1656092161~exp=1656092761~hmac=388b0fbdf7449312a576e5567f7ad21568db106994b85b881e33b2e54b701ebf&w=740"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://img.freepik.com/vector-gratis/salvaje-oeste-queria-hombre-cartel-recompensa-elementos-vaquero-ilustracion-vectorial_1284-2408.jpg?t=st=1656092161~exp=1656092761~hmac=71adef28384819a895c668567c6f13349a2fd08283a4a9d00ce3e5dcdc67f798&w=740"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleControls"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+
+    <script src="js/bootstrap.bundle.min.js"  crossorigin="anonymous"></script>
+  </body>
+</html>
