@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("Bienvenidos a la fiesta de Nancy")
+    </script>
+
+</head>
+<body>
+    <h1>Cumpleaños Nancy</h1>
+    <p id="demo">Esperando</p>
+
+    <!--coloco el onClick dentro de la etiqueta p en este caso con pastelSorpresa que es una function que esta en fiesta.js-->
+
+    <p id="pastel" onclick="pastelSorpresa()">Pastel Esperando</p>
+    <button onclick="abreSorpresa()">Pulsa para darle a la piñata</button>
+
+    <!--lista de nombres para modificar con onClick-->
+    <br>
+    <h3>Invitados</h3>
+    <p class= 'nombre'onclick="cambiarNombre(this, 'green')">Sebastian</p>
+    <p class= 'nombre' onclick="cambiarNombre(this, 'red')">Guadalupe</p>
+    <p class= 'nombre apelativo' onclick="cambiarNombre(this, '#455D9F')">Cory</p>
+    <p class= 'nombre apelativo' onclick="cambiarNombre(this, '#9F459E')">Venus</p>
+    <button onclick="obtenerClases()">Obtener Clases</button>
+<!--script interno-->
+    <script>
+        document.getElementById("demo").innerHTML = "quiero romper la piñata";
+    </script>
+<!--script externo-->
+    <script src="scripts/fiesta.js"></script>
+    
+</body>
+</html>
+
+<!--Es importante la ubicacion del script para que funcione por ejemplo si en body declaramos un id y luego lo llamamos en el head no funciona porque no esta declarado antes-->
