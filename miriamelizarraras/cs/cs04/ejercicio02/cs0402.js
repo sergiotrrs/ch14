@@ -6,8 +6,10 @@ Example: Given an array [1, 2, 4, 5]. The output should be [2, 4, 8, 10] */
 
 
 let numbers = [1, 2, 4, 5];
+let tmp = [];
 
 numbers.forEach(function(element, index, arreglo){
-    console.log(element * 2);
+    tmp.push(element*2);
 });
-
+    console.log(numbers);
+    console.log(tmp);
