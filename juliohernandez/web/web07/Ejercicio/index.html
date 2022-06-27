@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica</title>
+
+    <link rel="stylesheet" href="download/css/bootstrap.min.css">
+    <script src="download/js/bootstrap.min.js"></script>
+</head>
+
+<body >
+    <img src="https://img.freepik.com/foto-gratis/fondo-textura-cohete-espacial-artesania-arcilla-plastilina-azul-ninos_53876-126168.jpg?t=st=1656355231~exp=1656355831~hmac=dc236abf480bfed40394505cbb2ac58344cfc3dc4420846574b323d4d6102945&w=740" class="img-fluid card-img"/>
+    
+    <!-- Ejercicio -->
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+
+            <div class="card card-img-overlay align-middle" style="width: 18rem;">
+                <div class="card-body">
+                    <h1 class="card-title text-bg-dark p-3" id="name" style="border-radius:15px;"> Hola nombre </h1>
+                    <p class="card-text">Sea bienvenido, usuario. Por favor, ingrese su nombre</p>
+                    <button type="button" class="btn btn-primary" onclick="cambiarNombre()">
+                        ¡Cambiar nombre!
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <!-- Script -->
+    <script>
+        function cambiarNombre(){
+            let nombre = prompt("¿Cuál es tu nombre?");
+            document.getElementById("name").innerHTML=(`¡Hola, ${nombre}!`)
+            
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        alert("Bienvenidos a la fiesta de Nancy")
+    </script>
+    <title>Document</title>
+</head>
+<body style="background-color:rgb(205, 206, 134); text-align: center;">
+    <h1 style="background-color: white;">Cumpleaños de Nancy</h1>
+    <p id="demo">Esperando</p>
+    <p id="pastel" onclick="pastelSorpresa()">Queremos pastel, pastel</p>
+    <button onclick="abreSorpresa()">Pulsa para una sorpresa</button>
+    <button onclick="edoPiniata()">Estado de piñata</button>
+    <br>
+    <div style="background-color:rgb(183, 183, 185); padding: 10px; margin: 5px;">
+        <h3 style="color:rgb(236, 48, 42); border: 5px double rgb(255, 255, 255)">INVITADOS</h3>
+        <p class="nombre" onclick="cambiarNombre(this, 'red')">Sebastián</p>
+        <p class="nombre" onclick="cambiarNombre(this, 'red')">Guadalupe</p>
+        <p class="nombre apelativo" onclick="cambiarNombre(this, 'red')">Gerardo</p>
+        <p class="nombre apelativo" onclick="cambiarNombre(this, 'red')">Venus</p>
+        <button onclick="obtenerClases()">Obtener clases</button>
+    </div>
+
+    <!-- Scritps -->
+    <script>
+        document.getElementById("demo").innerHTML="Quiero romper la piñata";
+        function edoPiniata(){
+            document.getElementById("demo").innerHTML="Se rompieron las piñatas";
+        }
+    </script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
