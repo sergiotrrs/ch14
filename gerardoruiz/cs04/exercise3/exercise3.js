@@ -6,12 +6,18 @@ Example: Given an array [1, 2, 3, 4] The sum is 10. The product is 24.
 const elements = [1,2,3,4];
 let sum = 0;
 let mult = 1;
-
+/* 
 for (let i = 0; i < elements.length; i++){
-        sum += elements[i];
-        mult *= elements[i];
+        sum += elements[i];//sum = sum + elements[i];
 
-}
+        mult *= elements[i]; }*/
+
+elements.forEach(dato=>{
+        sum+=dato;
+        mult*=dato;
+});
+
+
 
 console.log("Los elementos son: " + elements)
 console.log("La suma de los elementos del array es " + sum);
