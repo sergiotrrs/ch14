@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <!-- Navar-->
+    <nav class="navbar bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+            Bootstrap
+          </a>
+        </div>
+      </nav>
+    <!-- Titulo-->
+    <h1 class="text-center">Hello, Vaqueros</h1>
+    <!-- Columnas uniformes-->
+   <div class="conteiner-md">
+    <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-6 text-center">
+            <button type="button" class="btn btn-primary">Primary</button></div>
+        <div class="col-lg-4 col-md-6 text-center"><button type="button" class="btn btn-secondary">Secondary</button></div>
+        <div class="col-lg-4 col-md-12 text-center"><button type="button" class="btn btn-success">Success</button></div>
+    </div>
+   </div>
+
+   <!--Carrusel-->
+   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://img.freepik.com/free-photo/sunset-sisters-monument-valley-usa_268835-1009.jpg?t=st=1656092568~exp=1656093168~hmac=ec15cd484ba333c9267bc04199fa4df7dfe21a48453d119b9848fb63d737af2e&w=996" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://img.freepik.com/free-photo/boots-hat-front-monument-valley-with-special-photographic-processing_268835-1179.jpg?t=st=1656092612~exp=1656093212~hmac=7ae9a147026d9e9dc7bd726a9e62b711f9b87ce3d216ef69f435b4ab46c3b78c&w=996" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://img.freepik.com/free-photo/european-female-with-cowboy-hat-standing-rock-watching-sunset_181624-43411.jpg?t=st=1656092612~exp=1656093212~hmac=d888e8eea3fd48a5cbc7e0edf9e962cf42f7682adb940e649703fd86fc570868&w=996" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+    <script src="js/bootstrap.bundle.min.js integrity=" crossorigin="anonymous"></script>
+  </body>
+</html>
