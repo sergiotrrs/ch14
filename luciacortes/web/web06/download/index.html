@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+     <!--NavBar -->
+     <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- Título se comenta con ctrl + }  -->
+    <h1 class="text-center">Hello, Vaqueros</h1>
+   
+    <!-- columnas uniformes -->
+    <div class="container-md">
+      <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-6 text-center">
+          <button type="button" class="btn btn-primary">Primary</button>
+        </div>
+        <div class="col-lg-4 col-md-6 text-center">
+          <button type="button" class="btn btn-secondary">Secondary</button>
+        </div>
+        <div class="col-lg-4 col-md-12 text-center">
+          <button type="button" class="btn btn-success">Success</button>
+        </div>
+      </div>
+    </div>
+    <!-- Carrusel -->
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://img.freepik.com/vector-gratis/salvaje-oeste-queria-hombre-cartel-recompensa-elementos-vaquero-ilustracion-vectorial_1284-2408.jpg?t=st=1656092170~exp=1656092770~hmac=e4e0286a9c47bb4e051a0cb78ac2f4ff19a3ed44e15460cb8b6cbd65df89db81&w=740" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://img.freepik.com/vector-gratis/conjunto-etiquetas-vaquero_1284-6745.jpg?t=st=1656092170~exp=1656092770~hmac=67a2223bfdf70ce1a1c742402f2e195baed68880879669f941963f148c7b6096&w=740" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://img.freepik.com/vector-gratis/grafico-tematico-rodeo-sombrero-vaquero-calavera-ganado_1284-41296.jpg?t=st=1656092170~exp=1656092770~hmac=d747e5340ac807136e7680a450933cb16f93231ad6fdeb8f928371aa9de5f930&w=360" class="d-block w-100" alt="...">
+        </div>
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"  crossorigin="anonymous"></script>
+  </body>
+</html>

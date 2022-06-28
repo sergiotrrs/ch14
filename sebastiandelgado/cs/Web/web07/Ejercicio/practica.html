@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica del día 27 de junio de 2022</title>
+    <link href="Download/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script>
+        console.log("Se inicia el proceso de correr.");
+    </script>
+</head>
+
+<body style="background-color:rgb(67, 225, 228);">
+    <div style="color:rgb(204, 34, 34);">
+        <h1 id="nom" style="text-align:center; border-radius: 20px;; background-color:rgb(59, 114, 169);"
+            ;>¡Hola extraño!</h1>
+        <button type="button" style="text-align:center;" class="btn btn primary"
+            style="background-color:rgb(37, 133, 37)" onclick="cambiarNombre()">Cambiar nombre</button>
+    </div>
+    <!--La función que utilicé fue para pedir el nombre y registrarlo en el h1 de id = mom-->
+    <script>
+        function cambiarNombre() {
+            let n = prompt("Cuál es tu nombre?");
+            document.getElementById("nom").innerHTML = " Hola " + n;
+            document.body.style.textAlign = "center";
+            document.getElementById("nom").style = "color:blue";
+        }
+        
+    </script>
+
+    <script src="Download/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+
+</html>
