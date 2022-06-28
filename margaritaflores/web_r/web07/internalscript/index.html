@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script> 
+    console.log ("Bienvenidos a la fiesta de Nancy");
+    </script>
+</head>
+<body>  
+        <h1> Cumpleaños de Nancy</h1>
+             <p id="demo"> Esperando piñata</p>
+             <p id="pastel" onclick="pastelSorpresa()"> Pastel esperando</p>
+             <button onclick="abreSorpresa ()"> Pulsa para una sorpresa</button>
+        <br>
+<!-- Onclick Event (se agrega la palabra reserva this y se cambia el parametro que deseas uno por uno)  -->
+        <h3>Invitados</h3>
+        <p class="nombre" onclick="cambiarNombre(this, 'green')">Sebastian</p>
+        <p class ="nombre" onclick="cambiarNombre(this, 'blue')">Margarita</p>
+        <p class ="nombre apelativo" onclick="cambiarNombre(this, 'purple')">Guadalupe</p>
+        <p class ="nombre apelativo" onclick="cambiarNombre(this, 'pink')">Venus</p>
+        <button onclick="obtenerClases()"> Pulsa para tener una clase </button>
+ <!-- Scripts -->
+ <script>
+    document.getElementById ("demo").innerHTML = "Quiero romper la piñata";
+    </script>
+    <script src = "scripts/fiesta.js"></script>
+</body>
+</html>
