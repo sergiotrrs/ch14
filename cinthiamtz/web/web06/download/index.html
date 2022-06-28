@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- navel -->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar scroll</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Link
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Link</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    <!-- Titulo -->
+    <h1 class="text-center">Hola vaquero</h1>
+    <!-- Columnas uniformes -->
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 text-center">
+                <button type="button" class="btn btn-primary">Primary</button>
+            </div>
+            <div class="col-lg-4 col-md-6 text-center">
+                <button type="button" class="btn btn-secondary">Secondary</button>
+            </div>
+            <div class="col-lg-4 col-md-12 text-center">
+                <button type="button" class="btn btn-success">Success</button>
+            </div>
+        </div>
+    </div>
+    <!-- Carrusel -->
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://img.freepik.com/vector-gratis/ilustracion-dia-nacional-perro_23-2148986999.jpg?t=st=1656091534~exp=1656092134~hmac=a415c32f6322980d68f9744ab14d86a7fc119c859d17c328da886283607d56bf&w=996" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://img.freepik.com/vector-gratis/conjunto-perro-pequeno-feliz-lindo-perrito-divertido-practicando-diferentes-actividades-cazando-jugando-comiendo-durmiendo_74855-10796.jpg?t=st=1656091534~exp=1656092134~hmac=fb9ea740d0a899ecda8c8ee5297b2da6be4633d65d0c711c33341175d4c849fb&w=1060" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://img.freepik.com/vector-gratis/dibujado-mano-ilustracion-dia-nacional-perro_52683-67065.jpg?t=st=1656091534~exp=1656092134~hmac=96e1916d46ba5c591c3dcd620815888e64f2784229a81168a4143e396d982254&w=740" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+
+
+      <script src="js/bootstrap.bundle.min.js"  crossorigin="anonymous"></script>
+</body>
+
+</html>
