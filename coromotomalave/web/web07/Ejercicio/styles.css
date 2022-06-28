@@ -1,0 +1,17 @@
+
+body {
+    padding: 20px;
+    background-color: rgb(159, 175, 186);
+}
+
+#name {
+    color: white;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+}
+
