@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Script interno-->  
+    <script>
+        //No tengo acceso a los elementos del DOM, aún no se han creado.
+        console.log("Bienvenido a la fiesta de Nancy");
+    </script>
+</head>
+<body>
+    <h1>Cumpleaños de Nancy</h1>
+    <p id="demo">Esperando</p>
+    <!--Se agrega función  onclick para cambiar color, defincion de función en script externo-->
+    <p id="pastel" onclick="pastelSorpresa()">Estoy esperando</p> 
+    <!--Defincion de función en script externo-->
+    <button onclick="sorpresa()">Sopresa</button>
+    <!--Defincion de función en script interno-->
+    <button onclick="sorpresa2()">Sopres2</button>
+    <br>
+    <h3>Invitados</h3>
+    <p class="nombre" onclick="cambiarNombre(this,'#33FF5B')">Mario</p>
+    <!--This hace referencia a este estiqueta (apunta al objeto que lo manda a llamar)-->
+    <p class="nombre" onclick="cambiarNombre(this,'#33FF5B')">Sebastian</p>
+    <!--This hace referencia a este estiqueta-->
+    <p class="nombre" onclick="cambiarNombre(this,'blue')" >Guadalupe</p>
+    <!--This hace referencia a este estiqueta-->
+    <p class="nombre apelativo" onclick="cambiarNombre(this,'red')">Gerardo</p>
+    <!--This hace referencia a este estiqueta-->
+    <p class="nombre apelativo" onclick="cambiarNombre(this)">Venus</p>
+    <br>
+    <button onclick="obtenerClases()">Clases</button>
+    <!--Script interno-->   
+    <script>
+        //Tengo acceso al DOM, por eso ya puedo acceder a la etiqueta <p> con id "demo"
+        //Si lo pusiera en el <head> no lo haría, por no tener acceso al DOM.
+        document.getElementById("demo").innerHTML="Quiero romper la piñata";
+        //Definción de función  en script interno
+        function sorpresa2(){
+            document.getElementById("pastel").innerHTML="Todos  y todas a comer";            
+        }
+    </script>
+    <!--Script externo--> 
+    <script src="scripts/fiesta.js"></script>
+</body>
+</html>
