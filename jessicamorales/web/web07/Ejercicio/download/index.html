@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Barra de búsqueda -->
+    <nav class="navbar bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand">Navbar</a>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+    <!--Título-->
+    <h1 class="text-center">Hello, Vaqueros</h1>
+    <!--Columnas uniformes-->
+    <div class="">
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 text-center">
+                <button type="button" class="btn btn-primary">Primary</button>
+            </div>
+            <div class="col-lg-4 col-md-6 text-center">
+                <button type="button" class="btn btn-secondary">Secondary</button>
+            </div>
+            <div class="col-lg-4 col-md-12 text-center">
+                <button type="button" class="btn btn-success">Success</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carrusel -->
+    <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://img.freepik.com/vector-gratis/marco-vaquero-cuerda-cactus-botas-sombrero-calavera-dinero_83728-1648.jpg?t=st=1656092181~exp=1656092781~hmac=e1a073eee34daa41f9e290153da23756905db1a9fa5a7800ce64930ded7f101f&w=826" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://img.freepik.com/vector-gratis/marco-vaquero-cofre-cactus-dinero_83728-1649.jpg?t=st=1656140127~exp=1656140727~hmac=25ff05f812dcd135f96411307dbc79908eea196416d47e4dcbe61fd619446946&w=826" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://img.freepik.com/vector-gratis/marco-vaquero-pistola-sombrero-peto_83728-1650.jpg?t=st=1656140230~exp=1656140830~hmac=0d5f5869d14c4ca95fb44f4890f4b9e0864ef1633a0951759b2a3f29f48402d5&w=826" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+    <script src="js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+
+</html>
