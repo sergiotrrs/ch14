@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("Bienvenidos a la fiesta de Nancy");
+    </script>
+</head>
+
+<body>
+    <h1>Cumpleaños de Nancy</h1>
+    <p id="demo">Esperando</p>
+    <p id="pastel" onclick="pastelSorpresa()">Pastel esperando</p>
+    <button onclick="abreSorpresa()">Pulsa para una sorpresa</button>
+    <br>
+    <h3>Invitados</h3>
+    <!-- This hace referencia a que la funcion que se le llama es esa misma que se esta trabajando. -->
+    <p class="nombre" onclick="cambiarNombre(this,`green`)">Sabastian</p> 
+    <p class="nombre"  onclick="cambiarNombre(this, `blue`)">Guadalupe</p>
+    <p class="nombre apelativo"  onclick="cambiarNombre(this, `fuchsia`)">Gerardo</p>
+    <p class="nombre apelativo"  onclick="cambiarNombre(this, 'red')">Venus</p>
+    <button onclick="obtenerClases()">Obtener clases</button>
+    <!-- Aqui se esta poniendo el codigo de JS de manera interna -->
+    <!-- scipts -->
+    <script>
+        console.log("Mensaje a la piñata");
+        document.getElementById("demo").innerHTML = "Quiero romper la piñata";
+    </script>
+    <!-- De esta manera de esta poniendo el codigo de JS de manera externa mediante un archivo -->
+    <script src="scripts/fiesta.js"></script>
+</body>
+
+</html>
