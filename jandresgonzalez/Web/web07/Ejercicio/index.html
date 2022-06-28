@@ -9,15 +9,33 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
+    <!-- NAVBAR -->
+    <nav class="navbar bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand ms-auto" href="#">
+            <img src="https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="auto" height="33" class="d-inline-block align-text-top" >
+                    Abue Webpage. Powered by Bootstrap</div> 
+            </a>
+        </div>
+      </nav>
     <!-- Header -->
-    <div class="container-fluid">
+    <div class="container-fluid text-center">
     <h1 style="margin:25px"> Sensacional y poderosa pagina de práctica. By: Abue JATG </h1>
     
     <!-- Texto que se cambiará -->
     <h3 id="cambiaNombre"> Hola, ---nombre--- </h3>
     <!-- Al darle click al botón, se cambia -->
-    <button type="button" class="btn btn-secondary" onclick="changeName()">¡Cambiar el nombre!</button>
+    <button type="button" class="btn btn-primary" onclick="changeName()" style="margin:45px">¡Cambiar el nombre!</button>
     </div>
+    
+    <!-- Carruselito para poner bello la pág -->
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/fondo.webp" class="d-block w-100" alt="...">
+      </div>
+
+
     <!-- Scripts de Bootstrap y de la página -->
     <script src="js/main.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
