@@ -85,3 +85,8 @@ hs_err_pid*
 # 3D Images
 *.3dm
 *.max
+
+# Ignora archivos del sistema Mac 
+.DS_store
+.DS_Store
+.DS_STORE

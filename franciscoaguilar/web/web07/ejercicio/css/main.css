@@ -1,0 +1,12 @@
+.backstyle{
+    background-color: rgb(13, 55, 222);
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 25px, rgba(131, 21, 21, 0.5) 25px, rgba(131, 21, 21, 0.5) 40px);
+
+}
+
+.contenedor{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}

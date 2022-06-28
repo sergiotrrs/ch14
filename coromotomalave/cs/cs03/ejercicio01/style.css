@@ -1,0 +1,27 @@
+
+body {
+
+    background-color: rgb(53, 111, 186);
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    line-height: 40px;
+    padding: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration-line:underline;
+}
+
+li {
+
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 28px;
+    color: white;
+    margin-top: 10px;
+    list-style-type:circle;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    text-indent: 40px;
+
+}

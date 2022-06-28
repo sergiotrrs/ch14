@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("Bienvenidos al party");
+    </script>
+    <style>
+        h1 {
+            color: aqua
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1> Cumpliendo 1 año </h1>
+    <p id="demo">Esperando </p>
+    <p id="pastel" onclick="pastelSorpresa()"> Queremos todo </p>
+    <button onclick="estadoPinata()">Pulsa para una sorpresa 3</button>
+    <button onclick="abreSorpresa()">Pulsa para una sorpresa 1 </button>
+    <button onclick="pastelSorpresa()">Pulsa para una sorpresa 2</button>
+    <br>
+    <h3> Invitados, tocalos *.* </h3>
+    <p class="nombre" onclick="cambiarNombre(this, 'green')"> Vladimir1 </p>
+    <p class="nombre"  onclick="cambiarNombre(this, '#E333FF')"> Vladimir2 </p>
+    <p class="nombre apelativo" onclick="cambiarNombre(this, 'red')"> Vladimir3 </p>
+    <p class="nombre apelativo" onclick="cambiarNombre(this, '#FFF833')"> Vladimir4 </p>
+    <button onclick="obtenerClases()"> Obtener clases </button>
+
+    <script>
+        console.log("Sorpresaaaaaa");
+        document.getElementById("demo").innerHTML = "quiero romper la piñata";
+    </script>
+    <script src="scripts/fiesta.js"> </script>
+</body>
+
+</html>
