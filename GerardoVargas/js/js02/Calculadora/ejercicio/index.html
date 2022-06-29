@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ch14</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body background="https://img.freepik.com/vector-gratis/fondo-invierno-hojas-pinceles-color-pastel_220290-42.jpg?t=st=1656518100~exp=1656518700~hmac=9121f2274b185292f7a48126814b2f7371cdd1ccb07cfedaa45bf2dcafc7395c&w=1060">
+<!-- h1 es para poner el el titulo que se verá en el proyecto -->
+  <h1 class="p-3 mb-2 bg-primary text-white text-center"> Calculadora </h1>
+<!-- Se crea un contenedor *container fluid para que sea responsivo  -->
+    <div class="container-fluid">
+<!-- Enla siguiente linea la fila (row) se justifica y se centra -->
+        <div class ="row justify-content-center">
+          
+          <div class="col-xl-4 col text-center">
+        <input type="number" class="form-control" placeholder="Insertar Número" id="a">
+      </div>
+      <div class="col-xl-4 col text-center">
+        <input type="number" class="form-control" placeholder="Insertar Número" id="b">
+      </div>
+    </div>
+  <h2 class="text-center"><span id="resultado">
+    <button type="button"  class="btn btn-outline-success">Muestra Resultado</button></span></h2>
+   <div class="container-md">
+        <div class="row justify-content-center">
+          <div class="col-lg-4 col text-center">
+      <button onclick="sumar()" type="button" class="btn btn-primary">sumar</button>
+      <button onclick="restar()" type="button" class="btn btn-warning">restar</button>
+      <button onclick="multiplicar()" type="button" class="btn btn-primary">multiplicar</button>
+      <button onclick="dividir()" type="button" class="btn btn-warning">dividir</button>
+        </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
