@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="pantalla">
+            <div class="input" >
+                <input type="number" id="primero">
+            </div>
+
+            <div class="input">
+                <input type="number" id="segundo">
+
+            </div>
+
+            <div class="resultado">
+                <input type="number" id="resultado" >
+
+            </div>
+            
+        </div>
+        <div class="teclado">
+            <div class="boton" >
+                <button onclick="()=>alert(`Se escribió un mensaje`)">+</button>
+            </div>
+            <!-- ->
+            <div class="boton" >
+                <button onclick="suma(x,y)">-</button>
+            </div>
+            <div class="boton" >
+                <button onclick="suma(x,y)">x</button>
+            </div>
+            <div class="boton" >
+                <button onclick="suma(x,y)">%</button>
+            </div>
+            <--  -->
+        </div>
+            
+        </div>
+    </div>
+    
+    <script>
+        let a = Number(document.getElementById("primero").value);
+        let b = Number(document.getElementById("segundo").value);
+        const suma = (a,b)=> {
+            document.getElementById("resultado").value= a+b;
+        };
+        function resta(a,b){return a-b}
+        function multiplica(a,b){return a+b}
+        function divide(a,b){return a+b}
+    </script>
+</body>
+</html>
