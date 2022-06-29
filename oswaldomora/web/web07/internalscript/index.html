@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log ("Mayonesa");
+    </script>
+</head>
+<body>
+    <h1> Cumpleaños de Nancy</h1>
+    <p id="demo"> Esperando piñata</p>
+    <p id="pastel" onclick="pastelSorpresa()">Pastel esperando</p>
+    <button onclick="abreSorpresa()">Pulsa para una sorpresa
+    </button>
+    
+    <h3>Invitados</h3>
+    <p class ="nombre" onclick="cambiarNombre(this, 'blue')">Sebastian</p>
+    <p class="nombre" onclick="cambiarNombre(this, 'green')">Ale</p>   
+    <p class="nombre apelativo">Guadalupe</p>
+    <p class="nombre apelativo">Angie</p>
+    <button onclick="obtenerClases()">Obtener Clases</button>
+
+
+    <script src="fiesta.js"></script>
+    <script>
+        console.log("Mayonon")
+        document.getElementById("demo").innerHTML = "Quiero la piñata";
+    </script>
+</body>
+</html>

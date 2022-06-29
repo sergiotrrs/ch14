@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="download/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body >
+    <h1 id="name" class="text-center text-primary" >Hola Nombre</h1>
+    <button onclick="nombre()" type="button" class="btn btn-dark d-grid gap-2 col-3 mx-auto">Cambiar nombre</button>
+    <script>
+        function nombre() {
+            let nombre = prompt(`Ingresa tu nombre`);
+            document.getElementById("name").innerHTML = (`Hola ${nombre}`);
+        }
+    </script>
+
+
+    <script src="download/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>
