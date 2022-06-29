@@ -1,26 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ejercicio</title>
-  <link href="css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio</title>
+    <link href="css/bootstrap.min.css" crossorigin="anonymous">
 </head>
-<body style="text-align: center">
-  <h1 class="text-center">Hola nombre</h1>
-             <div class="col-lg-4 col-md-6 text-center">
-                 <button type="button" class="btn btn-primary">Cambiar el nombre</button>
-              </div>
-    <script> 
-      function cambiarNombre(){
-        let name = prompt ("¿Cuál es tu nombre?");
-        document.getElementById ("nombre").innerHTML = "Hola " +nombre;
-        document.body.style.textAlign = "center";
-        document.getElementById ("nombre").style = "color:blue";
-      }
-    </script>
-    
-    <script src="js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+<body>
+  <div class="text-center"></div>
+  <div style="text-align: center;" class="container-fluid p-5 bg-primary">
+      <h1 id = "inicio" style="background-color: #F0D4FA; text-align:center">Hola nombre</h1>
+      <input style= text-align:center type = "button" onclick="nombre()" value = "Cambiar el nombre" class="rounded">
+    </div>
+
+    <script src = "js/bootstrap.bundle.min.js"></script>
+    <script src = "scripts/script.js" ></script>
 </body>
 </html>
