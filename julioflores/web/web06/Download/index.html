@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+    <!--nav bar para navegador-->
+    <nav class="navbar bg-light">
+        <form class="container-fluid">
+          <div class="input-group">
+            <span class="input-group-text" id="basic-addon1">@</span>
+            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+        </form>
+      </nav>
+    <h1 class="text-center">Hello, Vaqueros!</h1>
+    <div class="container-md">
+        <div class="row justify-content-center">
+            <!--lg y md son breackpoints para el tamaño ocupado por las columnas dependiendo la pantalla en que se vea-->
+            <div class="col-lg-4 col-md-6 text-center">
+                <button type="button" class="btn btn-primary">Primary</button>
+            </div>
+            <div class="col-lg-4 col-md-6 text-center">
+                <button type="button" class="btn btn-secondary">Secondary</button>
+            </div>
+            <div class="col-lg-4 col-md-12 text-center">
+                <button type="button" class="btn btn-success">Success</button>
+            </div>
+        </div>
+    </div>
+
+    <!--carrusel-->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://img.freepik.com/vector-gratis/plantilla-poster-publicitario-rodeo-vintage_225004-81.jpg?t=st=1656092170~exp=1656092770~hmac=c1e166934522010edb368fcd0bb2582e3db2a83803dc38331b2c62f39e676f9e&w=360" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://img.freepik.com/vector-gratis/cartel-vintage-salvaje-oeste-rodeo-vaquero-que-muestra-descripciones-1987-jinete-lazo_1284-33856.jpg?t=st=1656092170~exp=1656092770~hmac=66230c2b14c47c8266d9099f84bd02f5b595e8a987ef99f44fd1323e1575430a&w=740" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://img.freepik.com/vector-gratis/escena-salvaje-oeste-vaquero_603843-2199.jpg?t=st=1656092170~exp=1656092770~hmac=b1f655b80195027c5da1e9eee8fe0831e1125a69f57ea337b2475229898bee70&w=740" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+    <script src="js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
