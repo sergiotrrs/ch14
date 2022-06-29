@@ -51,13 +51,18 @@
       </div>
     
     <script>
-    let a = Number(document.getElementById("primero").value);
-    let b = Number(document.getElementById("segundo").value);
+    const cargarDatos = ()=>{
+      let datos=[]
+      datos[0] = Number(document.getElementById("primero").value);
+      datos[1] = Number(document.getElementById("segundo").value);
+
+      return datos;
+    }
+    
     
     function algo(){
-      document.getElementById("resultado").value=suma(a,b)
-      console.log(a+b);
-    
+      cargarDatos();
+      document.getElementById("resultado").value=suma(cargarDatos[0],cargarDatos[1])    
     }
 
       const suma = (a, b) =>  {return a + b };
