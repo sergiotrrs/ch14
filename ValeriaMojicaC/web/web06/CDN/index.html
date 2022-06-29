@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+    <!-- Barra de Navegacion -->
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <a class="navbar-brand" href="#">Hidden brand</a>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Titulo -->
+    <h1 class="text-center">Hello, world!</h1>
+
+    <!-- Grid -->
+    <div class="container-md">
+      <!-- Filas -->
+      <div class="row justify-content-center">
+        <!-- Columnas -->
+        <div class="col-lg-4 col-md-6 col-sm-12 text-center bg-success">
+          <button type="button" class="btn btn-primary">Primary</button>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12 text-center bg-warning">
+          <button type="button" class="btn btn-secondary">Secondary</button>
+        </div>
+        
+        <div class="col-lg-4 col-md-12 col-sm-12 text-center bg-danger">
+          <button type="button" class="btn btn-success">Success</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carrusel -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://img.freepik.com/vector-gratis/conjunto-emblemas-salvaje-oeste-elementos-monocromaticos-calavera-sombrero-vaquero-caballo-rodeo-arma-cruzada-insignia-sheriff-coleccion-ilustraciones-vectoriales-vintage-aislada-sobre-fondo-blanco_74855-8675.jpg?t=st=1656092200~exp=1656092800~hmac=105b72dd7753b7da27a8146c54ebd37267508f544f998053f101340cd763f4cd&w=826" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>First slide label</h5>
+            <p>Some representative placeholder content for the first slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://img.freepik.com/vector-gratis/conjunto-etiquetas-vintage-salvaje-oeste_74855-15573.jpg?t=st=1656092200~exp=1656092800~hmac=e7086b281d1c3caabba65f86db2badc03664fd760b6b75556d2eaca09df7d519&w=740" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Second slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://img.freepik.com/vector-gratis/impresion-deseada-calavera-estilo-vintage_225004-1784.jpg?t=st=1656092375~exp=1656092975~hmac=f28c2cd38e3887b9aac8e8d48a195fa524064dd5d4f57aa45cf216357e273457&w=740" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Third slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- Final del Carrucel -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
