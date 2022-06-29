@@ -5,19 +5,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio</title>
+    <style>
+        div{
+            background-color:wheat;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 <body>
-    <h1>Calculadora</h1>
-    <label>Primer número</label>
-    <input type="number" id="inA"/> 
-    <label>Segundo número</label>
-    <input type="number" id="inB"/> 
-    <label>Resultado</label>
-    <label id="outR"></label>
-    <button onclick="suma()">Suma</button>
-    <button onclick="resta()">Resta</button>
-    <button id="mul">Multiplicación</button>
-    <button onclick="division()">Division</button>
+    <div class="container-sm">
+        <!--Inicia primer renglon-->
+        <div class="row justify-content-center">
+            <div class="col-sm-4 col-12">
+                <h1>Calculadora</h1>
+            </div>
+        </div>
+         <!--Inicia segundo renglon-->
+        <div class="row justify-content-center">
+            <div class="col-sm-6 col-12">
+                <label>Primer número</label>
+                <br>
+                <input type="number" id="inA"/>
+            </div>
+            <div class="col-sm-6 col-12">
+                <label>Segundo número</label>
+                <br>
+                <input type="number" id="inB"/> 
+            </div>
+        </div>
+            <!--Inicia tercer renglon-->
+        <div class="row justify-content-center">
+            <div class="col-sm-3 col-12">
+                <label>Resultado</label>
+                <br>
+                <label id="outR"></label>
+            </div>
+        </div>
+        <!--Inicia cuarto renglon-->
+        <div class="row justify-content-center">
+            <div class="col-sm-3 col-6">
+                <button onclick="suma()" class="btn btn-primary">Suma</button>
+            </div>
+            <div class="col-sm-3 col-6">
+                <button onclick="resta()" class="btn btn-primary">Resta</button>
+            </div>
+            <div class="col-sm-3 col-6">
+                <button id="mul" class="btn btn-primary">Multiplicación</button>
+            </div>
+            <div class="col-sm-3 col-6" >
+                <button onclick="division()" class="btn btn-primary">Division</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script src="script/myscript.js"></script>
 </body>
 </html>
