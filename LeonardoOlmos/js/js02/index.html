@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>calculadora</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <SECtion class="text-start text-md-center">
+        <legend class="text-center bg-info">calculadora</legend>
+
+        <div>
+            <label for="">suma</label>
+            <input id="campo1" type="text" aria-placeholder="inserta valur 1">
+            <input id="campo2" type="text" aria-placeholder="inserta valur 2">
+            <button class="btn btn-primary" onclick="sumar()">resultado</button>
+            <p id="resultadosuma"></p>
+
+        </div>
+
+        <div>
+
+            <label for="">resta</label>
+            <input id="campo3" type="text" aria-placeholder="inserta valur 1">
+            <input id="campo4" type="text" aria-placeholder="inserta valur 2">
+            <button class="btn btn-primary" onclick="restar()">resultado</button>
+            <p id="resultadoresta"></p>
+
+        </div>
+
+        <div>
+
+            <label for="">multiplicacion</label>
+            <input id="campo5" type="text" aria-placeholder="inserta valur 1">
+            <input id="campo6" type="text" aria-placeholder="inserta valur 2">
+            <button class="btn btn-primary" onclick="multiplicar()">resultado</button>
+            <p id="resultadomultiplicacion"></p>
+
+        </div>
+        <div>
+
+
+            <label for="">division</label>
+            <input id="campo7" type="text" aria-placeholder="inserta valur 1">
+            <input id="campo8" type="text" aria-placeholder="inserta valur 2">
+            <button class="btn btn-primary" onclick="dividir()">resultado</button>
+            <p id="resultadodivision"></p>
+
+        </div>
+
+    </SECtion>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+<script>
