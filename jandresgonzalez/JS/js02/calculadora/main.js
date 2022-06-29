@@ -26,7 +26,6 @@ function changeResult() {
 
 //Se utilizan funciones para suma, resta, mult y división
 function sumar(a, b) {
-    getValue();
     console.log("Suma");
     a = Number(a);
     b = Number(b);
@@ -35,7 +34,6 @@ function sumar(a, b) {
 }
 
 function restar(a,b) {
-    getValue();
     console.log("Resta");
     a = Number(a);
     b = Number(b);
@@ -44,19 +42,17 @@ function restar(a,b) {
 }
 
 function multiplicar(a,b) {
-    getValue();
     console.log("Multiplicacion");
     a = Number(a);
     b = Number(b);
-    resultado = ((a * 10) * (b * 10)) / 10;
+    resultado = a*b;
     changeResult();
 }
 
 function dividir(a, b) {
-    getValue();
     console.log("Division");
     a = Number(a);
     b = Number(b);
-    resultado = ((a * 10) / (b*10)) / 10;
+    resultado = a/b;
     changeResult();
 }
