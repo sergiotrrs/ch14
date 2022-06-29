@@ -98,3 +98,10 @@ if (opciomElegida===0){
 }
 
 }*/
+
+//Operador ternario -un if pequeñito-
+edad = 5;
+let esMayor = (edad>=18) ? "Puede votar" : "No puede votar";
+console.log(`¿Puede votar: ${esMayor}`)
+//Se puede poner 'let esMayor =' o no, pero la parte del else es obligatoria;
+//Si se quiere poner más de una instrucción, colocar '{}'
