@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body style="background-color:navajowhite;">
+
+    <h1 class="text-center"> Hola, Bienvenido </h1>
+    <hr>
+    <h2 class="justify-content-around ">En esta aplicación, tendrás que introducir dos números en los botones correspondientes y teclear el botón de la 
+        operación que desees hacer para mostrar el resultado. ¡Inténtalo!
+    </h2>
+    <br>
+    <br>
+    <!-- Columnas uniformes   col-lg-4 col-md-6-->
+    <div class="container-sm">
+        <div class="row">
+            <div class="col-sm-6 text-center">
+                <button id="btnUno" onclick="clickBtnUno()" type="button" class="btn btn-primary">Inserta el primer número</button>
+            </div>
+            <br>
+            <br>
+            <div class="col-sm-6 text-center">
+                <button id="btnDos" onclick="clickBtnDos()" type="button" class="btn btn-primary">Inserta el segundo número</button>
+            </div>
+            <br>
+            <br>
+            <div class="text-center" style="color:rgb(103, 209, 103);">
+                <button id="btnResul" type="button" class="btn btn-primary">Resultado</button>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-3  text-center">
+                <button id="btnSuma" onclick="clickBtnSuma()" type="button" class="btn btn-primary">Suma</button>
+            </div>
+            <br>
+            <br>
+            <div class="col-sm-3  text-center">
+                <button id="btnResta" onclick="clickBtnResta()" type="button" class="btn btn-primary">Resta</button>
+            </div>
+            <br>
+            <br>
+            <div class="col-sm-3  text-center">
+                <button id="btnMulti" onclick="clickBtnMulti()" type="button" class="btn btn-primary">Multiplicación</button>
+            </div>
+            <br>
+            <br>
+            <div class="col-sm-3  text-center">
+                <button id="btnDiv" onclick="clickBtnDiv()" type="button" class="btn btn-primary">División</button>
+            </div>
+            <br>
+            <br>
+        </div>
+        <div  class="row align-content-xl-start"> 
+            <div class=" text-center">
+                <button id="btnLimpiar" onclick="clickBtnClean()" type="button" class="btn btn-primary">Limpiar datos</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="practica.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>

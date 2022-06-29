@@ -9,11 +9,27 @@
 </head>
 
 <body>
-    <h1>hola <span id="nombre"> nombre</span></h1>
+    <h1 id="nombre">
+        g
+    </h1>
     <button onclick="cambiarNombre()">¡cambia tu nombre!</button>
 
+    <div id="prueba" onclick="">
+        <p>parrafo 1</p>
+        <p> parrafo 2</p>
+    </div>
+    <button onclick="contenido()">cambia contenido</button>
 
 
+    <script>
+        function contenido() {
+            for (let index = 0; index < document.getElementById("prueba").children.length; index++) {
+                document.getElementById("prueba").children[index].innerHTML = "adios";
+
+            }
+
+        }
+    </script>
 
     <script src="scripts/script.js"></script>
 </body>
