@@ -1,81 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora</title>
-    <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-<!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora</title>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
 
 </head>
+
 <body>
   <br>
 
-    <div class="container">
-      <!-- Ingreso de números -->
-        <div class="row text-center">
-          <div class="col">
-            <input type="number" placeholder="numero 1" id="primero">
-          </div>
-          <div class="col">
-            <input type="number" placeholder="numero 2" id="segundo">
-          </div>
-        </div>
-        <br>
-        <div class="row">
-            <div class="text-center">
-                <input type="text" value="" placeholder="resultado" id="resultado">
-            </div>
-            
-        </div>
-        <!-- Botones -->
-        <br>
-        <div class="row">
-          <div class="col-sm-6 col-md-3 text-center">
-            <button type="button" class="btn btn-dark" onclick="algo()">+</button>
-          </div>
-          
-          <div class="col-sm-6 col-md-3 text-center">
-            <button type="button" class="btn btn-dark">-</button>
-          </div>
-          <div class="col-sm-6 col-md-3 text-center">
-            <button type="button" class="btn btn-dark">x</button>
-          </div>
-          <div class="col-sm-6 col-md-3 text-center">
-            <button type="button" class="btn btn-dark">/</button>
-          </div>
-        </div>
+  <div class="container">
+    <!-- Ingreso de números -->
+    <div class="row text-center">
+      <div class="col">
+        <input type="number" placeholder="numero 1" id="primero">
       </div>
-    
-    <script>
-    const cargarDatos = ()=>{
-      let datos=[]
+      <div class="col">
+        <input type="number" placeholder="numero 2" id="segundo">
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="text-center">
+        <input type="text" value="" placeholder="resultado" id="resultado">
+      </div>
+
+    </div>
+    <!-- Botones -->
+    <br>
+    <div class="row">
+      <div class="col-sm-6 col-md-3 text-center">
+        <button type="button" class="btn btn-dark" onclick="algo()">+</button>
+      </div>
+
+      <div class="col-sm-6 col-md-3 text-center">
+        <button type="button" class="btn btn-dark">-</button>
+      </div>
+      <div class="col-sm-6 col-md-3 text-center">
+        <button type="button" class="btn btn-dark">x</button>
+      </div>
+      <div class="col-sm-6 col-md-3 text-center">
+        <button type="button" class="btn btn-dark">/</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const cargarDatos = () => {
+      let datos = []
       datos[0] = Number(document.getElementById("primero").value);
       datos[1] = Number(document.getElementById("segundo").value);
 
       return datos;
     }
-    
-    
-    function algo(){
+
+    /*{
+      if (edad > 18) {
+        console.log("Es mayor de edad: adulto")
+      } else if (edad > 15) {
+        console.log("Es aborrecente")
+      } else if (edad > 6) {
+        console.log("Es un niño")
+      } else {
+        console.log("Es un bebé")
+      }
+
+    }*/
+
+
+    function algo() {
       cargarDatos();
-      document.getElementById("resultado").value=suma(cargarDatos[0],cargarDatos[1])    
+      document.getElementById("resultado").value = suma(cargarDatos[0], cargarDatos[1])
     }
 
-      const suma = (a, b) =>  {return a + b };
+    const suma = (a, b) => { return a + b };
 
-        
-        /*
-        const suma = (a,b)=> {
-            document.getElementById("resultado").value= a+b;
-        };
-        function resta(a,b){return a-b}
-        function multiplica(a,b){return a+b}
-        function divide(a,b){return a+b}
-        */
-    </script>
+
+    /*
+    const suma = (a,b)=> {
+        document.getElementById("resultado").value= a+b;
+    };
+    function resta(a,b){return a-b}
+    function multiplica(a,b){return a+b}
+    function divide(a,b){return a+b}
+    */
+  </script>
 </body>
+
 </html>
