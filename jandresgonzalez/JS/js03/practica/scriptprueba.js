@@ -5,31 +5,40 @@
  **/
 //console.log("Link");
 
-//Se declaran variables para mes, anio y día, obtenidas de input value
+/*
+let fechaPrueba = new Date("2July2022");
 
-//Se ponen números en enteros, para evitar que pongan decimales
-//parseInt();
+console.log(fechaPrueba);
 
-//Se utiliza una función que cambia a string el mes del USER
-//switchMonth(var2);
+day = date.getDay();
+month = date.getMonth();
+console.log(`El día es el ${day} de la semana (0-6)`);
+console.log(`El mes es el ${month} del anio (0-11)`);
+*/
 
-//Se concatenan las tres variables y se pasan a new Date, para obtener la fecha
-//let userDate = new Date("" + var1 + var2 + var3);
+//Estas variables guardan el value que USER ponga en los input del HTML
+let userInputDay;
+let userInputMonth;
+let userInputYear;
 
-//Se obtiene el número del día de la semana en la fecha dada
-//let dayOFWeek = userDate.getDay();
+//Una función va a obtener los value de los input, y se va a vincular al SUMBIT con propiedad onclick
 
-//Se realiza una función que decide la info del day of week, y muestra el resultado en pantalla
-//switchDay(dayOfWeek);
+userInputDay = 30;
+userInputMonth = "January";
+userInputYear= 2022;
 
-//Se revisa con un concatenador ternario si es dia laboral o fin de semana, y muestra el resultado en pantalla
-// (dayOfWeek == 7 || dayOfWeek == 8) ? result.value="Fin de semana" : result.value="Día laboral";
+const date = {userInputDay, userInputMonth, userInputYear}
+console.log(date)
 
-//Funciones que se utilizan con hoisting
-//Se ponen funciones abajo porque son varias lineas de código. Se aprovecha el hoisting para hacer el código legible
+//Los valores que se obtengan se pondrán en una string para date
+console.log("" + userInputDay + userInputMonth + userInputYear);
+let jum= new Date ("" + userInputDay + userInputMonth + userInputYear);
+console.log(jum);
 
+//Y se regresan day
+let day = jum.getDay();
 
-function switchMonth (month) {
+/*
 switch(month) {
     case 0:
     case 00:
@@ -94,9 +103,8 @@ switch(month) {
         console.log("No pude leer ese número. ¿podemos poner otro?");
         break;
 }
-}
+*/
 
-function switchDay(day) {
 switch(day) {
     case 1: {
         console.log("Lunes, día laborable");
@@ -130,5 +138,4 @@ switch(day) {
         console.log("Creo que falta cambiar algo en las fechas. \
         ¿Podemos volver a llenar con números?");
         break;
-}
 }
