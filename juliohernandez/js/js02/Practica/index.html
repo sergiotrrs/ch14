@@ -23,16 +23,16 @@
     <!-- Ingreso de números -->
     <div class="row text-center">
       <div class="col">
-        <input type="number" placeholder="numero 1" id="primero">
+        <input type="number" placeholder="numero 1" id="primero" class="datos">
       </div>
       <div class="col">
-        <input type="number" placeholder="numero 2" id="segundo">
+        <input type="number" placeholder="numero 2" id="segundo" class="datos">
       </div>
     </div>
     <br>
     <div class="row">
       <div class="text-center">
-        <input type="text" value="" placeholder="resultado" id="resultado">
+        <input type="text" value="" placeholder="resultado" id="resultado" disabled>
       </div>
 
     </div>
@@ -40,50 +40,48 @@
     <br>
     <div class="row">
       <div class="col-sm-6 col-md-3 text-center">
-        <button type="button" class="btn btn-dark" onclick="algo()">+</button>
+        <button type="button" class="btn btn-dark" onclick="suma()">+</button>
       </div>
 
       <div class="col-sm-6 col-md-3 text-center">
-        <button type="button" class="btn btn-dark">-</button>
+        <button type="button" class="btn btn-dark" onclick="(function(){document.getElementById('resultado').value=a-b})()">-</button>
       </div>
       <div class="col-sm-6 col-md-3 text-center">
-        <button type="button" class="btn btn-dark">x</button>
+        <button type="button" class="btn btn-dark" onclick="multiplica(a,b)">x</button>
       </div>
       <div class="col-sm-6 col-md-3 text-center">
-        <button type="button" class="btn btn-dark">/</button>
+        <button type="button" class="btn btn-dark" id="divide">/</button>
       </div>
     </div>
   </div>
 
   <script>
+    let a;
+    let b;
+    let c= document.getElementById('resultado');
+    
+    
+
     const cargarDatos = () => {
       let datos = []
-      datos[0] = Number(document.getElementById("primero").value);
-      datos[1] = Number(document.getElementById("segundo").value);
-
-      return datos;
+      a = Number(document.getElementById("primero").value);
+      b = Number(document.getElementById("segundo").value);
     }
 
-    /*{
-      if (edad > 18) {
-        console.log("Es mayor de edad: adulto")
-      } else if (edad > 15) {
-        console.log("Es aborrecente")
-      } else if (edad > 6) {
-        console.log("Es un niño")
-      } else {
-        console.log("Es un bebé")
-      }
+    function suma() {c.value = a + b}
 
-    }*/
+    
 
-
-    function algo() {
+    const multiplica = function(x,y){
       cargarDatos();
-      document.getElementById("resultado").value = suma(cargarDatos[0], cargarDatos[1])
+      document.getElementById("resultado").value=x*y;
     }
 
-    const suma = (a, b) => { return a + b };
+    document.getElementById("segundo").addEventListener("change", cargarDatos)
+    document.getElementById("primero").addEventListener("change", cargarDatos);
+
+    //División
+    document.getElementById("divide").onclick = function(){ document.getElementById("resultado").value=a/b};
 
 
     /*
