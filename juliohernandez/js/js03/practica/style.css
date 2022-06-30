@@ -1,0 +1,16 @@
+.input {
+    margin:10px auto;
+    width: 50%;
+}
+
+.boton{
+    margin: 30px auto;
+}
+
+.col {
+    text-align: center;
+}
+
+#resultado{
+    width: 210px;
+}
