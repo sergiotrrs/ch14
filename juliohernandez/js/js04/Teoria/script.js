@@ -16,3 +16,11 @@ let long = frutas.push("uvas"); //Devuelve longitud del arreglo
 console.log(long)
 console.log(frutas.join(" - ")); 
 
+//Eliminar primer elemento y pasarlo a una variable
+fruta = frutas.shift();
+console.log(frutas.join(" - "));
+console.log(`Fruta eliminada ${fruta}`);
+
+//Agregar un elemento al inicio del arreglo
+console.log(frutas.unshift("fresas"))
+console.log(frutas.join(" - "));
