@@ -9,4 +9,10 @@ console.log(miArreglo.join("-")); // 'dato String-falsee-23--true
 const frutas=["Mango","Plátano","Melón", "Guanábana", "Aguacate","Kiwi"];
 let fruta = frutas.pop(); // .pop() es un método
 console.log(frutas.join(" * "));
-console.log(`Fruta eliminada: ${fruta}`)  //¡¡NO regresa un string!!
+console.log(`Fruta eliminada: ${fruta}`);  //¡¡NO regresa un string!!
+
+//Agregar un elemento al final
+let long = frutas.push("uvas"); //Devuelve longitud del arreglo
+console.log(long)
+console.log(frutas.join(" - ")); 
+
