@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Practica el dia 27 de junio 2022</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+  </head>
+  <body>
+   <i><h1 id="nombre" style="color:rgb(161, 91, 253)">Hola nombre</h1></i> 
+    <button onclick="cambiarNombre()" type="button" class="btn btn-outline-primary" >Cambiar nombre</button>
+<script>
+    function cambiarNombre(){
+        let nombre = prompt("¿Cual es tu nombre?");
+        document.getElementById("nombre").innerHTML="Hola "  + nombre;
+    }
+</script>
+    <script src="bootstrap.min.js" 
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" 
+    crossorigin="anonymous"></script>
+  </body>
+</html>
