@@ -26,6 +26,7 @@ const suma = () => {
     let B = document.getElementById("valorB").value;
     return document.getElementById("resultado").innerHTML = A/B ;
   };
+ 
 
 //   function leerDatos(){
 //     const a=parseInt(document.getElementById("A").value);

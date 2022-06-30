@@ -7,28 +7,32 @@
     <title>Calculadora</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-| <!-- hacerla responsiva  -->
-    <div class="container">
+<body style="text-align:text-center">
+    <h1>Calculadora</h1>
+    <h5>Bienvenido usuario, por favor inserte en las siguientes casillas los valores que desea calcular. Posteriormente, de click en la operación que desea realizar.</h5>
+    |
+    <!-- hacerla responsiva  -->
+    <div class="flex-container">
         <!-- cajas para ingresar valores -->
-        <div class="row-4">
-            <input type="number" id="valorA" placeholder="A" class="btn btn-outline-primary" />
+        <div class="flex-container">
+            <input type="number" id="valorA" placeholder="A" class="btn btn-outline-dark" />
         </div>
-        <div class="row-4">
-            <input type="number" id="valorB" placeholder="B" class="btn btn-outline-primary" />
+        <div class="flex-container">
+            <input type="number" id="valorB" placeholder="B" class="btn btn-outline-dark" />
         </div>
         <!--botón para el resultado  -->
-
-        <button type="button" id="resultado" class="btn btn-primary">Resultado </button>
-
+        <button type="button" id="resultado" class="btn btn-outline-dark">Resultado </button>
         <!-- botones para las operaciones -->
-        <div class="row-3">
-        <button type="button" class="btn btn-primary" onclick="suma()">Suma </button>
-        <button type="button" class="btn btn-primary" onclick="resta()">Resta </button>
-        <button type="button" class="btn btn-primary" onclick="multiplicacion()">Multiplicacion </button>
-        <button type="button" class="btn btn-primary" onclick="division()">Division </button>
+        <div class="container" text-align="text-center">
+            <div class="col-sm-3">
+            <button type="button" class="btn btn-dark" onclick="suma()">Suma</button>
+            <button type="button" class="btn btn-dark" onclick="resta()">Resta</button>
+            <button type="button" class="btn btn-dark" onclick="multiplicacion()">Multiplicación</button>
+            <button type="button" class="btn btn-dark" onclick="division()">División</button>
+            </div>
         </div>
         <script src="calculadora.js"></script>
     </div>
