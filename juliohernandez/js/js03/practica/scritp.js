@@ -10,17 +10,23 @@ document.getElementById("calcula").onclick = function () {
     m = Number(document.getElementById("mes").value);
     d = Number(document.getElementById("dia").value);
 
+    if (a <= 0 || m <= 0 || d <= 0) {
+        alert("ingresa una fecha válida");
+        document.getElementById("año").value="";
+        document.getElementById("mes").value="";
+        document.getElementById("dia").value="";
+    } else {
+        let fecha = new Date(a, m - 1, d);
+        let dia = weekday[fecha.getDay()];
 
-    let fecha = new Date(a, m - 1, d);
-    let dia = weekday[fecha.getDay()];
+        switch (fecha.getDay()) {
+            case 0: case 6:
+                respuesta = `${dia}, día no laboral`;
+                break;
+            default:
+                respuesta = `${dia}, día laboral. Sorry.`;
+        }
 
-    switch (fecha.getDay()) {
-        case 0: case 6:
-            respuesta = `${dia}, día no laboral`;
-            break;
-        default:
-            respuesta = `${dia}, día laboral. Sorry.`;
+        document.getElementById("resultado").value = respuesta;
     }
-
-    document.getElementById("resultado").value = respuesta;
 }
