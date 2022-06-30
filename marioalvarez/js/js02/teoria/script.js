@@ -109,3 +109,4 @@ const participante={
 
 console.log("Nombre participante:"+participante.nombreCompleto());
 console.log("Participante asiste?:"+participante.asiste);
+

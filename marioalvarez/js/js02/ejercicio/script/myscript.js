@@ -1,27 +1,41 @@
 const resultado=document.getElementById("outR");
 let a=0;
 let b=0;
+
+/**
+ * Obtenermos los valores y los convertimos a numerico.
+ */
 function obtenerValores(){
     a=Number(document.getElementById("inA").value);
     b=Number(document.getElementById("inB").value);
 }
 
+/**
+ * Realiza la suma
+ */
 function suma(){
     obtenerValores();
-    resultado.innerHTML=a+b;
+    resultado.value=a+b;
 }
 
+/**
+ * Realiza la resta
+ */
 function resta(){
     obtenerValores();
-    resultado.innerHTML=a-b;
+    resultado.value=a-b;
 }
 
+/**
+ * Realiza la división
+ */
 function division(){
     obtenerValores();
+    //Comprueba  si es posible realizarla
     if(b==0)
-        resultado.innerHTML="Error.No dividir entre cero."
+        resultado.value="Error. No dividir entre cero"
     else 
-        resultado.innerHTML=a/b; 
+        resultado.value=a/b; 
 }
 /*
     https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_onclick_dom
@@ -33,5 +47,6 @@ function division(){
         }
     </script>
 */
-document.getElementById("mul").onclick=()=>{obtenerValores();resultado.innerHTML=a*b;};
+//Realiza la función  de multiplicación con arrow
+document.getElementById("mul").onclick=()=>{obtenerValores();resultado.value=a*b;};
 
