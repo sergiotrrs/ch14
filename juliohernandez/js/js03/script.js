@@ -105,3 +105,14 @@ let esMayor = (edad>=18) ? "Puede votar" : "No puede votar";
 console.log(`¿Puede votar: ${esMayor}`)
 //Se puede poner 'let esMayor =' o no, pero la parte del else es obligatoria;
 //Si se quiere poner más de una instrucción, colocar '{}'
+
+//Ejercicio de comparación
+let age = "19" //cambiar a '19Monse'
+let voteable
+age = Number(age);
+if (isNaN(age)) { //Devuelve 'false' o 'true' si es un número o no, respectivamente.
+  voteable = "Input is not a number";
+} else {
+  voteable = (age < 18) ? "Too young" : "Old enough";
+}
+console.log(voteable);
