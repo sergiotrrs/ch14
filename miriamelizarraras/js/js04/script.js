@@ -15,3 +15,18 @@ console.log("Fruta eliminada " + fruta );
 
 console.log(frutas.push("uvas")); //Agregamos el elemento al final del arreglo // Devuelve la longitud del arreglo.
 console.log(frutas.join(" - "));
+
+//Eliminar el primer elemento del arreglo y pasarlo a una variable*****
+fruta = frutas.shift();
+console.log(frutas.join(" - "));
+console.log("Fruta eliminada " + fruta);
+
+//Agregar un elemento al inicio del arreglo ****
+console.log(frutas.unshift("fresa"));
+console.log(frutas.join(" - "));
+
+//Métodos que se utilizarían para hacer un FIFO en arreglo
+/**
+ * FIFO: unshift - shift
+ * LIFO: unshift - pop
+| */
