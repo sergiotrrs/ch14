@@ -1,0 +1,13 @@
+.container{
+    border:2px solid white; 
+    background-color: rgb(0, 0, 0);  
+    border-radius: 10px;
+    height: auto;
+    
+}
+
+.btn-dark {
+    margin-bottom: 20px; 
+    border:1px solid rgba(255, 255, 255, 0.897);
+    width: 75%;
+}

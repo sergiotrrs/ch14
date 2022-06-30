@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Práctica Calculadora</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body style="background-color:rgb(86, 167, 167)">
+    <h1 style="background-color:gray; text-align: center;">Calculadora</h1><br>
+    <!-- Aqui iran los input -->
+    <div class="container-md">
+    <div class="row m-3">
+        <div class="col-sm-3 col-12 mt-3 mb-2" >
+          <input type="number" name="a" id="a" class="form-control" placeholder="Número A" aria-label="First name">
+        </div>
+        <div class="col-sm-3 col-12  mt-3 mb-2">
+          <input type="number" name="b" id="b" class="form-control" placeholder="Número B" aria-label="Last name">
+        </div>
+      </div>
+      
+    </div>
+     <br>
+     
+     
+
+<!-- Este es el espacio del resultado -->
+      <h2 id="resul" style="text-align: center; color: red;">Resultado</h2><br>
+     
+    <!-- Aquui iran los botones -->
+<div class="container-md">
+    <div class="row m-3">
+        <div class=" col-sm-6 col-md-3 ">
+            <button onclick="sumar()" type="button" class="btn btn-primary mx-auto  m-2" style="width:calc(100%) ; height: 50px;">Suma</button>
+        </div>
+        <div class="col-sm-6 col-md-3 ">
+            <button onclick="restar()" type="button" class="btn btn-primary  mx-auto  m-2" style="width:calc(100%) ; height: 50px;">Resta</button>
+        </div>
+        <div class=" col-sm-6 col-md-3">
+            <button onclick="multip()" type="button" class="btn btn-primary  mx-auto  m-2" style="width:calc(100%) ; height: 50px;">Multi</button>
+        </div>
+        <div class=" col-sm-6 col-md-3">
+            <button onclick="div()" type="button" class="btn btn-primary  mx-auto  m-2" style="width:calc(100%) ; height: 50px;">Dividir</button>
+        </div>
+    </div>
+
+</div>
+
+<!-- Aqui van los scripts -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
