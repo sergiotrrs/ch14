@@ -26,7 +26,39 @@ console.log(frutas.unshift("fresa"));
 console.log(frutas.join(" - "));
 
 //Métodos que se utilizarían para hacer un FIFO en arreglo
+
+
 /**
- * FIFO: unshift - shift
- * LIFO: unshift - pop
+* FIFO: unshift - shift     **FIFO: First In First Out (PEPS)
+        0,1,2,3       0,1,2,3,4      0,1,2,3
+*      [a,b,c,d,] -> [a,b,c,d,e] -> [b,c,d,e]   Con unshift quita el primer elemento que ya estaba, en esta ocasión saca a la letra "a".
+
+
+* LIFO: push - pop       **LIFO: Last In First Out(UEPS)ultimo en entrar, primero en salir.
+        0,1,2,3       0,1,2,3,4      0,1,2
+*      [a,b,c,d,] -> [a,b,c,d,e] -> [a,b,c,d]  Con unshift quita el último elemento que entra, en esta ocasión saca a la letra "e".
+* 
 | */
+
+// const cars = ["BMW","Volvo", "Saab", "Ford", "Fiat", "Audi"];
+
+// let text = "";
+// for(let i = 0; i < cars.length; i++) {
+//     text += cars[i] + "<br>";
+// }
+
+
+/**
+ * for ([initialization]; [condition]; [final-expression])
+ * statement
+ */
+
+for (let index = 0; index<10; index = index + 1) 
+console.log(index);
+console.log("Instrucción al final del for");
+//---------------
+// index = index + 1 -> index++;
+
+for (let index =0, a=0; index < 3; index++, a+=2){
+    console.log(a,index);
+}
