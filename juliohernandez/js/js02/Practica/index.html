@@ -14,43 +14,48 @@
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
     crossorigin="anonymous"></script>
 
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
   <br>
 
-  <div class="container">
-    <!-- Ingreso de números -->
-    <div class="row text-center">
-      <div class="col">
-        <input type="number" placeholder="numero 1" id="primero" class="datos">
+  <div class="container" style="border-style:solid; background-color: rgb(0, 0, 0);  border-radius: 10px;">
+    <!-- Pantalla-->
+    <div  style="margin-top: 20px; border-style: inset; background-color: rgb(177, 174, 174); border-radius: 10px;">
+      <div class="row text-center">
+        <div class="col">
+          <input type="number" placeholder="Número 1" id="primero" class="datos" style="margin: 10px 0px; background-color: lightgray; border-style: none ; border-radius: 5px;">
+        </div>
+        <div class="col">
+          <input type="number" placeholder="Número 2" id="segundo" class="datos" style="margin: 10px 0px; background-color: lightgray; border-style: none; border-radius: 5px;">
+        </div>
       </div>
-      <div class="col">
-        <input type="number" placeholder="numero 2" id="segundo" class="datos">
+      
+      <div class="row"  style="margin:5px 0px 10px;">
+        <div class="text-center">
+          <input type="text" value="" placeholder="Resultado" id="resultado" disabled style="border-radius: 5px;">
+        </div>
       </div>
-    </div>
-    <br>
-    <div class="row">
-      <div class="text-center">
-        <input type="text" value="" placeholder="resultado" id="resultado" disabled>
-      </div>
-
     </div>
     <!-- Botones -->
     <br>
     <div class="row">
       <div class="col-sm-6 col-md-3 text-center">
-        <button type="button" class="btn btn-dark" onclick="suma()">+</button>
+        <button type="button" class="btn btn-dark" onclick="suma()" style="margin-bottom: 20px;">+</button>
       </div>
 
-      <div class="col-sm-6 col-md-3 text-center">
-        <button type="button" class="btn btn-dark" onclick="(function(){document.getElementById('resultado').value=a-b})()">-</button>
+      <div class="col-sm-6 col-md-3  text-center">
+        <button type="button" class="btn btn-dark"
+          onclick="(function(){document.getElementById('resultado').value=a-b})()"
+          style="margin-bottom: 20px;">-</button>
       </div>
-      <div class="col-sm-6 col-md-3 text-center">
-        <button type="button" class="btn btn-dark" onclick="multiplica(a,b)">x</button>
+      <div class="col-sm-6 col-md-3  text-center">
+        <button type="button" class="btn btn-dark" onclick="multiplica(a,b)" >x</button>
       </div>
-      <div class="col-sm-6 col-md-3 text-center">
-        <button type="button" class="btn btn-dark" id="divide">/</button>
+      <div class="col-sm-6 col-md-3  text-center">
+        <button type="button" class="btn btn-dark" id="divide" style="margin-bottom: 20px;">/</button>
       </div>
     </div>
   </div>
@@ -58,9 +63,9 @@
   <script>
     let a;
     let b;
-    let c= document.getElementById('resultado');
-    
-    
+    let c = document.getElementById('resultado');
+
+
 
     const cargarDatos = () => {
       let datos = []
@@ -68,30 +73,20 @@
       b = Number(document.getElementById("segundo").value);
     }
 
-    function suma() {c.value = a + b}
+    function suma() { c.value = a + b }
 
-    
 
-    const multiplica = function(x,y){
+
+    const multiplica = function (x, y) {
       cargarDatos();
-      document.getElementById("resultado").value=x*y;
+      document.getElementById("resultado").value = x * y;
     }
 
     document.getElementById("segundo").addEventListener("change", cargarDatos)
     document.getElementById("primero").addEventListener("change", cargarDatos);
 
     //División
-    document.getElementById("divide").onclick = function(){ document.getElementById("resultado").value=a/b};
-
-
-    /*
-    const suma = (a,b)=> {
-        document.getElementById("resultado").value= a+b;
-    };
-    function resta(a,b){return a-b}
-    function multiplica(a,b){return a+b}
-    function divide(a,b){return a+b}
-    */
+    document.getElementById("divide").onclick = function () { document.getElementById("resultado").value = a / b };
   </script>
 </body>
 
