@@ -24,3 +24,13 @@ console.log(`Fruta eliminada ${fruta}`);
 //Agregar un elemento al inicio del arreglo
 console.log(frutas.unshift("fresas"))
 console.log(frutas.join(" - "));
+
+//Métodos para hacer un FIFO en un arreglo i(0) es cabeza
+/**
+ * FIFO: push - shift
+ *       0,1,2,3
+ *      [a,b,c,d] -> [a,b,c,d,e] -> [b,c,d,e]
+ * LIFO: push - pop
+ *  i    0,1,2,3      0,1,2,3,4
+ *      [a,b,c,d] -> [a,b,c,d,e] -> [a,b,c,d] 
+ */
