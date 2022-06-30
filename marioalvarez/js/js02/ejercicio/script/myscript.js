@@ -33,7 +33,7 @@ function division(){
     obtenerValores();
     //Comprueba  si es posible realizarla
     if(b==0)
-        resultado.value="Error. No dividir entre cero"
+        resultado.value="Error. No dividir entre 0."
     else 
         resultado.value=a/b; 
 }
