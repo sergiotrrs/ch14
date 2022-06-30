@@ -34,3 +34,9 @@ console.log(frutas.join(" - "));
  *  i    0,1,2,3      0,1,2,3,4
  *      [a,b,c,d] -> [a,b,c,d,e] -> [a,b,c,d] 
  */
+
+//Ejercicio for
+for (let index = 0, a=0; index<10; index++, a++) console.log(index,a); //se pueden declarar dos variables dentro
+console.log("instrucción al ifinal del for");
+//Si el valor del index se aleja de la condición NO SE CREA un loop INFINITO.
+//La variable se desborda cuando el valor es muy grande y se reinicia su valor.
