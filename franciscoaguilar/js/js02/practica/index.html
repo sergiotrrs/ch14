@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel = "stylesheet" href="css/bootstrap.min.css">
+    <link rel = "stylesheet" href="main.css">
+   
+    
+</head>
+<body>
+ 
+
+
+    <div class="container text-center col-10 offset-sm-2" >
+        <h1 class="col-12 col-sm-10 text-center">Calculadora</h1><br>
+        <div class="row ">
+            <div class="col-12 col-sm-10">
+                <input type="text" id="c" placeholder="Resultado" class="form-control"/>
+            </div>
+        </div><br>
+        <div class="row">
+            <div class="col-6 col-sm-5">
+                <label>Ingresar Número </label><br>
+                <input type="number" id="a" class="form-control" />
+            </div>
+            <div class="col-6 col-sm-5">
+                <label>Ingresar Número </label><br>
+                <input type="number" id="b" class="form-control"/>
+            </div>
+          
+        </div><br>
+        <div class="row">
+            <div class="col-6 col-sm-2"><button class="btn btn-light" onclick="sumar()">+</button></div>
+            <div class="col-6 col-sm-2"><button  class="btn btn-light" onclick="restar()">-</button></div>
+            <div class="col-6 col-sm-2"><button class="btn btn-light" onclick="multiplicar()">*</button></div>
+            <div class="col-6 col-sm-2"> <button class="btn btn-light" onclick="dividir()">/</button></div>
+            <div class="col-12 col-sm-2"><button class="btn btn-light" onclick="limpiar()">C</button></div>
+        </div>
+    </div> <br>
+
+
+
+<!--    
+            <input type="number" id="a" />
+            <input type="number" id="b" />
+            <input type="text" id="c"/>
+    
+    
+    
+            <button onclick="sumar()">+</button>
+            <button onclick="restar()">-</button>
+            <button onclick="multiplicar()">*</button>
+            <button onclick="dividir()">/</button> -->
+    
+
+    <footer style="color: whitesmoke;">Developed by: Francisco Aguilar</footer>
+    
+    
+    <script src="script.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="js/popper.min.js"></script> -->
+</body>
+</html>
