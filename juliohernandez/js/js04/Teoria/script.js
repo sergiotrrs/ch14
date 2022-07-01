@@ -60,3 +60,47 @@ for(;;){
 let i=0;
 for (;i<100;i++);
 console.log(i); //100
+
+
+/**
+ * Sintaxis del ciclo While
+ * while (condition)
+ * statement
+ */
+
+//while (confirm("¿Quieres continuar?"))console.log("Pulsó aceptar");
+
+i = 0;
+while(i<10){
+    console.log(`Valor de i en while: ${i}`);
+    i++;
+}
+
+//Usar for cuando los ciclos son determinados ; while cuando no. 
+
+//El hermano de while, se llama Do-While (primero entra y luego verfica condición)
+/*
+let numConciertos=1;
+do{
+    console.log(`Veces que fui al concierto:${numConciertos}`);
+    numConciertos++;
+}while (confirm("¿Puedo ir al concierto?"));
+
+let numMueseo=1;
+while(confirm("¿Puedo ir al museo?")){
+    console.log(`Veces que fui al museo: ${numMueseo}`);
+    numMueseo++;
+}
+*/
+
+// Formas de iterar un arreglo
+
+//Usando for clásico
+let carros = ["VW","Audi", "Seat", "BMW"];
+for (let i=0;i<carros.length;i++)console.log(carros[i]);
+
+//Usando forEach
+carros.forEach(auto=>console.log(`Con forEach ${auto}`)); //Debe especificarse una función
+
+//Usando for in
+for (let auto in carros)console.log(`Con for-in: ${carros[auto]}`) //auto es un índice en carros
