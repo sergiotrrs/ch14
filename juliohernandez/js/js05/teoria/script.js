@@ -1,0 +1,1 @@
+console.log("Teoría de la sesión JS05, Operadores");
