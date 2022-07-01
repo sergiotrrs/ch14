@@ -1,32 +1,60 @@
 body{
     background-color:midnightblue;
-    background-image: url("https://img.freepik.com/vector-gratis/fondo-geometrico-abstracto-modelo_1319-242.jpg?t=st=1656635117~exp=1656635717~hmac=07a764de18c21fc7537c9702808f3b8a41aba6717d5b1d2b6ddf2bb0b733ea36&w=740");
+    background-image: url("https://img.freepik.com/vector-gratis/hexagono-fondo-abstracto-textura-negra_206725-413.jpg?w=740&t=st=1656637094~exp=1656637694~hmac=dce569ba701a7d5032b55350d7236363e2a4537dca53d10f0080ac966bd33e8a");
     background-size: 25%;
     background-repeat:repeat;
 }
 h1{
-    color:darkslateblue;
-    text-align: center;
+    font-size: 5rem;
+    font-family:monospace;
+    color:white;
     font-weight: 700;
-    letter-spacing: 8px;
-    margin-bottom: 40px;
 }
-label{
-    color:darkslateblue;
+p{
+    font-family:monospace;
+    width: 75%;
 }
-.myrow{
-    margin-top: 15px;
-    margin-bottom: 15px;
+
+.input2{
+    text-align: center;
+    font-family:monospace;
+    width: 75px;
+    font-weight: 800;
+    font-size:xx-large;
+    border: 5px orange solid;
 }
-.mybotton{
-    margin:10px;
+
+.input4{
+    text-align: center;
+    font-family:monospace;
+    width: 130px;
+    font-weight: 800;
+    font-size:xx-large;
+    border: 5px orange solid;
+}
+.text-orange{
+    text-align: right;
+    color:orange;
 }
 .myfooter{
-    text-align: center;
+    background-color: black;
     position: absolute;
     bottom: 0;
-    height: 40px;
+    height: 50px;
     width: 100%;
+}
+label{
+    color: white;
+}
+
+.mybutton{
+    color:white;
+    font-weight: 700;
+    background-color:orange;
+}
+.mybutton:hover{
+    color:white;
+    background-color:rgba(255, 166, 0, 0.808);
 }
 
 @media (min-width: 576px) { 

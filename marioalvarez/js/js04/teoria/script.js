@@ -86,26 +86,89 @@ console.log(cola.toString());
 
 
 /***************************FOR********************************* */
-
+console.log("Ejemplo for 1");
 for(let i=0;i<10;i++){
     console.log(i);
 }
 
-/**
-    let a=0;
-    for(let i=0;i<10;i++){
+console.log("Ejemplo for 2");
+let a=0;
+for(let i=0;i<10;i++){
     a++;
     console.log(i);
 } 
+console.log("Ejemplo for 3");
+let b=0;
+    for(let i=0;i<10;i++){
+    b++;
+    console.log(i);
+} 
+console.log("Ejemplo for 4");
 for(let i=0,a=0;i<10;i++){
     a++;
-    console.log(i);
-}
-for(let i=0,a=0;i<10; i++, a++){
-    a++;
-    console.log(i);
+    console.log(i+","+a);
 }
 
+console.log("Ejemplo for 5");
+for(let i=0,a=0;i<10; i++, a++){
+    console.log(i+","+a);
+}
+
+//el ciclo for puede no llevar parámetros e inicialización
+/*
+let i=0;
+ for(;i<4;i++){
+    console.log(i);
+ }
+
+ let index=0;
+ for( ; ; ;){
+    index++;
+    if(index>3)
+         break;
+ }
+ let i=0;
+ //No tiene cuerpo de instrucciones
+  for(;i<4;i++);
+
+  console.log(i);
+ */
+/**
 a+=2 -> a=a+2;
  * 
  */
+
+
+/************************CICLO WHILE*********************************** */
+
+/*
+while(confirm("Quieres continuar?")){
+console.log("Pulsó aceptar");
+}
+*/
+console.log("Ejemplo while");
+let i=0;
+while(i<10){
+    console.log(i);
+    i++;
+}
+
+ //do while
+ console.log("do while")
+i=0;
+do{
+    console.log(i);
+    i++;
+}while(i<10)
+
+
+
+
+
+function suma(a, b){
+    return a+b;
+}
+
+//Cuando ya  llamo la funcition, sobre ella ya puedo ver la descripción
+suma(1,2);
+
