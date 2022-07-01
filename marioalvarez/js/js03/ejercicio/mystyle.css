@@ -1,0 +1,49 @@
+body{
+    background-color:midnightblue;
+    background-image: url("https://img.freepik.com/vector-gratis/fondo-geometrico-abstracto-modelo_1319-242.jpg?t=st=1656635117~exp=1656635717~hmac=07a764de18c21fc7537c9702808f3b8a41aba6717d5b1d2b6ddf2bb0b733ea36&w=740");
+    background-size: 25%;
+    background-repeat:repeat;
+}
+h1{
+    color:darkslateblue;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 8px;
+    margin-bottom: 40px;
+}
+label{
+    color:darkslateblue;
+}
+.myrow{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.mybotton{
+    margin:10px;
+}
+.myfooter{
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+}
+
+@media (min-width: 576px) { 
+    .containerS{
+        width:346px;
+        margin:auto;
+    }
+}
+@media (min-width: 580px) { 
+    .containerS{
+        width:580px;
+        margin:auto;
+    }
+}
+@media (min-width: 770px) { 
+    .containerS{
+        width:770px;
+        margin:auto;
+    }
+}
