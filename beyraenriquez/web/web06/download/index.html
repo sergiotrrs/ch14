@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+    <!-- NavBar-->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+    <!--Titulo-->
+    <h1 class="text-center">Hello, Vaqueros</h1>
+    <!--columnas uniformes-->
+    <div class="container-md">
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 text-center">
+                <button type="button" class="btn btn-primary">Primary</button>
+            </div>
+            <div class="col-lg-4 col-md-6 text-center">
+                <button type="button" class="btn btn-secondary">Secondary</button>
+            </div>
+            <div class="col-lg-4 col-md-12 text-center">
+                <button type="button" class="btn btn-success">Success</button></div>
+        </div> 
+    </div>
+
+    <!--Carrusel-->
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://img.freepik.com/vector-gratis/ilustracion-icono-dibujos-animados-lindo-oso-peluche-agitando-mano_138676-2714.jpg?t=st=1656093620~exp=1656094220~hmac=5d2188c4d11936c96fb9e027c6e4329e9dedc0b3b2033475725b961dda816ae7&w=740s" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://img.freepik.com/vector-gratis/ilustracion-icono-vector-dibujos-animados-lindo-oso-polar-escuchando-musica-concepto-icono-tecnologia-animal-aislado-vector-premium-estilo-dibujos-animados-plana_138676-3389.jpg?t=st=1656093620~exp=1656094220~hmac=56ca96e9712c9ddf2b778fa079b5f5c143a453649df86e6c5fb2459319bc3ee0&w=740" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://img.freepik.com/vector-gratis/oso-lindo-ilustracion-dibujos-animados-sobre_138676-2749.jpg?t=st=1656093620~exp=1656094220~hmac=2ae7bfcc7c7cfe0742b974c4499430f013c67cb6885f98aa9ebfd9d4ece4ca49&w=740" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+    <script src="js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  </body>
+</html>
