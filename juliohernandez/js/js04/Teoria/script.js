@@ -104,3 +104,19 @@ carros.forEach(auto=>console.log(`Con forEach ${auto}`)); //Debe especificarse u
 
 //Usando for in
 for (let auto in carros)console.log(`Con for-in: ${carros[auto]}`) //auto es un índice en carros
+
+for (let auto of carros) console.log(auto); //auto es el elemento 
+
+//Arreglos de dos dimensiones
+const cohortes = [
+    ["Marihan", "Adrian", "Gustavo"],
+    ["Miri", "Emiliano", "TuTiaAbi"]];
+
+console.log(cohortes[0][2]); //[F]eliz[C]umpleaños = [Fila][Columna]
+
+console.log("Ejercicio de Matrices de 3 formas");
+//cohortes.forEach(fila=>fila.forEach(columna=>console.log(columna)));  //forEach
+/*for(let fila in cohortes)
+    for (let columna in cohortes[fila])console.log(cohortes[fila][columna]);  //For in
+*/
+for (let fila of cohortes)for (let columna of fila)console.log(columna);  //For of
