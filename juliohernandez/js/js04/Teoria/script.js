@@ -40,3 +40,23 @@ for (let index = 0, a=0; index<10; index++, a++) console.log(index,a); //se pued
 console.log("instrucción al ifinal del for");
 //Si el valor del index se aleja de la condición NO SE CREA un loop INFINITO.
 //La variable se desborda cuando el valor es muy grande y se reinicia su valor.
+
+//Ciclo for con dos variables
+let index=0, a=0;
+for ( ; index<3; index++,a+=2){
+    console.log(a,index)
+}
+console.log(`final index: ${index}, final a: ${a}`); //6 - 3
+
+// Ciclo for, puede no llevar parámetros de inicialización, evaluación y expresión final
+index =0;
+for(;;){
+    if(index>3) break;
+    console.log(index);
+    index++;
+}
+
+//El ciclo for podría no tener un cuerpo (bloque) de instrucciones
+let i=0;
+for (;i<100;i++);
+console.log(i); //100
