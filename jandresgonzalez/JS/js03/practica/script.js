@@ -5,130 +5,132 @@
  **/
 //console.log("Link");
 
-//Se declaran variables para mes, anio y día, obtenidas de input value
+//Se declaran variables generales para mes, anio y día, obtenidas de input value
+let day;
+let month;
+let year;
 
+function calcDay() {
 //Se ponen números en enteros, para evitar que pongan decimales
-//parseInt();
+day = parseInt(day);
+month = parseInt(month) - 1;
+year = parseInt(year);
 
 //Se utiliza una función que cambia a string el mes del USER
-//switchMonth(var2);
+switchMonth(month);
 
 //Se concatenan las tres variables y se pasan a new Date, para obtener la fecha
-//let userDate = new Date("" + var1 + var2 + var3);
-
+let userDate = new Date("" + day + month + year);
+console.log(userDate);
 //Se obtiene el número del día de la semana en la fecha dada
-//let dayOFWeek = userDate.getDay();
+let dayOfWeek = userDate.getDay();
 
 //Se realiza una función que decide la info del day of week, y muestra el resultado en pantalla
-//switchDay(dayOfWeek);
+switchDay(dayOfWeek);
 
 //Se revisa con un concatenador ternario si es dia laboral o fin de semana, y muestra el resultado en pantalla
-// (dayOfWeek == 7 || dayOfWeek == 8) ? result.value="Fin de semana" : result.value="Día laboral";
-
-//Funciones que se utilizan con hoisting
-//Se ponen funciones abajo porque son varias lineas de código. Se aprovecha el hoisting para hacer el código legible
-
-
-function switchMonth (month) {
-switch(month) {
-    case 0:
-    case 00:
-     {
-        month="January";
-        break;
-    }
-    case 1:
-    case 01: {
-        console.log("February");
-        break;
-    }
-    case 2:
-    case 02: {
-        console.log("March");
-        break;
-    }
-    case 3:
-    case 03: {
-        console.log("April");
-        break;
-    }
-    case 4:
-    case 04: {
-        console.log("May");
-        break;
-    }
-    case 5:
-    case 05: {
-        console.log("June");
-        break;
-    }
-    case 6:
-    case 06: {
-        console.log("July");
-        break;
-    }
-    case 7:
-    case 07: {
-        console.log("August");
-        break;
-    }
-    case 8:
-    case 08: {
-        console.log("September");
-        break;
-    }
-    case 9:
-    case 09: {
-        console.log("October");
-        break;
-    }
-    case 10: {
-        console.log("November");
-        break;
-    }
-    case 11: {
-        console.log("December");
-        break;
-    }
-    default:
-        console.log("No pude leer ese número. ¿podemos poner otro?");
-        break;
-}
+(dayOfWeek == 7 || dayOfWeek == 8) ?document.getElementById("weekend").innerHTML = 
+"Fin de semana" : document.getElementById("weekend").innerHTML = "Día laboral";
 }
 
+//Esta función actualiza valores en variables day, month y year, según ponga USER
+function getValue() {
+    console.log("Funca botón");
+    day = document.getElementById("day").value;
+    month = document.getElementById("month").value;
+    year = document.getElementById("year").value;
+}
+
+//Esta función apunta al texto en el HTML de la tabla donde se muestra el resultado del día
+//y cambia el texto según lo que se ponga en el parámetro
+function displayDayHTML (element) {
+    document.getElementById("result").innerHTML = element;
+}
+
+//La función es un SWITCH que cambia datos en el HTML según la información del getDay();
 function switchDay(day) {
 switch(day) {
-    case 1: {
-        console.log("Lunes, día laborable");
+    case 1:
+        displayDayHTML ("Lunes")
         break;
-    }
-    case 2: {
-        console.log("Martes, día laborable");
+    case 2: 
+        displayDayHTML("Martes");
         break;
-    }
-    case 3: {
-        console.log("Miércoles, día laborable");
+    case 3:
+        displayDayHTML("Miercoles");
         break;
-    }
-    case 4: {
-        console.log("Jueves, día laborable");
+    case 4:
+        displayDayHTML("Jueves");
         break;
-    }
-    case 5: {
-        console.log("Viernes, día laborable");
+    case 5:
+        displayDayHTML("Viernes");
         break;
-    }
-    case 6: {
-        console.log("Sábado, fin de semana");
+    case 6:
+        displayDayHTML("Sabado");
         break;
-    }
-    case 0: {
-        console.log("Domingo, fin de semana");
+    case 0:
+        displayDayHTML("Domingo");
         break;
-    }
     default:
-        console.log("Creo que falta cambiar algo en las fechas. \
-        ¿Podemos volver a llenar con números?");
+        document.getElementById("result").innerHTML = "Creo que falta cambiar algo en las fechas. \
+        ¿Podemos volver a llenar con números?";
         break;
 }
 }
+
+//Esta función cambia el mes de formato numérico a formato string, para pasar el dato a new Date()
+function switchMonth (element) {
+    switch(element) {
+        case 0: {
+            month="January";
+            break;
+        }
+        case 1: {
+            month=("February");
+            break;
+        }
+        case 2: {
+            month=("March");
+            break;
+        }
+        case 3: {
+            month=("April");
+            break;
+        }
+        case 4: {
+            month=("May");
+            break;
+        }
+        case 5:{
+            month=("June");
+            break;
+        }
+        case 6:{
+            month=("July");
+            break;
+        }
+        case 7: {
+            month=("August");
+            break;
+        }
+        case 8:{
+            month=("September");
+            break;
+        }
+        case 9: {
+            month=("October");
+            break;
+        }
+        case 10: {
+            month=("November");
+            break;
+        }
+        case 11: {
+            month=("December");
+            break;
+        }
+        default:
+            console.log("No pude leer ese número. ¿podemos poner otro?");
+            break;
+    }
+    }
