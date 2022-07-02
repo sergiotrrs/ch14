@@ -26,9 +26,16 @@ function workingDay(){
         message="Error, en campo año.";
         document.getElementById("msg").value=message;
         return;
-     }   
+     }
+    //El mes inicia de 0-11;
     //Creo un objeto date, con las propiedades de la fecha.
-    const date = new Date(String(uYear+"-"+uMonth+"-"+uDay));
+    const date = new Date(uYear,--uMonth,uDay);
+     /*En esta comprobación, getate es la importante (las otras ya las filtré), para 30 de ferbrero regresa 2 (se desborda) */
+    if (date.getFullYear() != uYear || date.getMonth() != uMonth && date.getDate() != uDay) {
+        message="Error, fecha no válida.";
+        document.getElementById("msg").value=message;
+        return;
+    }
     //Obtengo el dia(0-6)
     let day = date.getDay();
 
