@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio JS03</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="mystyle.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header class="bg-dark text-orange">
+        <h4 class="text-orange">CH14 GENERATION</h4>
+    </header>
+    <div class="container-lg">
+        <div class="row">
+            <div class="col-8">
+                <!--mb=>margin botton-->
+                <h1 class="mb-4">¿Día laborable?</h1>
+                <!--pb=>padding botton-->
+                <p class="text-light fs-6 mb-4 pb-3">Ingresa una fecha numérica dd/mm/aaaa y se mostrará tanto el dia como si fue laborable o no.</p>
+            </div>
+            <div class="col-1 align-self-center">
+                <!--Dia-->
+                <input type="number" class="input2"/>
+                <br>
+                <label>Dia</label>
+            </div>
+            <div class="col-1 align-self-center">
+                <!--Mes-->
+                <input type="number" class="input2"/>
+                <br>
+                <label>Mes</label>
+            </div>
+            <div class="col-2 align-self-center">
+                <!--Año-->
+                <input type="number" class="input4"/>
+                <br>
+                <label>Año</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <botton class="btn mybutton rounded-pill py-3 px-5">Calcular</botton>
+            </div>
+            <div class="col-4 align-self-start">
+                <input type="text" disabled/>
+            </div>
+        </div>
+    </div>
+    <footer class="myfooter">
+        <p class="text-orange">&copy; Página creada por Mario de CH14</p>
+    </footer>
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+    <script src="myscript.js"></script>
+</body>
+
+</html>
