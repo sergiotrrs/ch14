@@ -12,7 +12,7 @@ function workingDay(){
         return;
      }
     if(isNaN(uDay) || uDay<1 || uDay>31){
-        message="Error, en campo dia.";
+        message="Error, en campo día.";
         document.getElementById("msg").value=message;
         return;
     }
@@ -44,19 +44,19 @@ function workingDay(){
             message="Domingo, fin de semana.";
             break;
         case 1:
-            message="Lunes, dia laborable.";
+            message="Lunes, día laborable.";
             break;
         case 2:
-            message="Martes, dia laborable.";
+            message="Martes, día laborable.";
             break;
         case 3:
-            message="Miercoles, dia laborable.";
+            message="Miercoles, día laborable.";
             break;
         case 4:
-            message="Jueves, dia laborable.";
+            message="Jueves, día laborable.";
             break;
         case 5:
-            message="Viernes, dia laborable.";
+            message="Viernes, día laborable.";
             break;
         default:
             message="Sabado, fin de semana.";
