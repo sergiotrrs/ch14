@@ -10,8 +10,8 @@ document.getElementById("calcula").onclick = function () {
     m = Number(document.getElementById("mes").value);
     d = Number(document.getElementById("dia").value);
 
-    if (a <= 0 || m <= 0 || d <= 0) {
-        alert("ingresa una fecha válida");
+    if (a <= 0 || (m <= 0 || m>12)|| (d <= 0 || d>31)) {
+        alert("Ingresa una fecha válida");
         document.getElementById("año").value="";
         document.getElementById("mes").value="";
         document.getElementById("dia").value="";
