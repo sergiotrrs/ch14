@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container border" style="margin:30px auto;">
+        <div class="row border">
+
+            <div class="col">
+                <label for="año">Ingrese su año: </label>
+                <input class="input" type="number" id="año" placeholder="Ingrese año" min="1900">
+            </div>
+            <div class="col">
+                <label for="mes">Ingrese su mes: </label>
+                <input class="input" type="number" id="mes" placeholder="Ingrese mes" max="12" min="1" >
+            </div>
+            <div class="col">
+                <label for="dia">Ingrese su día: </label>
+                <input class="input" type="number" id="dia" placeholder="Ingrese día" max="31" min="1">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col text-center boton">
+                <button id="calcula" class="btn btn-dark">Calcular</button>
+            </div>
+        </div>
+
+        <div class="row text-center" id="datos">
+            <div>
+                <input type="text" disabled id="resultado" class="text-center bg-primary text-white">
+            </div>
+        </div>
+
+    </div>
+    <script src="scritp.js"></script>
+</body>
+
+</html>

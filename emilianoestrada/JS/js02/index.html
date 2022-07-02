@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .center {
+          margin: 0;
+          padding: 0;
+          border: 3px solid #000000;
+          background-color: #cf0ccf;
+          text-align: center;
+          color : white;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          font-size: 50px;
+
+          border: 3px solid #000000;
+        }
+        .header {
+          margin: 0;
+          padding: 0;
+          padding: 10px;
+          text-align: center;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          background-color: rgb(25, 174, 211); 
+          font-size: 50px;
+          border: 3px solid #000000;
+        }
+ 
+  
+        </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <h1 class="header">MI PRIMERA CALCULADORA</h1>
+ <div class="container-sm">
+
+  <div class="input-group mb-3 my-2">
+    <label class="input-group-text" for="valor1">Número 1</label>
+    <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="num1" name="a" >
+  </div>
+
+  <div class="input-group mb-3 my-2">
+    <label class="input-group-text" for="valor2">Número 2</label>
+    <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="num2" name="b">
+  </div>
+ 
+
+            <div class="center">
+                <p id=demo text-color="white" ; >resultado</p>
+              </div>
+
+  
+      <div class="row m-4 my-3">
+        <div class="col-6 col-sm-3 my-2">
+            <button class="btn btn-dark" type="button" onclick="suma()" style="width: calc(100%);"> Sumar </button>
+        </div>
+        <div class="col-6 col-sm-3 my-2">
+            <button class="btn btn-dark" type="button" onclick="resta()" style="width: calc(100%);"> Restar </button>
+        </div>
+        <div class="col-6 col-sm-3 my-2">
+            <button class="btn btn-dark" type="button" onclick="multi()" style="width: calc(100%);"> Multiplicar </button>
+        </div>
+        <div class="col-6 col-sm-3 my-2">
+            <button class="btn btn-dark" type="button" onclick="div()" style="width: calc(100%);"> Dividir</button>
+        </div>
+ 
+  </div>
+    <script src="script.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+     
+</body>
+</html>

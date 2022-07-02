@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body style="background-image: url(https://img.freepik.com/foto-gratis/fondo-elegante-vacio-espacio-copia_24972-1807.jpg?t=st=1656561368~exp=1656561968~hmac=0f3c96dadf56dcc30c05c08408de738050377f961dee1df0362301f5d5e84d9c&w=740);">
+    <div class="text-center">
+        <div style="color:rgb(188, 129, 228)" ;>
+            <h1 style="text-align:center;" id="saludo">Fecha</h1>
+            <p style="text-align:center;">Ingresa la fecha con el siguiente formato: dd/mm/aaaa</p>
+            <div class="container-sm"> <!-- Para pantallas menores a small 576px buscar breakpoints -->
+                <input style="text-align:center;" type="number" id="dia" placeholder="Día" />
+                <input style="text-align:center;" type="number" id="mes" placeholder="Mes" />
+                <input style="text-align:center;" type="number" id="año" placeholder="Año" />
+            </div>
+            <br>
+            <div class="container-sm">
+                <button align:center class="btn btn-info" type="button" onclick="tipoDia()"
+                    style="background-color:rgba(69, 191, 212, 0.404); text-align:center; color:rgb(51, 68, 223);">Calcular</button>
+            </div>
+            <br>
+            <div>
+                <label style="background-color:rgb(170, 159, 159); color:black;" id="diaFecha">Día, </label>
+                <label style="background-color:rgb(170, 159, 159); color:black;" id="tipoFecha">Tipo de día</label>
+            </div>
+            <div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="Donwload/css/js/download/js/bootstrap.min.js"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+        crossorigin="anonymous"></script>
+    <script src="scripts/fecha.js"></script>
+</body>
+
+</html>

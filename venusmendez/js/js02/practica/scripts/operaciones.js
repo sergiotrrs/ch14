@@ -1,34 +1,34 @@
-function cambiaNombre(){
-    let nombre1=prompt("Escribe tu nombre");
-    document.getElementById("saludo").innerHTML = "Hola " + nombre1;
+function leerDatos(){
+    const a=parseInt(document.getElementById("A").value);
+    const b=parseInt(document.getElementById("B").value);
+    return {a: a, b:b};
 }
 
 function suma(){
-    a=parseInt(document.getElementById("A").value);
-    b=parseInt(document.getElementById("B").value);
-    document.getElementById("C").innerHTML = a+b;
+    dato = leerDatos();
+    document.getElementById("C").innerHTML = dato.a +dato.b;
 }
 
 function resta(){
-    a=parseInt(document.getElementById("A").value);
-    b=parseInt(document.getElementById("B").value);
+    let a=parseInt(document.getElementById("A").value);
+    let b=parseInt(document.getElementById("B").value);
     document.getElementById("C").innerHTML = a-b;
 }
 
 function multiplica(){
-    a=parseInt(document.getElementById("A").value);
-    b=parseInt(document.getElementById("B").value);
+    const a=parseInt(document.getElementById("A").value);
+    const b=parseInt(document.getElementById("B").value);
     document.getElementById("C").innerHTML = a*b;
 }
 
 /*function divide(){
-    a=parseInt(document.getElementById("A").value);
-    b=parseInt(document.getElementById("B").value);
+    const a=parseInt(document.getElementById("A").value);
+    const b=parseInt(document.getElementById("B").value);
     document.getElementById("C").innerHTML = a/b;
 }*/
 
 const divide = () => {
-    a=parseInt(document.getElementById("A").value);
-    b=parseInt(document.getElementById("B").value);
+    const a=parseInt(document.getElementById("A").value);
+    const b=parseInt(document.getElementById("B").value);
     document.getElementById("C").innerHTML = a/b;
 }
