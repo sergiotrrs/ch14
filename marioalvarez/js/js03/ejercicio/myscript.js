@@ -41,7 +41,7 @@ function workingDay(){
 
     switch(day){
         case 0:
-            message="Domingo, dia no laborable.";
+            message="Domingo, fin de semana.";
             break;
         case 1:
             message="Lunes, dia laborable.";
@@ -59,7 +59,7 @@ function workingDay(){
             message="Viernes, dia laborable.";
             break;
         default:
-            message="Sabado, dia no laborable.";
+            message="Sabado, fin de semana.";
             break;
     }
 
