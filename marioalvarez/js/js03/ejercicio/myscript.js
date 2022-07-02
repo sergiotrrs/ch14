@@ -1,26 +1,34 @@
 function workingDay(){
 
-    let uDay=0;
-    let uMonth=0;
-    let uYear=0;
-    let message;
-
+    let uDay=Number(document.getElementById("uday").value);
+    let uMonth=Number(document.getElementById("umonth").value);
+    let uYear=Number(document.getElementById("uyear").value);
+    let message="";
+    
     //Compruebo que sean valores válidos
+     if(uDay==0 && uMonth==0 && uYear==0){
+        message="No se ingresó fecha.";
+        document.getElementById("msg").value=message;
+        return;
+     }
     if(isNaN(uDay) || uDay<1 || uDay>31){
         message="Error, en campo dia.";
+        document.getElementById("msg").value=message;
         return;
     }
     if(isNaN(uMonth) || uMonth<1 || uMonth>12){
         message="Error, en campo mes.";
+        document.getElementById("msg").value=message;
         return;
     }
     //cuatro digitos
-    if(isNaN(uYear) || uYear<1000){
-        message="Error";
+    if(isNaN(uYear) || uYear<1970){
+        message="Error, en campo año.";
+        document.getElementById("msg").value=message;
         return;
      }   
     //Creo un objeto date, con las propiedades de la fecha.
-    const date = new Date(uYear,uMonth,uDay);
+    const date = new Date(String(uYear+"-"+uMonth+"-"+uDay));
     //Obtengo el dia(0-6)
     let day = date.getDay();
 
@@ -47,5 +55,7 @@ function workingDay(){
             message="Sabado, dia no laborable.";
             break;
     }
+
+    document.getElementById("msg").value=message;
 
 }

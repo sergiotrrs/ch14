@@ -1,5 +1,10 @@
+html{
+    height: 100%;
+}
 body{
-    background-color:midnightblue;
+    height: 100%;
+    
+    background-color:black;
     background-image: url("https://img.freepik.com/vector-gratis/hexagono-fondo-abstracto-textura-negra_206725-413.jpg?w=740&t=st=1656637094~exp=1656637694~hmac=dce569ba701a7d5032b55350d7236363e2a4537dca53d10f0080ac966bd33e8a");
     background-size: 25%;
     background-repeat:repeat;
@@ -59,7 +64,7 @@ body{
         font-weight: 800;
         font-size:large;
         border: 5px orange solid;
-        width: 50%;
+        width: 60%;
         height: 3.5rem;
         margin:auto;
         margin-top: 5px;
@@ -82,6 +87,9 @@ body{
         padding:0;
         border:0;
         margin:2%;
+    }
+    .mycolumn2{
+        width: 30%;
     }
     h1{
         text-align: center;
@@ -130,7 +138,7 @@ body{
         font-weight: 800;
         font-size:large;
         border: 5px orange solid;
-        width: 50%;
+        width: 70%;
         height: 3.5rem;
         margin:auto;
         margin-top: 5px;
@@ -149,6 +157,11 @@ body{
 /*Para ajustar elementos a una pantalla de >=991 px*/
 @media (min-width: 991px) { 
 
+    .mycontainer{
+        width: 1041px;
+        margin:auto;
+    }
+    
     h1{
         font-size: 5rem;
         font-family:monospace;
@@ -185,7 +198,7 @@ body{
         font-weight: 800;
         font-size:large;
         border: 5px orange solid;
-        width: 90%;
+        width: 93%;
         height: 4rem;
         margin:auto;
         background-color: white;
@@ -202,17 +215,16 @@ body{
     
 }
 
-
-
 .text-orange{
     color:orange;
 }
 .myfooter{
     text-align: center;
     background-color: black;
-    position: sticky;
-    bottom: 0;
-    height: 50px;
+    position:sticky;
+    bottom: 0px;
+    margin-top: 20px;
+    height: 80px;
     width: 100%;
 }
 label{
