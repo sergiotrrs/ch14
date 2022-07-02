@@ -1,0 +1,16 @@
+/*
+La hoja de estilos da un fondo, cambia la fuente predeterminada de bootstrap
+y realiza cambios al maquetado del texto
+*/
+
+*{
+    background-color: cornsilk;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+p {
+    line-height: calc(150%);
+    text-align: justify;
+    font-weight: 495;
+}

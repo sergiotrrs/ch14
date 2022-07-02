@@ -19,46 +19,51 @@
 <body>
     <h1 class="text-center">Calculadora</h1>
     <div class="img text-center">
-        <img src="https://i.pinimg.com/736x/9e/d8/02/9ed802bed153391e3958fc9b40ed817e.jpg" alt="michi">
+        <!-- <img src="https://i.pinimg.com/736x/9e/d8/02/9ed802bed153391e3958fc9b40ed817e.jpg" alt="michi"> -->
     </div>
+
     <br>
+    <!-- Inicio. Ingresar datos -->
     <form action="" class="valores">
         <div class="row text-center">
             <div class="col-lg-4 col-md-4 col-sm-6">
-                <label for="">Primer Numero</label> <br>
+                <label for="num1">Primer Numero</label> <br>
                 <input type="number" id="num1" class="text-center">
             </div>
             <div class="col-lg-4 col-md-4 col-sm-6">
-                <label for="">Segundo Numero</label> <br>
+                <label for="num2">Segundo Numero</label> <br>
                 <input type="number" id="num2" class="text-center">
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12">
-                <label for="">El resultado es:</label> <br>
+                <label for="resultado">El resultado es:</label> <br>
                 <input type="number" id="resultado" class="text-center" disabled>
             </div>
         </div>
     </form>
-        <br>
-        <div class="row text-center operaciones">
-            <div class="col-lg-3 col-md-3 col-sm-3">
-                <button type="button" class="btn" id="suma" onclick="suma()">Suma</button>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-3">
-                <button type="button" class="btn" id="resta" onclick="resta()">Resta</button>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-3">
-                <button type="button" class="btn" id="multiplicacion" onclick="multiplicacion()">Multiplicación</button>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-3">
-                <button type="button" class="btn" id="division" onclick="division()">Division</button>
-            </div>
-        </div>
+    <!-- Fin. Ingresar datos -->
+    <br>
 
-        <div class="row text-center borrar">
-            <div class="col-12">
-                <button type="button" class="btn" id="borrar" onclick="borrar()">Borrar</button>
-            </div>
+    <!-- Inicio. Botones -->
+    <div class="row text-center operaciones">
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <button type="button" class="btn" id="suma" onclick="suma()">Suma</button>
         </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <button type="button" class="btn" id="resta" onclick="resta()">Resta</button>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <button type="button" class="btn" id="multiplicacion" onclick="multiplicacion()">Multiplicación</button>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+            <button type="button" class="btn" id="division" onclick="division()">Division</button>
+        </div>
+    </div>
+   <!--Fin. Botones  -->
+    <div class="row text-center borrar">
+        <div class="col-12">
+            <button type="button" class="btn" id="borrar" onclick="borrar()">Borrar</button>
+        </div>
+    </div>
 
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
