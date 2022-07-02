@@ -25,3 +25,8 @@ function dividir(){
     const div = (a, b) => a / b;
     document.getElementById("resultado").innerHTML = div (a,b);
 }
+function borrar(){
+    document.getElementById("a").value = "";
+    document.getElementById("b").value = "";
+    document.getElementById("resultado").value = "";
+}
