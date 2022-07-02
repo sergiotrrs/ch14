@@ -138,6 +138,27 @@ a+=2 -> a=a+2;
  * 
  */
 
+/******************************FORMAS DE ITERAR UN ARREGLO************************************* */
+//Sirve para iterar todo el arreglo
+const carros=["VM", "audi", "Seat", "BMW"];
+for(let i=0; i<carros.length;i++) {
+    console.log("con for:"+carros[i]);
+}
+
+console.log("for each");
+carros.forEach((auto)=>console.log("con for each:"+auto));
+
+//Auto me da el indice de cada element
+console.log("for in");
+for(let auto in carros)
+    console.log("Con for in:"+auto+" , "+carros[auto]);
+
+    console.log("for of");
+    //Auto me da el dato 
+for(let auto of carros)
+console.log("Con for of:"+auto);
+
+
 
 /************************CICLO WHILE*********************************** */
 
@@ -163,7 +184,12 @@ do{
 
 
 
-
+/**
+ * Realiza la sma
+ * @param {number} a Primer numero
+ * @param {numer} b  Segundo número
+ * @returns  suma de a+b
+ */
 
 function suma(a, b){
     return a+b;
@@ -172,3 +198,35 @@ function suma(a, b){
 //Cuando ya  llamo la funcition, sobre ella ya puedo ver la descripción
 suma(1,2);
 
+/******************ARREGLOS DE DOS DIMENCIONES***************** */
+
+console.log("Areglos de dos dimensiones")
+const numeros=[
+                ["1","2","3"],
+                ["10","11","12"]
+            ];
+
+//Primer corchete fila, segundo corchete columna
+console.log(numeros[0]); // Imprime la primera fila
+console.log(numeros[0][1]) // Imprime el primer elemento de la matrix
+
+console.log("inicio");
+
+for (let i=0; i<numeros.length;i++) {
+    for(let j=0; j<numeros[i].length;j++)
+        console.log(numeros[i][j]);
+}
+
+const cohortes = [
+    ["Marihan", "Adrian", "Gustavo"],
+    ["Miri", "Emiliano", "TuTiaAbi"]];
+    
+cohortes.forEach((fila)=>fila.forEach((columna)=>console.log(columna)));
+
+for(let fila in cohortes){
+    for (let columna in cohortes[fila])console.log(cohortes[fila][columna]);
+}
+
+for (let fila of cohortes){
+    for (let columna of fila)console.log(columna)
+}
