@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica JS</title>
+    <link  href="css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link  href="styles.css" rel="stylesheet" />
+<body>
+    <div class="container">
+        
+    <h1 class="border border-dark rounded3 border3 text-center my-4 ">Calculadora</h1>
+    <p><b>Instrucciones:</b> Ingresa 2 números uno en cada recuadro y luego selecciona la operación que quieras realizar, podras ver el resultado en la ultima caja.🤓</p>
+   
+<form>
+    <div class="input-group mb-3 my-2">
+        <label class="input-group-text"  for="valor1" >Número 1</label>
+        <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="valor1" name="valor1">
+      </div>
+      <div class="input-group mb-3 my-2">
+        <label class="input-group-text"  for="valor2" >Número 2</label>
+        <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="valor2" name="valor2">
+      </div>
+      <div class="row m-4 my-3" >
+        <div class="col-6 col-sm-3 my-2"  >
+            <button class="btn btn-dark" type="button" onclick="sumar()"   style="width: calc(100%);"> Sumar </button>
+        </div>
+        <div class="col-6 col-sm-3 my-2">
+            <button class="btn btn-dark" type="button" onclick="restar()" style="width: calc(100%);"> Restar </button>
+        </div>
+        <div class="col-6 col-sm-3 my-2">
+            <button class="btn btn-dark" type="button" onclick="multiplicar()"  style="width: calc(100%);"> Multiplicar </button>
+        </div>
+        <div class="col-6 col-sm-3 my-2">
+            <button class="btn btn-dark" type="button" onclick="dividir()"  style="width: calc(100%);"> Dividir</button>
+        </div>
+    </div>
+    <div class="container my-2">
+    <div class="row">
+      <div class="col text-center">
+        <button class= " fs-5 btn btn-outline-dark mx-auto rounded-pill m-2" onclick="reset()" style="width: calc(mt-auto);">Limpiar</button>
+      </div>
+    </div>
+  </div>
+     
+        <div class=" btn btn-dark  container text-bg-light text-center my-2">
+        <h2 fs-2>Resultado</h2><p class="fs-2 fw-bold" id="resultado"></p>
+      </div>
+    </form>
+    </div>
+    
+
+</div>
+
+
+<footer id="footer" class="foot mt-auto py-3 bg-light">
+    <div class="container ">
+        <span class="text-muted ">Hecho por <a href="https://www.linkedin.com/in/gerardo-ruiz-46a26423b/" target="_blank">Gerardo Ruiz</a>  para la CH14</span>
+    </div>
+</footer>
+
+
+<script src="js/bootstrap.bundle.min.js"  crossorigin="anonymous"></script>
+    <script src="calculadora.js"></script>
+</body>
+</html>
