@@ -1,0 +1,51 @@
+body{
+    background-color:midnightblue;
+    background-image: url("https://img.freepik.com/vector-gratis/fondo-blanco-diseno-zigzag_1017-33197.jpg?t=st=1656562793~exp=1656563393~hmac=c43d9fffb74519d69d9ce98add15435ccb56133ab8fc0dfe60b2bc9467d1ea6d&w=826");
+    background-size: 100%;
+    background-repeat:repeat;
+}
+h1{
+    color:darkslateblue;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 8px;
+    margin-bottom: 40px;
+}
+label{
+    color:darkslateblue;
+}
+.myrow{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.mybotton{
+    margin:10px;
+}
+.myfooter{
+    text-align: center;
+    position: sticky;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+}
+
+@media (min-width: 576px) { 
+    .containerS{
+        width:346px;
+        margin:auto;
+    }
+}
+@media (min-width: 580px) { 
+    .containerS{
+        width:580px;
+        margin:auto;
+    }
+}
+@media (min-width: 770px) { 
+    .containerS{
+        width:770px;
+        margin:auto;
+    }
+}
+
+

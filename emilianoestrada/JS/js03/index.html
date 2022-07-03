@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+
+.cali{
+
+          margin: 0;
+          padding: 0;
+          border: 3px solid #000000;
+          background-color: #cf0ccf;
+          text-align: center;
+          color : rgb(255, 255, 255);
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          font-size: 20px;
+
+}
+form{ width:250px; margin:0 auto; padding:10px; border: 1px solid #d9d9d9;}
+form p, form input[type = "submit"]{text-align:center; font-size:20px;}
+
+
+input[type = "radio"]{ display:none;/*position: absolute;top: -1000em;*/}
+label{ color:grey;}
+
+.clasificacion{
+    direction: rtl;
+    unicode-bidi: bidi-override;
+}
+
+label:hover,
+label:hover ~ label{color:rgb(17, 0, 255);}
+input[type = "radio"]:checked ~ label{color:orange;}
+
+
+    </style> 
+</head>
+
+<body>
+    
+    <!-- <table align="left" hspace="8" width="100%" border="1" cellpadding="5" bgcolor="#FF99FF"> -->
+        <table class="table table-dark table-hover" >
+        <tbody>
+            <tr>
+                <th>Fecha</th>
+              <td>
+
+                    <input  id="dia" type="text" name="day" value="1" size="3" >
+                    <select id="mes" name="month" >
+                        <option value="1">Enero </option>
+                        <option value="2">Febrero </option>
+                        <option value="3">Marzo </option>
+                        <option value="4">Abril </option>
+                        <option value="5">Mayo </option>
+                        <option value="6">Junio </option>
+                        <option value="7">Julio </option>
+                        <option value="8">Agosto </option>
+                        <option value="9">Septiembre </option>
+                        <option value="10">Octubre </option>
+                        <option value="11">Noviembre </option>
+                        <option value="12">Diciembre </option>
+                    </select>
+                    <input id="ano" type="text" name="year" value="1998" size="5" class="span1">
+
+                </td>
+            </tr>
+            <tr style="display:none;">
+                </td>
+            </tr>
+           
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="button" class="btn btn-secondary" value="Calcular" onclick="calcGregorian();">
+                </td>
+            </tr> 
+            <tr>
+                <th>Día de la semana: </th>
+                <td align="center">
+                    <p id="demo">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <form>
+        <p class="clasificacion">
+         
+          <input id="radio1" type="radio" name="estrellas" value="5"><!--
+          --><label for="radio1">★</label><!--
+          --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+          --><label for="radio2">★</label><!--
+          --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+          --><label for="radio3">★</label><!--
+          --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+          --><label for="radio4">★</label><!--
+          --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+          --><label for="radio5">★</label>
+        </p>   <p class="cali">Califícame</p>
+      </form>
+      <div class="card" style="width: 18rem;">
+        <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">MI LINKED-IN</h5>
+          <p class="card-text">ADRIAN EMILIANO ESTRADA PARRA</p>
+          <a href="https://www.linkedin.com/in/emilianoestrada/" class="btn btn-primary stretched-link">LINKED-IN</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="https://desarrollodgeti.files.wordpress.com/2014/02/calculadora.png?w=640" class="card-img-right" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">MI 1A CALCULADORA</h5>
+          <p class="card-text">CALCULADORA</p>
+          <a href="https://calculadoradeemiliano.netlify.app/" class="btn btn-primary stretched-link">CALCULADORA</a>
+        </div>
+      </div>
+     
+</body>
+
+</html>
