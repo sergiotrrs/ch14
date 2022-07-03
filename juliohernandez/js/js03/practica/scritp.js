@@ -1,6 +1,4 @@
-let a = 1900;
-let m = 1;
-let d = 1;
+let a, m, d;
 let respuesta;
 
 let weekday = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
@@ -30,3 +28,9 @@ document.getElementById("calcula").onclick = function () {
         document.getElementById("resultado").value = respuesta;
     }
 }
+/**
+ * Validación @blur
+ * Mostrar días posibles según el mes y el año
+ * Mostrar qué fecha se está evaluando
+ * Año 0?
+ */
