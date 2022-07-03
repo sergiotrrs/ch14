@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="style.css" rel='stylesheet'>
+</head>
+
+<body>
+    <br>
+    <h1> Generation Mexico </h1>
+    <br>
+    <h2>Calculadora de fechas</h2>
+    <br>
+    <div class="container">
+        <br>
+        <h3>Calculadora que define si el dia es laborable o fin de semana</h3>
+        <br>
+        <form name="calculadoraFechas">
+
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                    <label  >Dia</label>
+                    <input type="number" id="valorDia" placeholder="Ingresa el día">
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                    <select id="mes" class="form-select">
+                        <option>Seleccione el mes</option>
+                        <option>Enero</option>
+                        <option>Febrero</option>
+                        <option>Marzo</option>
+                        <option>Abril</option>
+                        <option>Mayo</option>
+                        <option>Junio</option>
+                        <option>Julio</option>
+                        <option>Agosto</option>
+                        <option>Septiembre</option>
+                        <option>Octubre</option>
+                        <option>Noviembre</option>
+                        <option>Diciembre</option>
+                    </select>
+                </div>
+                <div class="col-lg-4 col-md-3 col-sm-12 text-center">
+                    <label>Año</label>
+                    <input type="number" id="valorAnio" placeholder="Ingresa el año">
+                </div>
+            </div>
+            <br>
+            <div class="row justify-content-center">
+                <div class="col-lg-5 col-sm-12 text-center">
+                    <button type="button" id="diaSemana" class="btn btn-primary btn-lg">Resultado</button>
+                </div>
+            </div>
+            <br>
+            <div class="row justify-content-center">
+                <div class="col-lg-5 col-md-3 col-sm-12 text-center">
+                    <button type="button" id="calcular" class="btn btn-primary btn-lg" onclick="dia()">Calcular</button>
+                </div>
+            </div>
+            <br>
+        </form>
+    </div>
+    <br>
+    <h4>Cinthia Martinez </h4>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Hola</h1>
+    <label>Dia</label>
+    <input type="number" id="valorDia">
+    <br>   
+    <label>Mes</label>
+    <select id="mes">
+        <option>Enero</option>
+        <option>Febrero</option> 
+        <option>Marzo</option>      
+        <option>Abril</option>      
+        <option>Mayo</option>      
+        <option>Junio</option>      
+        <option>Julio</option>      
+        <option>Agosto</option>      
+        <option>Septiembre</option>      
+        <option>Octubre</option>      
+        <option>Noviembre</option>      
+        <option>Diciembre</option>      
+    </select>
+    
+    <label>Año</label>
+    <input type="number" id="valorAnio">
+    <br>
+    <button type="button" id="calcular" onclick="dia()">Calcular</button>
+    <button type="button" id="diaSemana">Resultado</button>
+    <label></label>
+    <script src="script.js"></script>
+</body>
+
+</html> -->
