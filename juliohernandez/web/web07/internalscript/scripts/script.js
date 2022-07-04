@@ -17,4 +17,5 @@ function cambiarNombre(uncoso, color){
 function obtenerClases(){
     let coleccion=document.getElementsByClassName("nombre apelativo");
     console.log(coleccion);
+    confirm("Se dio click")
 }
