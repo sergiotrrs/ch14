@@ -1,0 +1,20 @@
+*{
+    border-radius: 10px;
+}
+.input {
+    margin:10px auto;
+    width: 50%;
+}
+
+.boton{
+    margin: 30px auto;
+}
+
+.col {
+    text-align: center;
+}
+
+#resultado{
+    width: 100%;
+    margin: 10px 0px;
+}
