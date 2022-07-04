@@ -1,6 +1,6 @@
 function cambiarNombre() {
-    let nombre = prompt("cual es tu nombre?")
-    document.getElementById("nombre").innerHTML = nombre;
+    let nombre = prompt("cual es tu nombre?");
+    document.querySelector("#nombre").innerHTML = nombre;
 
 
 
