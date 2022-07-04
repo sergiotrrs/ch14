@@ -13,3 +13,9 @@ h2{
     font-family:monospace;
     text-align: center;
 }
+
+
+body {
+    background-image: url("img_tree.gif"), url("paper.gif");
+    background-color: #cccccc;
+  }
