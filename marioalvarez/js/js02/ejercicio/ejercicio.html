@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header class="myheader">
+        <h1>Calculadora</h1>
+    </header>
+    <div class="container containerS">
+        <!--Inicia primer renglon-->
+        <div class="row myrow">
+            <div class="col-sm-6 col-12" style="text-align: center;">
+                <label>Primer número</label>
+                <br>
+                <input type="number" id="inA" />
+            </div>
+            <div class="col-sm-6 col-12" style="text-align: center;">
+                <label>Segundo número</label>
+                <br>
+                <input type="number" id="inB" />
+            </div>
+        </div>
+        <!--Inicia segundo renglon-->
+        <div class="row myrow">
+            <div class="col-12 resultado" style="text-align: center;">
+                <label>Resultado</label>
+                <br>
+                <input type="text" id="outR" disabled style="background-color: white;"/>
+            </div>
+        </div>
+        <!--Inicia tercer renglon-->
+        <div class="row myrow">
+            <div class="col-md-3 col-sm-6 col-12" style="text-align: center;">
+                <button onclick="suma()" class="btn btn-dark mybotton">Suma</button>
+            </div>
+            <div class="col-md-3 col-sm-6 col-12" style="text-align: center;">
+                <button onclick="resta()" class="btn btn-dark mybotton">Resta</button>
+            </div>
+            <div class="col-md-3 col-sm-6 col-12" style="text-align: center;">
+                <button id="mul" class="btn btn-dark mybotton">Multiplicación</button>
+            </div>
+            <div class="col-md-3 col-sm-6 col-12" style="text-align: center;">
+                <button onclick="division()" class="btn btn-dark mybotton">División</button>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+    <footer class="myfooter text-bg-dark">
+        <p>&copy; Página creada por Mario de CH14.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="script/myscript.js"></script>
+</body>
+
+</html>

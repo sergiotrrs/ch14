@@ -1,0 +1,44 @@
+/* #buton{
+    background-color: rgb(215, 141, 4);
+    text-decoration-color: white;
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+} */
+
+#buton {
+    /* -webkit-border-radius: 4; */
+    /* -moz-border-radius: 4; */
+    border-radius: 4px;
+    /* text-shadow: 1px 1px 15px #666666; */
+    /* font-family: Arial; */
+    color: #ffffff;
+    font-size: 20px;
+    padding: 5px 5px;
+    background: rgb(235, 155, 5);
+    /* border: solid #000000 1px; */
+    text-decoration: none;
+    width: 10%;
+    height: 10%;
+  }
+
+  .btn {
+    /* -webkit-border-radius: 4; */
+    /* -moz-border-radius: 4; */
+    border-radius: 4px;
+    /* text-shadow: 1px 1px 15px #666666; */
+    /* font-family: Arial; */
+    color: #ffffff;
+    font-size: 20px;
+    padding: 5px 5px;
+    background: rgb(235, 155, 5);
+    /* border: solid #000000 1px; */
+    text-decoration: none;
+    width: 10%;
+    height: 10%;
+  }
+
+  .card-body{
+    background: #ffffff45;
+}

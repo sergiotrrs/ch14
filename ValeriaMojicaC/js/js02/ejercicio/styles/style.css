@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: #ffcdb2;
+    color: #6d6875;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+h1 {
+    font-size: 4rem;
+    text-shadow: 3px 3px #e5989b;
+}
+
+.valores{
+    padding-top: 10px;
+}
+
+label {
+    font-size: 1.5rem;
+}
+
+input {
+    background-color: #ffb4a2;
+    border: 2px dotted black;
+    height: 30px;
+}
+
+.operaciones {
+    padding-top: 30px;
+}
+
+.btn {
+    border-radius: 5px;
+    background-color: #b5838d;
+    height: 40px;
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.borrar{
+    padding-top: 30px;
+}

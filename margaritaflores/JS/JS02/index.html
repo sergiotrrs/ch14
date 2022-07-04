@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>   
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULADORA</title> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> 
+</head>
+<body>
+        <h1 class="justify-content-around col-lg-6 text-center"> CALCULADORA </h1>
+            <br></br>
+<!--Imput para ingresar los dos números-->
+    <div class="container-sm">
+         <div class="row">
+             <div class="col-sm-6 text-center">
+                <label for="Numero1"> Ingresa Numero 1: </label>
+                 <input type="tex" class="form-control" id="a" placeholder="Ingresa un número" >
+                </div>
+             <div class="col-sm-6 text-center">
+        <label for="Numero2"> Ingresa Numero 2: </label>
+     <input type="tex" class="form-control" id="b" placeholder="Ingresa un número">
+    <br></br>   
+</div>
+<!--Botones para la calculadora-maga-->
+    <div class="row">
+        <div class="col-sm-3 col-md-6 text-center">
+            <button a href="#" onclick="suma()" class="btn btn-primary" type="submit">SUMA</button>
+                </div>
+                    <div class="col-sm-3 col-md-6 text-center">
+                     <button a href="#" onclick="resta()" class="btn btn-primary" type="submit">RESTA</button>
+                         </div>
+                        <div class="col-sm-3 col-md-6 text-center">
+                     <button a href="#" onclick="multiplica()" class="btn btn-primary" type="submit">MULTIPLICA</button>
+                 </div>
+            <div class="col-sm-3 col-md-6 text-center">
+        <button a href="#" onclick="division ()"  class="btn btn-primary" type="submit">DIVISION</button>
+    </div>
+<br></br>
+<!--Boton para ver el resultado-->
+            <div class="row align-content-xl-star">
+                <label for="Resultado"> Observar Resultado: </label>
+                 <input type="tex" class="form-control" id="c" placeholder="Calculadora-Maga" name="b">
+            </div>
+<!--Scripts-->
+        <Script src="calculadora.js"> </Script>
+        <script src="Donwload/css/js/download/js/bootstrap.min.js"></script>
+</body>
+</html>

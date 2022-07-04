@@ -1,0 +1,66 @@
+<!doctype html>
+<!-- HTML para proyecto calculadora 28/06/22
+By: Abue-Jatg-eca @Generation México -->
+<!-- Se usan estilos con bootstrap -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>calculadora de Abue-Jatg-eca</title>
+    <!-- Se utiliza CDN para linkear estilos de librería Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- Se linkea el estilo principal, que no es de Bootstrap -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- HEADER -->
+    <h1 class="text-center m-5">JS02, o la calculadora de Abue hackerman</h1>
+    <div class="container m-4 px-2 bg-light border">
+        <div class="table align-content-center">
+        <div class="row text-center"> <!--INSERTAR DOS NÚMEROS-->
+            <!--2. Se debe mostrar dos campos (A) -->
+            <div class="col-12 col-sm-6 mt-3 mb-2">
+                <label for="numberA">Número A</label>
+                <input id="numberA" type="number" placeholder="Inserte un número" value="">
+            </div>
+            <!-- y (B) en la interfaz para insertar dos números -->
+            <div class="col-12 col-sm-6 mt-3 mb-2">
+                <label for="numberB">Número B</label>
+                <input id="numberB" type="number" placeholder="Inserte otro número" value="">
+            </div>
+        </div>
+        <div class="row m-3"> <!-- BOTONES DE FUNCIONES -->
+            <!--3. Se debe tener un botón para cada una de las funciones -->
+            <div class="col-6 col-sm-3">
+                <button type="button" onclick="getValue(), sumar(numberA, numberB)" class="btn btn-info mx-auto rounded-pill m-2" style="width: calc(100%);"> + </button>
+            </div>
+            <div class="col-6 col-sm-3">
+                <button type="button" onclick="getValue(), restar(numberA, numberB)" class="btn btn-info mx-auto rounded-pill m-2" style="width: calc(100%);"> - </button>
+            </div>
+            <div class="col-6 col-sm-3">
+                <button type="button" onclick="getValue(), multiplicar(numberA, numberB)" class="btn btn-info mx-auto rounded-pill m-2" style="width: calc(100%);"> x </button>
+            </div>
+            <div class="col-6 col-sm-3">
+                <button type="button" onclick="getValue(), dividir(numberA, numberB)" class="btn btn-info mx-auto rounded-pill m-2" style="width: calc(100%);"> ÷ </button>
+            </div>
+        </div>
+        <div class="row"> <!-- RESULTADO DE OPERACIÓN -->
+            <div class="col-fluid-12 text-center m-3" id="result-label">
+                El resultado es:
+            </div>
+        </div>
+        <div class="row"> <!-- RESULTADO DE OPERACIÓN -->
+            <!-- 4. El resultado de la operación se debe mostrar en un campo C -->
+            <div class="col-fluid-12 text-center m-3" id="result">
+                0
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- 6. La alineación menor a  576px debe cambiar -->
+    <!-- Se utiliza el CDN para linkear script de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <!-- Se linkea el script principal, que no es de Bootstrap -->
+    <script src="main.js"></script>
+  </body>
+</html>
