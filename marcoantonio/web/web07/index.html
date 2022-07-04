@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("Bienvenidos a la fiesta de Nancy");
+
+    </script>
+    
+</head>
+<body>
+    <h1>CUMPLEAÑOS DE NANCY</h1>
+    <p id="demo">Esperando</p>
+    <p id="pastel" onclick="pastelSorpresa()">Pastel esperando</p>
+    <button onclick="abreSorpresa()"> Pulsa para una sorpresa</button> <!-- Agregamos boton  -->
+    <br>
+    <h3>invitados</h3>
+    <p class="nombre" onclick="cambiarNombre(this, 'green')">Sebastian</p>
+    <p class="nombre" onclick="cambiarNombre(this , 'blue')">Venus</p>
+    <p class="nombre apelativo" onclick="cambiarNombre(this, 'Aqua')">Guadalupe</p>
+    <p class="nombre apelativo" onclick="cambiarNombre(this, 'fuchsia')">Marco</p>
+    <button onclick="obtenerClases()">Obtener clases</button>
+
+    <script>
+        console.log("Mensaje a la piñata");
+        document.getElementById("demo").innerHTML = "Quiero romper la piñata";
+
+    </script>
+    <!-- scripts/fiesta.js hace referencia la direccion donde tenemos el .js  -->
+    <script src= "scripts/fiesta.js"></script>
+
+</body>
+</html>

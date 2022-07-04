@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <!-- /*Utilicé el link de bootstrap, solo se puede ver si hay internet*/ -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    
+</head>
+<body>
+        <style>
+        
+        body{
+            background-image: url(https://www.elrinconhabla.com/media/elrinconhabla/images/2020/12/30/2020123010224821914.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size:cover;
+            text-align: center;
+        } 
+        input{
+            margin: 10px;
+        }
+        h1{
+            color: white;
+            font-size: 60px;
+        }
+        h2{
+            color: white;
+            font-size: 45px;
+        }
+
+    </style>
+  <br>
+  <br>
+    <h1><strong>Calculadora</strong></h1>
+    
+    <div>
+    <form>
+        <div class="container-md">
+         <label for="1"></label> <br><br>
+            <input type="number" id="valor1" style="text-align: center" placeholder="Introduce número A"> 
+            <label for="2"></label><br><br>
+            <input type="number" id="valor2" style="text-align: center" placeholder="Introduce número B">
+      </div><br><br>
+</div>
+        <h2 id="resultado">Resultado</h2><br><br>
+    <div>
+        <input type="buttom" id="buttom" value="Suma" onclick="capturar()" class="btn btn-light">
+
+        <input type="buttom" id="buttom" value="Resta" onclick="capturarResta()" class="btn btn-light">
+
+        <input type="buttom" id="buttom" value="Multiplicación" onclick="capturarMulti()" class="btn btn-light">
+
+        <input type="buttom" id="buttom" value="División" onclick="capturarDiv()" class="btn btn-light">
+    </div>
+
+    
+    </form>
+
+    <script src="calculadora.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+</body>
+</html>
