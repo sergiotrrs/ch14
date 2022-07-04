@@ -1,0 +1,47 @@
+
+#footer {
+    position: absolute;
+    padding: 10px 10px 0px 10px;
+    bottom: 1;
+    width: 100%;
+    /* Height of the footer*/ 
+    height: 40px;
+    background: grey;          
+    }
+
+/* unvisited link */
+a:link {
+    color: black;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: black;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: black;
+  }
+  
+  /* selected link */
+  a:active {
+    color: black;
+  }
+
+  .card {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+}
+
+
+#resultado {
+  border-style: solid;
+   border-width: 2.5px;
+   border-color: black;
+  font-size: xx-large;
+  font-weight: 400;
+  width: 100%;
+  color: black ;
+}
