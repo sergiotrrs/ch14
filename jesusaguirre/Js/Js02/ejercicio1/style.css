@@ -1,6 +1,17 @@
 
 
-.container{
+/* #container{
     background-color: rgb(16, 105, 105);
+    border-radius: 10px;
+    margin: 0;
+    padding: 30px 30px;
+    border:0;
+   
 
+} */
+.espacio{
+    padding: 13.5px;
+}
+.centrar{
+  text-align: center;
 }
