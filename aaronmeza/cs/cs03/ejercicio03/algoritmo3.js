@@ -18,6 +18,7 @@ const obtenerNumero = () => {
     }
   };
   
+  
   obtenerNumero();
   
   function mayorQue(numero, min, max) {
