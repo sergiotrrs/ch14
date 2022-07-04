@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="display:flex; flex-direction:column; justify-content:space-between">
+    <div id="header" style="display:flex; justify-content: space-around; align-items: center; width: 50%; margin: auto;">
+
+        <select name="" id="idioma">
+            
+        <option value="español" onclick="location.reload()">español</option>
+        <option value="english" onclick="location.reload()">english</option>
+
+
+    </select>
+
+        <legend style="text-align:center" id="legend">introduce tu fecha</legend>
+    </div>
+    <fieldset style="border:dotted; text-align: center; height: 30rem; display:flex; flex-direction: column; justify-content: space-around;">
+
+
+        <div>
+            <label for="" id="label-dia">dia</label>
+            <input type="text" id="dia">
+
+
+        </div>
+
+        <div>
+
+
+            <label for="" id="label-mes">mes</label>
+            <input id="mes" type="text">
+
+
+        </div>
+
+        <div>
+
+
+            <label for="" id="label-año">año</label>
+            <input type="text" id="año">
+
+
+        </div>
+
+        <button class="boton" onclick="fecha()">¡dale!</button>
+        <hr>
+
+
+
+        <div>
+            <select name="" id="meses">
+
+            </select>
+
+
+            <select name="" id="dias">
+      
+
+
+
+            </select>
+
+
+            <select name="" id="años">
+      
+
+
+
+            </select>
+
+
+
+
+        </div>
+        <button class="boton" onclick="fecha2()">¡dale!</button>
+
+
+
+
+
+
+        <p id="resultado"></p>
+
+    </fieldset>
+
+
+
+    <script src="script.js"></script>
+    <style>
+        html {
+            font-size: 62.5%;
+            box-sizing: border-box;
+        }
+        
+        *,
+        *::after,
+        *::before {
+            box-sizing: inherit;
+        }
+        
+        body {
+            font-size: 16px;
+            text-align: center;
+        }
+        
+        .boton {
+            background-color: rgb(0, 89, 255);
+            padding: .5rem 7rem;
+            color: white;
+            font-weight: bolder;
+        }
+        
+        .boton:hover {
+            background-color: aqua;
+            color: black;
+        }
+        
+        #resultado {
+            background-color: gray;
+        }
+        
+        @media (max-width:30rem) {
+            #header {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+
+</body>
+
+</html>
