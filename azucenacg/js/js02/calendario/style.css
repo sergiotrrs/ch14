@@ -1,0 +1,15 @@
+h1{ 
+    font-size:30px;
+    color: white;
+    background-color: rgb(190, 78, 200);
+    font-family:monospace;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+h2{ 
+    font-size:25px;
+    font-family:monospace;
+    text-align: center;
+}

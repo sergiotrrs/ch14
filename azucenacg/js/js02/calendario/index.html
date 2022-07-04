@@ -12,24 +12,38 @@
     
     <!-- Se incluye el link de la hoja de estilos de bootstrap, que en este caso está descargada en esta misma carpeta-->
     <link href="css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-
+    <link href="style.css" rel="stylesheet"/>
+    
 </head>
 <body>
+
     <script src="script.js"> </script>
 
-    <div class="container-md">
+
+    <!-- Con estas propiedades de grid se ordenan los elementos
+    de la página -->
+
+    <div class="container-fluid">
+        
+        <!-- Fila 1 con 1 columna para título -->
+        <div class="row justify-content-center m-5">
+            <h1>Calcúla el día la semana de tu fecha</h1> 
+        </div>
+
+        <!-- Fila 2 con 4 columnas para dd/mm/aa-->
+
         <div class="row justify-content-center">
             
-            <div class="col-2">
-                <!-- Entrada de DIA -->
-                <label> Día</label> <br>
+            <!-- Columna 1 para Entrada de DIA -->
+            <div class="col-2 text-center">
+                <h2> Día</h2> <br>
                 <input type="number" id="dia"/>
             </div>
+            
+            <!-- Columna 2 para Selección de MES -->
+            <div class="col-2 text-center">
 
-            <div class="col-2">
-                <!-- Selección de MES -->
-
-                <label> Mes </label> <br>
+                <h2> Mes </h2> <br>
 
                 <select type="string" id="mes">
                 <option>--</option>
@@ -48,28 +62,37 @@
                 </select>
             </div>
 
-            <div class="col-2">
-                <!-- Entrada de año -->
-
-                <label> Año</label> <br>
+            <!-- Columna 3 para Entrada de año -->
+            <div class="col-2 text-center">
+                <h2> Año</h2> <br>
                 <input type="number" id="año"/>
-                
             </div>
             
         </div>
-    </div>
 
-    
+        <!-- Fila 3 con 1 columna para el botón -->
 
-    <!-- Botón de cálculo -->
-    <button onclick="typeOfDay()">CÁLCULO</button> 
+        <div class="row justify-content-center">
 
-    <br>
+            <!-- Columna 1 para Botón de cálculo -->
+            <div class="col-3 text-center m-5">
+            <button class="btn btn-dark" onclick="typeOfDay()">CÁLCULO</button> 
+            </div>
 
-    <!-- Caja de resultados -->
-    <div>
-        <label> Resultado</label>
-        <input id="resul"/>
+        </div>
+
+
+       <!-- Fila 4 con 1 columna para los resultados-->
+        <div class="row justify-content-center">
+
+            <!-- Columna 1 para Caja de resultados -->
+            <div class="col-3 text-center m-3">
+            <h2> Resultado</h2> <br>
+            <input id="resul"/> 
+            </div>
+
+        </div>
+
     </div>
 
 
