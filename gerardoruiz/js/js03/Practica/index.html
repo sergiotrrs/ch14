@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>¿Día laborable?</title>
+    <link rel = "icon" href = 
+"https://icons.iconarchive.com/icons/paomedia/small-n-flat/24/calendar-icon.png" 
+        type = "image/x-icon">
+    <link
+      href="css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+   <div class="container ">
+      <h1 class="border p-1 border-dark rounded-3 border-4 text-center mt-4">
+        ¿Día laboral o fin de semana?
+      </h1>
+      <p class="text-center fs-4 my-4">
+        <b>Instrucciones:</b> Ingresa una fecha para saber que día de la
+        semana es y saber si es día laborable. 📅 <b>El formato para el mes empieza en 0. (ejemplo: Enero =0, Febrero = 1...)</b>
+      </p>
+    </div>
+  
+
+    
+
+<div class="container text-center fs-3 align-content-center">
+  <div class="form">
+<div class="row">
+  <div class="col">
+
+    <div class="input-group mb-3">
+      <span class="input-group-text form-control-lg" id="inputGroup-sizing-default">Día</span>
+      <input type="number" id="dia" maxlength="2" min="1" max="31" class="form-control form-control-lg" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    </div>
+    
+  </div>
+  <div class="col">
+
+    <div class="input-group mb-3 ">
+      <span class="input-group-text form-control-lg" id="inputGroup-sizing-default">Mes</span>
+      <input type="number" id="mes" maxlength="2" min="0" max="11" class="form-control form-control-lg " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    </div>
+    
+  </div>
+  <div class="col">
+  
+<div class="input-group mb-3 siz">
+  <span class="input-group-text " id="inputGroup-sizing-default">Año</span>
+  <input type="number" id="anio"  maxlength="4" min="1900" max="2999" class="form-control form-control-lg" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+</div>
+  
+  </div>
+</div>
+
+<div class="row my-4">
+  <div class="col">
+
+    
+
+    <input type="text" id="resultado" placeholder="Resultado" disabled class="card text-center text-black" >
+  </div>
+</div>
+
+
+
+
+<div class="row my-5">
+<div class="column">
+  
+    <button type="button" id="calcular" value="calcular" onclick="calcularDiaYLaborable()" class="btn btn-dark btn-md fs-4">Calcular</button>
+ 
+    <button
+    type="button reset"
+    class="btn btn-dark  btn-md btm-md fs-4"
+    onclick="reset()"
+    id="reset"
+    type="reset">
+    Reset
+  </button>
+</div>
+</form>
+</div>
+</div>  
+        </div>  
+    </div>
+
+
+
+    <script src="script.js"></script>
+    <script src="js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+    <footer id="footer" class="foot mt-auto py-3 bg-light">
+      <div class="container">
+        <span class="text-muted"
+          >Hecho por
+          <a
+            href="https://www.linkedin.com/in/gerardo-ruiz-46a26423b/"
+            target="_blank"
+            >Gerardo Ruiz</a
+          >
+          para la CH14</span
+        >
+      </div>
+    </footer>
+  </body>
+</html>
