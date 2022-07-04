@@ -11,7 +11,7 @@
     <title>Calendario</title>
     
     <!-- Se incluye el link de la hoja de estilos de bootstrap, que en este caso está descargada en esta misma carpeta-->
-    <link href="css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet"/>
     
 </head>
@@ -35,37 +35,50 @@
         <div class="row justify-content-center">
             
             <!-- Columna 1 para Entrada de DIA -->
+
             <div class="col-2 text-center">
-                <h2> Día</h2> <br>
-                <input type="number" id="dia"/>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Día</span>
+                    </div>
+                    <input type="number" id= "día" class="form-control"  aria-label="Username" aria-describedby="basic-addon1">
+                </div>
             </div>
             
             <!-- Columna 2 para Selección de MES -->
+
             <div class="col-2 text-center">
-
-                <h2> Mes </h2> <br>
-
-                <select type="string" id="mes">
-                <option>--</option>
-                <option>01</option>
-                <option>02</option>
-                <option>03</option>
-                <option>04</option>
-                <option>05</option>
-                <option>06</option>
-                <option>07</option>
-                <option>08</option>
-                <option>09</option>
-                <option>10</option>
-                <option>11</option>
-                <option>12</option>
-                </select>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <label class="input-group-text" for="inputGroupSelect01">Mes</label>
+                    </div>
+                    <select class="custom-select" id="mes">
+                      <option selected>--</option>
+                      <option value="1">01</option>
+                      <option value="2">02</option>
+                      <option value="3">03</option>
+                      <option value="1">04</option>
+                      <option value="2">05</option>
+                      <option value="3">06</option>
+                      <option value="1">07</option>
+                      <option value="2">08</option>
+                      <option value="3">09</option>
+                      <option value="1">10</option>
+                      <option value="2">11</option>
+                      <option value="3">12</option>
+                    </select>
+                </div>
             </div>
 
             <!-- Columna 3 para Entrada de año -->
-            <div class="col-2 text-center">
-                <h2> Año</h2> <br>
-                <input type="number" id="año"/>
+
+            <div class="col-2">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="basic-addon1">Año</span>
+                    </div>
+                    <input type="number" id= "año" class="form-control"  aria-label="Username" aria-describedby="basic-addon1">
+                </div>
             </div>
             
         </div>
