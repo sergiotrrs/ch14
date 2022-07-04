@@ -5,10 +5,11 @@ const datosFecha = () => { // const datosFecha = () =>{
     const fecha = new Date(anio, mes, dia);
     // console.log(fecha);
 
-    if(dia<1 || dia>31) {
-       alert("Día invalido. Ingresa un dia dentro del rango de 1 a 31");
-        document.getElementById("dia").value = "";
-    }
+    // Arroja alert día/mes/año invalido
+    // if(dia<1 || dia>31) {
+    //    alert("Día invalido. Ingresa un dia dentro del rango de 1 a 31");
+    //     document.getElementById("dia").value = "";
+    // }
 
     if (mes < 0 || mes > 12) {
         alert("Mes invalido. Ingresa un mes dentro del rango de 1 a 12");
@@ -20,73 +21,96 @@ const datosFecha = () => { // const datosFecha = () =>{
         document.getElementById("anio").value = "";
     }
 
+    // Arroja días invalidos por meses 30 o 31, incluyendo bisiestos 28 y 29
     let anioBis;
     let diaSemana = fecha.getDay();
 
-    // switch (mes) {
-    //     case 0: //Enero
-    //         if (dia < 1 || dia > 31) diaError = document.getElementById("dia").value = "";
-    //         alert("Día invalido. Ingresa un dia de acuerdo dentro del rango de 1 a 31");
-    //         break;
-    //     case 1: //Febrero
-    //         if (anioBis == 0) {
-    //             document.getElementById("anioBis").innerHTML = "El año es Bisiesto";
-    //             if (dia < 1 || dia > 29) {
-    //                 diaError = document.getElementById("dia").value = "";
-    //                 alert("Día invalido. Ingresa un dia de acuerdo dentro del rango de 1 a 29");
-    //             }
-    //         } else {
-    //             document.getElementById("anioBis").innerHTML = "El año no es Bisiesto";
-    //             if (dia < 1 || dia > 28) diaError = document.getElementById("dia").value = "";
-    //             alert("Día invalido. Ingresa un dia de acuerdo dentro del rango de 1 a 28");
-    //         }
-    //         break;
-    //     case 2: //Marzo
-    //         if (dia < 1 || dia > 31) diaError = document.getElementById("dia").value = "";
-    //         alert("Día invalido. Ingresa un dia de acuerdo dentro del rango de 1 a 31");
-    //         break;
-    //     case 3: //Abril
-    //         if (dia < 1 || dia > 30) diaError = document.getElementById("dia").value = "";
-    //         alert("Día invalido. Ingresa un dia de acuerdo dentro del rango de 1 a 30");
-    //         break;
-    //     case 4: //Mayo
-    //         if (dia < 1 || dia > 31) diaError = document.getElementById("dia").value = "";
-    //         alert("Día invalido. Ingresa un dia de acuerdo dentro del rango de 1 a 31");
-    //         break;
-    //     case 5: //Junio
-    //         if (dia < 1 || dia > 30) {
-    //             diaError = document.getElementById("dia").value = "";
-    //             alert("Día invalido. Ingresa un dia de acuerdo dentro del rango de 1 a 30");
-    //         }
-    //         break;
-    //     case 6: //Julio
-    //         if (dia < 1 || dia > 31) diaError = document.getElementById("dia").value = "";
-    //         alert("Día invalido. Ingresa un dia de acuerdo dentro del rango de 1 a 31");
-    //         break;
-    //     case 7: //Agosto
-    //         if (dia < 1 || dia > 31) diaError = document.getElementById("dia").value = "";
-    //         alert("Día invalido. Ingresa un dia de acuerdo dentro del rango de 1 a 31");
-    //         break;
-    //     case 8: //Sept
-    //         if (dia < 1 || dia > 30) diaError = document.getElementById("dia").value = "";
-    //         alert("Día invalido. Ingresa un dia de acuerdo dentro del rango de 1 a 30");
-    //         break;
-    //     case 9: //Oct
-    //         if (dia < 1 || dia > 31) diaError = document.getElementById("dia").value = "";
-    //         alert("Día invalido. Ingresa un dia de acuerdo dentro del rango de 1 a 31");
-    //         break;
-    //     case 10: //Nov
-    //         if (dia < 1 || dia > 30) {
-    //             diaError = document.getElementById("dia").value = "";
-    //             alert("Día invalido. Ingresa un dia de acuerdo dentro del rango de 1 a 30");
-    //         }
-    //         break;
-    //     default: //Dic
-    //         if (dia < 1 || dia > 31) diaError = document.getElementById("dia").value = "";
-    //         alert("Día invalido. Ingresa un dia de acuerdo dentro del rango de 1 a 31");
-    //         break;
-    // }
+    switch (mes) {
+        case 0: //Enero
+            if (dia < 1 || dia > 31) {
+                 document.getElementById("dia").value = "";
+                 alert("Día invalido. Ingresa un dia dentro del rango de 1 a 31");
+            }
+            break;
+        case 1: //Febrero
+            if (anioBis == 0) {
+                document.getElementById("anioBis").innerHTML = "El año es Bisiesto";
+                if (dia < 1 || dia > 29) {
+                    document.getElementById("dia").value = "";
+                    alert("Día invalido. Ingresa un dia dentro del rango de 1 a 29");
+                }
+            } else {
+                document.getElementById("anioBis").innerHTML = "El año no es Bisiesto";
+                if (dia < 1 || dia > 28) {
+                     document.getElementById("dia").value = "";
+                     alert("Día invalido. Ingresa un dia dentro del rango de 1 a 28");
+            
+                    }
+                }
+            break;
+        case 2: //Marzo
+            if (dia < 1 || dia > 31) {
+                document.getElementById("dia").value = "";
+                alert("Día invalido. Ingresa un dia dentro del rango de 1 a 31");
+                }
+            break;
+        case 3: //Abril
+            if (dia < 1 || dia > 30) {
+                document.getElementById("dia").value = "";
+                alert("Día invalido. Ingresa un dia dentro del rango de 1 a 30");
+                }
+            break;
+        case 4: //Mayo
+            if (dia < 1 || dia > 31) {
+                document.getElementById("dia").value = "";
+                alert("Día invalido. Ingresa un dia dentro del rango de 1 a 31");
+                }
+            break;
+        case 5: //Junio
+            if (dia < 1 || dia > 30) {
+                document.getElementById("dia").value = "";
+                alert("Día invalido. Ingresa un dia dentro del rango de 1 a 30");
+            }
+            break;
+        case 6: //Julio
+            if (dia < 1 || dia > 31) {
+                document.getElementById("dia").value = "";
+                alert("Día invalido. Ingresa un dia dentro del rango de 1 a 31");
+            }
+            break;
+        case 7: //Agosto
+            if (dia < 1 || dia > 31) {
+                document.getElementById("dia").value = "";
+                alert("Día invalido. Ingresa un dia dentro del rango de 1 a 31");
+            }
+            break;
+        case 8: //Sept
+            if (dia < 1 || dia > 30) {
+                document.getElementById("dia").value = "";
+                alert("Día invalido. Ingresa un dia dentro del rango de 1 a 30");
+            }
+            break;
+        case 9: //Oct
+            if (dia < 1 || dia > 31) {
+                document.getElementById("dia").value = "";
+                alert("Día invalido. Ingresa un dia dentro del rango de 1 a 31");
+            }
+            break;
+        case 10: //Nov
+            if (dia < 1 || dia > 30) {
+                document.getElementById("dia").value = "";
+                alert("Día invalido. Ingresa un dia dentro del rango de 1 a 30");
+            }
+            break;
+        default: //Dic
+            if (dia < 1 || dia > 31) {
+                document.getElementById("dia").value = "";
+                alert("Día invalido. Ingresa un dia dentro del rango de 1 a 31");
+            }
+            break;
+    }
 
+    // Arroja día de la semana
     switch (diaSemana) {
         case 0:
             document.getElementById("diaSemana").innerHTML = "Domingo, Día inhabil";
@@ -114,6 +138,7 @@ const datosFecha = () => { // const datosFecha = () =>{
             break;
     }
 
+    // Arroja si es Bisiesto o no
     //Bis = 0
     //NoBis = decimal
     anioBis = anio % 4;
@@ -129,10 +154,12 @@ const datosFecha = () => { // const datosFecha = () =>{
     }
 
 }
-function borrar() {
+
+    // Boton borrar
+    function borrar() {
     document.getElementById("dia").value = "";
     document.getElementById("mes").value = "";
     document.getElementById("anio").value = "";
     document.getElementById("Respond").value = "";
     document.getElementById("anioBis").value = "";
-}
+    }
