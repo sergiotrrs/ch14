@@ -1,28 +1,52 @@
+
+<!--PREGUNTA TU NOMBRE   -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <link href="css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-</head>
+    <!-- Le ponemos tìtulo a la pestaña -->
+    <title>Pregunta tu nombre</title>
+    <!-- Hacemos referencia a la hoja de estilos de bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Referenciamos a una hoja de estilos -->
+    <link href="style.css" rel="stylesheet"/>
+  </head>
 <body>
-  <h1 id="nombre">Hola Nombre</h1>  
+
 
   
-  <div class="d-grid gap-2">
+  
 
-    <button class="btn btn-outline-success" type="submit" onclick="abrePregunta()">¡Cambiar el nombre!</button>
+  <div class="container">
+
+    <!-- Fila 1 para el titulo -->
+    <div class="row align-items-center justify-content-center">
+
+      <div class="col align-self-center">
+
+        <h1 class="m-5" id="nombre"> ¡Hola ...!</h1>  
+      </div>
+
+    </div>
+
+    <!-- Fila 2 para el boton -->
+    <div class="row align-items-center justify-content-center">
+
+      <div class="col-3 align-self-center">
+        <button type="button" class="btn btn-dark btn btn-secondary btn-lg" onclick="abrePregunta()">¡Cambiar el nombre!</button>
+      </div>
+
+    </div>
 
   </div>
-
 
   <!-- Llamando al script en la carpeta -->
 <script src="script.js"></script>
 
-<script src="js/bootstrap.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
 </body>
 
 </html>

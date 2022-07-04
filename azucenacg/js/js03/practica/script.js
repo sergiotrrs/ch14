@@ -54,7 +54,7 @@ function typeOfDay (){
         break;
 
     default:
-        console.log("Opción invalida");
+        document.getElementById("resul").value="Opción invalida";   
         break;
 
 }

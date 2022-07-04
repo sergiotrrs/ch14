@@ -1,0 +1,12 @@
+h1 {
+    color: rgb(0, 0, 0);
+    font-family: "Lucida Handwriting", "Courier New", monospace;
+    background-color: rgb(138, 75, 115);
+    text-align: center
+    
+  }
+
+  body {
+    /* background-color: rgb(185, 144, 128); */
+    background-image: url("https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png");
+  }
