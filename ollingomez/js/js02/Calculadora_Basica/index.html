@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ollin_Generation</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
-        <!-- Coloco una imagen de fondo -->
-        <style>
-            body {
-              background-image: url('https://th.bing.com/th/id/OIP.LIbLVXAjh9cR3M-jVkwRHAHaNJ?pid=ImgDet&rs=1');
-              background-repeat: no-repeat;
-              background-attachment: fixed;
-              background-size: cover;
-            }
-            input{
-                margin:10px;
-            }
-            </style>
-        <br>
-        
+    <!-- Coloco una imagen de fondo -->
+    <style>
+        body {
+            background-image: url('https://th.bing.com/th/id/OIP.LIbLVXAjh9cR3M-jVkwRHAHaNJ?pid=ImgDet&rs=1');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        input {
+            margin: 10px;
+        }
+    </style>
 </head>
+
 <body>
     <br>
     <!-- Centro el encabezado h1 -->
@@ -31,33 +33,49 @@
     <!-- Genero los cuadros de texto y los botones -->
     <form>
         <!-- Centrando cuadros de texto -->
-        <div class="container-md">
-            <div class="row-justify-content-center">
-                <div class="col-lg-4 col-md-12 text-center">
-        <label for="valor1"></label><br>
-        <input type="number" id="valor1" style="text-align:center" placeholder="Introduce número 1"><br>
-        <label for="valor2"></label><br>
-        <input type="number" id="valor2" style="text-align:center" placeholder="Introduce número 2"><br><br>
-                 </div>
-            </div>
-        </div>
-        <h2 style="text-align:center" id="cambio">R</h2>
-        
-        <!-- Centrando los botones -->
-        <div class="container-md">
-            <div class="row-justify-content-center">
-                <div class="col-lg-4 col-md-12 text-center">
-                        <input type="button" id="button" value="S" onclick="capturar()"  class="btn btn-success"> 
-                        <input type="button" id="button" value="R" onclick="capturar1()" class="btn btn-danger">
-                        <input type="button" id="button" value="M" onclick="capturar2()" class="btn btn-warning">
-                        <input type="button" id="button" value="D" onclick="capturar3()" class="btn btn-info">
+        <div class="container-fluid text-center">
+            <div class="row">
+                <div class="col-sm-6">
+                    <label for="valor1"></label><br>
+                    <input class="float-md-none" type="number" id="valor1" style="text-align:center" placeholder="Introduce número 1"><br>
+                </div>
+                <div class="col-sm-6">
+                    <label for="valor2"></label><br>
+                    <input class="float-md-none" type="number" id="valor2" style="text-align:center" placeholder="Introduce número 2"><br><br>
                 </div>
             </div>
         </div>
-    </form> 
-    <br>
-   <!-- linck de los archivos js -->
-    <script src="script.js"></script>
-    <script src="js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+        <!-- entrando respuesta -->
+        <div class="row borrar">
+            <div class="col-12 mt-2">
+                <h2 style="text-align:center" id="cambio">R</h2>
+            </div>
+        </div>
+        <br>
+        <!-- Centrando los botones -->
+
+        <div class="container-fluid text-center">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <input type="button" id="button" value="Suma" onclick="capturar()" class="btn btn-success w-75">
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <input type="button" id="button" value="Resta" onclick="capturar1()" class="btn btn-danger w-75">
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <input type="button" id="button" value="Multiplicación" onclick="capturar2()" class="btn btn-warning w-75">
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <input type="button" id="button" value="División" onclick="capturar3()" class="btn btn-info w-75">
+                </div>
+            </div>
+        </div>
+
+        <!-- linck de los archivos js -->
+        <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+            crossorigin="anonymous"></script>
 </body>
+
 </html>
