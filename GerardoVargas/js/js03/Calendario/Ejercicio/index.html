@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body
+    background="https://img.freepik.com/foto-gratis/muro-hormigon-negro_24972-1046.jpg?t=st=1656789261~exp=1656789861~hmac=da1ee6ff934bfa7e828ae626f4fb57bfcc88ce50099eb6c8a38c0b4c4f39d359&w=1380">
+    <h1 class="text-white text-center ">Calendario</h1>
+    <h2 class="bg-warning text-dark text-center ">Validar días hábiles</h2>
+
+    <div class="container">
+        <div class="text-center text-white">
+            <div class="row">
+                <div class="col-12 col-sm-4 my-2">
+                    <b><span>Dia</span></b>
+                    <input class="form-control form-control-sm text-center" type="number" id="dia" placeholder="dd"
+                        max="31" min="1">
+                </div>
+                <!-- contenedor del mes -->
+                <div class="col-12 col-sm-4 my-2">
+                    <b><span>Mes</span></b>
+                    <input class="form-control form-control-sm text-center" type="number" id="mes" placeholder="mm"
+                        max="12" min="1">
+                </div>
+                <!-- contenedor del año -->
+                <div class="col-12 col-sm-4 my-2">
+                    <b><span>Año</span></b>
+                    <input class="form-control form-control-sm text-center" type="number" id="anio" placeholder="aaaa"
+                        max="2050" min="1970">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Contenedor "Dia de la semana" -->
+    <div class="container text-center">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-4 my-2">
+                <button type="button" id="Respond" style="text-align: center" type="text" name="wday" value="" size="9"
+                    class="ctr form-control form-control-sm" readonly="">Dia de la semana</button>
+            </div>
+        </div>
+    </div>
+    <!-- Botón de datos -->
+    <div class="container text-center">
+        <div class="row">
+            <div class="justify-content-center">
+                <button onclick="datos()" type="button" class="btn btn-primary mb-1 mx-1 rounded">Dia</button>
+            </div>
+        </div>
+    </div>
+    <!--****************** PRUEBA <h2 id="Respond">Dia</h2> ***************-->
+    <!-- Contenedor de anioBis -->
+    <div class="container text-center">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-4 my-2">
+                <button type="button" id="anioBis" style="text-align: center" type="text" name="wday" value="" size="9"
+                    class="ctr form-control form-control-sm" readonly="">Tipo año</button>
+            </div>
+        </div>
+    </div>
+    <!-- Boton de borrar -->
+    <div class="row borrar">
+        <div class="col-12 mt-2">
+            <button type="button" class="btn btn-warning mx-4" id="borrar" onclick="borrar()">Borrar</button>
+        </div>
+    </div>
+    <!-- Contenedor de redes Linkedin * Spotify * -->
+    <div class="card container text-white bg-dark mb-3 text-center col-12 col-sm-2 my-3">
+        <div class="card-body"> <b>Redes</b>
+        </div>
+        <p><b>Gerardo Marin Vargas </b><a href="https://www.linkedin.com/in/gerardo-marin-vargas-527438240/"><br><svg
+                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="link-danger bi-hand-index-thumb-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M8.5 1.75v2.716l.047-.002c.312-.012.742-.016 1.051.046.28.056.543.18.738.288.273.152.456.385.56.642l.132-.012c.312-.024.794-.038 1.158.108.37.148.689.487.88.716.075.09.141.175.195.248h.582a2 2 0 0 1 1.99 2.199l-.272 2.715a3.5 3.5 0 0 1-.444 1.389l-1.395 2.441A1.5 1.5 0 0 1 12.42 16H6.118a1.5 1.5 0 0 1-1.342-.83l-1.215-2.43L1.07 8.589a1.517 1.517 0 0 1 2.373-1.852L5 8.293V1.75a1.75 1.75 0 0 1 3.5 0z" />
+                </svg>Linkedin</a>
+        </p>
+        <p>Ch14<a href="https://open.spotify.com/playlist/6cgzLVqCitM1hoo9bGzDye?si=367f9f19c955480a"><br><svg
+                    xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="link-success bi-spotify" viewBox="0 0 16 16">
+                    <path
+                        d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.669 11.538a.498.498 0 0 1-.686.165c-1.879-1.147-4.243-1.407-7.028-.77a.499.499 0 0 1-.222-.973c3.048-.696 5.662-.397 7.77.892a.5.5 0 0 1 .166.686zm.979-2.178a.624.624 0 0 1-.858.205c-2.15-1.321-5.428-1.704-7.972-.932a.625.625 0 0 1-.362-1.194c2.905-.881 6.517-.454 8.986 1.063a.624.624 0 0 1 .206.858zm.084-2.268C10.154 5.56 5.9 5.419 3.438 6.166a.748.748 0 1 1-.434-1.432c2.825-.857 7.523-.692 10.492 1.07a.747.747 0 1 1-.764 1.288z" />
+                </svg>Spotify</a></p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
