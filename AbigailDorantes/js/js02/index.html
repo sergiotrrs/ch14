@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DtutiaAbi </title>
+    <!--se agrega link para trabajar con bootstrap css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Se agrega nombre principal y una breve descripción -->
+    <h1 class="text-center " style="background-color:pink ;"> Calcular Fecha</h1>
+    <p class="text-center" style="background-color:rgb(118, 79, 135); color:white;"> Ingresa fecha y te dire si es laboral o no </p>
+    <!-- Se agregan contenedores para hacer la pagina responsiva para una resolucion <576px -->
+    <div class="container-md">
+        <div class="row justify-content-center ">
+            <div class="col-md-4 ms-auto">
+                <!-- se agrega primer entrada  -->
+                <label for="dia">Dia</label>
+                <input id="dia" type="date" placeholder="Inserte número de dia" value="">
+            </div>
+            <div class="col-md-4 ms-auto">
+                <!-- se agrega segunda entrada  -->
+                <label for="mes">mes</label>
+                <input id="mes" type="month" placeholder="Inserte úmero" value="">
+            </div>
+            <div class="col-md-4 ms-auto">
+                <!-- se agrega segunda entrada  -->
+                <label for="ano">año</label>
+                <input id="ano" type="" placeholder="Inserte úmero" value="">
+            </div>
+        </div>
+    </div>
+    <br>
+    <!-- se agrega donde se imprimira el resultado de las operaciones realizadas  -->
+    <p style="text-align: center;">Su resultado es: </p>
+    <h2 id="result" style="text-align: center; color: rgb(118, 170, 118);
+    "> <em>Resultado </em></h2>
+    <br>
+    <!-- se agregan contenedores para botones para hacer la pagina responsiva para una resolucion <576px -->
+    <div class="container-md">
+        <div class="row align-items-start">
+            <div class="col">
+                <!-- La función calc() realiza un cálculo para ser utilizado como valor de propiedad.
+            Se agregan botones con funciones desde js para realizar operaciones de suma, resta, multiplicacion, division -->
+                <button onclick="sumar()" type="button" class="btn btn-info  mx-auto  m-2"
+                    style="width:calc(100%) ; height: 50px;"><strong>+</strong></button>
+            </div>
+            <div class="col">
+                <button onclick="resta()" type="button" class="btn btn-info  mx-auto  m-2"
+                    style="width:calc(100%) ; height: 50px;"><strong>-</strong></button>
+            </div>
+            <div class="col">
+                <button onclick="multipli()" type="button" class="btn btn-info  mx-auto  m-2"
+                    style="width:calc(100%) ; height: 50px;"><strong>x</strong></button>
+            </div>
+            <div class="col">
+                <button onclick="division()" type="button" class="btn btn-info  mx-auto  m-2"
+                    style="width:calc(100%) ; height: 50px;"><strong>/</strong></button>
+            </div>
+        </div>
+    </div>
+    <!--se agrega source para trabajar con archivo externo js-->
+    <script src="script.js"></script>
+    <!--se agrega link para trabajar con bootstrap js-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
