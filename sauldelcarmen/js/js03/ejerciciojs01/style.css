@@ -1,0 +1,16 @@
+div {
+  border: 5px;
+  text-align: center;
+}
+
+button {
+  cursor: pointer;
+}
+
+select {
+  width: 80px;
+  cursor: pointer;
+  text-align-last:center;
+
+}
+

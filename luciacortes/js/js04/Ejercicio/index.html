@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+</head>
+<body style="text-align: center;">
+    <h1 style= "background-color: #ABC9FF">Generation México</h1>
+    <h3>Ejercicio Calendario</h3>
+    <p>Bienvenido, usuario. Para calcular qué día de la semana fue alguna fecha, por favor, ingrese el día, seleccione
+        el mes e ingrese el año en donde corresponde. Después, de click en calcular.</p>
+    <div class="row-cols-4 justify-content-center">
+        <input type="number" id="dia" placeholder="Día" class="btn btn-outline-danger" />
+        <select name="form-select form-select-sm" aria-label="form-select-sm example" id="mes"
+            class="btn btn-outline-danger">
+            <option value="0">Elegir mes</option>
+            <option value="1">Enero</option>
+            <option value="2">Febrero</option>
+            <option value="3">Marzo</option>
+            <option value="4">Abril</option>
+            <option value="5">Mayo</option>
+            <option value="6">Junio</option>
+            <option value="7">Julio</option>
+            <option value="8">Agosto</option>
+            <option value="9">Septiembre</option>
+            <option value="10">Octubre</option>
+            <option value="11">Noviembre</option>
+            <option value="12">Diciembre</option>
+        </select>
+        <input type="number" id="anio" placeholder="Año" class="btn btn-outline-danger" />
+    </div>
+    <div class="container-sm">
+        <button type="button" id="resultado" class="btn btn-outline-danger">Resultado</button>
+    </div>
+    <div class="container-sm">
+        <button type="button" id="calcular" onclick="calcularFecha()" class="btn btn-outline-danger">Calcular</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+<footer>
+    <p>Creada por <a href="https://www.linkedin.com/in/lucia-cortes-m/">Lucía Cortés</a></p>
+</footer>
+
+</html>
