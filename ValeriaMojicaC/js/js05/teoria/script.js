@@ -120,8 +120,97 @@ x = 2 ** 3;
 //Operador de asignacion
 x = 2;
 x += 10; //x = x + 10;
-x -= 3;
-x *= 3;
-x /= 2;
-x %= 4;
-x **= 3;
+x -= 3; //x = x -5
+x *= 3; //x = x * 3
+x /= 2; //x = x / 2
+x %= 4; //x = x % 4
+x **= 3;//x = x ** 3
+
+//Operadores de igualdad (comparacion)
+//operador igual que (solo compara el valor, no el tipo)
+x = 1;
+y = 2;
+console.log(`x == y: ${x == y}`); //false
+y = 1;
+console.log(`x == y: ${x == y}`); //true
+y = "1";
+console.log(`x == "y": ${x == y}`); //true
+
+//Operador diferente que !=
+x = 1;
+y = "2";
+console.log(`x != "y": ${x != y}`); //true
+console.log(`x++ != "y": ${x++ != y}`); //true
+console.log(`x != "y": ${x != y}`); //false
+console.log(`++x != "y": ${++x != y}`); //true
+
+//Operador extrictamente igual que ===
+//Compara el valor y tipo de dato
+x = 1;
+y = "1";
+console.log(`x === "y": ${x === y}`); //false
+
+//Operador extrictamente diferente !==
+//Compara el valor y tipo de dato
+console.log(`x !== "y": ${x !== y}`); //true
+
+//Operadores lógicos &&  ||  !
+//Operador &&
+//False, null, NaN, empty string o Undefine son considerados false
+true && true  //true  
+true && false //false 
+
+//Operadores de corto-circuito
+//Si el primer operador es true, el resultado es el valor del segundo
+console.log(`true && NaN ${true && NaN}`); //NaN
+//si el primer operador es false, el resultado sera el primer operador
+console.log(`false && NaN ${false && NaN}`); //False
+console.log(`true && "Hols Estrella" ${true && 'Hola Estrella'}`);//Hola estrella
+console.log(`null && "Hola Moi" ${null  && "Hola Moi"}`); //null
+console.log(`"a" && "Hola Moi" ${"a"  && "Hola Moi"}`); //Hola Moi
+console.log(`"" && "Hola Moi" ${""  && "Hola Maga"}`); //string vacio
+console.log(`" " && "Hola Moi" ${" "  && "Hola Maga"}`); //Hola Maga
+
+//Operador lógico or ||
+//False, null, NaN, empty string o Undefine son considerados false
+console.log(true || false); //true
+//Si el primer operador es true, el resultado es el primer operador
+//Si el primer operador es false, el resultado es el segundo operador
+console.log(`true || NaN ${true || NaN}`); //true
+console.log(`false || NaN ${false || NaN}`); //NaN
+console.log(`true || "Hols Estrella" ${true || 'Hola Estrella'}`);//true
+console.log(`null || "Hola Moi" ${null  || "Hola Moi"}`); //Hola Moi
+console.log(`"a" || "Hola Moi" ${"a"  || "Hola Moi"}`); //a
+console.log(`"" || "Hola Moi" ${""  || "Hola Maga"}`); //Hola Maga
+console.log(`" " || "Hola Moi" ${" "  || "Hola Maga"}`); //
+
+//Operador lógico not !
+let nuevoValor = !true;
+nuevoValor = !false
+//False, null, NaN, empty string o Undefine son considerados false
+console.log(`!NaN ${!NaN}`); //true
+console.log(`!true ${!true}`); //false
+console.log(`!"Hols Estrella" ${!'Hola Estrella'}`);//false
+console.log(`!false" ${!false}`); //true
+console.log(`!"a" ${!"a"}`); //false
+console.log(`!"" ${!""}`); //true
+console.log(`!" " ${!" "}`); //false
+
+//Operador lógico binario ?? Nullish Coalescing
+//Operador lógico que retorna el operador de la derecha
+//si el operador de la izquierda es null o undefined. De lo contrario retorna 
+//el valor de la izquierda
+let asistencia;
+console.log(`operador ?? Nulllish Coalescing`);
+console.log(`asiatencia = nul ?? true: ${asistencia = null ?? true}`); //true
+console.log(`asiatencia = nul ?? true: ${asistencia = 1 ?? true}`); //1
+x = undefined;
+console.log(`Asignacion de asiatencia = x: ${asistencia = x ?? "Asiste"}`);
+console.log(`Asignacion de asiatencia = x: ${asistencia = "" ?? "Asiste"}`);
+console.log(`typeOf (undefined): ${typeof(undefined)}`); //undefined
+console.log(`typeOf (null): ${typeof(null)}`); //object (erro de javascript)
+//Los datos se guardan en memoria como 1 y 0,
+//Los bits que indican el tipo de dato, para objetos es = 00
+//Para string es = 
+//Para numericos =
+//Para null, todos sus bits (1 y 0) son 000000... 000 (coincice con el de objetos)

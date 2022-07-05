@@ -4,16 +4,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WORK OR REST?</title>
+    <link rel = "stylesheet" href="css/bootstrap.min.css" >
+    <link rel = "stylesheet" href="main.css" >
 </head>
 <body>
-    <h1>PRACTICA DE FECHAS</h1>
-    <input type="number" id="dia" placeholder="dia">
-    <input type="number" id="mes" placeholder="mes">
-    <input type="number" id="year" placeholder="año"><br><br>
 
-    <button onclick="calcular()">Calcular</button><br><br>
-    <input type="text">
+        <div class="container-fluid text-center" id="nav">
+            <h1>PLANNING</h1><hr>
+            <h1>WORK OR REST?</h1>
+        </div>
+    
+        <!-- DIV PRINCIPAL-->
+
+      <div class="row " >
+        <div class=" col-12 col-sm-3 text-center"  id="first">
+            <img class="img-fluid h-100 "  id="imagen" src="https://estaticos-cdn.prensaiberica.es/clip/dc2a1787-2436-4582-9ada-db6414dfac46_16-9-aspect-ratio_default_0.jpg" alt="">
+
+        </div>
+        <div class=" col-12  col-sm-9"  id="first">
+            <div class="row px-1" id="second">
+                <!-- Div con input del día -->
+                <div class="col-4 text-center h-100 d-flex justify-content-center align-items-center"  >
+                    <input type="number" id="dia" placeholder="dia" class="form-control">
+                </div>
+                <div class="col-4 h-100 d-flex justify-content-center align-items-center text-center" id="ddown">
+                    <!-- Dropdown list (Meses del año) -->
+                    <form class="form-control bg-transparent border-0" >
+                        <select id="mes"  class="form-control">
+                            <option value="1">Enero</option>
+                            <option value="2">Febrero</option>
+                            <option value="3">Marzo</option>
+                            <option value="4">Abril</option>
+                            <option value="5">Mayo</option>
+                            <option value="6">Junio</option>
+                            <option value="7">Julio</option>
+                            <option value="8">Agosto</option>
+                            <option value="9">Septiembre</option>
+                            <option value="10">Octubre</option>
+                            <option value="11">Noviembre</option>
+                            <option value="12">Diciembre</option>
+                        </select>
+                    </form>
+
+                </div>
+                 <!-- Div con input del año -->
+                <div class="col-4 text-center h-100 d-flex justify-content-center align-items-center">
+                    <input type="number" id="year" placeholder="año" class="form-control">
+                </div>
+
+            </div>
+            <!-- Div para el botón de calcular -->
+            <div class="row align-middle" id="second">
+                <div class="col-12 text-center  d-flex justify-content-center align-items-center" >
+                    <button class="btn btn-primary w-50 h-50"  style="font-size:18px ;" id="miboton" onclick="calcular()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                          </svg>
+                        Calcular</button>
+                </div>
+            </div>
+            <!-- Div para mostrar resultado -->
+            <div class="row text-center align-middle" id="second">
+                <div class="col-12 h-100 d-flex justify-content-center align-items-center">
+                    <input type="text" id="calculo" class="form-control text-center h-75 fs-4" style="margin-right: 2%; margin-left: 2%;">
+                </div>
+            </div>
+
+        </div>
+      </div>
+    <!-- Información del desarrollador -->
+ <br><br><br><p style="color: white;">Developed by: <span><a href="https://www.linkedin.com/in/juan-francisco-aguilar-flores-a11b3616a/">Francisco Aguilar</a></span></p>
+
     <script src="script.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -5,9 +5,6 @@
 //  entrada y devolver una salida donde hay alguna relación obvia entre la 
 // entrada y la salida. Para usar una función, debes definirla en algún lugar
 //  del ámbito desde el que deseas llamarla.
-let day;
-let month;
-let year;
 
 function datos() {
     /**Guardo el valor de día en una variable */
@@ -16,6 +13,7 @@ function datos() {
     let month = document.getElementById("mes").value - 1; //
     /**Guardo el valor de ayo en una variable */
     let year = document.getElementById("anio").value;
+    let validarFebrero= anio % 4;
 
     if (day < 1 || day > 31) {
         alert("Ingresar día valido");
@@ -28,6 +26,20 @@ function datos() {
     if (year < 1970 || year > 2050) {
         alert("Ingresar año valido");
         document.getElementById("anio").value = "";
+    }
+    // FALTA COMPLETAR EL SIGUIENTE IF 
+    if (validarFebrero == 0 && day > 29 && month == 1) {
+        alert("Ingrese un dia menor o igual a 29 para el mes de Febrero");
+        document.getElementById("dia").value = "";
+        document.getElementById("anioBis").innerHTML = "";
+        document.getElementById("diaSemana").innerHTML = "";
+    }
+
+    if (validarFebrero !== 0 && day > 28 && month == 1) {
+        alert("Ingrese un dia menor o igual a 28 para el mes de Febrero");
+        document.getElementById("dia").value = "";
+        document.getElementById("anioBis").innerHTML = "";
+        document.getElementById("diaSemana").innerHTML = "";
     }
     const fecha = new Date(year, month, day);
     console.log(fecha);
@@ -57,20 +69,29 @@ function datos() {
             break;
 
     }
-    let anioBis;
-    anioBis = anio % 4;
-    switch (anioBis) {
-        case 0:
-            document.getElementById("anioBis").innerHTML = "Bisiesto"
-            break;
+    // let anioBis;
+    // anioBis = anio % 4;
+    // switch (anioBis) {
+    //     case 0:
+    //         document.getElementById("anioBis").innerHTML = "Bisiesto";
+    //         break;
 
-        default:
-            document.getElementById("anioBis").innerHTML = "No Bisiesto"
-            break;
-    }
+    //     default:
+    //         document.getElementById("anioBis").innerHTML = "No Bisiesto";
+    //         break;
+    // }
+
+    let bisiesto = year%4;
+  if(bisiesto==0){//cuando el residuo sea igual a 0 imprime
+  document.getElementById("anioBis").innerHTML="El año " + year + " es bisiesto";
+  }else{
+  document.getElementById("anioBis").innerHTML="El año " + year + " no es bisiesto";
+  }
 }
 function borrar() {
     document.getElementById("dia").value = "";
     document.getElementById("mes").value = "";
     document.getElementById("anio").value = "";
+    document.getElementById("Respond").innerHTML = "Diá de la semana";
+    document.getElementById("anioBis").innerHTML = "Tipo de año";
 }
