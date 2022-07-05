@@ -9,7 +9,16 @@ const calcularFecha = () =>{
 /*     //Se manda llamar a la función Date() que se almacena en la constante día
     const dia = new Date(Number(document.getElementById("anio").value),String(document.getElementById("mes").value)-1, Number(document.getElementById("dia").value)); */
     //Se coloca -1 en el mes por el año bisiesto 
-    document.getElementById("fecha").value = definirFecha(dia.getDay()); //Se manda llamar a la función definirFecha  */
+    //document.getElementById("fecha").value = definirFecha(dia.getDay()); //Se manda llamar a la función definirFecha  */
+    const formulario = document.getElementById("formulario");
+    console.log(formulario.elements['mes'].value);
+    const dia = new Date(
+        formulario.elements['anio'].value,
+        formulario.elements['mes'].value-1,
+        formulario.elements['dia'].value
+       )
+    formulario.elements['fecha'].value = definirFecha( dia.getDay());
+
 }
 
 //Función para indicar el día y si es laborable
