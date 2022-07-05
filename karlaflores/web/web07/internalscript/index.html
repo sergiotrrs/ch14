@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("Fiesta de Nancy")
+        </script>
+</head>
+<body>
+    <h1> Cumpleaños de Nancy</h1>
+    <p id="demo"> Esperando</p>
+    <p id="pastel" onclick ="pastelSorpresa()">Esperando pastel</p>
+    <button onclick="abreSorpresa()">Pulsa para sorpresa</button>
+    <br>
+    <h3> Invitados</h3>
+    <p class= "nombre" onclick="cambiarNombre(this, 'green')">Sebastian </p>
+    <p class= "nombre" onclick="cambiarNombre(this, 'red')">Guadalupe </p>
+    <p class= "nombre" onclick="cambiarNombre(this, 'blue')">Gerardo </p>
+    <p class= "nombre apelativo" onclick="cambiarNombre(this, 'orange')">Maga </p>
+    <button onclick="obtenerClases()">Obtener Clases</button>
+    <!-- Scripts -->
+    <script>
+        document.getElementById("demo").innerHTML = "Piñata";
+        </script>
+        <script src="scripts/fiesta.js"></script>
+</body>
+</html>

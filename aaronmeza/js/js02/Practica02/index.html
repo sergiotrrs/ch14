@@ -1,0 +1,51 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>La Calculadora de Aarón Meza </title>
+  </head>
+  <body
+    background = "https://content.r9cdn.net/rimg/dimg/b4/d7/5204394d-city-47535-169c4d94f7c.jpg?width=1200&height=630&crop=true"
+    <h1 class="p-3 mb-2 bg-primary text-black-50  text-center"> Calculadora de Aarón Meza  </h1>
+    <div class="container-fluid">
+        <!-- Enla siguiente linea la fila (row) se justifica y se centra -->
+        <div class="row justify-content-center">
+    
+          <div class="col-lg-4 col-md-4 col-sm-6">
+            <input type="number" class="form-control" placeholder="Insertar Número" id="a">
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-6">
+            <input type="number" class="form-control" placeholder="Insertar Número" id="b">
+          </div>
+        </div> 
+        <h2 class="text-center mt-3"><span id="resultado">
+            <button type="button" >Muestra Resultado</button></span></h2>
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <div class="col-lg-6 col text-center">
+              <button onclick="sumar()" type="button" >sumar</button>
+              <button onclick="restar()" type="button">restar</button>
+              <button onclick="multiplicar()" type="button">multiplicar</button>
+              <button onclick="dividir()" type="button" >dividir</button>
+            </div>
+            <div class="row text-center borrar">
+              <div class="col-12 mt-2">
+                  <button type="button"  id="borrar" onclick="borrar()">Borrar</button>
+              </div>
+          </div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+    crossorigin="anonymous"></script>
+    <script src="scripts/ScriptPrac02.js"></script>
+  </body>
+</html>
