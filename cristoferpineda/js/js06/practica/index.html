@@ -16,16 +16,35 @@
 
 <body>
     <div class="container-fluid contenedor-inputs align-items-center ">
-        <form class="formulario-container">
+        <form id="formulario" class="formulario-container">
             <div class="container-fluid bg-light text-dark text-center">
                 <h1>Días laborables</h1>
             </div>
             <div class="row p-5 align text-center">
                 <div class="col-sm-12">
-                    <input type="number" name="" id="dia" class="fecha" placeholder="Día">
+                    <input 
+                       type="number" 
+                       name="" id="dia" 
+                       class="fecha" 
+                       placeholder="Día"
+                       min="1"
+                       max="31"
+                       title="Indique el dia a buscar" 
+                       required   
+                       oninvalid="setCustomValidity('Es necesesario espesificar el dia')" 
+                       oninput="setCustomValidity('')"
+                       >
                 </div>
                 <div class="col-sm-12">
-                    <select type="number" name="" id="mes" class="fecha" placeholder="Mes">
+                    <select 
+                       type="number" 
+                       name="" 
+                       id="mes" 
+                       class="fecha" 
+                       placeholder="Mes"                       
+                       title="Indique el mes a buscar"
+                       >
+
                         <option value="1">Enero</option>
                         <option value="2">Febrero</option>
                         <option value="3">Marzo</option>
@@ -40,31 +59,44 @@
                         <option value="12">Diciembre</option>
                 </div>
                 <div class="col-sm-12">
-                    <input type="number" name="" id="anio" class="fecha" placeholder="Año">
+                    <input 
+                        type="number" 
+                        name="" 
+                        id="anio" 
+                        class="fecha" 
+                        placeholder="Año" 
+                        title="Indique el año a buscar"
+                        min="1997"
+                        max="2050"
+                        required
+                    >
+                        
                 </div>
-            
+
                 <div class="row p-4 align-text-center">
-                    <div class="col-sm-8">
-                        <button type="button" class="btn btn-outline-light boton-operacion btn-calcular"
+                    <div class="col-sm-8 my-1">
+                        <button type="submit" class="btn btn-outline-light boton-operacion btn-calcular"
                             onclick="calcularFecha()">Calcular día</button>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-4 my-1">
                         <button class="btn btn-outline-light boton-operacion btn-limpiar" onclick="reset()"
                             style="width: calc(mt-auto);">Limpiar</button>
                     </div>
                 </div>
-            </div>    
+            </div>
             <div class="container-fluid contenedor-resultado align-items-center">
                 <div class="row p-6">
                     <div class="col-3"></div>
                     <div class="col" id="resultado">
-                        <input type="text" name="" id="fecha" style="text-align: center; color:rgb(36, 37, 71);border: 5px solid rgb(36, 37, 71); border-radius: 10px" class="resultado" disabled >
+                        <input type="text" name="" id="fecha"
+                            style="text-align: center; color:rgb(36, 37, 71);border: 5px solid rgb(36, 37, 71); border-radius: 10px"
+                            class="resultado" disabled>
                     </div>
                 </div>
             </div>
         </form>
         <script src="script/script.js"></script>
-        
+    </div>
 </body>
 
 </html>
