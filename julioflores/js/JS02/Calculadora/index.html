@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+<script src="script.js"></script>
+<link href="Download/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    <style>
+        body {
+            color: black;
+            background-image: url(https://i.ibb.co/6DRRMXM/8c43645fe8d0ac164a6925448be32858.jpg);
+        }
+    </style>
+
+    <h1 style="text-align:center">Calculadora
+    <form>
+        <label for="valorA"></label><br><br>
+        <input type="number" id="valorA" style="text-align: center" placeholder="Introduce número 1">
+        <label for="valorB"></label><br><br>
+        <input type="number" id="valorB" style="text-align: center" placeholder="Introduce número 2">   
+    </form>
+    </h1>
+      
+    <h2 style="text-align: center" id="result">Resultado
+       
+    <div class="container-md">
+        <div class="row-justify-content-center">
+            <div class="col-lg-4 col-md-12 text-center">
+                <button type="button" id="buttom" class="btn btn-primary" value="suma" onclick="calcular()">+</button>
+                <button type="button" id="buttom" class="btn btn-primary" value="resta" onclick="calcular2()">-</button>
+                <button type="button" id="buttom" class="btn btn-primary" value="mult" onclick="calcular3()">x</button>
+                <button type="button" id="buttom" class="btn btn-primary" value="div" onclick="calcular4()">/</button>
+            </div>
+        </div>
+    </div>
+    </h2>
+
+    
+    
+    
+   
+   <script src="Download/js/bootstrap.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
