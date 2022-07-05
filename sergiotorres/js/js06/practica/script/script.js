@@ -1,3 +1,39 @@
+setInvisible(true);
+/**
+ * Establecer como invisble el botón de limpiar
+ * @param {boolean} estado true: visible, false:invisible
+ */
+function setInvisible(estado){
+    const formulario = document.getElementById("formulario");
+    // let status = "visible";
+    // if(estado) status="hidden";
+    // formulario.elements['limpiar'].style.visibility = status;    
+    
+    let status = "inline";
+    if(estado) status = "none";
+    formulario.elements['limpiar'].style.display = status;
+    formulario.elements['fecha'].style.display = status;
+}
+
+
+const form = document.getElementById('formulario');
+
+form.addEventListener('submit', (event) =>{
+    event.preventDefault();
+    console.log(event);
+    calcularFecha();
+    setInvisible(false);
+}  );
+
+form.addEventListener('click', (event) =>{ 
+    console.log("click: "+ event);
+    
+}  );
+
+
+
+
+
 //Obtener la fecha determinada
 /**
  * @param {int} anio
@@ -27,11 +63,11 @@ const calcularFecha = () =>{
 
 }
 
-//Función para indicar el día y si es laborable
+
 /**
- * 
- * @param {int}  dia 
- * @return "'Día', fin de semana o 'Día', día lavorable"
+ * Función para indicar el día y si es laborable
+ * @param {number}  dia 
+ * @return "'Día', fin de semana o 'Día', día laborable"
  */
 function definirFecha(dia){
     switch(dia){
