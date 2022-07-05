@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dias laborales</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <style media="screen">
+            @media (max-width: 576px) {
+                body{
+                    background: salmon
+                }
+            }
+            </style>
+    <h1 style="text-align:center">Dias laborales</h1>
+</head>
+<body>
+    <form>
+    </div>
+    <hr>
+
+    <div class="container-sm">
+        <div class="row">
+            <div class="col-sm-4 text-center"> 
+                <label for="valorA">Ingresa dia</label>
+                <input type="text" class="form-control" id="a" autofocus placeholder="dd">
+            </div>
+            <div class="col-sm-4 text-center"> 
+                <label for="valorA">Ingresa mes</label>
+                <input type="text" class="form-control" id="b"  placeholder="dd">
+            </div>
+            <div class="col-sm-4 text-center"> 
+                <label for="valorA">Ingresa año</label>
+                <input type="text" class="form-control" id="c" placeholder="aaaa">
+            </div>
+        </div>
+    </div>
+
+    <hr>
+        <div class="row justify-content-center">
+            <div class="col-sm-6"> 
+                <button onclick="diaSemana()" type="button" class="btn btn-dark">Calcular</button>
+            </div>
+        </div>
+
+        <hr>
+        <div class="row justify-content-center">
+            <div class="col-md-6"> 
+                <button id="dayz" type="button" class="btn btn-warning">Dias laborables</button>
+            </div>
+        </div>
+
+    </form>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+</body>
+</html>
