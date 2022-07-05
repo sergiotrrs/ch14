@@ -17,13 +17,25 @@
 
 <body>
     <div class="container-fluid contenedor-inputs align-items-center ">
-        <form class="formulario-container">
+        <form id="formulario" class="formulario-container">
             <div class="container-fluid bg-light text-dark text-center">
                 <h1>Días laborables JFAF</h1>
             </div>
             <div class="row p-5 align text-center">
                 <div class="col-sm-12">
-                    <input type="number" name="" id="dia" class="fecha" placeholder="Día">
+                    <input
+                     type="number" 
+                     name="" 
+                     id="dia" 
+                     class="fecha"
+                      placeholder="Día"
+                      min="1" 
+                      max="31"
+                      title="Indique el día a buscar"
+                      required
+                      oninvalid="setCustomValidity('Es necesario especificar el dia')"
+                      oninput="setCustomValidity('')"
+                      >
                 </div>
                 <div class="col-sm-12">
                     <select type="number" name="" id="mes" class="fecha" placeholder="Mes">
@@ -41,15 +53,27 @@
                         <option value="12">Diciembre</option>
                 </div>
                 <div class="col-sm-12">
-                    <input type="number" name="" id="anio" class="fecha" placeholder="Año">
+                    <input 
+                    type="number"
+                     name="" 
+                     id="anio" 
+                     class="fecha" 
+                     placeholder="Año"
+                     min="1997"
+                     max="2050"
+                     title="Introduce el año a buscar"
+                     required 
+                     oninvalid="setCustomValidity('Es necesario especificar el año')"
+                     oninput="setCustomValidity('')"
+                     >
                 </div>
             
                 <div class="row p-4 align-text-center">
-                    <div class="col-sm-8">
-                        <button type="button" class="btn btn-outline-light boton-operacion btn-calcular"
+                    <div class="col-sm-8 my-1">
+                        <button type="submit" class="btn btn-outline-light boton-operacion btn-calcular"
                             onclick="calcularFecha()">Calcular día</button>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-4 my-1">
                         <button class="btn btn-outline-light boton-operacion btn-limpiar" onclick="reset()"
                             style="width: calc(mt-auto);">Limpiar</button>
                     </div>
@@ -65,6 +89,7 @@
             </div>
         </form>
     </div>
+    <script src="script/script.js"></script>
 </body>
 
 </html>
