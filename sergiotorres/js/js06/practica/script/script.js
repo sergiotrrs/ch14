@@ -7,16 +7,23 @@
  */
 const calcularFecha = () =>{ 
     //Se manda llamar a la función Date() que se almacena en la constante día
-    const dia = new Date(
+/*     const dia = new Date(
         Number(document.getElementById("anio").value),
         String(document.getElementById("mes").value)-1, 
         Number(document.getElementById("dia").value));
     
         //Se coloca -1 en el mes por que enero comienza con 0
     document.getElementById("fecha").value = definirFecha(dia.getDay()); 
-
-    
-
+ */
+   
+    const formulario = document.getElementById("formulario");
+    console.log( formulario.elements['mes'].value );
+    const dia = new Date(
+        formulario.elements['anio'].value,
+        formulario.elements['mes'].value-1,
+        formulario.elements['dia'].value
+    )
+    formulario.elements['fecha'].value = definirFecha( dia.getDay() );
 
 }
 
