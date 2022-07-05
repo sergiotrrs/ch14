@@ -1,3 +1,26 @@
+setInvisible(true);
+/**
+ * Establecer como invisible el botón de limpiar
+ * 
+ */
+
+function setInvisible(estado) {
+    const formulario = document.getElementById("formulario");
+    let status="visible";
+    if(estado) status="hidden"
+    formulario.elements['limpiar'].style.visibility= status;
+
+}
+
+const form = document.getElementById('formulario');
+
+form.addEventListener('submit', (event) =>{ 
+    event.preventDefault();
+    console.log(event);
+    calcularFecha();
+    setInvisible(false);
+} )
+
 //Obtener la fecha determinada
 /**
  * @param {int} anio
