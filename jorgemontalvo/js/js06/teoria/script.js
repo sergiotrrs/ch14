@@ -2,7 +2,9 @@ console.log("Teoría de Sesión JS06");
 // encontrarPorId();
 // encontrarPorTagName();
 // encontrarPorClase();
-encontrarPorSelector();
+// encontrarPorSelector();
+// crearElemento();
+cambiarEstilo();
 
 function encontrarPorId(){
     //Obtenemos el metodo mediante su Id
@@ -43,4 +45,32 @@ function encontrarPorSelector(){
     let unirStr="";
     elements.forEach(dato => unirStr+=dato.innerHTML + " ")//Se unen los strings de p.saludo
     document.getElementById("concatena").innerHTML = unirStr;
+}
+
+function crearElemento(){
+    const nuevoElemento = document.createElement("p"); //<p><\p>
+    nuevoElemento.innerHTML = "Este es un nuevo párrafo" // <p>Este es un nuevo párrafo<\p>
+    document.body.appendChild(nuevoElemento); // Se inserta el objeto en body 
+    document.getElementById("titulo").appendChild(nuevoElemento);// Se inserta el elemento en la id="titulo"
+
+}
+
+function cambiarEstilo(){
+    document.getElementById("intro").style.color = "tomato"; //Cambia el color del id=intro
+    const estilo = document.createElement("style");
+    //Tods los elementos HTML son nodos
+    //Los elementos, atributos y textos son nodos.
+    const texto = document.createTextNode(" body {font: 20px verdana; background-color: lightblue} ");
+    estilo.appendChild(texto);
+    /**
+     * <style>
+     * body{
+     * font = 20 px verdana;
+     * background-color: blue;
+     * }
+     * 
+     * </style>
+     */
+    document.head.appendChild(estilo);
+
 }
