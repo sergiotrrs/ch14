@@ -23,7 +23,7 @@ label{
 }
 .myfooter{
     text-align: center;
-    position: absolute;
+    position: sticky;
     bottom: 0;
     height: 40px;
     width: 100%;

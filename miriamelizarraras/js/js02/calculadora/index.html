@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <!-- /*Utilicé el link de bootstrap, solo se puede ver si hay internet*/ -->
+    <link href="bootstrap/css/bootstrap.min.css" rel=“stylesheet” crossorigin=“anonymous”>
+
+
+</head>
+
+<body>
+    <style>
+        body {
+            background-image: url(https://www.elrinconhabla.com/media/elrinconhabla/images/2020/12/30/2020123010224821914.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            text-align: center;
+        }
+
+        input {
+            margin: 10px;
+        }
+
+        h1 {
+            color: white;
+            font-size: 60px;
+        }
+
+        h2 {
+            color: white;
+            font-size: 45px;
+        }
+    </style>
+    <br>
+    <br>
+    <h1><strong>Calculadora</strong></h1>
+
+
+    <form>
+        <div class="container-md">
+            <label for="1"></label> <br><br>
+            <input type="number" id="valor1" style="text-align: center" placeholder="Introduce número A">
+            <label for="2"></label><br><br>
+            <input type="number" id="valor2" style="text-align: center" placeholder="Introduce número B">
+        </div><br><br>
+
+        <h2 id="resultado">Resultado</h2><br><br>
+        <div>
+            <input type="buttom" id="buttom" value="Suma" onclick="capturar()" class="btn btn-light">
+
+            <input type="buttom" id="buttom" value="Resta" onclick="capturarResta()" class="btn btn-light">
+
+            <input type="buttom" id="buttom" value="Multiplicación" onclick="capturarMulti()" class="btn btn-light">
+
+            <input type="buttom" id="buttom" value="División" onclick="capturarDiv()" class="btn btn-light">
+        </div>
+
+
+    </form>
+
+    <script src="calculadora.js"></script>
+    <script src=“/bootstrap/js/bootstrap.bundle.min.js” crossorigin=“anonymous”></script>
+
+
+</body>
+
+</html>
