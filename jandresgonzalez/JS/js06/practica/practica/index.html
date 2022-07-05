@@ -34,8 +34,8 @@
                         max="31"
                         title="Indique el día en número"
                         required
-                        oninvalid="setCustomValidity('Especificar el año')"
-                        oninput="setCustomValidity(' ')"                        
+                        oninvalid="setCustomValidity('Indicar dia')"
+                        oninput="setCustomValidity('')"                        
                         >
                 </div>
                 <div class="col-sm-12">
@@ -71,9 +71,10 @@
                         class="fecha"
                         placeholder="Año"
                         title="Indique el año en número"
+                        min="1970"
                         required
                         oninvalid="setCustomValidity('Especificar el año')"
-                        oninput="setCustomValidity(' ')"
+                        oninput="setCustomValidity('')"
                         >
                 </div>
         </form>
@@ -81,19 +82,32 @@
         <!-- BOTONES CALCULAR LIMPIAR-->
         <div class="container-fluid results-container">
             <div class="row p-4 align-text-center">
-                <div class="col-sm-8 my-1">
-                    <button type="submit" class="btn btn-outline-light boton-operacion btn-calcular"
-                        onclick="calcularFecha()">Calcular día</button>
-                </div>
-                <div class="col-sm-4 my-1">
-                    <button class="btn btn-outline-light boton-operacion btn-limpiar" onclick="reset()"
-                        style="width: calc(mt-auto);">Limpiar</button>
+                <div class="col my-1">
+
+                    <button
+                        type="submit"
+                        class="btn btn-outline-light boton-operacion btn-calcular
+                        mx-1 my-1">
+                        Calcular día
+                    </button>
+                
+
+                    <button 
+                        type="reset"
+                        id="limpiar"
+                        class="btn btn-outline-light boton-operacion btn-limpiar mx-3
+                        mx-1 my-1"
+                        style="width: calc(mt-auto);"
+                        onclick="setInvisible(true)">
+                        Limpiar
+                    </button>
+
                 </div>
             </div>
         </div>
         <!-- RESULTS -->
         <div class="container-fluid contenedor-inputs align-items-center">
-            <div class="row p-6">
+            <div class="row p-6 m-5 p-4">
                 <div class="col-3"></div>
                 <div class="col" id="resultado">
                     <input type="text" name="" id="fecha"

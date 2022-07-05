@@ -1,18 +1,22 @@
+const form = document.getElementById("form");
+setInvisible(true);
+
+form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    calcularFecha();
+    setInvisible(false);
+});
+
+
+
 //Obtener la fecha determinada
 /**
- * @param {int} anio
- * @param {int} mes
- * @param {int} dia
+ * @param {number} anio
+ * @param {number} mes
+ * @param {number} dia
  * @return fecha dd/mm/aaaa (fecha solicitada)
  */
 const calcularFecha = () =>{ 
-/*     //Se manda llamar a la función Date() que se almacena en la constante día
-    const dia = new Date(Number(document.getElementById("anio").value),String(document.getElementById("mes").value)-1, Number(document.getElementById("dia").value));
-    console.log(dia);
-    //Se coloca -1 en el mes por el año bisiesto 
-    document.getElementById("fecha").value = definirFecha(dia.getDay()); //Se manda llamar a la función definirFecha 
- SHIFT ALT A pa comentar*/
-
 const formulario = document.getElementById("form");
 let day = formulario.elements['dia'].value;
 let month = formulario.elements['mes'].value - 1;
@@ -23,43 +27,25 @@ const dia = new Date(
     day
 );
 
-if (formulario.elements['anio'].value == 0 || formulario.elements['dia'].value == 0) {
-    window.alert("Por favor, ponga fecha en los campos indicados.");
-}
-else {
-/*
-else {
-    if (month == 1 || 
-        month == 3 ||
-        month == 5 ||
-        month == 7 || 
-        month == 8 ||
-        month == 10 ||
-        month == 12 &&
-        day >=32) {
-        window.alert(`El mes ingresado tiene 31 días. Por favor, ingrese otro día`);
-        day = 31;
-    }
-    else if (month == 4 ||
-            month==6 ||
-            month==9 ||
-            month==11 &&
-            day >=31) {
-        window.alert(`El mes ingresado tiene 30 días. Por favor, ingrese otro día`);
-        day = 30;
-    }
-    else if (month == 2) {
-        if (year%4 == 0) {
-            window.alert(`El mes ingresado tiene 29 días en bisiesto. Por favor, ingrese otro día`);
-            day = 29;
-        }
-        else {
-            window.alert(`El mes ingresado tiene 28 días, si el año no es bisiesto. Por favor, ingrese otro día`);
-            day=28;
-        }
-    } */
+
     formulario.elements['fecha'].value = definirFecha(dia.getDay());
 }
+
+/**
+ * 
+ * @param {boolean} con true se oculta, con false es visible 
+ */
+ function setInvisible(estado) {
+    const formulario = document.getElementById("form");
+    let status= "visible";
+    if (estado) status= "hidden"
+    formulario.elements["limpiar"].style.visibility=status;
+    formulario.elements["fecha"].style.visibility=status;
+    
+    
+    //let boole = "inline";
+    //if (estado) boole = "none";
+    //formulario.elements["limpiar"].style.display = boole;
 }
 
 
@@ -91,3 +77,5 @@ function definirFecha(dia){
             
     }
 }
+
+//Shift alt a para comentar
