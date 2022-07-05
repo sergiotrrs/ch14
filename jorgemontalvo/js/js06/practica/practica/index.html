@@ -73,13 +73,21 @@
                 </div>
 
                 <div class="row p-4 align-text-center">
-                    <div class="col-sm-8 my-1">
-                        <button type="submit" class="btn btn-outline-light boton-operacion btn-calcular"
-                            onclick="calcularFecha()">Calcular día</button>
-                    </div>
-                    <div class="col-sm-4 my-1">
-                        <button class="btn btn-outline-light boton-operacion btn-limpiar" onclick="reset()"
-                            style="width: calc(mt-auto);">Limpiar</button>
+                    <div class="col-sm-12 ">
+                        <button 
+                        type="submit" 
+                        class="btn btn-outline-light boton-operacion btn-calcular my-1 mx-2"
+                        >Calcular día
+                        </button>
+                    <!-- </div> -->
+                    <!-- <div class="col-sm-4 my-1"> -->
+                        <button 
+                        id="limpiar" 
+                        type="reset" 
+                        class="btn btn-outline-light boton-operacion btn-limpiar my-1 mx-2"
+                        style="width: calc(mt-auto);"
+                        onclick="setInvisible(true)"
+                        >Limpiar</button>
                     </div>
                 </div>
             </div>
