@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Document</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+    <h1>Cumpleaños de Nancy</h1>
+    <p id="demo"> Esperando piñata</p>
+    <p id="pastel" onclick="pastelSorpresa()">Pastel esperando</p>
+    <button onclick="abreSorpresa()">Pulsa para una sorpresa</button>
+    <button onclick="estadoPinata()">Estado de piñata</button>
+    <br>
+    <h3>Invitados</h3>
+    <p class="nombre" onclick="cambiarNombre(this, 'green')">Sebastian</p>
+    <p class="nombre" onclick="cambiarNombre(this, 'blue')">Guadalupe</p>
+    <p class="nombre apelativo" onclick="cambiarNombre(this, 'fuchsia')">Gerardo</p>
+    <p class="nombre apelativo" onclick="cambiarNombre(this, 'red')">Venus</p>
+    <button onclick="obtenerClases()">Obtener Clases</button>
+
+    <!-- Scripts -->
+    <script>
+        console.log("Queremos romper la piñata");
+        document.getElementById("demo").innerHTML = "Quiero romper la piñata";
+
+        function estadoPinata() { 
+            document.getElementById("demo").innerHTML = "Se rompieron las piñatas";
+        }
+    </script>
+    <script src="scripts/fiesta.js"></script>
+</body>
+</html>

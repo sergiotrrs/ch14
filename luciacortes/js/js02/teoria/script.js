@@ -77,7 +77,7 @@ console.log("El residuo es "+ residuo(9,2) );
 //Funciones dentro de objetos******* Función y método son sinónimos
 //ir declarándolos uno por línea para que sea más fácil de leer
 const participante = {
-    nombre:"Jorge", //nombre es la clave "Jorge" el valor.
+    nombre:"Jorge", //nombre es la clave ,"Jorge" el valor.
     apellido:"Montalvo",
     nombreCompleto: function(){
         return this.nombre+ " "+ this.apellido;
