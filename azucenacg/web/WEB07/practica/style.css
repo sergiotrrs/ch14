@@ -1,0 +1,15 @@
+h1 {
+    color: rgb(0, 0, 0);
+    font-family: "Lucida Handwriting", "Courier New", monospace;
+    background-color: rgb(138, 75, 115);
+    text-align: center
+    
+  }
+
+  body {
+    background-image: url("https://i.ibb.co/fC500Nw/fondo.jpg");
+    background-repeat: no-repeat; 
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+  }

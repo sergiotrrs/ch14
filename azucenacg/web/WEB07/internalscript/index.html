@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("Bienvenidos a la fiesta de Nancy");
+    </script>
+</head>
+<body>
+   <h1>Cumpleaños de Nancy</h1> 
+   <p id="demo"> Esperando</p>
+<!-- Cuando se de un clic en el texto indicado por ese id se 
+llevará a cabo la función, en este caso se hace roja-->
+   <p id="pastel" onclick="pastelSorpresa()"> pastel esperando</p>
+
+   <!-- aqui aparece un botón y eso cambia el texto que está
+en la página -->
+
+<button onclick="abreSorpresa()">Pulsa para una sorpresa</button>
+
+<h3> Invitados</h3>
+
+<p class="nombre" onclick="cambiarNombre(this, 'green')"> Sebastian </p>
+<p class="nombre" onclick="cambiarNombre(this, 'blue')">Guadalupe</p>
+<p class="nombre apelativo" onclick="cambiarNombre(this, 'fuchsia')">Gerardo</p>
+<p class="nombre apelativo" onclick="cambiarNombre(this, 'red')">Venus</p>
+
+<button onclick="obtenerClases()"> Obtener clases </button>
+
+<!-- Scripts -->
+   
+   <script>
+       console.log("Mensaje a la piñata");
+        document.getElementById("demo").innerHTML="quiero romper la piñata";
+    </script>
+<!-- si importa el orden de los scripts -->
+
+<!-- Llamando al script en la carpeta -->
+<script src="scripts/fiesta.js"></script>
+
+</body>
+</html>

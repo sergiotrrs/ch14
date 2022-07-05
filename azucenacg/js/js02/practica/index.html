@@ -1,0 +1,83 @@
+<!-- CALCULADORA-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+    <!-- Añadiendo hoja de estilos de boostrap -->
+    <link href="../../js03/practica/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Se agrega una hoja de estilos .css -->
+    <link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+    <script src="script.js"> </script>
+
+<h1>Calculadora</h1>
+
+<!-- Tabla para organizar los datos -->
+<div class="container-sm">
+
+    <div class="row m-lg-5">
+        <!--1ra columna para Lectura del primer número -->
+        <div class="col">
+            <label> Primer número</label><br>
+            <input type="string" id="valor1"/>
+        </div>  
+
+        <!-- 2da lectura para Lectura de segundo número -->
+        <div class="col">
+            <label> Segundo número</label><br>
+            <input type="string" id="valor2"/>
+        </div>
+      
+    </div>
+
+    <!-- Fila 2 con 1 columna para el resultado -->
+
+    <div class="row justify-content-md-center">
+
+        <!-- Columna 1 para resultado -->
+        <div class="col-4 text-center m-5">
+            <label> Resultado</label> <br>
+            <input type="string" id="resul"/>
+
+        </div>
+
+    </div>
+
+    <!-- Fila 3 con 1 columna para los botones -->
+    <div class="row justify-content-md-center">
+
+        <!-- Columna 1 para los botones-->
+        <div class="col-4 text-center m-5">
+
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <!-- Botones de operaciones -->
+                <button type="button" class="btn btn-secondary" onclick="suma()">Suma</button> 
+                <button type="button" class="btn btn-secondary" onclick="resta()">Resta</button> 
+                <button type="button" class="btn btn-secondary" onclick="division()">División</button> 
+                <button type="button" class="btn btn-secondary" onclick="multiplica()">Multiplicación</button> 
+                <button type="button" class="btn btn-secondary" onclick="limpia()">Limpiar</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+</body>
+</html>
+
+
