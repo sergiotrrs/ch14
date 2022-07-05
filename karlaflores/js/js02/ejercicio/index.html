@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <!--<link href="css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+  <style>
+    body{
+      background-image: url(https://img.freepik.com/vector-gratis/fondo-holografico-galaxia-fantasia-colores-pastel_126980-86.jpg?w=996);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      text-align:center;
+    }
+
+  </style>
+    <form>
+      
+      </div>
+        <h1 class="shadow-lg p-3 mb-5 bg-body rounded" style="font-size: 70px; text-align:center"> Calculadora</h1>
+        <div class="row justify-content-center text-align:center container-md">
+          <div class="col-6">
+            <label for="valor1"> </label>
+             <input  style="text-align: center" placeholder="Introduce el número 1" type="number" id="valor1" name=numero1 />
+          </div>
+          <div class="col-6">
+            <label for="valor2"> </label>       
+            <input type="text-align: center" placeholder="Introduce el número 2"  type="number" id="valor2" name=numero2 />
+          </div>
+        </div>
+        <br>
+        <input class="btn btn-dark justify-content-center align-items-center" type="buttom" id="buttom" value="Suma" onclick="capturar()" >
+        <input class="btn btn-dark justify-content-center align-items-center" type="buttom" id="buttom" value="Resta" onclick="capturar2()" >
+        <input class="btn btn-dark justify-content-center align-items-center" type="buttom" id="buttom" value="Multiplicación" onclick="capturar3()" >
+        <input class="btn btn-dark justify-content-center align-items-center" type="buttom" id="buttom" value="División" onclick="capturar4()" >
+        <br>
+        <br>
+        <h2 style="text-align: center" id="Resultado">Result</h2>
+        <br>
+        <button class=" fs-5 btn btn-outline-dark mx-auto rounded-pill m-2" onclick="reset()" style="width: calc(mt-auto);">Limpiar</button>
+    
+    <!--<div class="row align-items-center"></div>-->
+    <!--  -->
+<br>
+<!--
+    <button class="btn btn-dark align-items-center" onclick="capturar()">Suma</button>
+    <button class="btn btn-dark align-items-center" onclick="resta()">Resta</button>
+    <button class="btn btn-dark align-items-center" onclick="mul()">Multiplipicación</button>
+    <button class="btn btn-dark align-items-center" onclick="div()">División</button>
+-->
+    </form>
+    <!--
+    <div class="row align-items-center">
+        <div class="col">
+          One of three columns
+        </div>
+        <div class="col">
+          One of three columns
+        </div>
+        <div class="col">
+          One of three columns
+        </div>
+      </div>
+    -->
+
+
+
+    <script src="ejercicio.js"></script>
+
+    <script src="js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>  
+    <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  
+</body>
+</html>

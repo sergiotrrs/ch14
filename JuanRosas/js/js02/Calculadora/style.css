@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.calculadora{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculadora .input{
+    padding: 10px 0;
+
+}
+
+.calculadora .input input{
+    text-align: center;
+}
+
+.calculadora .result{
+    padding: 10px 0;
+}
+
+.calculadora .result input{
+    text-align: center;
+}
+
+.calculadora .operation{
+    
+    padding: 10px 0;
+}
+
+.calculadora .operation button{
+    margin: 0 5px;
+}
