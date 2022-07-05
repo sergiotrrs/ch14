@@ -17,3 +17,11 @@ label{
     border-radius: 5px;
     padding: 10px 20px;
 }
+
+body {
+    background-image: url("https://i.ibb.co/nL84DG3/glittery-star-confetti-on-colorful-abstract-pastel-watercolor-background.jpg");
+    background-repeat: no-repeat; 
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+  }

@@ -7,6 +7,9 @@ h1 {
   }
 
   body {
-    /* background-color: rgb(185, 144, 128); */
-    background-image: url("https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png");
+    background-image: url("https://i.ibb.co/fC500Nw/fondo.jpg");
+    background-repeat: no-repeat; 
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
   }

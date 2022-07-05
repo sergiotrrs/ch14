@@ -1,7 +1,7 @@
 h1{ 
     font-size:30px;
-    color: white;
-    background-color: rgb(190, 78, 200);
+    color: rgb(0, 0, 0);
+    background-color: rgb(247, 240, 176);
     font-family:monospace;
     text-align: center;
     border-radius: 5px;
@@ -16,6 +16,9 @@ h2{
 
 
 body {
-    background-image: url("img_tree.gif"), url("paper.gif");
-    background-color: #cccccc;
+    background-image: url("https://i.ibb.co/25Rsbcq/esta-es.jpg");
+    background-repeat: no-repeat; 
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
   }

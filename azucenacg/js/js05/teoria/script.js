@@ -120,3 +120,118 @@ x*=3 // x=x*3
 x/=2 // x=x/2
 x%=4 //x=x%4
 x**=3 // x= x**3
+
+
+// Operador igual que == compara el valor del dato
+x=1;
+y=2;
+x==y; //false
+y=1;
+x==y; //true
+x=1;
+y="1";
+
+//true compara el VALOR, el tipo string se convierte a
+//numérico
+console.log("x == y " + (x==y));
+
+//operador diferente que !=
+x=1;
+y='2';
+console.log("x != y "+ (x !=y));//true
+console.log("x++ != y "+ (x++ !=y));//true
+console.log("x != y "+ (x !=y));//false
+console.log("++x != y "+ (++x !=y));//true
+
+//Operador estrctamente igual === que comara el valor 
+//y tipo de dato
+x=1;
+y='1';
+console.log("x === y " + (x===y)); //false
+
+//operador estrictamente diferente que !===
+//compara el valor y tipo de dato
+console.log("x !== y " + (x !==y)); //true
+
+//Operadores lógicos &&, || , !
+true&&true //true
+true&&false //false
+//false, null, NaN, 0, empty string o undefined son 
+//considerados con valor false 
+
+//si el primer operador es true, el rsultado 
+//es el valor del segundo operador
+
+//si el primer operador es false, el resultado será false
+
+//operadores corto circuito
+
+console.log(" false && NaN = " + (false && NaN)); //false
+console.log(" true && 'hola estrella' = " + (true && 'hola estrella')); //hola estrella
+console.log(" true && NaN = " + (true && NaN)); //NaN
+console.log(" null && 'hola moi' = " + (null && 'hola moi')); //null
+console.log(" 'a' && 'hola moi' = " + ('a' && 'hola moi')); //hola moi
+console.log(" '' && 'hola maga' = " + ('' && 'hola maga')); //aparece un empty space
+console.log(" ' ' && 'hola maga' = " + (' ' && 'hola maga')); //el espacio si es un valor, por eso es true
+// el espacio es diferente al empty space
+
+//Operador lógico or ||
+true || false //true
+
+//false, null, NaN, 0, empty string o undefined son considerados con valor false
+//si el primer operador es true, el resultado es el primer operador
+//si el primer operador es false, el resulado es el segundo operador
+
+console.log("\n operador or ||")
+console.log(" true || NaN = " + (true || NaN)); //true
+console.log(" false || NaN = " + (false || NaN)); //NaN
+console.log(" true || 'hola estrella' = " + (true || 'hola estrella')); //true
+console.log(" null || 'hola moi' = " + (null || 'hola moi')); //hola moi
+console.log(" 'a' || 'hola moi' = " + ('a' || 'hola moi')); //'a'
+console.log(" '' || 'hola maga' = " + ('' || 'hola maga')); //"hola maga"
+console.log(" ' ' || 'hola maga' = " + (' ' || 'hola maga')); //el espacio si es un valor, por eso el resultado es un espacio
+
+//Operador lógico not !
+let nuevoValor = !true //false
+nuevoValor = !false //true
+
+//false, null, NaN, 0, empty string o undefined son considerados con valor false
+//aqui no hay corto circuito
+
+console.log("\n Operador not !")
+console.log(" !NaN = " + (!NaN )); //true
+console.log(" !true = " + (!true )); //false
+console.log(" !'Hola estrella' = " + ( !'Hola estrella' )); //false
+console.log(" !false = " + ( !false )); // true
+console.log(" !'a' = " + ( !'a' )); //false 
+console.log(" !''' = " + ( !'' )); //true
+
+
+//operador lógico binario ?? Nullish Coalecing
+//Si la izquierda es null o undefined, se retorna la derecha
+//Si la izquierda NO ES null o undefined, se retorna la izquierda
+
+let asistencia=null??true //true
+console.log("\n operador ?? nullish coalecing");
+console.log(" asistencia = null ?? true: " + (asistencia= null ?? true)); //true
+console.log(" asistencia = 1 ?? true: " + (asistencia= 1 ?? true)); //1
+
+x=undefined;
+console.log("asignacion de asitencia = x : "+ (asistencia= x ?? 'asistencia'));//asistencia
+console.log("asignacion de asitencia = x : "+ (asistencia= '' ?? 'asistencia'));//asistencia
+console.log("typeof(undefined) "+ typeof(undefined));//undefined
+console.log("typeof(null) "+ typeof(null));//object 
+//typeof null es un error de javascript, 
+
+
+
+
+
+
+
+
+
+
+
+
+
