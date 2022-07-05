@@ -8,7 +8,9 @@ console.log("Link");
 //encontrarPorId ();
 //encontrarPorTagName();
 //encontrarPorClase();
-encontrarPorSelector();
+//encontrarPorSelector();
+crearElemento();
+cambiarEstilo();
 
 //Función que obtiene un elemento con id determinado
 function encontrarPorId () {
@@ -60,4 +62,20 @@ function encontrarPorSelector() {
     elements.forEach(element => queryString+=element.innerHTML+" ");
     document.getElementById("concatena").innerHTML = queryString;
 
+}
+
+function crearElemento() {
+    const nuevoElemento = document.createElement("p");
+    nuevoElemento.innerHTML = "Nuevo párrafo";
+    document.getElementById("titulo").appendChild(nuevoElemento);
+    //document.body.appendChild(nuevoElemento); //Inserta el objeto en body
+
+}
+
+function cambiarEstilo() {
+    document.getElementById("demo").style.color = "blue";
+    const estilo = document.createElement("style");
+    const texto = document.createTextNode("body {font-size: 20px; font-family: verdana; background-color: blue }");
+    estilo.appendChild(texto);
+    document.head.appendChild(estilo);
 }
