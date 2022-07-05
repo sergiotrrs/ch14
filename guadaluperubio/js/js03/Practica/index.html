@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body background="fondo.jpg">
+    <h1 style="text-align:center;">CALCULANDO DÍAS </h1>
+
+   
+    
+<div class="container border-0" style="margin: 80px auto;">
+
+        <div class="row border">
+            
+         <div class="col">
+    <input type="number" id="diaIngresado" placeholder="Ingresa día" style="text-align:center ;">
+         </div>
+   
+         
+         <div class="col" style="margin:20px auto;">
+        <select style="background-color:rgb(238, 204, 204)" id="meses">
+        <option>Seleccione el mes</option>
+        <option>enero</option>
+        <option>febreo</option>
+        <option>marzo</option>
+        <option>abril</option>
+        <option>mayo</option>
+        <option>junio</option>
+        <option>julio</option>
+        <option>agosto</option>
+        <option>septiembre</option>
+        <option>octubre</option>
+        <option>noviembre</option>
+        <option>diciembre</option>
+    </select>
+</div>
+   
+
+    <div class="col">
+    <input type="number" id="yearIngresado" placeholder="Ingresa año" style="text-align:center ;">
+    </div>
+    </div>
+
+
+    
+
+    <div class="row" style="margin: 40px auto;">
+        <div class="col text-center boton-">
+    <button type="button" class="btn btn-info" id="semanaDia">El dia es </button>
+        </div>
+    </div>
+
+
+    <div class="row" style="margin: 30px auto;">
+        <div class="col text-center boton-">
+    <button type="button" class="btn btn-success" id="calculo" onclick="dia()">Calcular aqui</button>
+        </div>
+    </div>
+
+    
+
+
+  
+    <script src="calendario.js"></script>
+    
+</body>
+</html>

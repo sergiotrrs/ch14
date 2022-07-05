@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body class="p-3 mb-2 bg-secondary text-white" style="--bs-bg-opacity: .5;">
+  <h1 class="text-black">CALCULADORA DE DIAS</h1>
+  <script src="indexcale.js"></script>
+  <div class="bg-warning p-2 text-dark bg-opacity-50"
+  class="shadow-lg p-5 mb-5 bg-body rounded">
+    <form>
+    <label><p>Diguite su año</p></label>
+    <input type="number" id="day" /><br />
+    
+    <label ><p>Seleccione el mes</p></label>
+    <select  id="meses">
+      <option id="null" value="NONE">ELIJA EL MES</option>
+      <option value=0 id="enero">ENERO</option>
+      <option value=1>FEBRERO</option>
+      <option value=2>MARZO</option>
+      <option value=3>ABRIL</option>
+      <option value=4>MAYO</option>
+      <option value=5>JUNIO</option>
+      <option value=6>JULIO</option>
+      <option value=7>AGOSTO</option>
+      <option value=8>SEPTIEMBRE</option>
+      <option value=9>OCTUBRE</option>
+      <option value=10>NOVIEMBRE</option>
+      <option value=11>DICIEMBRE</option>
+
+
+
+    </select>
+    <br />
+    
+    <label class=""><p>Diguite su año</p></label>
+    <input type="number" id="year" />
+    <br />
+    <input class="btn btn-info"  type="button" value=" IR " onclick="dardia()" />
+
+    <br />
+    <h1 id="cambio" class="fs-5"></h1>
+
+
+  </form>
+
+
+
+
+
+
+  </div>
+
+
+</body>
+
+</html>
