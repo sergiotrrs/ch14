@@ -1,3 +1,32 @@
+setInvisible(true);
+/**
+ * 
+ * Establecer como invisibles el botón de limpiar
+ *
+ * @param {boolean} estado true: visible o false: invisible
+ */
+function setInvisible(estado){
+    const formulario= document.getElementById("formulario");
+    /* let status="visible";
+    if(estado) status="hidden"
+    formulario.elements['limpiar'].style.visibility= status;
+     */
+    
+    let status= "inline";
+    if(estado) status= "none";
+    formulario.elements['limpiar'].style.display= status
+    formulario.elements['fecha'].style.display= status
+}
+
+const form= document.getElementById('formulario');
+
+form.addEventListener('submit', (event) =>{
+    event.preventDefault();
+    console.log(event);
+    calcularFecha();
+    setInvisible(false);
+} );
+
 //Obtener la fecha determinada
 /**
  * @param {int} anio
@@ -27,10 +56,9 @@ const calcularFecha = () =>{
     formulario.elements['fecha'].value = definirFecha (dia.getDay() );
 }
 
-//Función para indicar el día y si es laborable
 /**
- * 
- * @param {int}  dia 
+ //Función para indicar el día y si es laborable
+ *  @param {number}  dia 
  * @return "'Día', fin de semana o 'Día', día laborable"
  */
 function definirFecha(dia){
@@ -60,12 +88,3 @@ function definirFecha(dia){
             return "Día no existente";          
     }
 }
-/* for (let i = 1970, j = 0; i < 2023; i++, j++) {
-    document.getElementById("años").appendChild(document.createElement("option"));
-    document.getElementById("años").children[j].setAttribute("value", i.toString());
-    document.getElementById("años").children[j].innerHTML = i.toString();
-
-}
-
-el años es la ettiqueta select, espero te sriva.
- */
