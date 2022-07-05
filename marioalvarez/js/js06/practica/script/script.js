@@ -13,9 +13,14 @@ const calcularFecha = () =>{
                     Number(document.getElementById("dia").value)); */
     //Se coloca -1 por que enero comienza con cero
 
-
-    document.getElementById("fecha").value="Hola"; //Se manda llamar a la función definirFecha 
     //document.getElementById("fecha").value=definirFecha(date.getDay()); //Se manda llamar a la función definirFecha 
+    const formulario=document.getElementById("formulario");
+    //Accedo a elementos de mi formulario con el ID mes, tambien puedo utilizar el name
+    console.log(formulario.elements["mes"].value);
+    const date = new Date(formulario.elements["anio"].value,
+                        formulario.elements["mes"].value-1,
+                        formulario.elements["dia"].value);
+    formulario.elements["fecha"].value=definirFecha(date.getDay());;
 }
 
 //Función para indicar el día y si es laborable
