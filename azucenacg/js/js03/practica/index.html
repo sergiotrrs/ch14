@@ -1,0 +1,124 @@
+<!-- CALENDARIO -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título en la pestaña -->
+    <title>Calendario</title>
+    
+    <!-- Se incluye el link de la hoja de estilos de bootstrap, que en este caso está descargada en esta misma carpeta-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet"/>
+    
+</head>
+<body>
+
+    <script src="script.js"> </script>
+
+
+    <!-- Con estas propiedades de grid se ordenan los elementos
+    de la página -->
+
+    <div class="container-fluid">
+        
+        <!-- Fila 1 con 1 columna para título -->
+        <div class="row justify-content-md-center m-5">
+            <h1>Calcúla el día la semana de tu fecha</h1> 
+        </div>
+
+        <!-- Fila 2 con 4 columnas para dd/mm/aa-->
+
+        <div class="row justify-content-md-center">
+            
+            <!-- Columna 1 para Entrada de DIA -->
+
+            <div class="col m-auto">
+
+                <div class="input-group input-group-lg">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroup-sizing-lg">Dìa</span>
+                    </div>
+                    <input type="text" id="dia" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                </div>
+
+            </div>
+            
+            <!-- Columna 2 para Selección de MES -->
+
+            <div class="col m-auto">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                      <label class="input-group-text" for="inputGroupSelect01">Mes</label>
+                    </div>
+                    <select class="custom-select" id="mes">
+                      <option selected>--</option>
+                      <option value="1">01</option>
+                      <option value="2">02</option>
+                      <option value="3">03</option>
+                      <option value="4">04</option>
+                      <option value="5">05</option>
+                      <option value="6">06</option>
+                      <option value="7">07</option>
+                      <option value="8">08</option>
+                      <option value="9">09</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Columna 3 para Entrada de año -->
+
+            <div class="col m-auto">
+                
+                <div class="input-group input-group-lg">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroup-sizing-lg">Año</span>
+                    </div>
+                    <input type="text" id="año" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                </div>
+
+            </div>
+            
+        </div>
+
+        <!-- Fila 3 con 1 columna para el botón -->
+
+        <div class="row justify-content-md-center">
+
+            <!-- Columna 1 para Botón de cálculo -->
+            <div class="col-3 text-center m-5">
+                <button class="btn btn-dark" onclick="typeOfDay()">CÁLCULO</button> 
+            </div>
+
+        </div>
+
+
+       <!-- Fila 4 con 1 columna para los resultados-->
+        <div class="row justify-content-center">
+
+            <!-- Columna 1 para Caja de resultados -->
+            <div class="col-3 text-center m-3">
+
+                <div class="input-group input-group-lg">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" id="inputGroup-sizing-lg">Resultado</span>
+                    </div>
+                    <input type="text" id="resul" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+</body>
+</html>

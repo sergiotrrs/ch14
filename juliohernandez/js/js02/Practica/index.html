@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora</title>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <br>
+
+  <div class="container" style="border-style:solid; background-color: rgb(0, 0, 0);  border-radius: 10px;">
+    <!-- Pantalla-->
+    <div  style="margin-top: 20px; border-style: inset; background-color: rgb(177, 174, 174); border-radius: 10px;">
+      <div class="row text-center">
+        <div class="col">
+          <input type="number" placeholder="Número 1" id="primero" class="datos" style="margin: 10px 0px; background-color: lightgray; border-style: none ; border-radius: 5px;">
+        </div>
+        <div class="col">
+          <input type="number" placeholder="Número 2" id="segundo" class="datos" style="margin: 10px 0px; background-color: lightgray; border-style: none; border-radius: 5px;">
+        </div>
+      </div>
+      
+      <div class="row"  style="margin:5px 0px 10px;">
+        <div class="text-center">
+          <input type="text" value="" placeholder="Resultado" id="resultado" disabled style="border-radius: 5px;">
+        </div>
+      </div>
+    </div>
+    <!-- Botones -->
+    <br>
+    <div class="row">
+      <div class="col-sm-6 col-md-3 text-center">
+        <button type="button" class="btn btn-dark" onclick="suma()" style="margin-bottom: 20px;">+</button>
+      </div>
+
+      <div class="col-sm-6 col-md-3  text-center">
+        <button type="button" class="btn btn-dark"
+          onclick="(function(){document.getElementById('resultado').value=a-b})()"
+          style="margin-bottom: 20px;">-</button>
+      </div>
+      <div class="col-sm-6 col-md-3  text-center">
+        <button type="button" class="btn btn-dark" onclick="multiplica(a,b)" >x</button>
+      </div>
+      <div class="col-sm-6 col-md-3  text-center">
+        <button type="button" class="btn btn-dark" id="divide" style="margin-bottom: 20px;">/</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let a;
+    let b;
+    let c = document.getElementById('resultado');
+
+
+
+    const cargarDatos = () => {
+      let datos = []
+      a = Number(document.getElementById("primero").value);
+      b = Number(document.getElementById("segundo").value);
+    }
+
+    function suma() { c.value = a + b }
+
+
+
+    const multiplica = function (x, y) {
+      cargarDatos();
+      document.getElementById("resultado").value = x * y;
+    }
+
+    document.getElementById("segundo").addEventListener("change", cargarDatos)
+    document.getElementById("primero").addEventListener("change", cargarDatos);
+
+    //División
+    document.getElementById("divide").onclick = function () { document.getElementById("resultado").value = a / b };
+  </script>
+</body>
+
+</html>

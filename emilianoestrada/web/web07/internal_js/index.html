@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link  href="css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    <button type="button" class="btn btn-outline-danger" onclick="cambiarNombre()"> CAMBIAR EL NOMBRE</button>
+    <h1 id="demo"></h1>
+
+    <script>
+        document.getElementById("demo").innerHTML = "HOLA NOMBRE";
+    function cambiarNombre(element){
+        let person = prompt("cual es tu nombre", "escribe aqui");
+  if (person != null) {
+    document.getElementById("demo").innerHTML ="HOLA " + person ;
+    document.getElementById("demo").style.fontSize = "90px";
+    document.getElementById("demo").style.backgroundColor= 'blue';
+    document.getElementById("demo").style.color="white";
+
+  }
+}
+    </script>
+    
+    <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
+</body>
+</html>
