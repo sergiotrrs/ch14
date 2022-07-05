@@ -5,6 +5,7 @@ console.log("Teoría de la sesión JS06");
 //encontrarPorSelector();
 
 
+
 function encontrarPorId() {
     //obtenemos el objeto mediante ID
     const element = document.getElementById("intro");
