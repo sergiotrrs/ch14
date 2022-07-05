@@ -59,3 +59,14 @@ function encontrarPorSelector(){
     //document.body.appendChild(nuevoElemento); //Se inserta el objeto en el body
     document.getElementById("titulo").appendChild(nuevoElemento);
 })();
+
+(function cambiarEstilo(){
+    document.getElementById("intro").style = "background-color:Salmon";
+    const estilo = document.createElement("style");
+    const texto = document.createTextNode( `body{
+        font = 20px arial; 
+        background-color: lightblue;
+    }`);
+    estilo.appendChild(texto);
+    document.head.appendChild(estilo);
+})();
