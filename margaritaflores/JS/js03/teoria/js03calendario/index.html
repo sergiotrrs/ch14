@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang=>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <br>
+    <title>CALENDARIO GREGORIANO </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="calendario.css">
+
+</head>
+<body>
+<!--Titulo-->
+  <div class="container-fluid text-center">
+    <h1 class="row-cols-sm-12 text-center" style="font-family: fantasy;" id="titulo">CALENDARIO GREGORIANO</h1>
+        </div>
+<!--Botones para ingresar datos-->
+        <div class="container-fluid text-center">
+                <label for="Numero1"> Conoce la fecha: </label> </div>
+                <div class="container-fluid text-center col-sm-6 h-100 d-flex justify-content-center align-items-center">
+                    <input type="text" class="form-control" id="d" placeholder="DD" >
+                    <input type="text" class="form-control" id="m" placeholder="MM" >
+                    <input type="text" class="form-control" id="a" placeholder="YYYY" >
+                   </div>   
+              
+                <br>
+<!--Boton para calcular-->
+    <div class="col-12 h-100 d-flex justify-content-center align-items-center">
+    <button  onclick="calcularDia()" type="button" class="btn btn-dark">Calcular</button>
+            </div>
+    <br>
+  
+<!--Extra information-->
+
+<a href="https://www.linkedin.com/in/maria-margarita-flores-zatarain-40572a167/" id="Titulo"><b>Margarita Flores</b></a>
+<img src="https://img.freepik.com/vector-gratis/calendario-programacion-proyectos_74855-4584.jpg?t=st=1656983657~exp=1656984257~hmac=f94daf6ba0323a6f83378d822f9b2e70ec8078b38b104c099ed982c7336c0316&w=2000" class="img-fluid" alt="Planeando">
+
+
+    <!--SCRIPTS-->
+<script src="calendario.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  
+</body>
+</html>

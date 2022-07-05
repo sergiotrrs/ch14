@@ -65,6 +65,14 @@ function cambiarEstilo(){
     estilo.appendChild(texto);
     document.head.appendChild(estilo);
     /**
+     * <syle>
      * 
+     * body{
+     * font = 20px verdana;
+     * background-color : blue;
+     * }
+     * 
+     * </style>
      */
+    document.head.appendChild(estilo);
 }
