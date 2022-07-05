@@ -1,0 +1,32 @@
+
+
+.row-mio{
+    height: 200px;
+    
+}
+#para{
+    text-align: center;
+    color: rgba(38, 4, 160, 0.712);
+    /* background-image: url("https://img.freepik.com/free-vector/celestial-object-sketch-set-beige-background_53876-120578.jpg?t=st=1656803112~exp=1656803712~hmac=ddd367c4cf7d26358e478d907f17b4b30b23ef84b23a4da01fb9a6bd1b04a5bc&w=740"); */
+
+}
+#para1{
+    text-align: center;
+    color: rgba(38, 4, 160, 0.712);
+    background-image: url("https://img.freepik.com/free-vector/celestial-object-sketch-set-beige-background_53876-120578.jpg?t=st=1656803112~exp=1656803712~hmac=ddd367c4cf7d26358e478d907f17b4b30b23ef84b23a4da01fb9a6bd1b04a5bc&w=740");
+    font-size:20px
+}
+#para2{
+    
+    color: rgba(38, 4, 160, 0.712);
+    background-image: url("https://img.freepik.com/free-vector/celestial-object-sketch-set-beige-background_53876-120578.jpg?t=st=1656803112~exp=1656803712~hmac=ddd367c4cf7d26358e478d907f17b4b30b23ef84b23a4da01fb9a6bd1b04a5bc&w=740");
+    font-size:17px;
+    font-weight: bold;
+}
+
+
+#pie{
+    font-weight: bold;
+    color:black
+    
+}

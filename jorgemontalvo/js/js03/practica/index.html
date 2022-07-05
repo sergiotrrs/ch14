@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calendario Fechas</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        
+</head>
+
+<body id="para" style="background-color: rgb(240, 159, 222)">
+
+    <h1 style=" text-align:center;background-color: rgba(195, 214, 89, 0.884); font-family:'Lucida Handwriting'">Calendario</h1>
+<!-- Instruciones de uso -->
+<div>
+    <p id="para1">Ingresa una fecha para saber el día y si será o no laborable</p>
+</div>
+<!-- Contenedor con columnas y filas para las entras (d,m,a) -->
+    <div id="para2" style="background-color: rgba(6, 155, 98, 0.7); height: 250px;" class="container-lx ">
+        <div class="row m-3 gx-5 gy-3 d-flex justify-content-center ">
+           <!-- Entrada del día -->
+            <div class=" col-sm-6 col-md-4 align-self-center" >
+                <div class="row justify-content-evenly">
+                    <div class="col-6 align-self-center"><label for="dia">Ingrese el día: </label>
+                    </div>
+                    <div class="col-6 align-self-center"><input style="background-color: rgb(73, 145, 204, 0.5)" type="number" name="fecha" id="fecha" min="1"
+                        max="31"></div>
+                
+                </div>
+                <!--Entrada del mes  -->
+            </div>
+            <div class="  col-sm-6 col-md-4 align-self-center">
+                <div class="row justify-content-evenly ">
+                    <div class="col-6 align-self-center"><label for="mes">Ingrese el mes: </label></div>
+                    <div class="col-6 align-self-center"><input style="background-color: rgba(73, 145, 204, 0.5)" type="number" name="mes" id="mes" min="1" max="12">
+                    </div>
+                    </div>
+                </div>
+                <!-- Entrada del año -->
+            <div class="  col-sm-6 col-md-4 align-self-center" >
+                <div class="row justify-content-evenly">
+                    <div class="col-6 align-self-center"><label for="anio">Ingrese el año: </label></div>
+                    <div class="col-6 align-self-center"><input style="background-color: rgb(73, 145, 204, 0.5)"
+                            type="number" name="anio" id="anio" min="0" max="3000">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+<!-- Botón asociado con la funcion calcular -->
+    <div class="container ">
+        <div class="row d-flex align-items-center" style="height: 100px;">
+            <div class="col-12 justify-content-center" >
+                <button onclick="calcular()" type="button" class="btn btn-outline-dark "
+                    style="width:calc(35%) ; height: 50px;">Calcular</button>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Texto con el resultafo -->
+    <h1 id="resul" style="text-align: center ;">¿Se trabajará ese día?</h1>
+
+    <div  style="height: 100px;">
+        <!-- Pie de pagina con informacion -->
+        <p class="m-5"id="pie">Hecho por <a href="https://github.com/jorgemonti">@jorgemonti</a>  </p>
+    </div>
+    
+
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
