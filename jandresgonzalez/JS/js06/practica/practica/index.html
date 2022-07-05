@@ -18,17 +18,37 @@
 
 <body>
     <div class="container-fluid contenedor-inputs align-items-center ">
-        <form class="formulario-container">
+        <form class="formulario-container" id="form">
             <div class="container-fluid bg-light text-dark text-center">
                 <h1>JAKEADa! POR ABUE HACKERMAN</h1>
             </div>
             <div class="row p-5 align text-center">
                 <div class="col-sm-12">
-                    <input type="number" name="" id="dia" class="fecha" placeholder="Día">
+                    <input 
+                        type="number"
+                        name=""
+                        id="dia"
+                        class="fecha"
+                        placeholder="Día"
+                        min="1"
+                        max="31"
+                        title="Indique el día en número"
+                        required
+                        oninvalid="setCustomValidity('Especificar el año')"
+                        oninput="setCustomValidity(' ')"                        
+                        >
                 </div>
                 <div class="col-sm-12">
                     <!-- DROPDOWN MES -->
-                    <select type="number" name="" id="mes" class="fecha" placeholder="Mes">
+                    <select
+                            type="number"
+                            name=""
+                            id="mes"
+                            class="fecha"
+                            placeholder="Mes"
+                            value="0"
+                            title="Seleccione un mes de la lista"
+                            required>
                         <option value="1">Enero</option>
                         <option value="2">Febrero</option>
                         <option value="3">Marzo</option>
@@ -44,18 +64,28 @@
                 </div>
                 <div class="col-sm-12">
                     <!-- AÑO -->
-                    <input type="number" name="" id="anio" class="fecha" placeholder="Año">
+                    <input  
+                        type="number"
+                        name=""
+                        id="anio"
+                        class="fecha"
+                        placeholder="Año"
+                        title="Indique el año en número"
+                        required
+                        oninvalid="setCustomValidity('Especificar el año')"
+                        oninput="setCustomValidity(' ')"
+                        >
                 </div>
         </form>
         
         <!-- BOTONES CALCULAR LIMPIAR-->
-        <div class="container results-container">
+        <div class="container-fluid results-container">
             <div class="row p-4 align-text-center">
-                <div class="col-sm-8">
-                    <button type="button" class="btn btn-outline-light boton-operacion btn-calcular"
+                <div class="col-sm-8 my-1">
+                    <button type="submit" class="btn btn-outline-light boton-operacion btn-calcular"
                         onclick="calcularFecha()">Calcular día</button>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4 my-1">
                     <button class="btn btn-outline-light boton-operacion btn-limpiar" onclick="reset()"
                         style="width: calc(mt-auto);">Limpiar</button>
                 </div>
