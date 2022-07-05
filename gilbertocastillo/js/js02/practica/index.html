@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica Calculadora CH14</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> 
+    <!--<link rel="stylesheet" href="internalscripts/css/bootstrap.min.css"> -->
+<script src="calculadora.js"></script>
+<script src="display.js"></script>
+<script src="practica.js" defer></script>
+    <style>
+        .min-flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn {
+            margin: 4px;
+            padding: 4px;
+            box-shadow: 0px 2px 0px 1px #02020c7e;
+        }
+
+        .calculadora {
+            min-width: 200px;
+            border-radius: 32px;
+            box-shadow: 0px 2px 0px 1px #02020c7e;
+        }
+        .cont-general{
+            height: 100vh;
+        }
+        @media screen and(max-width:800px) {
+            .cont-general{
+                height:100%;
+            }
+            
+        }
+        .Display{
+            border-radius: 15px;
+            box-shadow: 0px 0px 0px 5px #02020c7e;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            overflow: hidden;
+            height: 50px;
+        }
+        #valor-anterior{
+            color: yellow;
+        }
+    </style>
+
+</head>
+
+<body>
+    <main class="cont-general min-flex">
+        <div class="sub-general container ">
+            <div class="row bg-dark text-white min-flex">
+                <div class="header text-center">
+                    <h1>Calculadora CH14</h1>
+                </div>
+            </div>
+            <div class="row bg-secondary min-flex">
+                
+                    <div class="calculator container col-8 bg-success border p-2 m-3">
+                        <div class="row cont-display min-flex">
+                            <div class="Display text-white bg-dark w-75 my-3">
+                                <div id="valor-anterior"></div>
+                                <div id="valor-actual"></div>
+                            </div>
+                        </div>
+
+                        <div class="row  min-flex">
+                            <button class="btn btn-danger  col-2" onclick="display.deleteAll()">C</button>
+                            <button class="btn btn-danger col-2" onclick="display.deleteValue()">&larr;</button>
+                            <button class="btn btn-warning col-2 operador" value="potenciar">^</button>
+                            <button class="btn btn-warning col-2 operador" value="raiz">--</button>
+                        </div>
+                        <div class="row  min-flex">
+                            <button class="btn btn-dark  col-2 numero">7</button>
+                            <button class="btn btn-dark col-2 numero">8</button>
+                            <button class="btn btn-dark col-2 numero">9</button>
+                            <button class="btn btn-warning col-2 operador" value="dividir">/</button>
+                        </div>
+                        <div class="row min-flex">
+                            <button class="btn btn-dark  col-2 numero">6</button>
+                            <button class="btn btn-dark col-2 numero">5</button>
+                            <button class="btn btn-dark col-2 numero">4</button>
+                            <button class="btn btn-warning col-2 operador" value="multiplicar">x</button>
+                        </div>
+                        <div class="row min-flex">
+                            <button class="btn btn-dark  col-2 numero">3</button>
+                            <button class="btn btn-dark col-2 numero">2</button>
+                            <button class="btn btn-dark col-2 numero">1</button>
+                            <button class="btn btn-warning col-2 operador" value="restar">-</button>
+                        </div>
+                        <div class="row min-flex">
+                            <button class="btn btn-dark  col-2 numero">0</button>
+                            <button class="btn btn-dark col-2 numero">.</button>
+                            <button class="btn btn-dark col-2 operador" value="igual">=</button>
+                            <button class="btn btn-warning col-2 operador" value="sumar">+</button>
+                        </div>
+                    </div>
+                
+            </div>
+            <div class="row bg-dark text-white min-flex">
+                <div class="footer text-center">
+                    <h1>&copy;GilbertoCastillez </h1>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </main>
+
+
+
+</body>
+
+</html>

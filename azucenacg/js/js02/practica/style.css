@@ -1,0 +1,27 @@
+h1{ 
+    font-size:30px;
+    color: white;
+    background-color: rgb(190, 78, 200);
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+
+label{ 
+    font-size:20px;
+    color: rgb(0, 0, 0);
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+body {
+    background-image: url("https://i.ibb.co/nL84DG3/glittery-star-confetti-on-colorful-abstract-pastel-watercolor-background.jpg");
+    background-repeat: no-repeat; 
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
