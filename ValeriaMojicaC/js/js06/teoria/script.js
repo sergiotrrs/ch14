@@ -45,4 +45,33 @@ function encontrarPorSelector () {
     elements.forEach(dato => unirStr += dato.innerHTML + " ") //Se unen los string de p.saludo
     document.getElementById("concatena").innerHTML = unirStr;
 }
-encontrarPorSelector();
+//encontrarPorSelector();
+
+function crearElemento () {
+    const nuevoElemento = document.createElement("p"); //Crea un <p></p>
+    nuevoElemento.innerHTML = "Este es un nuevo parrafo"; //<p>Este es un nuevo parrafo</p>
+    //document.body.appendChild(nuevoElemento); //Se inserta nuevo elemento en el body (final)
+    document.getElementById("titulo").appendChild(nuevoElemento);
+
+    const nuevoDiv = document.createElement("div")
+    nuevoDiv.innerHTML = `<p>Hola estoy <b>dentro </b>de un div</p>`;
+    document.body.appendChild(nuevoDiv);
+}
+//crearElemento();
+
+function cambiarEstilo (){
+    document.getElementById("intro").style.color = "#962c4c";
+    const estilo = document.createElement("style");
+    const texto = document.createTextNode("body {font: 25px verdana; background-color: #becb7c;}");
+    estilo.appendChild(texto);
+    /**
+     *<style>
+     * body {
+     *      font: 20px verdana;
+     *      background-color: #becb7c;
+     * }
+     *</style>
+     */
+    document.head.appendChild(estilo);
+}
+cambiarEstilo();
