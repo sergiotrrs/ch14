@@ -7,11 +7,24 @@
  */
 const calcularFecha = () =>{ 
     //Se manda llamar a la función Date() que se almacena en la constante día
+    /* 
     const dia = new Date(Number(document.getElementById("anio").value),
     String(document.getElementById("mes").value)-1, 
     Number(document.getElementById("dia").value));
+    
     //Se coloca -1 en el mes porque enero incia en el 0 
-    document.getElementById("fecha").value= definirFecha(dia.getDay());
+    document.getElementById("fecha").value= definirFecha(dia.getDay()); 
+    */
+//accedemos dentro del formulario
+    const formulario = document.getElementById("formulario");
+    console.log(formulario.elements['mes'].value);
+    const dia = new Date(
+        formulario.elements['anio'].value,
+        formulario.elements['mes'].value-1,
+        formulario.elements['dia'].value,
+    )
+
+    formulario.elements['fecha'].value = definirFecha (dia.getDay() );
 }
 
 //Función para indicar el día y si es laborable
@@ -47,3 +60,12 @@ function definirFecha(dia){
             return "Día no existente";          
     }
 }
+/* for (let i = 1970, j = 0; i < 2023; i++, j++) {
+    document.getElementById("años").appendChild(document.createElement("option"));
+    document.getElementById("años").children[j].setAttribute("value", i.toString());
+    document.getElementById("años").children[j].innerHTML = i.toString();
+
+}
+
+el años es la ettiqueta select, espero te sriva.
+ */
