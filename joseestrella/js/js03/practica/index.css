@@ -1,0 +1,23 @@
+#header img {
+    width: 55px;
+}
+
+.container-sm{
+    background-image: linear-gradient(135deg, 
+    #a6a389 0, #9fa185 7.14%, #989e80 14.29%, 
+    #8f9c7c 21.43%, #849978 28.57%, #789574 35.71%, 
+    #6b9171 42.86%, #5b8d6e 50%, #49886c 57.14%, 
+    #35846c 64.29%, #19806e 71.43%, #007d71 78.57%, 
+    #007975 85.71%, #00767a 92.86%, #00747f 100%);
+}
+
+
+
+#footer{
+    background: linear-gradient(90deg, #1c3643, #273b47 25%, #1e5472);
+}
+
+#footer a {
+    color:white;
+}
+
