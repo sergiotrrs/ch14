@@ -75,31 +75,28 @@
             />
           </div>
 
-          <div class="row p-4 align-text-center">
-            <div class="col-sm-8 my-1">
-              <button
-                type="submit"
-                class="btn btn-outline-light boton-operacion btn-calcular"
-                onclick="calcularFecha()"
-              >
-                Calcular día
-              </button>
+          <div class="row p-12 align-text-center">
+            <div class="col-sm-12 ry-1 rx-1">
+                <button 
+                    type="submit" 
+                    class="btn btn-outline-light boton-operacion btn-calcular"
+                    >Calcular día
+                </button>                    
+                <button 
+                    id="limpiar" 
+                    type="reset" 
+                    class="btn btn-outline-light boton-operacion btn-limpiar" 
+                    style="width: calc(mt-auto);"
+                    onclick="setInvisible(true)"
+                >Limpiar
+                </button>
             </div>
-            <div class="col-sm-4 my-1">
-              <button
-                class="btn btn-outline-light boton-operacion btn-limpiar"
-                onclick="reset()"
-                style="width: calc(mt-auto)"
-              >
-                Limpiar
-              </button>
-            </div>
-          </div>
         </div>
+
+
         <div class="container-fluid contenedor-resultado align-items-center">
           <div class="row p-6">
             <div class="col-3"></div>
-            
             <div class="col" id="resultado">
               <input
                 type="text"

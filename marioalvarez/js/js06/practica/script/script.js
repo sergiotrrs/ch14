@@ -1,3 +1,38 @@
+setInvisible(true);
+/**
+ * Establecer como invisble el botón de limpiar
+ */
+function setInvisible(estado){
+
+    /*
+    //lo desaparece (ocupa el espacio)
+    const formulario=document.getElementById("formulario");
+    let status="visible";
+    if(estado) status="hidden";
+    formulario.elements["limpiar"].style.visibility=status;
+    */
+ 
+    //lo desaparece (no ocupa el espacio)
+    let status2= "inline";
+    if(estado) status2= "none";
+    formulario.elements["limpiar"].style.display =status2;
+    formulario.elements["fecha"].style.display =status2;
+    
+}
+
+
+const form= document.getElementById("formulario");
+//Crear un evento
+//Esto se hace para que  se ejecute la función cuando ya tenemos todos
+//los datos llenos, con onlcick se ejecuta la función aunque no tenga datso
+form.addEventListener("submit", (event)=>{
+    //Evito que me limpie el formulario y la consola
+    event.preventDefault();
+    console.log(event)
+    calcularFecha();
+    setInvisible(false);
+})
+
 //Obtener la fecha determinada
 /**
  * @param {int} año
