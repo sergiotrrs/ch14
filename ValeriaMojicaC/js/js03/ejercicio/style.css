@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: #f9dbbd;
+    color: #450920;
+}
+
+h1 {
+    font-size: 4rem;
+    text-shadow: 2px 2px #a53860;
+}
+
+
+label {
+    font-size: 1.5rem;
+}
+
+input {
+    background-color: #ffa5ab;
+    border: 2px dotted #450920;
+    height: 50px;
+}
+
+#resultado {
+    width: 300px;
+}
+
+.btn {
+    border-radius: 5px;
+    background-color: #da627d;
+    height: 50px;
+    width: 150px;
+    margin-bottom: 20px;
+}
+
