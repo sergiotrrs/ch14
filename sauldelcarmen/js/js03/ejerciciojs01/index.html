@@ -4,40 +4,101 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Demo web calculadora</title>
+	<title>Date</title>
+	<link rel="stylesheet" href="./style.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body> 
-<h1 class="text-center"> Calculadora </h1>
+    <div class="container text-center">
+	<div class="row">
+	<div class="col-12 col-sm-4 my-2">
+	<span>
+        <label for="day">Dia:</label>
+        <select id="day" name="day">
+          <option selected>01</option>
+		  <option>02</option>
+		  <option>03</option>
+		  <option>04</option>
+		  <option>05</option>
+		  <option>06</option>
+		  <option>07</option>
+		  <option>08</option>
+		  <option>09</option>
+		  <option>10</option>
+		  <option>11</option>
+		  <option>12</option>
+		  <option>13</option>
+		  <option>14</option>
+		  <option>15</option>
+		  <option>16</option>
+		  <option>17</option>
+		  <option>18</option>
+		  <option>19</option>
+		  <option>20</option>
+		  <option>21</option>
+		  <option>22</option>
+		  <option>23</option>
+		  <option>24</option>
+		  <option>25</option>
+		  <option>26</option>
+		  <option>27</option>
+		  <option>28</option>
+		  <option>29</option>
+		  <option>30</option>
+		  <option>31</option>
+		  		</select>
+	  </span>
+      	  </div>
+	<div class="col-12 col-sm-4 my-2">
+	  <span>
+        <label for="month">Mes:</label>
+        <select id="month" name="month">
+          <option selected>01</option>
+          <option>02</option>
+		  <option>03</option>
+		  <option>04</option>
+		  <option>05</option>
+		  <option>06</option>
+		  <option>07</option>
+		  <option>08</option>
+		  <option>09</option>
+		  <option>10</option>
+		  <option>11</option>
+		  <option>12</option>
+        </select>
+      </span>
+      	  </div>
+      	  <div class="col-12 col-sm-4 my-2">
+      <span>
+        <label for="year">Año:</label>
+        <select id="year" name="year">
+        <option selected>2022</option>
+		<option>2021</option>
+		<option>2020</option>
+		<option>2019</option>
+		<option>2018</option>
+		<option>2017</option>
+	</select>
+      </span>
+    	</div>
+    	</div>
+    	</div>
+    	</div>
 
-<form>
-  <div class="container-md">
+
       <div class ="row justify-content-center">
-        <div class="col-lg-3 col-md-2 text-center">
-      <input type="text" class="form-control" placeholder="A" id="NumeroA">
-    </div>
-    <div class="col-lg-3 col-md-2 text-center">
-      <input type="text" class="form-control" placeholder="B" id="NumeroB">
-    </div>
-  </div>
-</form>
-<h2 class="text-center"><span id="anonimo">C</span></h2>
- <div class="container-md">
-      <div class="row justify-content-center">
-        <div class="col-lg-2 col-md-1 text-center">
-	  <button onclick="sumar()" type="button" class="btn btn-primary">S</button>
+        <div class="col-lg-4 col-md-4 text-center">
+	  <button onclick="calcular()" type="button" class="btn btn-primary">Calcular</button>
     	</div>
-        <div class="col-lg-2 col-md-1 text-center">
-	  <button onclick="restar()" type="button" class="btn btn-primary">R</button>
     	</div>
-        <div class="col-lg-2 col-md-1 text-center">
-	  <button onclick="multiplicar()" type="button" class="btn btn-primary">M</button>
-    	</div>
-        <div class="col-lg-2 col-md-1 text-center">
-	 <button onclick="dividir()" type="button" class="btn btn-primary">D</button>
-	</div> 
-    </div>
-</div>
+
+
+
+    <h3 class="text-center"><span id="Fecha"></span></h3>
+    <h2 class="text-center"><span id="labora">Es</span> Dia laboral </h1>
+
+
+
 	  <script src="script.js"></script>
 </body>
 
