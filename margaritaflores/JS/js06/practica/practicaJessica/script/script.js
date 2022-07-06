@@ -1,3 +1,32 @@
+setInvisible(true);
+/**
+ * Establecer como invisible el botón de limpiar
+ */
+
+
+function setInvisible(estado){
+    const formulario = document.getElementById("formulario");
+    //let status = "visible";
+    //if(estado) status = "hidden";
+    //formulario.elements['limpiar'].style.visibility = status;
+
+        let status = "inline"
+        if(estado) status = "none";
+        formulario.elements['limpiar'].style.display = status;
+        formulario.elements['fecha'].style.display = status;
+}
+
+const form = document.getElementById('formulario');
+
+form.addEventListener('submit', (event)=>{
+    event.preventDefault();
+    console.log(event);
+    calcularFecha();
+    setInvisible(false);
+} );
+
+
+
 //Obtener la fecha determinada
 /**
  * @param {int} anio
@@ -7,19 +36,27 @@
  */
 const calcularFecha = () =>{ 
     //Se manda llamar a la función Date() que se almacena en la constante día
-    const dia = new Date(
+    /*const dia = new Date(
         Number(document.getElementById("anio").value),
         String(document.getElementById("mes").value)-1, 
         Number(document.getElementById("dia").value));
-    //Se coloca -1 en el mes porque enero comienza con 0 
-    document.getElementById("fecha").value definirFecha(dia.getDay()); //Se manda llamar a la función definirFecha 
+    Se coloca -1 en el mes porque enero comienza con 0 
+   document.getElementById("fecha").value = definirFecha(dia.getDay()); //Se manda llamar a la función definirFecha 
+        */
+    const formulario = document.getElementById("formulario");
+    console.log( formulario.elements['mes'].value);
+    const dia = new Date( 
+        formulario.elements['anio'].value,
+        formulario.elements['mes'].value -1,
+        formulario.elements['dia'].value
+    )
+    formulario.elements['fecha'].value = definirFecha(dia.getDay() );
 }
 
-//Función para indicar el día y si es laborable
 /**
- * 
- * @param {int}  dia 
- * @return "'Día', fin de semana o 'Día', día lavorable"
+ * //Función para indicar el día y si es laborable
+ * @param {number}  dia 
+ * @return "'Día', fin de semana o 'Día', día laborable"
  */
 function definirFecha(dia){
     switch(dia){
@@ -44,6 +81,6 @@ function definirFecha(dia){
             break;
         case 6:
             return "Sábado, fin de semana";
-            break;
+       
     }
 }
