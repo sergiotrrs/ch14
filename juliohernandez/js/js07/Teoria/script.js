@@ -27,11 +27,11 @@ function guardarDatos() {
     localStorage.setItem("nombre", formulario.elements['nombre'].value);
     localStorage.setItem("apellido", formulario.elements['apellido'].value);
 
-    localStorage.setItem("datosUsuario",
-        {
+    localStorage.setItem("datosUsuario", JSON.stringify //Se debe convertir el objeto a JSON con función JSON.stringify
+        ({
             nombre: formulario.elements['nombre'].value,
             apellido: formulario.elements['apellido'].value
-        })
+        }));
 }
 
 function recuperarDatos() {
