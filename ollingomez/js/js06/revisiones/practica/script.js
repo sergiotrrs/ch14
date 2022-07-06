@@ -53,65 +53,7 @@ const calcularFecha = () => {
   let day = formulario.elements[`dia`].value;
   let month = formulario.elements[`mes`].value - 1;
   let year = formulario.elements[`anio`].value;
-  let anioBis = year % 4;
-  switch (month) {
-    //meses con 31 dias
-    case 0:
-    case 2:
-    case 4:
-    case 6:
-    case 7:
-    case 9:
-    case 11:
-      if (day < 1 || day > 31) {
-        alert("Ingrese un dia dentro del rango 1-31");
-        document.getElementById("dia").value = "";
-        setInvisible(false);
-        return null;
-
-      }
-      break;
-    case 1:
-      console.log("Dentro del casen deberia dar el año" + year);
-      console.log("año bis" + anioBis);
-      // el año es bisiesto
-      if (anioBis == 0 && (day < 1 || day > 29)) {
-        alert("Ingrese un dia dentro del rango 1-29");
-        document.getElementById("dia").value = "";
-        setInvisible(false);
-        return null;
-
-
-      }
-      // alert("El año no es bisiesto");
-      if (anioBis !== 0 && (day < 1 || day > 28)) {
-        alert("Ingrese un dia dentro del rango 1-28");
-        document.getElementById("dia").value = "";
-        setInvisible(false);
-        return null;
-      }
-
-
-      break;
-    // Meses con 30 dias
-    case 3:
-    case 5:
-    case 8:
-    case 10:
-      if (day < 1 || day > 30) {
-        alert("Ingrese un dia dentro del rango 1-31");
-        document.getElementById("dia").value = "";  
-        return null;
-      }
-      break;
-
-    default:
-      alert("Opcion invalida, verifique que los datos ingresados sean correctos");
-      setInvisible(false);
-      return null;
-      break;
-  }
-  
+    
   formulario.elements[`fecha`].value = definirFecha(dia.getDay());
 
   const otrosElementos = document.getElementsByClassName("resultado");
@@ -121,12 +63,9 @@ const calcularFecha = () => {
 
   }
 
-  // let validarFebrero = anio % 4;
-  // if (dia >= 29) {
-  //   alert("Error");
-  //   console.log("prueba");
-  // }
-
+  console.log("hola1");
+  definirDias(year,month,day);
+  console.log("hola3");
 };
 
 //Función para indicar el día y si es laborable
@@ -159,4 +98,63 @@ function definirFecha(dia) {
     case 6:
       return "Sábado, fin de semana";
   }
+}
+
+function definirDias(year,month,day){
+  console.log("hola2");
+  let anioBis = year % 4;
+  console.log(year, month, day);
+  switch (month) {
+    //meses con 31 dias
+    case 0:
+    case 2:
+    case 4:
+    case 6:
+    case 7:
+    case 9:
+    case 11:
+      if (day < 1 || day > 31) {
+        alert("Ingrese un dia dentro del rango 1-31");
+        document.getElementById("dia").value = "";
+        setInvisible(false);
+        return null;
+      }
+      break;
+    case 1:
+      console.log("Dentro del casen deberia dar el año" + year);
+      console.log("año bis" + anioBis);
+      // el año es bisiesto
+      if (anioBis == 0 && (day < 1 || day > 29)) {
+        alert("Ingrese un dia dentro del rango 1-29");
+        document.getElementById("dia").value = "";
+        setInvisible(false);
+        return null;
+      }
+      // alert("El año no es bisiesto");
+      if (anioBis !== 0 && (day < 1 || day > 28)) {
+        alert("Ingrese un dia dentro del rango 1-28");
+        document.getElementById("dia").value = "";
+        setInvisible(false);
+        return null;
+      }
+      break;
+    // Meses con 30 dias
+    case 3:
+    case 5:
+    case 8:
+    case 10:
+      if (day < 1 || day > 30) {
+        alert("Ingrese un dia dentro del rango 1-31");
+        document.getElementById("dia").value = "";  
+        return null;
+      }
+      break;
+
+    default:
+      alert("Opcion invalida, verifique que los datos ingresados sean correctos");
+      setInvisible(false);
+      return null;
+      break;
+  }
+
 }
