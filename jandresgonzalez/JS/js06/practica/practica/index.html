@@ -30,11 +30,10 @@
                         id="dia"
                         class="fecha"
                         placeholder="Día"
-                        min="1"
-                        max="31"
                         title="Indique el día en número"
+                        min="1"
                         required
-                        oninvalid="setCustomValidity('Indicar dia')"
+                        oninvalid="setCustomValidity('Indicar dia entre 1 y 31')"
                         oninput="setCustomValidity('')"                        
                         >
                 </div>
@@ -71,7 +70,7 @@
                         class="fecha"
                         placeholder="Año"
                         title="Indique el año en número"
-                        min="1970"
+                        min="1600"
                         required
                         oninvalid="setCustomValidity('Especificar el año')"
                         oninput="setCustomValidity('')"
