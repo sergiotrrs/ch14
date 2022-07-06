@@ -1,3 +1,24 @@
+/**
+ * Establecer como invisible el boton de limpiar
+ */
+setInvisible(true);
+
+function setInvisible(estado) {
+  const formulario = document.getElementById("formulario");
+  
+  let status = " inline"
+  if (estado) status = "none";
+  formulario.elements['limpiar'].style.display = status;
+  formulario.elements['fecha'].style.display = status;
+}
+
+const form = document.getElementById("formulario");
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  calcularFecha();
+  setInvisible(false);
+});
+
 //Obtener la fecha determinada
 /**
  * @param {int} anio
@@ -5,20 +26,22 @@
  * @param {int} dia
  * @return fecha dd/mm/aaaa (fecha solicitada)
  */
-const calcularFecha = () => {
-  //Se manda llamar a la función Date() que se almacena en la constante día
-  /*   const dia = new Date(
-        Number(document.getElementById("anio").value),
-        String(document.getElementById("mes").value) - 1,
-        Number(document.getElementById("dia").value));
-    //Se coloca -1 en el mes porque enero comienza en el 0
-  document.getElementById("fecha").value = definirFecha(dia.getDay());
-  };  */
 
-//Función para indicar el día y si es laborable
+const calcularFecha = () => {
+  //Función para indicar el día y si es laborable
+  const formulario = document.getElementById("formulario");
+  console.log(formulario.elements["mes"].value);
+  const dia = new Date(
+    formulario.elements["anio"].value,
+    formulario.elements["mes"].value - 1,
+    formulario.elements["dia"].value
+  );
+
+  formulario.elements["fecha"].value = definirFecha(dia.getDay());
+};
 /**
  *
- * @param {int}  dia
+ * @param {number}  dia
  * @return "'Día', fin de semana o 'Día', día lavorable"
  */
 function definirFecha(dia) {
@@ -45,6 +68,6 @@ function definirFecha(dia) {
     case 6:
       return "Sábado, fin de semana";
     default:
-        return "Día no existente";
+      return "Día no existente";
   }
 }

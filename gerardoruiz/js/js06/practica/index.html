@@ -17,17 +17,23 @@
 
 <body>
     <div class="container-fluid contenedor-inputs align-items-center ">
-        <form class="formulario-container">
+        <form id="formulario" class="formulario-container">
             <div class="container-fluid bg-light text-dark text-center">
                 <h1>Días laborables CH14</h1>
             </div>
-            <div class="row p-5 align text-center">
-                <div class="col-sm-12">
-                    <input type="number" name="" id="dia" class="fecha" placeholder="Día">
+            <div class="row p-5 align text-center ">
+                <div class="col-sm-12 ">
+                    <input type="number" name="" id="dia" class="fecha" placeholder="Día" min="1" max="31"
+                        title="Indique el día " required
+                        oninvalid="setCustomValidity('Es necesario especificar el día')"
+                        oninput="setCustomValidity('')">
                 </div>
-                <div class="col-sm-12">
-                    <select type="number" name="" id="mes" class="fecha" placeholder="Mes">
-                        <option >Selecciona un mes...</option>
+                <div class="col-sm-12 ">
+
+                    <select type="number" name="" id="mes" class="fecha" title="Indique el mes" required
+                        oninvalid="setCustomValidity('Es necesario especificar el mes')"
+                        oninput="setCustomValidity('')">
+                        <option value="">Selecciona un mes...</option>
                         <option value="1">Enero</option>
                         <option value="2">Febrero</option>
                         <option value="3">Marzo</option>
@@ -42,30 +48,35 @@
                         <option value="12">Diciembre</option>
                 </div>
                 <div class="col-sm-12">
-                    <input type="number" name="" id="anio" class="fecha" placeholder="Año">
+                    <input type="number" name="" id="anio" class="fecha" placeholder="Año" min="1900" max="2999"
+                        title="Indique el año " required
+                        oninvalid="setCustomValidity('Es necesario especificar el año')"
+                        oninput="setCustomValidity('')">
                 </div>
-            
-                <div class="row p-4 align-text-center ">
-                    <div class="col-sm-8">
-                        <button type="button" class="btn btn-outline-light boton-operacion btn-calcular my-1"
-                            onclick="calcularFecha()">Calcular día</button>
-                    </div>
-                    <div class="col-sm-4">
-                        <button class="btn btn-outline-light boton-operacion btn-limpiar my-1" onclick="reset()"
-                            style="width: calc(mt-auto);">Limpiar</button>
-                    </div>
-                </div>
-            </div>    
-            <div class="container-fluid contenedor-resultado align-items-center">
-                <div class="row p-6 my-4" >
-                    <div class="col-3"></div>
-                    <div class="col" id="resultado">
-                        <input type="text" name="" id="fecha" style="text-align: center; color:rgb(36, 37, 71);border: 5px solid rgb(36, 37, 71); border-radius: 10px" class="resultado " disabled >
+
+                <div class="row p-4 align-text-center">
+                    <div class="col-sm-12 my-1 ">
+                        <button type="submit" class="btn btn-outline-light boton-operacion btn-calcular ">Calcular día
+                        </button>
+                        <button id="limpiar" type="reset"
+                            class="btn btn-outline-light boton-operacion btn-limpiar my-1 mx-1"
+                            style="width: calc(mt-auto);" onclick="setInvisible(true)">Limpiar
+                        </button>
                     </div>
                 </div>
-            </div>
+
+                <div class="container-fluid contenedor-resultado text-center">
+                    <div class="row p-6 my-4">
+                        <div class="col-3"></div>
+                        <div class="col text-center" id="resultado">
+                            <input type="text" name="" id="fecha"
+                                style="text-align: center; color:rgb(36, 37, 71);border: 5px solid rgb(36, 37, 71); border-radius: 10px"
+                                class="resultado text-center" disabled>
+                        </div>
+                    </div>
+                </div>
         </form>
-    </div> 
+    </div>
 </body>
 
 </html>
