@@ -31,6 +31,7 @@ function guardarDatos() {
     )
 }
 
+//recupera los datos guardados en el formulario
 function recuperarDatos(){
     const formulario = document.getElementById('formulario');
     formulario.elements['nombre'].value = localStorage.getItem("nombre");
