@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULADORA PRO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+
+<body>
+    
+<h1>Calculadora de Adrian</h1> 
+
+    <div class="row">
+     <form id='myform' name="" method="post" >
+        
+        <input class="col-md-4 "  type="number" name="" id="valor1" 
+        autofocus placeholder="INTRODUCE UN NUMERO">
+        
+        <input class="col-md-4 " type="number" name="" id="valor2" 
+        placeholder="INTRODUCE UN 2DO NUMERO">
+     </div>
+     <br><br>
+        <p> <strong> RESULTADO : <span id="el resultado"></span> </strong> </p>
+        
+        <button type="button" class="btn btn-info" onclick="sumar();">S</button>
+        <button type="button" class="btn btn-danger" onclick="restar();">R</button>
+        <button type="button" class="btn btn-warning" onclick="multiplicar();">M</button>
+        <button type="button" class="btn btn-dark" onclick="dividir();">D</button>
+ 
+     </form>
+     <br></br>
+     
+     <form>
+        <h2>calificacion</h2>
+        <p class="clasificacion">
+          <input id="radio1" type="radio" name="estrellas" value="5">
+          <label for="radio1">★</label>
+          <input id="radio2" type="radio" name="estrellas" value="4">
+          <label for="radio2">★</label>
+          <input id="radio3" type="radio" name="estrellas" value="3">
+          <label for="radio3">★</label>
+          <input id="radio4" type="radio" name="estrellas" value="2">
+          <label for="radio4">★</label>
+          <input id="radio5" type="radio" name="estrellas" value="1">
+          <label for="radio5">★</label>
+        </p>
+      </form>
+    <script type="text/javascript" src="calculadora.js"> 
+    </script>
+   <link rel="stylesheet" href="caculadora.css">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>   
+</body>
+</html>
