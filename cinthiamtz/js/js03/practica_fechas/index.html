@@ -21,6 +21,110 @@
         <br>
         <h3>Calculadora que define si el dia es laborable o fin de semana</h3>
         <br>
+        <form id="formulario" name="calculadoraFechas">
+
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                    <label>Dia</label>
+                    <input 
+                    type="number" 
+                    id="dia" 
+                    placeholder="DD"                  
+                    min="1"
+                    max="31"
+                    title="Indique el dia a buscar"
+                    required
+                    oninvalid="setCustomValidity('Es necesario especificar el dia')";
+                    oninput="setCustomValidity('')";>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                    <label>Mes</label>
+                    <select id="mes" class="form-select">
+                        <option value="0">Seleccione el mes</option>
+                        <option value="1">Enero</option>
+                        <option value="2">Febrero</option>
+                        <option value="3">Marzo</option>
+                        <option value="4">Abril</option>
+                        <option value="5">Mayo</option>
+                        <option value="6">Junio</option>
+                        <option value="7">Julio</option>
+                        <option value="8">Agosto</option>
+                        <option value="9">Septiembre</option>
+                        <option value="10">Octubre</option>
+                        <option value="11">Noviembre</option>
+                        <option value="12">Diciembre</option>
+                    </select>
+                </div>
+
+                <div class="col-lg-4 col-md-3 col-sm-12 text-center">
+                    <label>Año</label>
+                    <input 
+                    type="number"
+                    id="anio" 
+                    placeholder="AAAA"
+                    min="1997"
+                    max="2050"
+                    title="Indique el año a buscar"
+                    required
+                    oninvalid="setCustomValidity('Es necesario especificar el año')";
+                     oninput="setCustomValidity('')"; >
+                </div>
+            </div>
+            <br>
+            <div class="row justify-content-center">
+                <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+                    <input type="text" name="" id="resultado" placeholder="Resultado"
+                        class="btn btn-primary btn-lg my-1 mx-1" disabled>
+                </div>
+
+                <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+                    <button type="submit" class="btn btn-primary btn-lg my-1 mx-1">Calcular</button>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+
+                <button id="limpiar" type="reset" class="btn btn-primary btn-lg my-1 mx-1" style="width: calc(mt-auto);"
+                    onclick="setInvisible(true)">Limpiar
+                </button>
+            </div>
+        </form>
+    </div>
+    <br>
+    <h4>Cinthia Martinez </h4>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="style.css" rel='stylesheet'>
+</head>
+
+<body>
+    <br>
+    <h1> Generation Mexico </h1>
+    <br>
+    <h2>Calculadora de fechas</h2>
+    <br>
+    <div class="container">
+        <br>
+        <h3>Calculadora que define si el dia es laborable o fin de semana</h3>
+        <br>
         <form name="calculadoraFechas">
 
             <div class="row justify-content-center">
@@ -73,4 +177,4 @@
     <script src="script.js"></script>
 </body>
 
-</html>
+</html> -->

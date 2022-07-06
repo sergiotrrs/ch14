@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body class="w-100 vh-100">
+    <header class="w-100 d-flex justify-content-center align-items-center" 
+    style="height: 25%; background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeE8G9Lielic4AhRRG2DyeRvViVlWgoipz4w&usqp=CAU');">
+        <h1 style="font-size: 60px; color:yellow;">Calculadora</h1>
+    </header>
+    <section class="calculadora" style="height: 75%; background-color: navajowhite;">
+        <div class="input p-3 d-flex justify-content-center">
+            <input type="number" id="a" placeholder="Numero 1" class="text-center form-control w-25 mx-3">
+            <input type="number" id="b" placeholder="Numero 2" class="text-center form-control w-25 mx-3">
+        </div>
+        <div class="result d-flex justify-content-center">
+            <input type="text" id="result" placeholder="Resultado" class="text-center" disabled>
+        </div>
+        <div class="operation d-flex justify-content-evenly m-3">
+            <button id="suma" class="btn btn-secondary">Suma</button>
+            <button id="resta" class="btn btn-secondary">Resta</button>
+            <button id="multi" class="btn btn-secondary">Multiplicacion</button>
+            <button id="div" class="btn btn-secondary">Division</button>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
