@@ -62,7 +62,9 @@ function callBack() {
 }
 
 console.log("1. Antes de setTimeout");
-setTimeout(callBack, 3000); //setTimeout(nombre_funcion, ms_a_contar)
+//setTimeout(callBack, 3000); //setTimeout(nombre_funcion, ms_a_contar)
+//setTimeout(function(){console.log("2.1. Se activa mi función anónima")},3000); //Se acostumbra ocupar funciones anónimas dentro
+setTimeout(()=>console.log("2.2. Se activa la función flecha."),3000); //Se reduce con función flecha.
 console.log("3. Después de setTimeout");
 
 /**
@@ -70,3 +72,4 @@ console.log("3. Después de setTimeout");
  * 3
  * 2 (después de 3 segs)
  */
+
