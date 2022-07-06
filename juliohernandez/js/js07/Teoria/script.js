@@ -27,17 +27,46 @@ function guardarDatos() {
     localStorage.setItem("nombre", formulario.elements['nombre'].value);
     localStorage.setItem("apellido", formulario.elements['apellido'].value);
 
-    localStorage.setItem("datosUsuario", JSON.stringify //Se debe convertir el objeto a JSON con función JSON.stringify
-        ({
+    localStorage.setItem("datosUsuario", JSON.stringify( //Se debe convertir el objeto a JSON con función JSON.stringify para guardarlo
+        {
             nombre: formulario.elements['nombre'].value,
-            apellido: formulario.elements['apellido'].value
-        }));
+            apellido: formulario.elements['apellido'].value,
+            expiracion: Date().getTime()
+        }
+        ));
 }
 
-function recuperarDatos() {
-    const datos = localStorage.getItem("datosUsuario")
+function recuperarDatos() {   
+    const datos = JSON.parse(localStorage.getItem("datosUsuario")); //Se reconvierte a Objeto para leerlo
     const formulario = document.getElementById("formulario");
-    formulario.elements['nombre'].value = localStorage.getItem("nombre");
-    formulario.elements['apellido'].value = datos.apellido;
+    
+    //Leer el momento de guardado:
+    let tiempo = datos.expiracion;
 
+    //Corroborar el lapso permitido:
+    let limite = tiempo + 5*60*1000;
+    if (Date().getTime()<=limite){
+        //Recupera los datos
+        formulario.elements['nombre'].value = localStorage.getItem("nombre");
+        formulario.elements['apellido'].value = datos.apellido;
+        //formulario.elements['apellido'].value = datos['apellido']; Otra forma de encontrar un elemento de un objeto
+    }else{
+        formulario.elements["nombre"].placeholder = "Ingrese nombre";
+        formulario.elements["apellido"].placeholder = "Ingrese apellido";
+    }
+    
 }
+
+function callBack() {
+    console.log(`2. Se activa la función callBack`);
+}
+
+console.log("1. Antes de setTimeout");
+setTimeout(callBack, 3000); //setTimeout(nombre_funcion, ms_a_contar)
+console.log("3. Después de setTimeout");
+
+/**
+ * 1
+ * 3
+ * 2 (después de 3 segs)
+ */
