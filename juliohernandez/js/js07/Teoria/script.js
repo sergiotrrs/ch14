@@ -57,6 +57,7 @@ function recuperarDatos() {
     
 }
 
+/* * * * * * * * * * * * * * * * * * * * * Función setTimeout y Funciones * * * * * * * * * * * * * * * * * 
 function callBack() {
     console.log(`2. Se activa la función callBack`);
 }
@@ -64,7 +65,10 @@ function callBack() {
 console.log("1. Antes de setTimeout");
 //setTimeout(callBack, 3000); //setTimeout(nombre_funcion, ms_a_contar)
 //setTimeout(function(){console.log("2.1. Se activa mi función anónima")},3000); //Se acostumbra ocupar funciones anónimas dentro
-setTimeout(()=>console.log("2.2. Se activa la función flecha."),3000); //Se reduce con función flecha.
+setTimeout(()=>{
+    console.log("2.2. Se activa la función flecha.");
+    return "se retorna algo"; //Si tiene más de dos líneas, debe de escribirse un return
+},3000); //Se reduce con función flecha.
 console.log("3. Después de setTimeout");
 
 /**
@@ -73,3 +77,21 @@ console.log("3. Después de setTimeout");
  * 2 (después de 3 segs)
  */
 
+/* * * * * * * * * * * * * * * * * * * * * PROMESAS :'( * * * * * * * * * * * * * * * *  */
+function miPromesa(){
+    let promesa = new Promise((resolve, reject) => {
+        const expression = true;
+        if (expression){
+            resolve ("La promesa se resolvió, la abejita trae polen");
+        }else{
+            reject("La promesa NO se resolvió, la abejita no trajo polen;")
+        }
+    });
+
+    //Vamos a consumir la promesa con .then (resolve) y .catch (reject)
+    //promesa.then().catch();
+    promesa
+        .then(valueResolve => console.log(valueResolve))
+        .catch(valueReject => console.log(valueReject));
+}
+ 
