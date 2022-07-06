@@ -26,12 +26,12 @@ function guardarDatos() {
     localStorage.setItem("Cohorte", "Ch14");
     localStorage.setItem("nombre", formulario.elements['nombre'].value);
     localStorage.setItem("apellido", formulario.elements['apellido'].value);
-
-    localStorage.setItem("datosUsuario", JSON.stringify( //Se debe convertir el objeto a JSON con función JSON.stringify para guardarlo
+    //Se debe convertir el objeto a JSON con función JSON.stringify para guardarlo
+    localStorage.setItem("datosUsuario", JSON.stringify( 
         {
             nombre: formulario.elements['nombre'].value,
             apellido: formulario.elements['apellido'].value,
-            expiracion: Date().getTime()
+            expiracion: Date.now()
         }
         ));
 }
@@ -45,7 +45,7 @@ function recuperarDatos() {
 
     //Corroborar el lapso permitido:
     let limite = tiempo + 5*60*1000;
-    if (Date().getTime()<=limite){
+    if (Date.now()<=limite){
         //Recupera los datos
         formulario.elements['nombre'].value = localStorage.getItem("nombre");
         formulario.elements['apellido'].value = datos.apellido;
@@ -91,7 +91,7 @@ function miPromesa(){
     //Vamos a consumir la promesa con .then (resolve) y .catch (reject)
     //promesa.then().catch();
     promesa
-        .then(valueResolve => console.log(valueResolve))
+        .then(valueResolve => console.log(valueResolve))   //Aquí no se pone un ';'
         .catch(valueReject => console.log(valueReject));
 }
  
