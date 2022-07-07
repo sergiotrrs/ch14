@@ -7,6 +7,25 @@ form.addEventListener("submit", (event) => {
     setInvisible(false);
 });
 
+function setMax() {
+    const formulario = document.getElementById("form");
+    let day = formulario.elements['dia'];
+    let month = formulario.elements['mes'].value - 1;
+    let year = formulario.elements['anio'].value;
+    let bisiesto = year%4 == 0;
+    if (bisiesto && month == 1) {
+        day.max = "29"
+    }
+    else if (!bisiesto && month == 1) {
+        day.max = "28"
+    }
+    else if ((month == 0 || month == 2 || month == 4 || month == 6 || month == 7 || month == 9 || month == 11)) {
+        day.max = "31"
+        }
+    else if ((month == 3 || month == 5 || month == 8 || month == 10)) {
+        day.max = "30"
+    }
+}
 
 
 //Obtener la fecha determinada
@@ -42,7 +61,8 @@ let bisiesto = year%4 == 0;
         console.log("bisiesto");
         window.alert("Inserte un día menor para febrero en año bisiesto (menor o igual a 29)")
         formulario.elements['fecha'].value = "Inserte un día menor";
-        formulario.elements['dia'].value = "29";                
+        formulario.elements['dia'].value = "29";
+        formulario.elements['dia'].max = "29"
     }
     else if (!bisiesto && month == 1 & day > 28) {
         console.log("no bisiesto");
