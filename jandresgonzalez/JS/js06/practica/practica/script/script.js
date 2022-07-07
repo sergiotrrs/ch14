@@ -42,7 +42,8 @@ let bisiesto = year%4 == 0;
         console.log("bisiesto");
         window.alert("Inserte un día menor para febrero en año bisiesto (menor o igual a 29)")
         formulario.elements['fecha'].value = "Inserte un día menor";
-        formulario.elements['dia'].value = "29";                
+        formulario.elements['dia'].value = "29";
+        formulario.elements['dia'].max = "29"
     }
     else if (!bisiesto && month == 1 & day > 28) {
         console.log("no bisiesto");
