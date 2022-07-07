@@ -32,7 +32,12 @@ function guardarDatos() {
       //expiracion: tiempo_en_milisegundo; // minutos de tiempo de expiracion
     })
   );
-}
+    setTimeout(guardarDatos() => {
+      console.log("**Se guardaron datos secretos**")
+    }, 3000);
+  }
+
+
 
 function recuperarDatos() {
   const formulario = document.getElementById("formulario");
@@ -105,3 +110,10 @@ function miPromesa() {
     .then((valueResolve) => console.log(valueResolve))
     .catch((valueReject) => console.log(valueReject));
 }
+
+const timeoutId = setTimeout(function(){
+    console.log("Hola Mundo");
+}, 2000);
+
+clearTimeout(timeoutId);
+console.log(`Tiempo de espera ID ${timeoutId} ha sido limpiado`);
