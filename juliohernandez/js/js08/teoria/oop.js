@@ -26,3 +26,10 @@ console.log(`Me sirve un ${elote.marcaMoriras()}`) //con paréntesis para que se
 console.log(`Me sirve un ${elote.dorilocos(true)}`);
 console.log(`Me sirve un ${elote.dorilocos(false)}`);
 
+console.log(`------- Agregando un nuevo atributo -------`);
+//Crear y eliminar atributos
+console.log(`Antes de agregar atributo: ${Object.values(elote)}`) //Muestra los valores de los atributos de elote
+delete elote.tipo;
+elote.pica = true;
+console.log(`Después de agregar atributo: ${Object.keys(elote)}`) //Muestra los atributos de elote
+
