@@ -73,8 +73,8 @@ function suma(a, b, fncMostrar){
   fncMostrar(suma);
 }
 
-suma(3, 5, imprimir);
-suma(2, 8, imprimirHTML);
+//suma(3, 5, imprimir);
+//suma(2, 8, imprimirHTML);
 
 //Funcion setTimeout************************
 function funcionCalBack () {
@@ -90,17 +90,20 @@ function funcionCalBack () {
 //Si la funcion flecha solo tiene una instruccion no requiere return
 //si se necesita retornar algo y tiene mas de una instruccion si se utiliza el return
 //setTimeout(() => console.log(`2.2 Se activa la funcio flecha`), 3000);
-console.log(`3.Despues del setTimeout`);
+//console.log(`3.Despues del setTimeout`);
 
 
 //Promesas***********************************
-miPromesa();
+//miPromesa();
 function miPromesa(){
+  //Crear una nueva promesa
   let promesa = new Promise((resolve, reject) => {
     const expresion = false;
     if (expresion) {
+      //Resuelve la promesa-
       resolve (`Resolve: La Promesa Se Resolvio, La Abejita Trae Polen`);
     } else {
+      //Cuando la promesa no se cumple
       reject (`Reject: La Promesa NO se resolvió, La Abejita No Trajo Polen`)
     }
   });
@@ -108,6 +111,81 @@ function miPromesa(){
   //Vamos a consumir (leer) la promesa con .then y .chatch
   //promesa.then().catch();
   promesa
-  .then((valueResolve) => console.log(valueResolve)) 
-  .catch((valueReject) => console.log(valueReject));
+  .then((valueResolve) => console.log(valueResolve)) // y entonces cuando la promesa se cumple haces esto
+  .catch((valueReject) => console.log(valueReject)); //si la promesa es rechazada se ejecuta esta parte 
 }
+
+//Promesas, Async-Await, Try-Catch*********************
+
+async function calculos() {
+  //const suma = (a, b) => {return a + b};
+  //console.log(`El resultado de la suma es: ${suma(1, 2)}`);
+  const resta = (a, b) => a - b;
+  //console.log(`El resultado de la resta es: ${resta(6, 2)}`);
+
+  /**
+   * 
+   * @param {Number} a 
+   * a tiene que ser numero positivo
+   * @param {Number} b 
+   * 
+   * Mi funcion va a sumar siempre que a y b sean positivo
+   * Se retorna el resultado positivo.
+   * Si el resulto es negativo, se envia un mensaje
+  */
+  const suma = (a, b) => {
+    const operacionSuma = new Promise((resolve, reject) => {
+      //if (a > 0 && b > 0) resolve (a + b);
+      //                        funcion flecha o callback
+      if ( a > 0 && b > 0) setTimeout(() => resolve (a + b ), 3000)
+      else reject (`Solo se aceptan numero positivos`);
+    })
+    return operacionSuma;
+  }
+
+  /**
+   * @param {number} numero
+   * Determinara si el resultado de la suma es par
+   * Si es par retornara true
+   * De lo contrario (impar) retornara un mensaje de error
+   */
+  const esPar = (numero) => {
+    //return (a % 2 == 0) ? true :false;
+    return new Promise((resolve, reject) => {
+      if (numero % 2 == 0) setTimeout(() => resolve (true), 3000)
+      else reject (`El numero no es par`);
+    });
+  }
+
+  //Esta es una funcion asincrona
+  //Funcion promesa
+  suma(6, 6)
+  .then(resultado => {
+    console.log(`Promesa suma: ${resultado}`);
+    //console.log(`Es Par? ${esPar(resultado)}`);
+    return esPar(resultado)
+  })
+  .then( resultadoEsPar => { //Este .then, consume la promesa de esPar(resultado)
+    console.log(`Promesa es par? ${resultadoEsPar}`);
+  })
+  .catch(error => console.log(`Rechazado porque: ${error}`));
+  console.log(`El resultado de la resta es: ${resta(6, 2)}`);
+
+  //Existen otra forma de consumir promesas, con async-await
+  //Para usar await, mi funcion debe estar declarada como async
+  //Si se ejecuta el reject, me aparece el resultado(mensaje), No se maneja el error.
+  console.log(`Await. El resultado suma: ${await suma(9,6)}`);
+
+  //Para manejar el errror con await, podemor usar los bloques try-catch
+  //Se tiene el contro sobre los errores
+  try {
+    console.log(`Try. Trae el resultado suma: ${await suma(-6, 3)}`);
+    console.log(`Se terminó este asunto, vamos por elotes`);
+  } catch (error){
+    console.log(`Se generó un error porque:  ${error}`);
+  }
+
+  console.log(`Await. El resultado resta: ${resta(-9,6)}`);
+}
+calculos();
+
