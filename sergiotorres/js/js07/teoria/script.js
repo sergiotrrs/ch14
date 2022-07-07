@@ -74,22 +74,90 @@ function funcionCallBack(){
 //console.log("3.- Después de setTimeout");
 
 //***************************Promesas********************************* */
-miPromesa();
+//miPromesa();
 function miPromesa(){
-  const promesa = new Promise( (resolve, reject ) => {
+  const promesa = new Promise( (res, rej ) => {
     const expresion = false;
     if (expresion){
-      resolve ("La promesa se resolvió, la abejita trae polen");
+      res ("La promesa se resolvió, la abejita trae polen");
     }
     else{
-      reject ("La promesa NO se resolvió, la abejita no trajo polen");
+      rej ("La promesa NO se resolvió, la abejita no trajo polen");
     }
 
    });
 
    //Vamos a consumir la promesa con .then y .chatch
    //promesa.then( ).catch( );
+   let respuesta;
    promesa
-    .then( (valueResolve) => console.log(valueResolve) )
+    .then( (valueResolve) =>{
+      respuesta = valueResolve; 
+      console.log(respuesta); 
+    })
     .catch( (valueReject) => console.log(valueReject) );
 }
+
+//***************************Promesas, Async-Await, try-Catch*********** */
+calculos();
+async function calculos(){
+  //const suma = (a ,b ) => { return (a + b) };
+  //console.log("El resultado de la suma es: " + suma(1,2));
+  const resta = (a ,b ) => a - b;
+  
+  /**
+   *  Mi función va a sumar, siempre que a y b sean positivos
+   *  Se retorna el resultado positivo.
+   *  Si el resultado es negativo, se enviará un mensaje de error
+   */
+  const suma = (a, b) =>{
+    const operacionSuma = new Promise((resolve, reject) => {
+      //if(a>0 && b>0) resolve (a+b);
+      if ( a>0 && b>0) setTimeout( ()=>resolve (a+b), 3000);
+      else reject("Solo se puede sumar números positivos");      
+    })
+    return operacionSuma;
+  }
+
+  /**
+   * Se determinará si el número ingresado es par
+   * Si es par se retornará true
+   * Si no es par, se retorna un mensaje del error.
+   */
+  const esPar = (numero) => {
+    //return (numero%2==0 ? true : false);
+    return new Promise((resolve, reject) => {
+      if ( numero%2 == 0 )setTimeout( ()=>resolve (true), 3000);
+      else reject ("El número no es par");
+    });    
+  }
+  
+  // suma(5, 6)
+  // .then( resultado => {
+  //     console.log("Promesa Suma:" + resultado);
+  //     //console.log("Es par?: "+ esPar(resultado));
+  //     return esPar(resultado);
+  //   })
+  // .then( resultadoEsPar =>{   //Este .the, consume la promesa de esPar(resultado);
+  //     console.log("Promesa es par? " + resultadoEsPar);
+  // }  )
+  // .catch( error => console.log("Rechazado por: " + error));
+  
+  
+  //Existe otra forma de consumir las primesas, usando async-await
+  //Para usar await, mi función debe ser async.
+  //Si se ejectua el reject, me aparece el resultado(mensaje), No se maneja el error.
+  //console.log("Await El resultado suma: "+ await suma(9,6)); 
+
+  //Para manejar el error con await, podemos usar los bloques try-catch
+  try{
+    console.log("Try El resultado suma: " + await suma (-6,3));
+    console.log("Se terminó este asunto, vamos por elotes");
+  }
+  catch (error){
+    console.log("Se generó un error por: " + error);
+  }
+  
+  console.log("El resultado de la resta es: " + resta(10,3));
+}
+
