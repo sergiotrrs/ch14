@@ -29,7 +29,8 @@
     //localStorage.setItem("apellido", formulario.elements["apellido"].value);
     
     let dayData = Date.now();
-    let expiration = dayData + 60000;
+    //se pone con ms
+    let expiration = dayData + 45000;
 
     //JSON stringify string del objeto convertido a JSON
     localStorage.setItem("datos", JSON.stringify({   
@@ -109,12 +110,12 @@ console.log("Esto se hace antes de Timeout");
 */
 
 //--------------------------------P R O M E S A S ---------
-myPromise();
+//myPromise();
 function myPromise() {
   let promesa = new Promise((resolve, reject) => {
     const expresion = true;
     if (expresion) {
-      resolve ("La promesa se kunplio");
+      resolve ("La promesa se kunplio, KONSUMIDISIMA");
     }
     else {
       reject ("No hubo pa hacer la promesa");
@@ -131,4 +132,101 @@ function myPromise() {
     .catch( (valueReject) => console.log(valueReject));
 
 
+}
+
+//prometeVasolote();
+//Ejemplo 2
+function prometeVasolote() {
+  let senioraVasolotesXangari = true;
+  const promesa = new Promise((resolve, reject) => {
+    if (senioraVasolotesXangari) console.log("Regresamos con datos de que sí hay vasolote");    
+    else {
+      console.log("No estaban los vasolotes");
+    }
+  });
+
+  promesa
+    .then ( (valueResolve) => {
+      console.log(valueResolve);
+    })
+    .catch((valueReject) => console.log(valueReject))
+}
+
+// Promeas, Async-Await, try-Catch
+calculos();
+async function calculos() {
+  //const suma = (a,b) => a+b;
+  //console.log("El resultado de la suma es: " + suma(1,2));
+  const resta = (a,b) => a-b;
+  
+  
+  /**
+   * funcion sumará siempre que resultado sea positivo
+   * retorna resultado positivio
+   * un resultado negativo envía mensaje
+   * @param {num} a Numero 1
+   * @param {num} b Numero 2
+   * @returns Regresa la suma
+   */
+  const suma = (a,b) => {
+    const operacionSuma = new Promise((resolve, reject) => {
+      //if(a>0 && b>0) resolve (a+b);
+      if (a>0 && b>0) setTimeout(()=> resolve (a+b), 3000)
+      else reject ("Sólo admite números positivos");
+    })
+    return operacionSuma;
+  }
+
+  /**
+   * Se determinará si el número es par
+   * Si es par, se retornará true
+   * de lo contrario, retorna mensajer error
+   */
+  const esPar = (num) => {
+    //return (num%2 == 0) ? true : false;
+    return new Promise ((resolve, reject) => {
+      setTimeout(()=> {
+      if (num%2 == 0) resolve(true);
+      else reject (`El numero ${num} no es par`)}, 1500);
+    })
+  }
+
+
+//se consume la promesa
+
+/*   
+suma(5,6)
+    .then( resultado => {
+       console.log("Quedó así: " + resultado) 
+       //console.log("Es par?: " + esPar(resultado));
+       return esPar(resultado); //Una vez consumida una promesa, se puede realizar otro solicitando
+       //que regrese el valor
+      })
+    .then (resultadoEsPar => {   //Este .then consume la promesa esPar
+      console.log("Promesa es par? " + resultadoEsPar);
+    })
+    .catch( mensaje => console.log("Rechazado: " + mensaje) ); 
+    */
+
+    
+    
+    //Existe otra forma de consumir promesas: async-await
+    //Para usar await, la función debe ser asíncrona (async)
+    //Si se ejecuta el reject, aparece mensaje. No se maneja el error
+    //console.log("Await. El resultado suma: " + await suma(9, 6));
+
+    //Para manera el error con await, podemos usar los bloques try-catch
+    try {
+      console.log("Try El resultado suma: " + await suma(-6, 3));
+      console.log("Keda. Chascapizza yommi");
+    }
+    catch (error) {
+      console.log("Se generó un error por: " + error);
+    }
+
+    //El await detiene el código hasta que se cumpla la promesa.
+
+    //Pasa lo mismo con try - catch ^^^^^^^
+    //Sólo cumplida la promesa, avanza    
+    console.log("El resultado de la resta es: " + resta(5,3));
 }
