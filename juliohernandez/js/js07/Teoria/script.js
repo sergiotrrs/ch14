@@ -44,7 +44,7 @@ function recuperarDatos() {
     let tiempo = datos.expiracion;
 
     //Corroborar el lapso permitido:
-    let limite = tiempo + 5*60*1000;
+    let limite = tiempo + 1*60*1000;
     if (Date.now()<=limite){
         //Recupera los datos
         formulario.elements['nombre'].value = localStorage.getItem("nombre");
@@ -95,3 +95,57 @@ function miPromesa(){
         .catch(valueReject => console.log(valueReject));
 }
  
+/* * * * * * * * * * * *  Promesas, Async-await y try-catch */
+async function calculos(){
+    //const suma = (a,b)=> a +b;
+    //console.log(`El resultado de la suma es: ${suma(1,2)}`);
+    const resta = (a,b)=> a -b;
+    console.log(`El resultado de la resta es: ${resta(1,2)}`);
+
+    const suma = (a,b) => {  
+        const operacionSuma = new Promise((resolve,reject)=>{
+            //if (a>0 && b>0)resolve(a+b);
+            if (a>0 && b>0)setTimeout(()=>resolve(a+b),3000);
+            else reject("Solo se puede sumar números positivos");
+        })
+
+        return operacionSuma;
+
+    }
+    const esPar = (numero)=>{
+        //return(a%2==0 ? true : false);
+        return new Promise((resolve, reject) => {
+            if (numero%2==0) setTimeout(()=> resolve(true),3000);
+            else reject("El número NO es PAR");
+        })
+    }
+
+    suma(5,6)
+        .then(resultado => {
+            console.log("Suma: " + resultado);
+            //console.log(`Es par? ${esPar(resultado)}`);
+            return esPar(resultado); //Regresa Resultado para asignárselo a resultadoEsPar
+        }) //Resolve lo entrega en resultado
+        .then(resultado => console.log(`Promesa es par? ${resultado}`)) //Este .then recibe y espera al anterior .then.
+        //Aunque no hay un reject para EsPar, el único reject recibe todos los reject
+
+        //Sólo se puede poner un .catch
+        //.catch(error=>console.log(`Promesa es impar?${error}`))
+        .catch(error => console.log("Rechazado por: "+error)); //reject va a entregar en error
+
+        //Existe otra forma de consumir promesas: async-await
+        //Para usar await, mi función debe ser async
+        //Si se ejecuta el reject, me aparece el resultado (mensaje), No se maneja (controla) el error.
+        console.log(`Await El resultado suma: ${await suma(9,-6)}`); //Sin el await se retorna un object 
+        //No se ejecuta nada hasta que la promesa se cumple.
+        console.log("Despues del await");
+
+        //Para manejar el error con await, podemos usar los bloques try-catch
+       { try {
+            console.log("Try el resulado suma: "+ await suma(6,3));
+            console.log("Se terminó este asunto, vamos por elotes");
+        } catch (error) { //Trae el error de .catch
+            console.log("Se generó un error por: " + error)
+        }}
+}
+calculos();
