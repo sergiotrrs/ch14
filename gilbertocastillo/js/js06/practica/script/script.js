@@ -18,9 +18,22 @@ function setInvisible(estado){
 
 const form = document.getElementById('formulario');
 
+function pasarFiltro(anio, mes ,dia){
+    let bisiesto = anio%4;
+    if (mes ===2 && bisiesto == 0 dia <= 29) return true;
+    else
+
+if (bisiesto==0){}
+
+
+}
+
+
+
 form.addEventListener('submit', (event) =>{
     event.preventDefault();
     console.log(event);
+
     calcularFecha();
     setInvisible(false);
 }  );
