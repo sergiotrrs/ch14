@@ -15,8 +15,17 @@ function setInvisible(estado){
     formulario.elements['fecha'].style.display = status;
 }
 
-
 const form = document.getElementById('formulario');
+form.elements["mes"].onchange=function(){
+    let a = 31;
+    
+    const dia = new Date(
+        formulario.elements['anio'].value,
+        formulario.elements['mes'].value-1,
+    )
+
+    confirm(dia);
+}
 
 form.addEventListener('submit', (event) =>{
     event.preventDefault();
