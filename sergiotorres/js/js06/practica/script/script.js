@@ -18,9 +18,25 @@ function setInvisible(estado){
 
 const form = document.getElementById('formulario');
 
+let contador =0;
 form.addEventListener('submit', (event) =>{
     event.preventDefault();
-    console.log(event);
+    console.log(event);        
+        /**
+         *Implementar filtro 
+            if( pasaFiltro() {
+                calcularFecha();
+                setInvisible(false);
+                contador =0;
+            }
+            else{
+                ++contador;
+                if (contador>10){
+                    //Me doy por vencido, has lo que quieras
+                }
+                //Enviar mensaje a usuario
+            }
+         */
     calcularFecha();
     setInvisible(false);
 }  );
