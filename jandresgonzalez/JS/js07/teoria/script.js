@@ -9,14 +9,15 @@
  function getLocation() {
    if (navigator.geolocation) {
      navigator.geolocation.getCurrentPosition(showPosition);
-   } else { 
+   } else {
      x.innerHTML = "Geolocation is not supported by this browser.";
    }
  }
- 
+
+
  function showPosition(position) {
-   x.innerHTML = "Latitude: " + position.coords.latitude + 
-   "<br>Longitude: " + position.coords.longitude;
+   x.innerHTML = "Latitude: " + position.coords.latitude +
+    "<br>Longitude: " + position.coords.longitude;
  }
 
  function guardarDatos() {
@@ -27,30 +28,30 @@
     localStorage.setItem("cohorte", "ch14");
     //localStorage.setItem("nombre", formulario.elements["nombre"].value);
     //localStorage.setItem("apellido", formulario.elements["apellido"].value);
-    
     let dayData = Date.now();
     //se pone con ms
     let expiration = dayData + 45000;
 
     //JSON stringify string del objeto convertido a JSON
-    localStorage.setItem("datos", JSON.stringify({   
+    localStorage.setItem("datos", JSON.stringify({
+
         "nombre": formulario.elements["nombre"].value,
         "apellido": formulario.elements["apellido"].value,
         "expiration": expiration,
         "ingreso": dayData
       }
     ))
- }
+}
 
  function recuperarDatos() {
     const formulario = document.getElementById("formulario");
+
     //formulario.elements["nombre"].value = localStorage.getItem("nombre");
     //formulario.elements["apellido"].value = localStorage.getItem("apellido");
-    
     //JSON.parse convierte un JSON a objeto
     let datos = JSON.parse(localStorage.getItem("datos"));
     let dayData = Date.now();
-       
+
 //El siguiente if/else revisa que los datos de expiración no hayan caducado
 //Se revisa la fecha de expiración de almacenamiento. Si se ha cumplido, se borra la info
 //En caso de que la información no haya expirado, se muestran los últimos datos ingresados
@@ -69,7 +70,6 @@
     }
     formulario.elements["nombre"].value = datos.nombre;
     formulario.elements["apellido"].value = datos.apellido;
-    
  }
  function imprimir(dato) {
    console.log(dato);
@@ -158,8 +158,7 @@ async function calculos() {
   //const suma = (a,b) => a+b;
   //console.log("El resultado de la suma es: " + suma(1,2));
   const resta = (a,b) => a-b;
-  
-  
+
   /**
    * funcion sumará siempre que resultado sea positivo
    * retorna resultado positivio
@@ -194,10 +193,10 @@ async function calculos() {
 
 //se consume la promesa
 
-/*   
+/*
 suma(5,6)
     .then( resultado => {
-       console.log("Quedó así: " + resultado) 
+       console.log("Quedó así: " + resultado)
        //console.log("Es par?: " + esPar(resultado));
        return esPar(resultado); //Una vez consumida una promesa, se puede realizar otro solicitando
        //que regrese el valor
@@ -205,11 +204,10 @@ suma(5,6)
     .then (resultadoEsPar => {   //Este .then consume la promesa esPar
       console.log("Promesa es par? " + resultadoEsPar);
     })
-    .catch( mensaje => console.log("Rechazado: " + mensaje) ); 
+    .catch( mensaje => console.log("Rechazado: " + mensaje) );
     */
 
-    
-    
+
     //Existe otra forma de consumir promesas: async-await
     //Para usar await, la función debe ser asíncrona (async)
     //Si se ejecuta el reject, aparece mensaje. No se maneja el error
@@ -227,6 +225,6 @@ suma(5,6)
     //El await detiene el código hasta que se cumpla la promesa.
 
     //Pasa lo mismo con try - catch ^^^^^^^
-    //Sólo cumplida la promesa, avanza    
+    //Sólo cumplida la promesa, avanza
     console.log("El resultado de la resta es: " + resta(5,3));
 }
