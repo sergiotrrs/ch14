@@ -1,0 +1,19 @@
+{
+  "name": "teoria",
+  "version": "1.0.1",
+  "description": "uso de NPM",
+  "main": "scriptjs09.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "npm",
+    "bootstrap",
+    "axios"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}
