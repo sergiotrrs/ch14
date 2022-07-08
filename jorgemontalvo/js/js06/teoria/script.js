@@ -1,18 +1,18 @@
 console.log("Teoría de Sesión JS06");
-// encontrarPorId();
+encontrarPorId();
 // encontrarPorTagName();
 // encontrarPorClase();
 // encontrarPorSelector();
 // crearElemento();
-cambiarEstilo();
+// cambiarEstilo();
 
 function encontrarPorId(){
     //Obtenemos el metodo mediante su Id
-    const element = document.getElementById("intro");
-    console.log("Datos del elemento: " + element.innerHTML);
+    const elemento = document.getElementById("intro");
+    console.log("Datos del elemento: " + elemento.innerHTML);
     //Ingresar nuevos datos en el objeto con id "demo"
     document.getElementById("demo").innerHTML =
-        "El <b>texto</b> en el párrafo intro es: " +element.innerHTML;
+        "El <b>texto</b> en el párrafo intro es: " +elemento.innerHTML;
 }   
 
 function encontrarPorTagName(){
