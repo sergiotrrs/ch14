@@ -23,22 +23,25 @@
                 <h1>JAKEADa! POR ABUE HACKERMAN</h1>
             </div>
             <div class="row p-5 align text-center">
+                
+                <!-- AÑO -->
                 <div class="col-sm-12">
-                    <input 
+                    <input  
                         type="number"
                         name=""
-                        id="dia"
+                        id="anio"
                         class="fecha"
-                        placeholder="Día"
-                        title="Indique el día en número"
-                        min="1"
+                        placeholder="Año"
+                        title="Indique el año en número"
+                        min="1600"
                         required
-                        oninvalid="setCustomValidity('Indicar dia entre 1 y 31')"
-                        oninput="setCustomValidity('')"                        
+                        oninvalid="setCustomValidity('Especificar el año')"
+                        oninput="setCustomValidity('')"
                         >
                 </div>
+
+                <!-- DROPDOWN MES -->
                 <div class="col-sm-12">
-                    <!-- DROPDOWN MES -->
                     <select
                             type="number"
                             name=""
@@ -61,21 +64,25 @@
                         <option value="11">Noviembre</option>
                         <option value="12">Diciembre</option>
                 </div>
+
+                <!-- DIA -->
                 <div class="col-sm-12">
-                    <!-- AÑO -->
-                    <input  
+                    <input 
                         type="number"
-                        name=""
-                        id="anio"
+                        name="miname"
+                        id="dia"
                         class="fecha"
-                        placeholder="Año"
-                        title="Indique el año en número"
-                        min="1600"
+                        placeholder="Día"
+                        title="Indique el día en número"
+                        min="1"
                         required
-                        oninvalid="setCustomValidity('Especificar el año')"
+                        oninvalid="setCustomValidity('Indicar dia entre 1 y 31')"
                         oninput="setCustomValidity('')"
+                        onclick="setMax()"                        
                         >
-                </div>
+                </div>                
+
+
         </form>
         
         <!-- BOTONES CALCULAR LIMPIAR-->

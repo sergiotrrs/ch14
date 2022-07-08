@@ -64,7 +64,7 @@ const calcularFecha = () => {
   }
 
   console.log("hola1");
-  definirDias(year,month,day);
+  definirDias(year,month,day);SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
   console.log("hola3");
 };
 
@@ -127,14 +127,14 @@ function definirDias(year,month,day){
       if (anioBis == 0 && (day < 1 || day > 29)) {
         alert("Ingrese un dia dentro del rango 1-29");
         document.getElementById("dia").value = "";
-        setInvisible(false);
+        
         return null;
       }
       // alert("El año no es bisiesto");
       if (anioBis !== 0 && (day < 1 || day > 28)) {
         alert("Ingrese un dia dentro del rango 1-28");
         document.getElementById("dia").value = "";
-        setInvisible(false);
+        
         return null;
       }
       break;
@@ -152,7 +152,7 @@ function definirDias(year,month,day){
 
     default:
       alert("Opcion invalida, verifique que los datos ingresados sean correctos");
-      setInvisible(false);
+      
       return null;
       break;
   }
