@@ -17,7 +17,7 @@ fetch('https://reqres.in/api/users?page=2')
         document.getElementsByClassName("email")[user].innerHTML = usuarios.data[user].email;
         document.getElementsByClassName("fName")[user].innerHTML = usuarios.data[user].first_name;
         document.getElementsByClassName("lName")[user].innerHTML = usuarios.data[user].last_name;
-        //console.log(document.getElementsByClassName("img-avar")[user])
+        document.getElementsByClassName("img-avatar")[user].src = usuarios.data[user].avatar;
     } 
 });
 
@@ -43,6 +43,10 @@ function creaCols(indiceFila){
     document.getElementsByTagName("tr")[indiceFila].appendChild(document.createElement("td")).className = "avatar";
 }
 
+/*
+ * Crea elemento img con clase img-avatar dentro del elemento de clase avatar 
+ * @param {*} indiceFila Iniciando desde el 1
+ */
 function creaImg(indiceFila){
     document.getElementsByClassName("avatar")[indiceFila-1].appendChild(document.createElement("img")).className = "img-avatar";
    //Para que coincida el valor del índiceFila con creaFila y creaCols
