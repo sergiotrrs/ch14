@@ -1,19 +1,23 @@
-/* //El método por default que realiza fetch es Get
-fetch('https://reqres.in/api/users?page=2')
-  .then(response => response.json())
-  .then(usuarios => {
-    //console.log(usuarios.data[0])
-    for (user of usuarios.data){
-        
-        console.log(`${user.id} tiene email ${user.email}`);
-    }
-    document.getElementById("r1")[0]=usuarios.data[0].id;
-}); */
-
-for(let i=2;i<=4;i++){
+for(let i=2;i<=7;i++){
     creaFilas(i);
     creaCols(i);
 }
+
+ //El método por default que realiza fetch es Get
+fetch('https://reqres.in/api/users?page=2')
+  .then(response => response.json())
+  .then(usuarios => {
+    //console.log(usuarios.data)
+     for (user in usuarios.data){
+        
+        //console.log(`${usuarios.data[user].email} tiene email ${user}`);
+        document.getElementsByClassName("id")[user].innerHTML = usuarios.data[user].id;
+        document.getElementsByClassName("email")[user].innerHTML = usuarios.data[user].email;
+        document.getElementsByClassName("fName")[user].innerHTML = usuarios.data[user].first_name;
+        document.getElementsByClassName("lName")[user].innerHTML = usuarios.data[user].last_name;
+        document.getElementsByClassName("avatar")[user].innerHTML = usuarios.data[user].avatar;
+    } 
+});
 
 /**
  * Crea una fila con el índice indicado
