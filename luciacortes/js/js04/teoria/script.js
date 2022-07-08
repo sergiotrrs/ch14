@@ -26,7 +26,7 @@ console.log("Fruta eliminada "+fruta);
 
 //Agregar un elemento al inicio del arreglo **********************
 console.log(frutas.unshift("fresa"));
-console.log(frutas.join("-"))
+console.log(frutas.join("-"));
 
 //Métodos que se utilizarían para hacer un FIFO en arreglo
 /**
