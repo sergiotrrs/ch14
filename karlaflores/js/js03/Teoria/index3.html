@@ -1,0 +1,35 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ejercicio Calendario</title>
+</head>
+<body style="text-align: center;">
+    <h1>Calculadora Dias</h1>
+    <p>Muestra apartir de una fecha si el dia es laborable o fin de semana</p>
+    <!-- contenedor día -->
+    <span>Día:</span>
+    <input type="number" id="dia" placeholder="No mayor a 31">
+
+    <span>Mes:</span>
+    <input type="number" id="mes" placeholder="No mayor a 12">
+
+    <span>Año:</span>
+    <input type="number" id="anio" placeholder="Número de 4 cifras">
+
+    <input type="button" value="Calcular" class="btn btn-primary" onclick="datos()">
+    <!-- <button type="button" id="boton" class="btn btn-primary">Calcular</button> -->
+    
+    <h2 id="resultado">Día</h2>
+    <h2 id="errorD"></h2>
+    <h2 id="errorM"></h2>
+    <h2 id="errorA"></h2>
+
+
+    
+    <script src="java2.js"></script>
+</body>
+</html>
