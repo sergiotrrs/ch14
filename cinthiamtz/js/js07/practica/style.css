@@ -1,0 +1,7 @@
+.avatar {
+    /* cambia estos dos valores para definir el tamaño de tu círculo */
+    height: 75px;
+    width: 75px;
+    /* los siguientes valores son independientes del tamaño del círculo */
+   border-radius: 50%;
+}
