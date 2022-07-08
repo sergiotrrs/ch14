@@ -1,7 +1,9 @@
-for(let i=2;i<=7;i++){
+for(let i=1;i<7;i++){
     creaFilas(i);
     creaCols(i);
+    creaImg(i);
 }
+
 
  //El método por default que realiza fetch es Get
 fetch('https://reqres.in/api/users?page=2')
@@ -15,7 +17,7 @@ fetch('https://reqres.in/api/users?page=2')
         document.getElementsByClassName("email")[user].innerHTML = usuarios.data[user].email;
         document.getElementsByClassName("fName")[user].innerHTML = usuarios.data[user].first_name;
         document.getElementsByClassName("lName")[user].innerHTML = usuarios.data[user].last_name;
-        document.getElementsByClassName("avatar")[user].innerHTML = usuarios.data[user].avatar;
+        //console.log(document.getElementsByClassName("img-avar")[user])
     } 
 });
 
@@ -25,18 +27,24 @@ fetch('https://reqres.in/api/users?page=2')
  */
 function creaFilas(indiceFila){
     const fila = document.createElement("tr");
-    const filaCreada = document.getElementsByTagName("tbody")[0].appendChild(fila);
+    const filaCreada = document.getElementsByTagName("tbody")[0].appendChild(fila); //El elemento 0 del arreglo de elementos tbody
     filaCreada.id = `r${indiceFila}`
 }
 
 /**
  * Crea las columnas con clases para una fila dada
- * @param {*} indiceFila A partir de 2
+ * @param {*} indiceFila A partir de 1 (la primer tr está thead)
  */
 function creaCols(indiceFila){
-    document.getElementsByTagName("tr")[indiceFila].appendChild(document.createElement("td")).className = "id"
-    document.getElementsByTagName("tr")[indiceFila].appendChild(document.createElement("td")).className = "email"
-    document.getElementsByTagName("tr")[indiceFila].appendChild(document.createElement("td")).className = "fName"
-    document.getElementsByTagName("tr")[indiceFila].appendChild(document.createElement("td")).className = "lName"
-    document.getElementsByTagName("tr")[indiceFila].appendChild(document.createElement("td")).className = "avatar"
+    document.getElementsByTagName("tr")[indiceFila].appendChild(document.createElement("td")).className = "id";
+    document.getElementsByTagName("tr")[indiceFila].appendChild(document.createElement("td")).className = "email";
+    document.getElementsByTagName("tr")[indiceFila].appendChild(document.createElement("td")).className = "fName";
+    document.getElementsByTagName("tr")[indiceFila].appendChild(document.createElement("td")).className = "lName";
+    document.getElementsByTagName("tr")[indiceFila].appendChild(document.createElement("td")).className = "avatar";
+}
+
+function creaImg(indiceFila){
+    document.getElementsByClassName("avatar")[indiceFila-1].appendChild(document.createElement("img")).className = "img-avatar";
+   //Para que coincida el valor del índiceFila con creaFila y creaCols
+    
 }
