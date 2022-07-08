@@ -6,7 +6,7 @@ for(let i=1;i<7;i++){
 
 
  //El método por default que realiza fetch es Get
-fetch('https://reqres.in/api/users?page=2')
+fetch('https://reqres.in/api/users?delay=3')
   .then(response => response.json())
   .then(usuarios => {
     //console.log(usuarios.data)
@@ -18,6 +18,7 @@ fetch('https://reqres.in/api/users?page=2')
         document.getElementsByClassName("fName")[user].innerHTML = usuarios.data[user].first_name;
         document.getElementsByClassName("lName")[user].innerHTML = usuarios.data[user].last_name;
         document.getElementsByClassName("img-avatar")[user].src = usuarios.data[user].avatar;
+        document.getElementsByClassName("img-avatar")[user].style = "border-radius: 50%"
     } 
 });
 
@@ -52,3 +53,10 @@ function creaImg(indiceFila){
    //Para que coincida el valor del índiceFila con creaFila y creaCols
     
 }
+
+/**
+ * A resolver:
+ * 1. Mostrar sólo un determinado número de elementos
+ * 2. Ocupar botones para avanzar el "mostrador"
+ * 3. Con el "regreso", mostrar elementos guardados en localStorage
+ */
