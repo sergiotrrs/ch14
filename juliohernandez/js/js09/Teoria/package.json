@@ -11,5 +11,8 @@
     "bootstrap"
   ],
   "author": "Julio Hernandez",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
 }
