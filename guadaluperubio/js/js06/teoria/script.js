@@ -2,7 +2,11 @@ console.log("teoria");
 // encontrarporId();  //esta funcion se invoca si no no se imprime nada en pantalla xD
 // encontrarPorTagName();
 // encontrarPorClase();
-encontrarPorSelector();
+// encontrarPorSelector();
+
+// 05-06-2022
+// crearEelemento();
+cambiarEstilo();
 
 
 function encontrarporId(){
@@ -46,4 +50,28 @@ function encontrarPorSelector(){
     let unirStr="";
     elements.forEach( dato=> unirStr+=dato.innerHTML+" ");   //se unene los string de p.saludos
     document.getElementById("junta").innerHTML = unirStr;
+}
+
+function crearEelemento(){
+    const nuevoElemento = document.createElement("p"); //<p></p>
+    nuevoElemento.innerHTML = "Este es un nuevo párrafo";
+    // document.body.appendChild(nuevoElemento); //se inserta el objeto en body (appendChil inserta el objeto)
+    document.getElementById("titulo").appendChild(nuevoElemento);  //aquie tome el div como padre y apartir de ahi agregue un hijo que fue esta linea
+}
+
+function cambiarEstilo(){
+    document.getElementById("intro").style.color = "white";
+    const estilo = document.createElement("style");  //cree mi estilo con etiqueta estilo
+    const texto =  document.createTextNode("body {font: 20px verdana; background-color: pink;}");  //cree un nodo  con las intruccion de estilo (CSS) y mi objeto texto
+    estilo.appendChild (texto);  //sobre el estilo agregue el objeto texto
+   
+    /**
+     * <style>
+     * body {
+     * font= 20px verdad;
+     * background-color : blue;
+     * }
+     * </style>
+     */
+    document.head.appendChild(estilo); //aqui hago lo mismo que hiciera en CSS (linea 68 a 74 esta explicado)
 }
