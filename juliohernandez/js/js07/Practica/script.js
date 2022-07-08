@@ -10,6 +10,29 @@ fetch('https://reqres.in/api/users?page=2')
     document.getElementById("r1")[0]=usuarios.data[0].id;
 }); */
 
-function creaCols(){
-    document.getElementsByClassName("tbody")[0]
+for(let i=2;i<=4;i++){
+    creaFilas(i);
+    creaCols(i);
+}
+
+/**
+ * Crea una fila con el índice indicado
+ * @param {*} indiceFila A partir de 2
+ */
+function creaFilas(indiceFila){
+    const fila = document.createElement("tr");
+    const filaCreada = document.getElementsByTagName("tbody")[0].appendChild(fila);
+    filaCreada.id = `r${indiceFila}`
+}
+
+/**
+ * Crea las columnas con clases para una fila dada
+ * @param {*} indiceFila A partir de 2
+ */
+function creaCols(indiceFila){
+    document.getElementsByTagName("tr")[indiceFila].appendChild(document.createElement("td")).className = "id"
+    document.getElementsByTagName("tr")[indiceFila].appendChild(document.createElement("td")).className = "email"
+    document.getElementsByTagName("tr")[indiceFila].appendChild(document.createElement("td")).className = "fName"
+    document.getElementsByTagName("tr")[indiceFila].appendChild(document.createElement("td")).className = "lName"
+    document.getElementsByTagName("tr")[indiceFila].appendChild(document.createElement("td")).className = "avatar"
 }
