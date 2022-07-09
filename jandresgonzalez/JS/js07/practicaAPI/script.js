@@ -31,6 +31,8 @@ fetch('https://reqres.in/api/users?page=2')
             email = object.email;
             avatar = object.avatar;
 
+            console.log("Query:" + document.querySelector(.1));
+
             idHTML.innerHTML = id;
             fNameHTML.innerHTML = firstName;
             lNameHTML.innerHTML = lastName;
