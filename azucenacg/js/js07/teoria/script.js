@@ -43,3 +43,4 @@ function recuperarDatos() {
     let datos= localStorage.getItem("datosUsuario");
     console.log("datos usuario: "+ datos.nombre)
 }   
+
