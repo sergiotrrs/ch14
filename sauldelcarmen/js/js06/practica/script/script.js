@@ -18,22 +18,25 @@ function setInvisible(estado){
 
 const form = document.getElementById('formulario');
 
-function pasarFiltro(anio, mes ,dia){
-    let bisiesto = anio%4;
-    if (mes ===2 && bisiesto == 0 dia <= 29) return true;
-    else
-
-if (bisiesto==0){}
-
-
-}
-
-
-
+let contador =0;
 form.addEventListener('submit', (event) =>{
     event.preventDefault();
-    console.log(event);
-
+    console.log(event);        
+        /**
+         *Implementar filtro 
+            if( pasaFiltro() {
+                calcularFecha();
+                setInvisible(false);
+                contador =0;
+            }
+            else{
+                ++contador;
+                if (contador>10){
+                    //Me doy por vencido, has lo que quieras
+                }
+                //Enviar mensaje a usuario
+            }
+         */
     calcularFecha();
     setInvisible(false);
 }  );
