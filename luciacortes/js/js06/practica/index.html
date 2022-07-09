@@ -22,26 +22,13 @@
             </div>
             <div class="row p-5 align text-center">
                 <div class="col-sm-12">
-                    <input type="number" 
-                            name="" 
-                            id="dia" 
-                            class="fecha" 
-                            placeholder="Día" 
-                            min="1" 
-                            max="31"
-                            title="Indique el día a buscar"
-                            required
-                            oninvalid="setCustomValidity('Es necesario especifiar el dia')"
-                            oninput="setCustomValidity('')"
-                    >
+                    <input type="number" name="" id="dia" class="fecha" placeholder="Día" min="1" max="31"
+                        title="Indique el día a buscar" required
+                        oninvalid="setCustomValidity('Es necesario especificar el día')"
+                        oninput="setCustomValidity('')">
                 </div>
                 <div class="col-sm-12">
-                    <select type="number" 
-                            name="" 
-                            id="mes" 
-                            class="fecha" 
-                            title="Indique el mes a buscar"
-                    >
+                    <select type="number" name="" id="mes" class="fecha" title="Indique el mes a buscar">
                         <option value="1">Enero</option>
                         <option value="2">Febrero</option>
                         <option value="3">Marzo</option>
@@ -56,37 +43,17 @@
                         <option value="12">Diciembre</option>
                 </div>
                 <div class="col-sm-12">
-                    <input type="number" 
-                            name="" 
-                            id="anio" 
-                            class="fecha" 
-                            placeholder="Año"
-                            min="1990"
-                            max="2050"
-                            title="Indique el año a buscar"
-                            required
-                            oninvalid="setCustomValidity('Es necesario especifiar el año')"
-                            oninput="setCustomValidity('')"
-                     >
+                    <input type="number" name="" id="anio" class="fecha" placeholder="Año" min="1990" max="2050"
+                        title="Indique el año a buscar" required
+                        oninvalid="setCustomValidity('Es necesario especifiar el año')" oninput="setCustomValidity('')">
                 </div>
                 <div class="row p-4 align-text-center">
                     <div class="col-sm-12">
-                        <button 
-                            type="submit" 
-                            class="btn btn-outline-light boton-operacion btn-calcularmy-1 
-                            mx-1"
-                            
-                            >Calcular día
-                        </button>                    
-                        <button 
-                            id="limpiar" 
-                            type="reset" 
-                            class="btn btn-outline-light boton-operacion btn-limpiar my-1 
-                            mx-1" 
-                            style="width: calc(mt-auto);"
-                            onclick="setInvisible(true)"
-                           
-                        >Limpiar
+                        <button type="submit" class="btn btn-outline-light boton-operacion btn-calcular my-1 
+                            mx-1">Calcular día
+                        </button>
+                        <button id="limpiar" type="reset" class="btn btn-outline-light boton-operacion btn-limpiar my-1 
+                            mx-1" onclick="setInvisible(true)" style="width: calc(mt-auto)">Limpiar
                         </button>
                     </div>
                 </div>
