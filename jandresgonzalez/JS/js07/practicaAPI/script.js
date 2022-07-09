@@ -1,55 +1,77 @@
 console.log("Link");
-const idHTML = document.getElementById("id");
-//const idHTML = document.getElementById("id");
-const fNameHTML = document.getElementById("fName");
-const lNameHTML = document.getElementById("lName");
-const emailHTML = document.getElementById("email");
-const avatarHTML = document.getElementById("avatar")
+const users = [];
+
+
+
+/* for (i = 0; i <7 ; i++) 
+{const node = document.createElement("div")
+node.classList.add("col-6");
+
+// // Create a text node:
+const textnode = document.createTextNode("Water");
+
+// // Append the text node to the "li" node:
+node.appendChild(textnode);
+
+// // Append the "li" node to the list:
+document.getElementById("data").appendChild(node);} */
+
+//https://reqres.in/api/users?delay=3
 
 fetch('https://reqres.in/api/users?page=2') 
     .then(responseJSON => {return responseJSON.json()})
     .then(usuarios => {
-        const objects = [];
+        
         //console.log(usuarios.data[0]);
         for (let i=0; i<usuarios.data.length; i++) {
-            objects.push(usuarios.data[i]);
+            users.push(usuarios.data[i]);
         }
         //console.log(objects);
         /* for (object of objects) {
             console.log(object);
         }
  */
-        let id;
-        let firstName;
-        let lastName;
-        let email;
-        let avatar;
-        for (object of objects) {
-            id = object.id;
-            firstName = object.first_name;
-            lastName = object.last_name;
-            email = object.email;
-            avatar = object.avatar;
+        users.forEach(user => {
+/*             <div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text" */
 
-            console.log("Query:" + document.querySelector(.1));
+    const col = document.createElement("div");
+    const node = document.createElement("div");
+    const img = document.createElement("img");
+    const card = document.createElement("div");
+    const text = document.createElement("p");
+    text.classList.add("card-text");
+    card.classList.add("card-body");
+    img.setAttribute("src", user.avatar);
+    img.classList.add("card-img-top");
+    node.classList.add("card");
+    col.classList.add("col-sm-4");
+    node.setAttribute("style", "width: 9rem;")
+//    const info = document.createTextNode(`Info: ID --${user.id}-- NAME --${user.first_name} ${user.last_name}-- CONTACT --${user.email}-- ${user.avatar}`);
+    text.innerHTML= `<b>Id#:</b> ${user.id} <br> <b>Name:</b> ${user.first_name} ${user.last_name} <br> <b>Contact:</b> <a href="mailto:${user.email}?Subject=Abue%20hackerman%20page%20inquiry">${user.email}</a>`;
+    card.appendChild(text);
+    //img.appendChild(card);
+    node.appendChild(img);
+    node.appendChild(card);
+    col.appendChild(node);
 
-            idHTML.innerHTML = id;
-            fNameHTML.innerHTML = firstName;
-            lNameHTML.innerHTML = lastName;
-            emailHTML.innerHTML = email;
-            avatarHTML.innerHTML = `<img src =${avatar}></img>`;
+    document.getElementById("data").appendChild(col);
             
- //           if (class == id) {
-/*             idHTML.innerHTML = id;
-            fNameHTML.innerHTML = firstName;
-            lNameHTML.innerHTML = lastName;
-            emailHTML.innerHTML = email;
-            avatarHTML.innerHTML = `<img src =${avatar}></img>`;
-            }
-            else {
-                console.log("nope");
-            } */
-        }
+/*             // Se crea un div
+            const node = document.createElement("div")
+            node.classList.add("row", "col-12", "card");
+            const info = document.createTextNode(`Info: ID --${user.id}-- NAME --${user.first_name} ${user.last_name}-- CONTACT --${user.email}-- ${user.avatar}`)
+            node.appendChild(info);
+            const img = document.createElement("img")
+            img.setAttribute("src", user.avatar)
+            img.classList.add("card-img-top", "w-25")
+            node.appendChild(img);
+            document.getElementById("data").appendChild(node);
+             */
+        });
+
 
 
 /* 
@@ -67,33 +89,36 @@ fetch('https://reqres.in/api/users?page=2')
         }
         for (object of objects) {
             console.log(object.avatar);
-        } */
+        } */        
+});
 
-
-
-
-        
-
-        //console.log(objects[0]);
-    //console.log(usuarios.data);
-    //usuarios.data.forEach(element => { console.log(element);
-        
-    });
-    
-    
-/*  
+//callNames();
+function callNames() {
+    let id;
+    let firstName;
+    let lastName;
+    let email;
     let avatar;
-    for (user of usuarios.data) {
-        console.log(`UserId: ${user.id} Email: ${user.email}`);
-        avatar = user.avatar;
-        console.log(avatar);
-    }
-    document.getElementById("demo").innerHTML = `<img src =${avatar}></img>`;
-     */
-//});
 
-/* 
-fetch('https://fakestoreapi.com/products/1')
-            .then(res=>res.json())
-            .then(json=>console.log(json));
- */
+    console.log(users);
+
+    for (person of users) {
+        console.log(person)
+        id = person.id;
+        firstName = person.first_name;
+        lastName = person.last_name;
+        email = person.email;
+        avatar = person.avatar;
+
+        console.log(`Info ${id} ${firstName} ${lastName} ${email} ${avatar}`)
+
+
+        idHTML.innerHTML = id;
+        fNameHTML.innerHTML = firstName;
+        lNameHTML.innerHTML = lastName;
+        emailHTML.innerHTML = email;
+        avatarHTML.innerHTML = `<img src =${avatar}></img>`;
+        
+    }
+
+}
