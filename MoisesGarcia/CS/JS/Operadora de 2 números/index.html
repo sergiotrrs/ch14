@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ch14</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body
+  background="https://media.istockphoto.com/vectors/dinosaur-seamless-pattern-wallpaper-vector-illustration-vector-id686924026?k=20&m=686924026&s=170667a&w=0&h=0f9IhGHasZikhq1406oWNoJskKZ8H4r5ZfXxfmZnEqE=">
+  <!-- h1 es para poner el el titulo que se verá en el proyecto -->
+  <h1 class="p-3 mb-2 bg-success text-white text-center"> Calculadora </h1>
+  <!-- Se crea un contenedor *container fluid para que sea responsivo  -->
+  <div class="container-fluid">
+    <!-- Enla siguiente linea la fila (row) se justifica y se centra -->
+    <div class="row justify-content-center">
+
+      <div class="col-6 col-sm-12 my-2">
+        <div class="text-center">
+          <input type="text" class="btn btn-light" placeholder="Insertar Número" id="a">
+        </div>
+      </div>
+      <div class="col-6 col-sm-12">
+        <div class="text-center">
+          <input type="text" class="btn btn-light" placeholder="Insertar Número" id="b">
+        </div>
+      </div>
+    </div>
+   <div class="text-center my-2">
+    <div class="text-center btn btn-dark my-2">
+      <button type="button" onclick="" class="btn btn-outline-warning" id="resultado">Muestra Resultado</button></span>
+     </div>
+   </div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-6 col-sm-3 my-2 text-center">
+          <button onclick="sumar()" type="button" class="btn btn-primary">sumar</button>
+        </div>
+        <div class="col-6 col-sm-3 my-2 text-center">
+          <button onclick="restar()" type="button" class="btn btn-warning">restar</button>
+        </div>
+        <div class="col-6 col-sm-3 my-2 text-center">
+          <button onclick="multiplicar()" type="button" class="btn btn-primary">multiplicar</button>
+        </div>
+        <div class="col-6 col-sm-3 my-2 text-center">
+          <button onclick="dividir()" type="button" class="btn btn-warning">dividir</button>
+        </div>
+        <div class="text-center my-2">
+          <div>
+            <button type="button" class="btn btn-danger col-6 col-sm-3 my-2" onclick="limpiar()">Limpiar</button>
+          </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+          crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+</body>
+
+</html>
