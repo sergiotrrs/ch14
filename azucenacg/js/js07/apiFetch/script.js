@@ -6,11 +6,11 @@ fetch('https://reqres.in/api/users?page=2')
   //.then(response => response.json())
   .then(responseJSON => {return responseJSON.json()})
   .then(usuarios=>{
-    //console.log(usuarios.data[0])
+    console.log(usuarios.data);
     //este es un for of
-    for (user of usuarios.data) {
-        console.log(`id: ${user.id} tiene email: ${user.email}` );
-    }
+    // for (user of usuarios.data) {
+    //     console.log(`id: ${user.id} tiene email: ${user.email}` );
+    // }
   });
 
 
