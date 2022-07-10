@@ -3,9 +3,10 @@
 const isValidDay = (year, month, day) => {
     let  date = new Date(year, month, day); 
     //la fecha generada por la instancia Date debe ser igual a la ingresada.
+    //date.getDate retorna el dia del mes (Number)
     return date.getFullYear() === year && date.getMonth() === month && date.getDate() === day;
 };
-
+//
 const getMonthNameByIndex = (monthIndex) => {
     //monthIndex (Number): indice del mes para obtener su equivalente nombre
     const monthNames = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre',
@@ -16,14 +17,14 @@ const getMonthNameByIndex = (monthIndex) => {
 const createDateString = (dayName, dayNumber, monthNumber) =>  `${dayName}, ${dayNumber} de ${getMonthNameByIndex(monthNumber)}.`;
 
 const isWeekendDay = (day) => {
-    //['domingo', 'sabado'] array de dias no laborables
-    //Me aseguro que el string (dayName) siempre este en minuscula cuando lo busque en el array
-    //indexOf: obtiene la posicion del valor recibido como parametro en un array 
+    //[0, 6] 0 es el index de 'Domingo', 6 es el indece de Sabado (retornados por la instancia date) array de dias no laborables
+    //indexOf: obtiene la posicion del valor recibido como parametro en el array 
     return [0, 6].indexOf(day) > -1;
 };
 
 const getDateInfo = function getDateInfo(year, month, day) {
     //month: Number: Indice del mes 
+    //date.getDay() retorna el dia del la semana (Index, comenzando por 0 => domingo, terminando en 6 => sabado)
     let dayName = ''; //Declarar la variable y asignar initial value
     const date = new Date(year, month, day);
     switch (date.getDay()) {
