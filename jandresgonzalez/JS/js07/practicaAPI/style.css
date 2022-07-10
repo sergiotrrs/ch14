@@ -13,4 +13,6 @@ img {
 
 #footer {
     text-transform: calc(95%);
+    background-color: gray;
+    margin-top: 2cm;
 }
