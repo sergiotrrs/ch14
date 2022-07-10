@@ -10,3 +10,7 @@ img {
 .card-hover:hover{
     transform: scale(1.15);
 }
+
+#footer {
+    text-transform: calc(95%);
+}

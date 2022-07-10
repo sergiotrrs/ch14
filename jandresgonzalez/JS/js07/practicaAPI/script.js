@@ -1,32 +1,19 @@
-console.log("Link");
+const fetchUno = "https://reqres.in/api/users?delay=3";
+const fetchDos = 'https://reqres.in/api/users?page=2';
+const array = [];
 
-/* for (i = 0; i <7 ; i++) 
-{const node = document.createElement("div")
-node.classList.add("col-6");
 
-// // Create a text node:
-const textnode = document.createTextNode("Water");
-
-// // Append the text node to the "li" node:
-node.appendChild(textnode);
-
-// // Append the "li" node to the list:
-document.getElementById("data").appendChild(node);} */
-
-//https://reqres.in/api/users?delay=3
-
+/**
+ * Esta función obtiene los datos de la URL.
+ * Debe almacenarlos localmente
+ */
 function fetchInfo(url) {
-    const users = [];
     fetch(url) 
         .then(responseJSON => {return responseJSON.json()})
         .then(usuarios => {
-            
-            //console.log(usuarios.data[0]);
-            for (let i=0; i<usuarios.data.length; i++) {
-                users.push(usuarios.data[i]);
-            }
+            for (user of usuarios.data) {
 
-            users.forEach(user => {
+            /* users.forEach(user => { */
 
     
         const col = document.createElement("div");
@@ -51,73 +38,57 @@ function fetchInfo(url) {
     
         document.getElementById("data").appendChild(col);
                 
-    /*             // Se crea un div
-                const node = document.createElement("div")
-                node.classList.add("row", "col-12", "card");
-                const info = document.createTextNode(`Info: ID --${user.id}-- NAME --${user.first_name} ${user.last_name}-- CONTACT --${user.email}-- ${user.avatar}`)
-                node.appendChild(info);
-                const img = document.createElement("img")
-                img.setAttribute("src", user.avatar)
-                img.classList.add("card-img-top", "w-25")
-                node.appendChild(img);
-                document.getElementById("data").appendChild(node);
-                 */
-            });
-    
-    
-    
-    /* 
-            for (object of objects) {
-                console.log(object.id);
-            }
-            for (object of objects) {
-                console.log(object.email);
-            }
-            for (object of objects) {
-                console.log(object.first_name);
-            }
-            for (object of objects) {
-                console.log(object.last_name);
-            }
-            for (object of objects) {
-                console.log(object.avatar);
-            } */        
-    });
+
+            };
+        });
 }
 
-
-'https://reqres.in/api/users?page=2'
+/**
+ * Función que inicializa la información en un listado que admite
+ * seis elementos. Esta función empieza al dar click al botón en la página
+ * para obtener la información.
+ * Se llama la función para crear paginación y se esperan unos segundos para cambiar de página,
+ * sólo una vez que se haya cargado la info
+ */
 function displayInfo() {
     document.getElementById("buttonStart").style.display = "none";
-    fetchInfo("https://reqres.in/api/users?delay=3");
-    setTimeout(createPagination, 350);
+    fetchInfo(fetchUno);
+    setTimeout(createPagination, 2950);
+    localStorage.setItem("expirationInfo", JSON.stringify ({
+        expiration: Date.now() + 1000*30,
+    }));
     }
-    
+
+    /**
+     * Esta es una función asíncrona que crea los botones de paginación
+     * para separar el listado en seis elementos por página.
+     * 
+     */    
     async function createPagination() {
         document.getElementById("pagination").innerHTML = `               \
     
-        <div class="container-fluid m-3 d-flex justify-content-center">\
+        <div class="container-fluid m-3 d-flex justify-content-center pt-5" id="pages">\
         <div class="row" class="m-5 p-5 d-flex justify-content-center">\
           <span class="pagination-strip">\
             <span>Anterior ---</span>\
             <!-- Página 1 -->\
             <span 
                 class="pagination-item"
-                aria-label="Página 1"
+                title="Página 1"
                 onclick="paginaUno()">
                 <button class="btn btn-outline-secondary btn-sm"> 1 </button>\
             </span>\
             <!-- Página 2 -->\
             <span
                 class="pagination-item"
-                aria-label="Página 2"
+                title="Página 2"
                 onclick="paginaDos()">
                 <button class="btn btn-outline-secondary btn-sm"> 2 </button>\
             </span>\
             <!-- Página 3 -->\
             <span
                 class="pagination-item"
-                aria-label="Página 3"
+                title="Página 3"
                 onclick="paginaTres()">
                 <button class="btn btn-outline-secondary btn-sm"> 3 </button>\
             </span>\
@@ -128,15 +99,80 @@ function displayInfo() {
     `;
     }
 
+    //Función que se realiza al dar click a la página uno
     function paginaUno() {
-        console.log("clickUno");
+        document.getElementById("data").innerHTML = " ";
+        getLocalStore();
+        setLocalStore(fetchUno);
+        fetchInfo(fetchUno);
     }
+    //Función que se realiza al dar click a la página dos
     function paginaDos() {
-        const last = document.getElementById("data").lastChild;
-        document.getElementById("data").removeChild(last);
-        console.log("clickDos");
-        fetchInfo('https://reqres.in/api/users?page=2');
+        document.getElementById("data").innerHTML = " ";
+        getLocalStore();
+        setLocalStore(fetchDos);
+        fetchInfo(fetchDos);
     }
+    //Función que se realiza al dar click a la página tres
     function paginaTres() {
-        console.log("clickTres");
+        //setLocalStore(fetchUno);
+        document.getElementById("data").innerHTML = " "
+        //fetchInfo(fetchUno);
+        //getLocalStore();
+        
     }
+
+
+function getLocalStore(){
+    let info = JSON.parse(localStorage.getItem("expirationInfo"));
+    //let page = JSON.parse(localStorage.getItem(pageJSON));
+
+    if (info.expiration < Date.now()) {
+        document.getElementById("data").innerHTML = " ";
+        document.getElementById("pages").innerHTML = " ";
+        document.getElementById("buttonStart").style.display="inline";
+
+        localStorage.clear();
+    }
+    else {
+        console.log("O(ll)K(orrect)");
+    }
+}
+
+
+
+/**
+ * La función guarda en local storage los datos
+ * obtenidos de la API, para mostrar en página,
+ * más rápido, las cartas de las personas
+ * @param {string} url //En string, se coloca la URL de la API
+ * 
+ */
+function setLocalStore(url) {
+    fetch(url)
+    .then(response => {return response.json()})
+    .then(users => {
+        let info = users.data
+
+            info.forEach(element => {
+                localStorage.setItem("Card#" + element.id, JSON.stringify (
+                    {
+                        id: element.id,
+                        name: `${element.first_name} ${element.last_name}`,
+                        contact: element.email,
+                        avatar: element.avatar,
+        
+                    },
+                    ))
+
+            })
+
+/*         let day = Date.now();
+        let expirationTime = Date.now() + 1000*60;
+        localStorage.setItem("expirationInfo", JSON.stringify ({
+            input: day,
+            expiration: expirationTime,
+        }))
+ */
+});
+}
