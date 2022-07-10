@@ -5,9 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Práctica JS07</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
-
 <body>
+    <header>
+        <h1 class="text-center">Práctica JS07 FECTH API</h1>
+    </header>
+    <hr>
+    <nav class="text-start">
+        <button id="page1B" type="button" class="btn btn-dark">Page1</button>
+        <button id="page2B" type="button" class="btn btn-dark">Page2</button>
+        <button id="clearB" type="button" class="btn btn-dark">Clear</button>
+    </nav>
+    <hr>
+    <main>
+        <table class="table">
+            <thead>
+              <tr class="table-light">
+                <td id="tableTitle"colspan="5"></td>
+              </tr>
+              <tr class="table-dark">
+                <th scope="col">ID</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Photo</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody">
+             
+            </tbody>
+          </table>
+    </main>
+    <hr>
+    <footer>
+        <p>Page 1 with delay and cache</p>
+        <p>Page 2 without delay and cache</p>
+        <p>Mario CH14</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 </html>
