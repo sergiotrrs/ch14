@@ -84,14 +84,15 @@ function showUsers(arrUsers){
 
         //Creamos nuevo renglón, con la información
         const tableRow=document.createElement("tr");
-        tableRow.innerHTML=`<td>${user.id}</td>
-                            <td>${user.first_name}</td>
-                            <td>${user.last_name}</td>
-                            <td>${user.email}</td>
-                            <td class="photoIm"><image src="${user.avatar}"/></td>`;
+        tableRow.innerHTML=`<td class="tdStyle1">${user.id}</td>
+                            <td class="tdStyle2">${user.first_name}</td>
+                            <td class="tdStyle3">${user.last_name}</td>
+                            <td class="tdStyle4">${user.email}</td>
+                            <td class="tdStyle5"><image class="photoIm" src="${user.avatar}"/></td>`;
         //Añadirle elemento hijo
         tableBody.appendChild(tableRow);
     }
+    
 }
 
 /**
