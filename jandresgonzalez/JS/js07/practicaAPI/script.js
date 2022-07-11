@@ -1,27 +1,44 @@
+/**
+ * 
+ * Script para mostrar información en Front End
+ * utilizando la API Fetch del poderosísimo JavaScript
+ * que baja una URL con dalay y otra página 2 sin delay.
+ * Realizada por jatg-eca el 8, 9 y 10 de julio. 9 hrs aprox.
+ * para prácticas del bootcamp Generation México
+ * Fullstack Junior Java Web Developer.
+ * 
+ */
+
+//Esta variable conecta con la API a la primera página, que tiene delay
 const fetchUno = "https://reqres.in/api/users?delay=3";
+//Esta variable conecta con la API a la segunda página
 const fetchDos = 'https://reqres.in/api/users?page=2';
-const array = [];
+//Esta variable identifica que existan o no datos de expiración de localStorage
 const expir = JSON.parse(localStorage.getItem("expirationInfo"));
 
-//localStorage.clear();
-
-/* if (expir) {
-    displayInfo()
+/*Si no existen datos en localStorage descargados,
+la página comienza con un botón rojo (#buttonStart) que al dar click
+descarga y muestra la información en HTML; de lo contrario,
+se realiza lo que en el siguiente if:
+el botón desaparece, se crea paginación y se carga la página uno desde
+localStorage*/
+if (expir) {
+    document.getElementById("buttonStart").style.display = "none";
+    createPagination();
+    paginaUno();
 }
- */
+
 /**
  * Esta función obtiene los datos de la URL.
- * Debe almacenarlos localmente
+ * Y los almacena localmente en localStorage.
+ * 
  */
 function fetchInfo(url) {
     fetch(url) 
         .then(responseJSON => {return responseJSON.json()})
         .then(usuarios => {
             for (user of usuarios.data) {
-
-            /* users.forEach(user => { */
-
-    
+  
         const col = document.createElement("div");
         const node = document.createElement("div");
         const img = document.createElement("img");
@@ -37,7 +54,6 @@ function fetchInfo(url) {
     //    const info = document.createTextNode(`Info: ID --${user.id}-- NAME --${user.first_name} ${user.last_name}-- CONTACT --${user.email}-- ${user.avatar}`);
         text.innerHTML= `<b>Id#:</b> ${user.id} <br> <b>Name:</b> ${user.first_name} ${user.last_name} <br> <b>Contact:</b> <a href="mailto:${user.email}?Subject=Abue%20hackerman%20page%20inquiry">${user.email}</a>`;
         card.appendChild(text);
-        //img.appendChild(card);
         node.appendChild(img);
         node.appendChild(card);
         col.appendChild(node);
@@ -49,9 +65,17 @@ function fetchInfo(url) {
         });
 }
 
+/**
+ * Esta función crea un dato de expiración que se guarda en localStorage
+ * Este dato nos servirá para analizar si el tiempo ha pasado, y si es
+ * así, borra todo y vuelve a iniciar la solicitud de descarga.
+ * 
+ * En caso de querer cambiar la expiración, se puede mover en la suma de
+ * expiration: (después de Date.now() )
+ * */
 function setExpiration() {
     localStorage.setItem("expirationInfo", JSON.stringify ({
-        expiration: Date.now() + 1000*30,
+        expiration: Date.now() + (1000*60)*10,
     }));
 }
 
@@ -71,8 +95,8 @@ function displayInfo() {
 
     /**
      * Esta es una función asíncrona que crea los botones de paginación
-     * para separar el listado en seis elementos por página.
-     * 
+     * para separar el listado en seis elementos por página, tres páginas
+     * * 
      */    
     async function createPagination() {
         document.getElementById("pagination").innerHTML = `               \
@@ -109,20 +133,31 @@ function displayInfo() {
     `;
     }
 
+
+//Función de espera. Es una promesa que arroja en consola si faltan descargar datos
+async function wait() {
+    const espera = new Promise((resolve, reject) => {
+        if (JSON.parse(localStorage.getItem("Card1"))) resolve ("Ya hay datos de pág.uno");
+        else reject ("Falta bajar datos de API...");
+
+        espera
+            .then(console.log(resolve))
+            .catch(console.log(reject));
+    })
+
+}
     //Función que se realiza al dar click a la página uno
     function paginaUno() {
-        document.getElementById("data").innerHTML = " ";
         let cards = JSON.parse(localStorage.getItem("Card1"));
         if (cards) {
+            document.getElementById("data").innerHTML = " ";
             console.log("Hay datos");
             getLocalStoreOne();
         }
         else {
-            setLocalStore(fetchUno);
-            fetchInfo(fetchUno);
+            wait();
             console.log("Nanais de localStore");
-            /* setLocalStore(fetchUno);
-            fetchInfo(fetchUno); */
+           
         }
     }
     //Función que se realiza al dar click a la página dos
@@ -137,16 +172,11 @@ function displayInfo() {
             setLocalStore(fetchDos);
             fetchInfo(fetchDos);
             console.log("Nanais de localStore");
-            /* setLocalStore(fetchUno);
-            fetchInfo(fetchUno); */
         }
-        //getLocalStore();
-        //setLocalStore(fetchDos);
-        //fetchInfo(fetchDos);
+
     }
     //Función que se realiza al dar click a la página tres
     function paginaTres() {
-        //setLocalStore(fetchUno);
         document.getElementById("data").innerHTML = " ";
         let cards = JSON.parse(localStorage.getItem("Card1"));
         if (cards) {
@@ -158,15 +188,13 @@ function displayInfo() {
             fetchInfo(fetchUno);
             console.log("No hay local store");
         }
-      
-            /* setLocalStore(fetchUno);
-            fetchInfo(fetchUno); */
-  
-        //fetchInfo(fetchUno);
-        //getLocalStore();
         
     }
 
+/**
+ * Esta función limpia el localStorage e inicia todo el proceso de 
+ * conexión con la API, limpia el HTML y muestra el botón de inicio
+ */
 function clearStore() {
     document.getElementById("data").innerHTML = " ";
     document.getElementById("pages").innerHTML = " ";
@@ -175,7 +203,9 @@ function clearStore() {
     localStorage.clear();
 }
 
-
+/**
+ * La función regresa la información para la página uno
+ */
 function getLocalStoreOne(){
     const cardOne = JSON.parse(localStorage.getItem("Card1"));
     const cardTwo = JSON.parse(localStorage.getItem("Card2"));
@@ -202,6 +232,9 @@ function getLocalStoreOne(){
         }
     }
 
+/**
+ * La función regresa la información para la página uno
+ */
     function getLocalStoreTwo(){
         const cardSeven = JSON.parse(localStorage.getItem("Card7"));
         const cardEight = JSON.parse(localStorage.getItem("Card8"));
@@ -213,11 +246,7 @@ function getLocalStoreOne(){
     
     
         if (JSON.parse(localStorage.getItem("expirationInfo")).expiration < Date.now()) {
-            document.getElementById("data").innerHTML = " ";
-            document.getElementById("pages").innerHTML = " ";
-            document.getElementById("buttonStart").style.display="inline";
-    
-            localStorage.clear();
+            clearStore();
         }
         else {
             if (cardSeven) {
@@ -233,8 +262,14 @@ function getLocalStoreOne(){
             }
         }
 
+/**
+ * Esta función inyecta en el HTML información de los JSON obtenidos
+ * de la API de prueba. Se necesita usar uno para cada carta.
+ * La función creará cartas usando Bootstrap 5.2.0
+ * @param {variable} name //Aquí va el nombre del JSON de la carta que irá
+ * en HTML 
+ */
 function pasteHTML(name) {
-
     const col = document.createElement("div");
     const node = document.createElement("div");
     const img = document.createElement("img");
@@ -250,7 +285,6 @@ function pasteHTML(name) {
 //    const info = document.createTextNode(`Info: ID --${user.id}-- NAME --${user.first_name} ${user.last_name}-- CONTACT --${user.email}-- ${user.avatar}`);
     text.innerHTML= `<b>Id#:</b> ${name.id} <br> <b>Name:</b> ${name.name} <br> <b>Contact:</b> <a href="mailto:${name.contact}?Subject=Abue%20hackerman%20page%20inquiry">${name.contact}</a>`;
     card.appendChild(text);
-    //img.appendChild(card);
     node.appendChild(img);
     node.appendChild(card);
     col.appendChild(node);
@@ -282,13 +316,5 @@ function setLocalStore(url) {
                     ))
 
             })
-
-/*         let day = Date.now();
-        let expirationTime = Date.now() + 1000*60;
-        localStorage.setItem("expirationInfo", JSON.stringify ({
-            input: day,
-            expiration: expirationTime,
-        }))
- */
 });
 }
