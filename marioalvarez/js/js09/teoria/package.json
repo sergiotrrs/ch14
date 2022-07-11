@@ -1,0 +1,19 @@
+{
+  "name": "teoria",
+  "version": "1.0.0",
+  "description": "JS09",
+  "main": "script_npm.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "npm",
+    "bootstrap"
+  ],
+  "author": "Mario",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "bootstrap": "^5.1.3"
+  }
+}

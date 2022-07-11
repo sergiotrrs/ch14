@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendario</title>
-    <script src="script/script.js"></script>
-    <script src="CSS/style.css"></script>
+    
+    <!-- <script src="CSS/style.css"></script> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="shortcut icon" href="https://i.ibb.co/48c47QG/icons8-calendario-48.png" type="image/x-icon">
@@ -17,13 +17,25 @@
 
 <body>
     <div class="container-fluid contenedor-inputs align-items-center ">
-        <form class="formulario-container">
+        <form id="formulario" class="formulario-container">
             <div class="container-fluid bg-light text-dark text-center">
-                <h1>Días laborables</h1>
+                <h1>Días laborables JFAF</h1>
             </div>
             <div class="row p-5 align text-center">
                 <div class="col-sm-12">
-                    <input type="number" name="" id="dia" class="fecha" placeholder="Día">
+                    <input
+                     type="number" 
+                     name="" 
+                     id="dia" 
+                     class="fecha"
+                      placeholder="Día"
+                      min="1" 
+                      max="31"
+                      title="Indique el día a buscar"
+                      required
+                      oninvalid="setCustomValidity('Es necesario especificar el dia')"
+                      oninput="setCustomValidity('')"
+                      >
                 </div>
                 <div class="col-sm-12">
                     <select type="number" name="" id="mes" class="fecha" placeholder="Mes">
@@ -41,31 +53,50 @@
                         <option value="12">Diciembre</option>
                 </div>
                 <div class="col-sm-12">
-                    <input type="number" name="" id="anio" class="fecha" placeholder="Año">
+                    <input 
+                    type="number"
+                     name="" 
+                     id="anio" 
+                     class="fecha" 
+                     placeholder="Año"
+                     min="1997"
+                     max="2050"
+                     title="Introduce el año a buscar"
+                     required 
+                     oninvalid="setCustomValidity('Es necesario especificar el año')"
+                     oninput="setCustomValidity('')"
+                     >
                 </div>
-
+            
                 <div class="row p-4 align-text-center">
-                    <div class="col-sm-8">
-                        <button type="button" class="btn btn-outline-light boton-operacion btn-calcular"
-                            onclick="calcularFecha()">Calcular día</button>
-                    </div>
-                    <div class="col-sm-4">
-                        <button class="btn btn-outline-light boton-operacion btn-limpiar" onclick="reset()"
+                    <div class="col-sm-12 ">
+                        <button type="submit" class="btn btn-outline-light boton-operacion btn-calcular my-1 mx-1"
+                            >Calcular día</button>
+                    <!-- </div>
+                    <div class="col-sm-4 my-1"> -->
+                         <!-- type= "reset"  limpia el formulario
+                        setIvisible() muestra u oculta el boton de limpiar -->
+                        <button
+                         id="limpiar" 
+                        
+                         type="reset" 
+                         class="btn btn-outline-light boton-operacion btn-limpiar my-1 mx-1" 
+                         onclick="setInvisible(true)"
                             style="width: calc(mt-auto);">Limpiar</button>
                     </div>
                 </div>
-            </div>
+            </div>    
             <div class="container-fluid contenedor-resultado align-items-center">
                 <div class="row p-6">
                     <div class="col-3"></div>
                     <div class="col" id="resultado">
-                        <input type="text" name="" id="fecha"
-                            style="text-align: center; color:rgb(36, 37, 71);border: 5px solid rgb(36, 37, 71); border-radius: 10px"
-                            class="resultado" disabled>
+                        <input type="text" name="" id="fecha" style="text-align: center; color:rgb(36, 37, 71);border: 5px solid rgb(36, 37, 71); border-radius: 10px" class="resultado" disabled >
                     </div>
                 </div>
             </div>
         </form>
+    </div>
+    <script src="script/script.js"></script>
 </body>
 
 </html>
