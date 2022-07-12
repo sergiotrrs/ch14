@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+        body{
+            background-color:  #1870c2 ;
+        }        
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center">¿Fue día laboral?</h1>
+    <br>
+    <p style="text-align:center"><b>Escriba la fecha en el formato DDMMAAAA.</b></p>
+    <br>
+    <div class=" container bg-light border">
+        <div class="row justify-content-center">
+            <div class="col">
+                <form>
+                    <input type="number"  id="dia" placeholder="día" >
+                </form>               
+            </div>
+            <div class="col">
+                <form>
+                    <input type="number" id="mes" placeholder="mes">
+                </form>               
+            </div>
+            <div class="col">
+                <form>
+                    <input type="number" id="año" placeholder="año">
+                </form>               
+            </div>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+            <button onclick="checar()" type="button" class="btn btn-outline-success">Verificar</button>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+            <p id="respuesta">Aquí la respuesta.</p>            
+        </div>
+
+        <br>
+        //
+        <div class="row justify-content-center">
+            <button onclick="faseLunar()" type="button" class="btn btn-outline-success">¿Y la Luna?</button>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+            <p id="luna">Fase lunar en el Hemisferio Norte de tu día.</p>            
+        </div>
+    </div>
+
+    <script src="script.js"></script>    
+</body>
+</html>

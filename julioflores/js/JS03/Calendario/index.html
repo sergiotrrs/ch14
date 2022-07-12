@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario</title>
+    <link href="Download/css/bootstrap.min.css">
+</head>
+<body>
+    <style>
+        body {
+            color: blueviolet;
+            background-image: url(https://i.ibb.co/wp78s6B/6aad8effb39276729941c260d63ef239.jpg);
+        }
+    </style>
+
+    <h1 style="text-align:center">Calendario
+        <form>
+            <input type="number" id="dia" style="text-align: center" placeholder="Introduce dia">
+            
+            <input type="number" id="mes" style="text-align: center" placeholder="Introduce mes">
+            
+            <input type="number" id="year" style="text-align: center" placeholder="Introduce año">
+        </form>
+    </h1>
+
+    <h2 id="result" style="text-align: center">Tu día elegido es:
+       
+        <div class="container-md">
+            <div class="row-justify-content-center">
+                <div class="col-lg-4 col-md-12 text-center">
+                    <button type="button" class="btn btn-dark" value="resultado" onclick="unir()">Presiona para saber tu día</button>
+                </div>
+            </div>
+        </div>
+    </h2>
+
+    <script src="script.js"></script>
+    <script src="Download/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

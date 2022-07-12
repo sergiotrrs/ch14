@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio JS03</title>
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="mystyle.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!--Cabecera-->
+    <header class="bg-dark text-orange">
+        <h4 class="text-orange">CH14 GENERATION</h4>
+    </header>
+    <!--Contenedor del main-->
+    <!--min height para ocupar el 100% de la pnatalla, usar HTML, body height 100%-->
+    <form style="min-height: 100%;">
+    <div class="container-lg mycontainer">
+        <!--Primera renglon-->
+        <div class="row rowjust">
+            <div class="col-lg-8 col-sm-12 ">
+                <!--mb=>margin botton-->
+                <h1 class="mb-4">¿Día laborable?</h1>
+                <!--pb=>padding botton-->
+                <p class="text-light fs-6 mb-4 pb-3 ptext">Ingresa una fecha numérica dd/mm/aaaa y se mostrará tanto el dia así como si fue laborable o no.</p>
+            </div>
+            <div class="col-lg-1 col-sm-3 mycolumn">
+                <!--Dia-->
+                <input type="number" class="input2" min="1" max="31" id="uday"/>
+                <br>
+                <label>Dia</label>
+            </div>
+            <div class="col-lg-1 col-sm-3 mycolumn">
+                <!--Mes-->
+                <input type="number" class="input2" min="1" max="12" id="umonth"/>
+                <br>
+                <label>Mes</label>
+            </div>
+            <div class="col-lg-2 col-sm-3 mycolumn">
+                <!--Año-->
+                <input type="number" class="input4" min="1970" max="2030" id="uyear"/>
+                <br>
+                <label>Año</label>
+            </div>
+        </div>
+        <!--Segunda renglon-->
+        <div class="row rowjust2">
+            <!--Botón para iniciar el calculo-->
+            <div class="col-lg-8 col-sm-12">
+                <botton class="btn mybutton rounded-pill py-3 px-5" onclick="workingDay()">Calcular</botton>
+            </div>
+            <!--Input utilizado para mostrar el resultado, está deshabilitado-->
+            <div class="col-lg-4 col-sm-12 mycolumn">
+                <input type="text" disabled class="output" id="msg">
+            </div>
+        </div>
+    </div>
+    </form>
+    <!--Pie de página-->
+    <footer class="myfooter">
+        <p style="color:white;">Fecha más antigua  válida: 01  de enero de 1970</p>
+        <p class="text-orange">&copy; Página creada por Mario de CH14 </p>
+    </footer>
+    <!--Bootstrap-->
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+    <!--Mi script-->
+    <script src="myscript.js"></script>
+</body>
+
+</html>
