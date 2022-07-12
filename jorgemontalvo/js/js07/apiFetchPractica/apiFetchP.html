@@ -8,15 +8,22 @@
   </head>
   <body>
     <h1>API fetch</h1>
-    <div class="container mt-4 shadow-lg p3 mb-5 bg-body rounded">
+
+    <div id= "data" class="container">
+
+    </div>
+    
+      <div class="container mt-4 shadow-lg p3 mb-5 bg-body rounded">
         <table class="table table-bordered table-striped">
             <thead>
                 <tr>
+                  
                   <th>ID</th>
                   <th>NAME</th>
                   <th>LAST NAME</th>
                   <th>EMAIL</th>
                   <th>AVATAR</th>
+                  
                 </tr>
             </thead>
             <tbody id="data">
@@ -24,8 +31,10 @@
             </tbody>
         </table>
     </div>
+    
     <button onclick="boton()">Recuperar</button>
     <button onclick="pasa()">Siguiente</button>
+    <button onclick="guardarDatos()">Guardar Datos</button>
 
     
     <script src="apiFetchPscript.js"></script>

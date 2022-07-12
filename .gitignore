@@ -222,5 +222,14 @@ dist
 .pnp.*
 
 
+##Ignora los archivos .meta de Java
+.metadata
+/.metadata/
+bin
+/bin/
+
+
+#Ignorando la carpeta .vscode
+/.vscode
 
 .DS_STORE
