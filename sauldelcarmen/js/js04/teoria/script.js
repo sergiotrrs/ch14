@@ -213,9 +213,9 @@ for (let auto in carros) console.log("Con for-in " + carros[auto]);
 for (let auto of carros) console.log("Con for-of " + auto);
 
 //Arreglos de dos dimensiones
-const cohortes = [ 
-   ["Marihan", "Adrián"  , "Gustavo"] , 
-   ["Miri"   , "Emiliano", "TuTiaAbi", "ollin"]];
+//const cohortes = [ 
+//   ["Marihan", "Adrián"  , "Gustavo"] , 
+//   ["Miri"   , "Emiliano", "TuTiaAbi", "ollin"]];
                //  [F]eliz [C]umpleaños
                
 console.log(cohortes[0].length);
