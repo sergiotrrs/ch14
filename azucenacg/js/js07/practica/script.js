@@ -1,6 +1,7 @@
 //SEGUNDA OPCIÓN 
 let link1= "https://reqres.in/api/users?page=1";
 let link2= "https://reqres.in/api/users?page=2";
+let link3= "https://reqres.in/api/users?delay=3";
 
 function boton1() {
 pagina(link1);
@@ -8,6 +9,10 @@ pagina(link1);
 
 function boton2() {
 pagina(link2);
+}
+
+function boton3() {
+pagina(link3);
 }
 
 function pagina(link) {
@@ -30,7 +35,7 @@ function almacen(usuarios) {// aqui los guardamos en application
 
 function obtener() { //aqui llamamos los datos que están en local storage
   
-  for (let i = 7; i < localStorage.length; i++) {
+  for (let i = 1; i < localStorage.length; i++) {
       //indice=indice+user.id;
       lista = JSON.parse(localStorage.getItem(i));
       //console.log(lista);
@@ -47,8 +52,29 @@ function imprime(usuarios) {
                           <td>${user.first_name} </td>
                           <td>${user.last_name} </td>
                           <td>${user.email} </td>
-                          <td><img class="rounded-circle" src ="${user.avatar}"> </td>`;
+                          <td><img class="rounded-circle" src ="${user.avatar}"> </td></tr>`;
 
   }
   document.getElementById("info").innerHTML=datos;
 }
+
+
+//mas cositas 
+
+// function tiempoFin() {
+//   let tiempoExpira = Date.now() + 1000 * 10;
+//   localStorage.setItem("expiration", JSON.stringify({ expiration: tiempoExpira }));
+// }
+
+
+// function borrarStorage() {
+//   if (JSON.parse(localStorage.getItem("expiration")).expiration < Date.now()) {
+//       localStorage.clear()
+//      // console.log("se borró la info");
+//      // alert("no existe");
+//       tiempoFin();
+//       api("https://reqres.in/api/users?delay=3");
+//   } else {
+//       existentes();
+//   }
+// }
