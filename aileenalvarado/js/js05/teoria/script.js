@@ -47,13 +47,13 @@ console.log(x);
 console.log(x++);
 console.log(x);
 
-
-for (i =0; i <3; i++)console.log("con i++" + i ) // 0 , 1, 2
-console.log("Finalizacion de i: " + i);
-for (i =0; i <3; ++i)console.log("con ++i" + i ) // 1, 2
-
 let i;
 let j;
+//for (i =0; i <3; i++)console.log("con i++" + i ) // 0 , 1, 2
+//console.log("Finalizacion de i: " + i);
+//for (i =0; i <3; ++i)console.log("con ++i" + i ) // 1, 2
+
+
 for (i = 0; i<3 ; j=i++) console.log("con i++" + i); //0 , 1, 2
 console.log("Finalización de j: " + j); //2
 
@@ -121,3 +121,99 @@ x *= 3; //x = x * 3;
 x /= 2; // x = x/2; 
 x %=4; //x = x%4; 
 x **= 3 // x = x**3;
+
+/* 
+Operadores de igualdad (comparacion)
+*/ 
+
+//Operador igual que 
+x=1;
+y =2; 
+x == y;  // false 
+
+y = 1; 
+x == y; //true 
+x = 1;
+y = "1"; 
+x == y; //true compara del valor, el tipo de string se convierte a numerico
+console.log(" x == 'y' " + (x == y)); 
+
+//Operador diferente que != 
+x =1; 
+y = 2; 
+console.log("x != ('y'" + (x != y)); //true 
+//console.log(" x++ != ('y' " + ); 
+
+//Operador estrictamente igual === compara el valor y tipo de dato
+x = 1; 
+y = '1'; 
+console.log(" x === 'y' " + (x===y)); //false  
+
+//Operador estrictamente diferenete que != compara el valor y tipo de dato
+console.log("x !== 'y' " + (x!==y)); //true; 
+
+//operadores logicos &&, ||, ! 
+true && true //true 
+true && false // false, si uno de loos valores es false, el resultado sera false
+//False, null, NaN, 0, empty string o undefined son considerados con valor false 
+
+//SI el primero peraor es true, el resultado es el valor del segundo operador
+//Si el primer operador es false, el resultado sera el primer operador
+//Operaores de corto circuito
+console.log(" true && NaN = " + (true && NaN)); //NaN 
+console.log(" false && NaN = " + (false && NaN)); //false 
+console.log(" true  && 'Hola estrella' = " + (true && 'Hola estrella'));//Hola Estrella
+console.log(" null  && 'Hola Moy' = " + (null && 'Hola Moi')); //null
+console.log(" 'a' && 'Hola Moi' = " + ('a' && 'Hola Moi')); //hola Moi
+console.log(" '' && 'Hola Maga' = " + ('' && 'Hola Maga')); //string vacio 
+
+//Operador logico || or 
+true || false // true 
+//False, null, NaN, 0, empty string o undefined son considerados con valor false 
+//Si el primer operador es true, el resultad es el primero operador. 
+//Si el primero operador es false, el resultado es el segundo operador 
+console.log("\n Operadorf or")
+console.log(" true || NaN = " + (true || NaN)); // true
+console.log(" false || NaN = " + (false || NaN)); //NaN 
+console.log(" true  || 'Hola estrella' = " + (true || 'Hola estrella')); // true
+console.log(" null  || 'Hola Moy' = " + (null || 'Hola Moi')); //Hola Moi
+console.log(" 'a' ||'Hola Moi' = " + ('a' || 'Hola Moi')); //'a' string con algo adentro es true
+console.log(" '' || 'Hola Maga' = " + ('' || 'Hola Maga')); //Hola MAga //Un string vacio es false 
+
+//Operaador logico not ! 
+let nuevoValor = !true//false 
+ nuevoValor = !false //true 
+//False, null, NaN, 0, empty string o undefined son considerados con valor false  
+//La respuesta es lo opuesto
+console.log("\n Operador not !")
+console.log(" !NaN = " + (!NaN )); //true
+console.log(" !true = " + (!true )); //false
+console.log(" !'Hola estrella' = " + ( !'Hola estrella' )); //false
+console.log(" !false = " + ( !false )); // true
+console.log(" !'a' = " + ( !'a' )); //false 
+console.log(" !''' = " + ( !'' )); //true
+
+//Operador Logico binario Nullish Coalescing 
+//Operador Logico que retorna el operador de la derecha, si el operador de la 
+//izquierda es null  o undefined.De lo contrario retorna el operador de izquierda 
+//operadorIzquierda ?? opDereccha
+////Si la izquierda es null o undefined, se retorna la derecha
+//Si la izquierda NO ES null o undefined, se retorna la izquierda
+
+let asistencia;
+console.log("\n operador ?? Nullish ") 
+console.log("\n asistencia = null ?? true : " + (asistencia = null ?? true)) // true  
+console.log("\n asistencia = 1 ?? true : " + (asistencia = 1 ?? true)) //1 
+x = undefined;
+console.log("Asignacion de asistencia = x: " +(asistencia = x ?? 'Asiste')) // "Asiste"
+console.log("Asignacion de asistencia = x: " +(asistencia = '' ?? 'Asiste')) // ''
+console.log("typeOf(undefined) " + typeof(undefined)); //undefined
+console.log("typeOf(null) " + typeof(null)); //Object
+//Los datos se guardan em memoria como 1 y 0 
+//Los bits que indican el tipo de dato para objetos es 00 
+
+
+
+
+
+

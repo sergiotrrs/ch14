@@ -2,7 +2,9 @@ console.log("Teoria JS06");
 //encontrarPorId();
 //encontrarPorTagName();
 //encontrarPorClase();
-encontrarPorSelector();
+//encontrarPorSelector();
+//crearElemento();
+cambiarEstilo();
 
 function encontrarPorId(){
     //Obtenemos el objeto mediante su id
@@ -41,4 +43,30 @@ function encontrarPorSelector(){
     let unirStr="";//igualar a las comillas , para que no nos arroje un indefinido 
     elements.forEach( dato=> unirStr+=dato.innerHTML + " ");//Se unen los strings de p.saludo
     document.getElementById("junta").innerHTML = unirStr;
+}
+
+function crearElemento(){
+    const nuevoElemento = document.createElement("p"); // crea un <p></p>
+    nuevoElemento.innerHTML = "Este es un nuevo parrafo"; // <p>Este es un nuevo parrafo</p>
+    //document.body.appendChild(nuevoElemento); //Se inserta el objeto en el body
+    document.getElementById("titulo").appendChild(nuevoElemento);//se incerta debajo del body porqeu ahi esta ese id
+}
+
+function cambiarEstilo(){
+    document.getElementById("intro").style.color = "#9fd5d1"; //coloca stilo in line , el color puede ser descriptivo o exadecimal
+    const estilo = document.createElement("style");
+    //Todos los elementos HTML son nodos 
+    //Los elementos , atributos y textos son nodos
+    const texto = document.createTextNode("body{ font = 20px verdana; background-color: blue;} ");
+    estilo.appendChild(texto);
+    /**
+     * Descripcion grafica de lo que se realizo
+     * <style>
+     * body{
+     *   fint = 20px verdana;
+     *   background-color: blue;
+     * }
+     * </style>
+     */
+    document.head.appendChild(estilo);
 }
