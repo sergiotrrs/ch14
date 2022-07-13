@@ -1,22 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <script src="script.js"></script>
-        <title>Usuarios</title>
-    </head>
-    <body>
-        <h1>Usuarios</h1>
-        <form>
-            <ul>Correo electrónico</ul>
-            <ul>Nombre</ul>
-            <ul>Apellido</ul>
-            <ul>Avatar</ul>
-        </form>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <title>Usuarios</title>
+</head>
+
+<body>
+    <h1>Usuarios</h1>
+
+    <div class="container-fluid bg-light text-dark text-center">
+        <button class="btn btn-outline-dark" type="button" id="page1">Página 1</button>
+        <button class="btn btn-outline-dark" type="button" id="page2">Página 2</button>
+        <button class="btn btn-outline-dark" type="button" id="page3">Página 3</button>
+    </div>
+
+    <div class="container-fluid bg-light text-dark text-center">
+        <table class="table my-1 mx-1">
+            <thead>
+                <tr class="table table-bordered table-striped  table-danger ">
+                    <th scope="col-1">#</th>
+                    <th scope="col-2">Nombre</th>
+                    <th scope="col-3">Apellido</th>
+                    <th scope="col-4">Email</th>
+                    <th scope="col-5">Avatar</th>
+                </tr>
+            </thead>
+            <tbody id="data"></tbody>
+        </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
+<footer>
+    Api trabajada por <a href= "https://www.linkedin.com/in/lucia-cortes-m/">Lucia</a>
+</footer>
 </html>
