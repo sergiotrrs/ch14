@@ -1,43 +1,67 @@
-<!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>apiFetch Practica</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Usuarios</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-  </head>
-  <body>
-    <h1>API fetch</h1>
-
-    <div id= "data" class="container">
-
+ 
+</head>
+<body style="background-color: rgb(204, 169, 221);">
+    <br>
+    <h1 style=" text-align:center; font-family:Garamond">Datos de usuarios</h1>
+    <br>
+    <div id="info"></div>
+    <div class="container">
+        <div class=" row m-3 gx-5 gy-3 d-flex justify-content-center">
+            <div class="col-sm-12 col-md-4 col-lg-4 text-center ">
+                <button type="button" class="btn btn-outline-secondary" onclick="obtenerDatos()">Obtener Datos</button>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-4 text-center ">
+                <button type="button" class="btn btn-outline-dark" onclick="leerDatos()">Mostrar Datos</button>
+            </div>
+            <!-- <div class="col-sm-12 col-md-4 col-lg-4 text-center ">
+                <button type="button" class="btn btn-outline-warning" onclick="api()">Mostrar datos</button>
+            </div> -->
+            
+            </div>
     </div>
     
-      <div class="container mt-4 shadow-lg p3 mb-5 bg-body rounded">
-        <table class="table table-bordered table-striped">
-            <thead>
-                <tr>
-                  
-                  <th>ID</th>
-                  <th>NAME</th>
-                  <th>LAST NAME</th>
-                  <th>EMAIL</th>
-                  <th>AVATAR</th>
-                  
-                </tr>
-            </thead>
-            <tbody id="data">
+    
 
-            </tbody>
-        </table>
+    <div class="container">
+        <div class="row mx-3 gx-5 gy-3 d-flex justify-content-center ">
+          <div id="user1" class="col-sm-12 col-md-6 col-lg-4  text-center bg-secondary text-white rounded"> 
+            
+          </div>
+          <div id="user2" class="col-sm-12 col-md-6 col-lg-4 text-center bg-light text-dark rounded">
+            
+          </div>
+          <div id="user3" class="col-sm-12 col-md-6 col-lg-4 text-center bg-secondary text-white rounded">
+            
+          </div>
+
+          <div id="user4" class="col-sm-12 col-md-6 col-lg-4 text-center bg-light text-dark rounded"> 
+            
+        </div>
+        <div id="user5" class="col-sm-12 col-md-6 col-lg-4 text-center bg-secondary text-white rounded">
+          
+        </div>
+        <div id="user6" class="col-sm-12 col-md-6 col-lg-4 text-center bg-light text-dark rounded">
+          
+        </div>
+        </div>
+      </div>
+
+      <div id="data"></div>
+
+       <!-- Pie de pagina con informacion -->
+       <p class="m-5 text-center"id="pie">Hecho por <a href="https://github.com/jorgemonti">@jorgemonti</a>  </p>
     </div>
     
-    <button onclick="boton()">Recuperar</button>
-    <button onclick="pasa()">Siguiente</button>
-    <button onclick="guardarDatos()">Guardar Datos</button>
-
     
-    <script src="apiFetchPscript.js"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-  </body>
+    <script src="script1.js"></script>
+</body>
 </html>
