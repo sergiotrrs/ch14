@@ -41,124 +41,27 @@ const calcularFecha = () => {
 
   // document.getElementById("fecha").value = definirFecha(dia.getDay());
   //Se manda llamar a la función definirFecha
-
+  
   const formulario = document.getElementById("formulario");
   console.log(formulario.elements[`mes`].value);
-
-  const dia = new Date(
-    formulario.elements[`anio`].value,
-    formulario.elements[`mes`].value - 1,
-    formulario.elements[`dia`].value
-  );
-  let day = formulario.elements[`dia`].value;
-  let month = formulario.elements[`mes`].value - 1;
-  let year = formulario.elements[`anio`].value;
-  let anioBis = year % 4;
-  switch (month) {
-    //meses con 31 dias
-    case 0:
-    case 2:
-    case 4:
-    case 6:
-    case 7:
-    case 9:
-    case 11:
-      if (day < 1 || day > 31) {
-        alert("Ingrese un dia dentro del rango 1-31");
-        document.getElementById("dia").value = "";
-        setInvisible(false);
-        return null;
-
-      }
-      break;
-    case 1:
-      console.log("Dentro del casen deberia dar el año" + year);
-      console.log("año bis" + anioBis);
-      // el año es bisiesto
-      if (anioBis == 0 && (day < 1 || day > 29)) {
-        alert("Ingrese un dia dentro del rango 1-29");
-        document.getElementById("dia").value = "";
-        setInvisible(false);
-        return null;
-
-
-      }
-      // alert("El año no es bisiesto");
-      if (anioBis !== 0 && (day < 1 || day > 28)) {
-        alert("Ingrese un dia dentro del rango 1-28");
-        document.getElementById("dia").value = "";
-        setInvisible(false);
-        return null;
-      }
-
-
-      break;
-    // Meses con 30 dias
-    case 3:
-    case 5:
-    case 8:
-    case 10:
-      if (day < 1 || day > 30) {
-        alert("Ingrese un dia dentro del rango 1-31");
-        document.getElementById("dia").value = "";
-
-
-
-
-        // console.log(""+ document.getElementById("fecha").innerHTML);
-        //   `El primer parrafo (index 0) con la clase saludo es : ` + elements[0].innerHTML;
-        return null;
-
-
-        //     const elements = document.querySelectorAll("input.fecha");
-        // console.log("Datos en elements: " + elements.length);
-        // let unirStrings = "";
-        // elements.forEach(dato => unirStrings += dato.innerHTML + " ");//Se unen los strings de p.saludo
-        // document.getElementById("junta").innerHTML = unirStrings;
-
-
-        // const elements = document.getElementsByClassName("resultado").value = "hola1";
-        // document.getElementById("resultado").value = "hola2";
-
-
-        setInvisible(false);
-
-        // let status = "inline";
-        // // if (estado) status = "none";
-        // formulario.elements["limpiar"].style.display = status;
-        // formulario.elements["fecha"].style.display = status;
-
-        //aqui pongo otro metodo
-
-        // let status = "visible";
-        // if (estado) status = "hidden"
-        // formulario.elements["limpiar"].style.visibility = status;
-
-      }
-      break;
-
-    default:
-      alert("Opcion invalida, verifique que los datos ingresados sean correctos");
-      setInvisible(false);
-      return null;
-      break;
-  }
-  
-  formulario.elements[`fecha`].value = definirFecha(dia.getDay());
-
-  const otrosElementos = document.getElementsByClassName("resultado");
-  console.log("Elementos encontrados: " + otrosElementos.length);
-
-  if (otrosElementos==0) {
-
-  }
-
-  // let validarFebrero = anio % 4;
   // if (dia >= 29) {
   //   alert("Error");
   //   console.log("prueba");
   // }
+  const dia = new Date(
+    formulario.elements[`anio`].value,
+    formulario.elements[`mes`].value - 1,
+    formulario.elements[`dia`].value
+    );
+    let validarFebrero = anio % 4;
+    // if (dia >= 29) {
+    //   alert("Error");
+    //   console.log("prueba");
+    // }
+    
+    
 
+  formulario.elements[`fecha`].value = definirFecha(dia.getDay());
 };
 
 //Función para indicar el día y si es laborable
