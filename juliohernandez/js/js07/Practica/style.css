@@ -3,3 +3,7 @@ img {
     height: 1cm;
     width:1cm;
 }
+
+tr[id^='r']:hover{
+    transform: scale(1.1); 
+}
