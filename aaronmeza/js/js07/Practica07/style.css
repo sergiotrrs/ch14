@@ -1,0 +1,126 @@
+body{
+    position: relative;
+    padding-bottom: 3em;
+    min-height: 100vh;
+    background: linear-gradient(#431c1c, #5a021c 25%, #5c0627);
+    background-size:20%;
+    background-repeat:repeat;
+}
+
+body > nav.navbar.navbar-expand-lg.bg-light {
+    padding: 25px 0;
+    background: linear-gradient(#182ba7, #281eae 25%, #2e09e8);
+    background-size:20%;
+    background-repeat:repeat;
+}
+
+body > header > h1{
+    color: rgb(241, 27, 27);
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 0;
+}
+
+.tableStyle{
+    font-weight: 700;
+    font-size: 1.2em;
+    color: rgb(14, 13, 13);
+    background: #006830;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid rgb(21, 20, 20);
+}
+.tdStyle1{
+    height:130px;
+    margin: 10px;
+    width:59px;
+    border: 1px solid rgb(15, 15, 15);
+    background: #1c3643;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: rgb(13, 12, 12);
+}
+.tdStyle2{
+    margin: 10px;
+    height:130px;
+    width:203px;
+    border: 1px solid rgb(20, 19, 19);
+    background: #1c3643;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #fff;
+}
+.tdStyle3{
+    margin: 10px;
+    height:130px;
+    width:203px;
+    border: 1px solid #fff;
+    text-align: center;
+}
+.tdStyle4{
+    margin: 10px;
+    height:130px;
+    width:483px;
+    border: 1px solid #fff;
+    text-align: center; 
+}
+.tdStyle5{
+    margin: 10px;
+    height:130px;
+    width:auto;
+    border: 1px solid #fff;
+    text-align: center;
+}
+.thStyle6{
+    height:auto;
+    margin: 10px;
+    width:auto;
+    border: 1px solid rgb(8, 8, 8);
+}
+.thStyle{
+    
+    text-align: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 700;
+    font-size:1.5em;
+    padding: 10px;
+    height: 66px;
+    width: 100%;
+    border: 1px solid #fff; 
+}
+.mybtn{
+    margin-left: 15px;
+    margin-bottom:10px;
+    font-weight: 500;
+}
+.photoIm{
+    box-shadow: 25px 25px 25px gray;
+    border-radius: 100%;
+}
+
+
+
+body > nav.text-center.container-md{
+    background: #100f10;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 12px;
+}
+
+body > section > footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 3em;
+    background: linear-gradient(#4fa4ce, #273b47 25%, #1e5472);
+    background-size:20%;
+    background-repeat:repeat;
+}
+

@@ -1,30 +1,24 @@
-function createNode(element) {
-    return document.createElement(element);
-}
-
-function append(parent, el) {
-    return parent.appendChild(el);
-}
-function append(parent, el) {
-    return parent.appendChild(el);
-}
-
+//Funcion Principal
 function obtenerUsuarios(pagina) {
     let usuariosLocal =recuperarUsuariosLocalStorage(pagina);
-    //verificamos si existe en localStorage los usarios
-    if (usuariosLocal){
+    //verificamos si existe en localStorage los usuarios
+    if (usuariosLocal){ //Verificamos si usuario local tiene valor
+        //Esta funcion genera el html de los usuarios
         generarHTMLUsuarios(usuariosLocal);
     }else{
         llamaAPIUsuarios(pagina);
     }
 }
 
+//Llamada a la url de los usuarios
 function llamaAPIUsuarios(pagina){
-    const url = 'https://reqres.in/api/users?page=' + pagina;
+    const url = 'https://reqres.in/api/users?page=' + pagina; 
+
     fetch(url)
         .then((resp) => resp.json())
-        .then(function (data) {
-            let usuarios = data.data;
+        .then(function (data) { 
+            //Si la respuesta fue exitosa aqui 
+            let usuarios = data.data; //Obtenemos la lista de usuarios
             guardarUsuariosLocalStorage(pagina, usuarios);
             generarHTMLUsuarios(usuarios);
         })
@@ -37,8 +31,7 @@ function llamaAPIUsuarios(pagina){
 //esta funcion es la que va a generar el HTML para pintar los usuarios
 function generarHTMLUsuarios(usuarios) {
     
-    console.log("Llamando a la funcion")
-
+    //Este es ub div en donde guardaremos el html que se genere
     const contenedorUsuarios = document.getElementById('usuarios');
     let cabecera = `<table class="table table-dark table-hover">
     <thead>
@@ -49,7 +42,8 @@ function generarHTMLUsuarios(usuarios) {
             <th>Avatar</th>
         </tr>
     </thead>`;
-    let result = cabecera;
+    let result = cabecera; 
+    //Iteramos c/u de los usuarios y generamos un table row
     for (let user of usuarios) {
         result += ` <tr>
                 <td>${user.first_name}</td>
@@ -70,6 +64,6 @@ function guardarUsuariosLocalStorage(pagina, usuarios){
     localStorage.setItem("usuariosLocal2"+pagina, JSON.stringify(usuarios));
 }
 function recuperarUsuariosLocalStorage(pagina){
-    //Convertimo de String a JSON
+    //Convertimos de String a JSON
     return JSON.parse( localStorage.getItem( 'usuariosLocal2'+pagina));
 }
