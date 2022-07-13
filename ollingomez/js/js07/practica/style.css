@@ -1,0 +1,101 @@
+.container {
+    height: 80%;
+    width: 100%;
+    background-color: rgb(123, 163, 163);
+    margin-left: ;
+    margin-right: auto;
+}
+
+.avatar {
+    /* cambia estos dos valores para definir el tamaño de tu círculo */
+    height: 80px;
+    width: 80px;
+    /* los siguientes valores son independientes del tamaño del círculo */
+   border-radius: 50%;
+}
+
+.botones {
+ display: inline-flex; 
+ align-items: center;
+ justify-content: center;
+ width: 200px; /* ancho */
+height: 50px;/*alto*/
+background: #141414;
+color:aliceblue;
+font-size: 20px;
+/*Grueso*/
+font-weight: 500px;
+border:none;
+/*curso*/
+cursor: pointer;
+transition: .3s ease all; 
+border-radius:  10px;
+position: relative;
+overflow: hidden;/*Quitar la capa*/
+}
+
+.botones::after{/*se crea una capa*/
+    content:"";
+    width: 1px; 
+    height: 1px;
+    background: none;
+    position: absolute;
+    z-index: 1;
+    top:65%;
+    left:60%;
+    transition: .3s ease-in-out all;
+    border-radius: 100px;
+    transform-origin: center ;
+}
+.botones:hover::after{
+    transform: scale(300);
+    background:#1910cc;
+}
+
+
+
+span {
+ position: relative;
+ z-index:2;
+ transition: .3s ease all;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* /animacion hacia abajp/ */
+/*se crea una capa*/
+/* #botonUno::after{
+    content:"";
+    width: 100%; 
+    height: 100%;
+    background: red;
+    position: absolute;
+    z-index: 1;
+    top:-80px;
+    left:0;
+    transition: .3s ease-in-out all;
+}
+#botonUno:hover::after{
+    top:0;
+}
+
+span {
+ position: relative;
+ z-index:2;
+ transition: .3s ease all;
+} */

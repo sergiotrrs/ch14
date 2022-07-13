@@ -1,0 +1,24 @@
+h1{ 
+    font-size:30px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(247, 240, 176);
+    font-family:monospace;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+h2{ 
+    font-size:25px;
+    font-family:monospace;
+    text-align: center;
+}
+
+
+body {
+    background-image: url("https://i.ibb.co/25Rsbcq/esta-es.jpg");
+    background-repeat: no-repeat; 
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
