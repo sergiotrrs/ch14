@@ -1,0 +1,35 @@
+/*
+Hoja de estilos para la simulación de colaboradores de un sitio web
+para la práctica de Generation México, vincular una API con front-end
+en bootcamp Fullstack Web Developer con Java
+*/
+
+*{
+    background: scroll;
+}
+
+/*
+Se solicitó que las imágenes
+fueran sin bordes rectangulares
+*/
+img {
+    border-radius: 50%;
+    size-adjust: calc(100%);
+}
+
+/*
+Hace crecer los elementos al pasar el mouse
+*/
+.card-hover:hover{
+    transform: scale(1.15);
+}
+
+/*
+Se cuida que el texto del footer
+sea ligeramente más pequeño, y tenga un color de fondo
+*/
+#footer {
+    text-transform: calc(95%);
+    background-color: gray;
+    margin-top: 2cm;
+}

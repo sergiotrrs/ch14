@@ -1,0 +1,87 @@
+body{
+    position: relative;
+    padding-bottom: 3em;
+    min-height: 100vh; /*Como mínimo mide lo que mide el viewbord*/
+    background-image: url('https://st8.cannypic.com/thumbs/33/336867_632_canny_pic.jpg');
+    background-size:20%;
+    background-repeat:repeat;
+}
+h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 800;
+    font-size: 4em;
+    text-shadow: 3px 3px 5px coral;
+}
+.tableStyle{
+    font-weight: 700;
+}
+.tdStyle1{
+    height:130px;
+    margin: 10px;
+    width:59px;
+}
+.tdStyle2{
+    margin: 10px;
+    height:130px;
+    width:203px;
+}
+.tdStyle3{
+    margin: 10px;
+    height:130px;
+    width:203px;
+}
+.tdStyle4{
+    margin: 10px;
+    height:130px;
+    width:483px;
+}
+.tdStyle5{
+    margin: 10px;
+    height:130px;
+    width:auto;
+}
+.thStyle6{
+    height:auto;
+}
+.thStyle{
+    text-shadow: 3px 3px 5px coral;
+    text-align: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 700;
+    font-size:1.5em;
+    padding: 10px;
+    height: 66px;
+}
+.mybtn{
+    margin-left: 15px;
+    margin-bottom:10px;
+    font-weight: 500;
+}
+.photoIm{
+    box-shadow: 0px 0px 12px coral;
+    border-radius: 50%;
+    animation-name: ghumo;
+	animation-duration: 16s;
+	animation-iteration-count:infinite;
+    animation-timing-function: linear;
+	animation-direction:reverse;
+}
+
+@keyframes ghumo {
+	0% { transform: rotate(0); }
+    25% { transform: rotate(90deg); }
+    50% { transform: rotate(180deg); }
+    75% { transform: rotate(270deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.myfooter{
+    color:white;
+    text-align: center;
+    background-color: black;
+    padding: 1em;
+    position:absolute;
+    bottom: 0;
+    height:auto;
+    width: 100%;
+}

@@ -1,0 +1,20 @@
+body{
+    background-color: darkslategrey;
+    text-align: center;
+    font-family: sans-serif;
+    color: beige;
+    grid-template-columns: auto;
+}
+
+.h1{
+    text-align: center;
+    font-size: 50px;
+    grid-template-columns: auto;
+}
+
+.avatar{
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+}
+
