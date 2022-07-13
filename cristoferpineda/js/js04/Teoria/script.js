@@ -47,5 +47,90 @@ for(let index = 10; index>0; index=index -1) console.log(index);
 //index = index +1 -> index++     es lo mismo
 for (let index = 0 , a=0; index < 3; index++ , a++) {
     console.log = (a, index); 
-    
 }
+///********************************************** */
+/*let index =0 , a=0;//declaracion fuera del for
+for( ; index <3 ; index++, a+=2){
+    console.log (a , index); //0-0 // 2-1 // 4-2 //No cumple pero se quedan 6-3
+}
+console.log(`final index ${a} - ${index}`);//6 -3
+*/
+
+/*
+//El ciclo for , puede no llevar parametros de inicializacion , evaluacion y expresion final
+index=0;
+for (    ;  ; ) {
+    if (index>3) break;
+    console.log(index);
+    index++;
+}
+*/
+
+
+/*
+//El ciclo for podria no tener un cuerpo (bloque) de instrucciones.
+let i=0;
+for (; i<100; i++); //imprime solo 100 no de 0 -100 porque el ";" cierra el ciclo
+console.log(i);
+*/
+
+
+//Sintaxis del ciclo while(condicion)
+//while( confirm("Quieres continuar?")) console.log("Pulso aceptar");
+i=0;
+while(i<10){
+    console.log("Valor de i en while " + i);
+    i++;
+}
+i=0;
+while(i<10){
+    if(i==5)break;//imprime del 0 al 4
+    console.log("Valor de i en while " + i);
+    i++;
+}
+
+
+//Do - while*************************************************************/
+let numConciertos=1;
+do{
+    console.log("veses que fui al concierto?" + numConciertos);
+    numConciertos++
+}while(confirm("Puedo ir al concierto?"));
+//do while hace una ronda despues continua mientras la condicion sea verdadera y while comprueba la condicion antes de empezar 
+
+
+//formas de interar un arreglo ***************************************************/
+const carros=["Vw" , "Audi" , "Seat", "Bmw"];
+//usando estructura for
+for (i=0 ; i<carros.length ; i++) console.log("Con for " + carros[i]);
+//usando forEach
+carros.forEach((auto) =>console.log("Con for each" + auto));
+//usando for in
+for(let auto in carros)console.log("Con for-in " + carros[auto]);
+//usando for of
+for (let auto of carros) console.log("Con for-of " + auto);
+
+//Arreglos de dos dimensiones**********************************************************************/
+const cohortes = [ ["Marihan" , "Adrian" , "Gustavo"] , ["Miri" , "Emiliano" , "TuTiaAbi"]];
+console.log(cohortes[0][2]);//el primer indice es para el arreglo , el segundo para el dato dentro del arreglo
+//en el console se imprimiria gustabo 
+cohortes.forEach(fila=>fila.forEach(columna=>console.log(columna)));//para imprimir ambos arreglos
+/*
+//para imprimir ambos arreglos pero usando for in 
+for(let fila in cohortes){
+    for (let columna in cohortes[fila])console.log(cohortes[fila][columna]);
+}
+
+//para imprimir ambos arreglos pero con for anidados
+for(let i=0;i<cohortes.length;i++){
+    for(let j=0;j<cohortes[i].length;j++){
+        console.log(cohortes[i][j]);
+    }
+}
+
+//usando for-of
+for (let fila of cohortes){
+    for (let columna of fila)console.log(columna)
+}
+
+*/

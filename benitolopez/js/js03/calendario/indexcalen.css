@@ -1,0 +1,18 @@
+
+
+h3{
+    
+    display: block;
+    margin-left: 4em;
+}
+input.btn btn-info:hover{
+
+    background-color: brown;
+}
+input.ini{
+    border-radius: 4em;
+    width: 55em;
+}
+body{
+    display: flexbox;
+}

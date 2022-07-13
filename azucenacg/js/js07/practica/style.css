@@ -1,0 +1,16 @@
+img {
+    width: 65px;
+    height: 65px;
+}
+
+h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    background-image: url("https://i.ibb.co/hmX8pCn/4907157.jpg");
+    background-repeat: no-repeat; 
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+  }

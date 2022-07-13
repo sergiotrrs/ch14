@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Práctica</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+<body>
+    <div>
+        <h1 class="text-center" style="margin-top: 50px; background-color: aliceblue ; font-family:'Courier New', Courier, monospace ; ">Práctica JS03 </h1>
+        <h5 class="text-center" style= "margin-top: 35px; background-color: aliceblue ; ">Ingresa una fecha númerica y da clic en consultar, en el resultado se mostrará si el día es laborable o es fin de semana.</h5>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-lg-3 col-md-3 text-center" style="margin: 20px; text-align: center;"> Día
+                <input type="number" id="dd" placeholder="dd" min="01" max="31"> 
+            </div>
+            <div class="col-lg-3 col-md-3 text-center" style="margin: 20px; text-align: center;"> Mes
+                <input type="number" id="mm" placeholder="mm" min="01" max="12">
+            </div>
+            <div class="col-lg-3 col-md-3 text-center" style="margin: 20px; text-align: center;"> Año
+                <input type="number" id="aaaa" placeholder="aaaa" min="1900">
+            </div>
+        </div>
+    </div>
+
+    <div class="row pt-4 text-center">
+        <div class="col-lg-12 col-sm-6">
+            <button type="button" id="consultar" class="btn btn-outline-primary rounded" style="margin: 15px; text-align: center;" onclick="dia()">Consultar</button>
+        </div>
+        <div class="col-lg-12 col-sm-6">
+            <button type="button" id="resultado" class="btn btn-outline-primary rounded" style="margin: 15px; text-align: center;">Resultado</button>
+        </div>
+    </div>
+
+    <script src = "js/bootstrap.bundle.min.js"></script>
+    <script src="script.js" crossorigin="anonymous"></script>
+</body>
+</html>
