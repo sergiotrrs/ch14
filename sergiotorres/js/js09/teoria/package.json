@@ -13,6 +13,7 @@
   "author": "Niño del cuadrado",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.27.2",
     "bootstrap": "^5.1.3"
   }
 }
