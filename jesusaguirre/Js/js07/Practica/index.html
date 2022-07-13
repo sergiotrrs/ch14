@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="bg-info">
+    <div class="container justify-content-center mt-3">
+      <div class="row justify-content-center g-3">
+        <div class="col-3 text-center mt-3">
+          <button
+            class="btn btn-success"
+            id="leerUsuarios"
+            type="button"
+            onclick="leerDatos()"
+          >
+            Leer usuarios
+          </button>
+        </div>
+      </div>
+      <div class="justify-content-center mt-3">
+        <div class="container">
+          <div id="datos" class="row g-3"></div>
+        </div>
+        <!-- <table class="table table-bordered align-middle table-responsive">
+          <thead>
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">Email</th>
+              <th scope="col">First name</th>
+              <th scope="col">Last name</th>
+              <th scope="col">Avatar</th>
+            </tr>
+          </thead>
+          <tbody id="datos"></tbody>
+        </table> -->
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
