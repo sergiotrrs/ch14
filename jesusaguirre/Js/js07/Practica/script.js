@@ -42,10 +42,12 @@ function apiFetch(url, pagina) {
     .then(response => response.json())
     .then(dataJSON => {
       if (pagina == 1) {
-        localStorage.setItem(CLAVE, JSON.stringify({
-          datosArreglo: dataJSON.data,
-          tiempo: Date.now()
-        }));
+        localStorage.setItem(CLAVE,
+          JSON.stringify({
+            datosArreglo: dataJSON.data,
+            tiempo: Date.now()
+          }
+          ));
       }
       ponerDatos(dataJSON.data);
     })
