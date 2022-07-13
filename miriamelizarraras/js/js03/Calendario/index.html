@@ -43,13 +43,13 @@
             color: black;
             display: grid;
             grid-template-columns: 4fr 4fr 4fr;
-            grid-auto-rows: minmax(auto, auto);
-            margin: 10px;
+            grid-auto-rows: minmax(auto, auto, auto);
+            margin: 8px;
         }
     </style>
 
     <br>
-    <h1 style="font-size: 50px;">Calendario</h1>
+    <h1 style="font-size: 50px; grid grid-template-columns: auto;">Calendario</h1>
     <!-- Empieza LinkedIn -->
     <p>
         <a href="https://www.linkedin.com/in/miriamel/">
@@ -82,11 +82,11 @@
 
     <!-- span sirve para poner un letrero, en este caso puse span para señalar qué se debe poner en cada contenedor. -->
     <div class="calendario">
-        <span><strong>Día</strong><input type="number" id="dia" max="31" min="1" style="text-align: center;"></span>
-        <span><strong>Mes</strong><input type="number" id="mes" max="12" min="1" style="text-align: center;"></span>
-        <span><strong>Año</strong><input type="number" id="anio" max="3000" min="1000"
+        <span><strong>Día</strong><br><input type="number" id="dia" max="31" min="1" style="text-align: center;"></span>
+        <span><strong>Mes</strong><br><input type="number" id="mes" max="12" min="1" style="text-align: center;"></span>
+        <span><strong>Año</strong><br><input type="number" id="anio" max="3000" min="1000"
                 style="text-align: center;"></span>
-        <br><br><br>
+        <br>
         <button type="button" class="btn btn-warning" onclick="buscar()"><strong>Calcular</strong></button>
     </div>
     <!-- el h2 nos presenta el resultado -->

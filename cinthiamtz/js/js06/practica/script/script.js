@@ -18,7 +18,10 @@ function setInvisible(estado){
     formulario.elements['fecha'].style.display =status;    
 }
 
-
+// function pasaFiltro(anio, mes, dia){
+//     let bisniesto=anio%4
+//     if(mes==2 && bisniesto ==0 dia<29)
+// }
 
 
 const form = document.getElementById('formulario');
