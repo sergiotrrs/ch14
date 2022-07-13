@@ -1,0 +1,15 @@
+{
+  "name": "teoria",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Teoria\u001b[B",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "bootstrap": "^5.1.3"
+  }
+}
