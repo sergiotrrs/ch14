@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS07 API FETCH</title>
+</head>
+
+<body>
+    <h1>Sesión JS07 API FETCH</h1>
+    <p>Click the button to get your coordinates.</p>
+    <button onclick="getLocation()">Try It</button>
+    <p id="demo"></p>
+
+    <form id="formulario">
+        nombre: <input type="text" id="nombre" value="">
+        apellido<input type="text" id="apellido" value="">
+    </form>
+    <div class="botones">
+        <button  type="button" id="guardar"  onclick="guardarDatos()">Guardar Datos</button>
+        <button  type="button" id="recuperar"  onclick="recuperarDatos()">Recuperar Datos</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
