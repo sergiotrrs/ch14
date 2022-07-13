@@ -2,7 +2,7 @@
 let indicePag = 1;
 let primeraVez = true;
 document.getElementById("anterior").disabled = true;
-document.getElementById("actual").value = `Página ${indicePag}`;
+document.getElementById("actual").innerHTML = `Página ${indicePag}`;
 
 for (let i = 1; i < 7; i++) {
     creaFilas(i);
@@ -17,7 +17,7 @@ document.getElementById("anterior").addEventListener('click', () => {
     //Disminuir el valor del índice de página
     indicePag -= 1;
     //Actualizar el índice de página y formulario
-    document.getElementById("actual").value = `Página ${indicePag}`;
+    document.getElementById("actual").innerHTML = `Página ${indicePag}`;
     if (indicePag <= 1) {
         document.getElementById("anterior").disabled = true;
     }
@@ -44,7 +44,7 @@ document.getElementById("siguiente").addEventListener('click', () => {
     //Aumentar el valor del índice de página
     indicePag += 1;
     //Actualizar el índice de página y formulario
-    document.getElementById("actual").value = `Página ${indicePag}`;
+    document.getElementById("actual").innerHTML = `Página ${indicePag}`;
     if (indicePag > 2) {
         document.getElementById("siguiente").disabled = true;
     }
