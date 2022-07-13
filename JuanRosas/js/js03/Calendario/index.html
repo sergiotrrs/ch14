@@ -1,30 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
+
 <body>
-    <section class="calendario">
-        <div class="titulo">
-            <h1>Calculo de dia laboral</h1>
-        </div>
-        <div class="input"> <!-- ".id" traes o llamas a la clase -->
-            <!--"#id" llamas al id-->
-            <input type="number" min="1" max="31" id="dia" placeholder="Día">
-            <input type="number" min="1" max="12" id="mes" placeholder="Mes">
-            <input type="number" min="1990" max="2022" id="anio" placeholder="Año">
-        </div>
-        <div class="boton">
-            <button id="calcular">Calcular</button>
-        </div>
-        <div class="fecha">
-            <input type="text" id="resultado" disabled placeholder="resultado">
-        </div>
-    </section>
+    <div class="vh-100">
+        <header class="h-25 d-flex justify-content-center align-items-center bg-image w-100" 
+        style="background-image: url('https://lajornadahidalgo.com/wp-content/uploads/2022/04/pexels-cats-coming-707582.jpg');
+        background-size: cover; background-position: center;">
+            <h1 style=" font-size: 60px;" class="fw-bold ">Calculo de dia laboral</h1>
+        </header>
+        <section 
+            class="calendario border border-primary h-75 d-flex flex-column justify-content-start align-items-center"
+            style="background-image: url('https://www.pngmart.com/files/13/Honeycomb-Pattern-PNG-Clipart.png'); padding-top: 30px;">
+            <div class="input w-100 d-flex  justify-content-around m-3">
+                <!-- ".id" traes o llamas a la clase -->
+                <!--"#id" llamas al id-->
+                <input class="form-control text-center w-25" type="number" min="1" max="31" id="dia" placeholder="dd" maxlength="2" onkeyup="if(parseInt(this.value)>31){ this.value =31; return false; }">
+                <input class="form-control text-center w-25" type="text" min="1" max="12" id="mes" placeholder="mm" maxlength="2" onkeyup="if(parseInt(this.value)>12){ this.value =12; return false; }">
+                <input class="form-control text-center w-25" type="text" min="1990" max="2022" id="anio" placeholder="aaaa" maxlength="4" onkeyup="if(parseInt(this.value)>2022{ this.value =2022; return false; }">
+
+            </div>
+            <div class="boton m-3">
+                <button class="btn btn-primary btn-lg" id="calcular">Calcular</button>
+            </div>
+            <div class="fecha m-3 w-100 d-flex justify-content-center">
+                <input type="text" id="resultado" class="form-control text-center w-50" disabled placeholder="resultado">
+            </div>
+            <div class="img">
+                <img class="img-thumbnail" style="width: 500px;" src="https://uploadgerencie.com/imagenes/sumar-dias-laborales-fecha-excel.png" alt="imagen de resultado" id="img">
+            </div>
+        </section>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
+
 </html>

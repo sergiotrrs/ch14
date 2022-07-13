@@ -1,0 +1,19 @@
+{
+  "name": "t",
+  "version": "1.0.0",
+  "description": "uso de NPM y BOOTSRAP",
+  "main": "npm.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "npm",
+    "bootstrap"
+  ],
+  "author": "Gerardo Ruiz",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "bootstrap": "^5.1.3"
+  }
+}

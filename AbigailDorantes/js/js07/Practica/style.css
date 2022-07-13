@@ -1,0 +1,41 @@
+
+/*caracteristicas para el contenedor*/
+.container {
+  height: 80%;
+  width: 100%;
+  background-color: rgb(123, 163, 163);
+}
+
+span {
+    position: relative;
+    z-index: 2;
+    transition: 0.3s ease all;
+  }
+  
+/*estilo para las imagenes*/
+.image {
+  /*valores para definir el tamaño y forma del círculo */
+  height: 60px;
+  width: 60px;
+  border-radius: 60%;
+}
+
+/* estilo de botones*/
+.buttons {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px; 
+  height: 50px; 
+  background: #62199d;
+  color: rgba(255, 255, 255, 0.976);
+  font-size: 20px;
+  font-weight: 500px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease all;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
