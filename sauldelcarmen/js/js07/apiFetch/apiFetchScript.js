@@ -4,7 +4,7 @@ console.log('Api Fetch');
 fetch('https://reqres.in/api/users?page=2')
   .then(response => {return response.json()})
   .then(usuarios => {
-     // console.log(usuarios.data[0])
+    console.log(usuarios.data[0])
    for (user of usuarios.data) {
 	 console.log(`id ${user.id} tiene correo ${user.email}`)
    }
