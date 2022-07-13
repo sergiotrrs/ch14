@@ -1,0 +1,14 @@
+package java02;
+
+/**
+ * @author sebas
+ *
+ */
+public class HolaMundo {
+	public static void main (String []args) {
+	System.out.println("Hola Mundo Generation");
+	System.out.println("qué chido se pone esto");
+	System.out.println("Hola Mundo Generation");
+}
+}
+
