@@ -20,9 +20,19 @@
             class="btn btn-success"
             id="leerUsuarios"
             type="button"
-            onclick="leerDatos()"
+            onclick="leerDatos(URL_DELAY,1)"
           >
-            Leer usuarios
+            Pagina 1
+          </button>
+        </div>
+        <div class="col-3 text-center mt-3">
+          <button
+            class="btn btn-success"
+            id="leerUsuarios"
+            type="button"
+            onclick="leerDatos(URL_PAGE2,2)"
+          >
+            Pagina 2
           </button>
         </div>
       </div>
@@ -30,18 +40,6 @@
         <div class="container">
           <div id="datos" class="row g-3"></div>
         </div>
-        <!-- <table class="table table-bordered align-middle table-responsive">
-          <thead>
-            <tr>
-              <th scope="col">Id</th>
-              <th scope="col">Email</th>
-              <th scope="col">First name</th>
-              <th scope="col">Last name</th>
-              <th scope="col">Avatar</th>
-            </tr>
-          </thead>
-          <tbody id="datos"></tbody>
-        </table> -->
       </div>
     </div>
     <script

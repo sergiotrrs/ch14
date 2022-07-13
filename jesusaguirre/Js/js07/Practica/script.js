@@ -1,9 +1,11 @@
-console.log("hola jesus");
-
+console.log("hola ch14");
+//urls 
+const URL_DELAY = "https://reqres.in/api/users?delay=3";
+const URL_PAGE2 = "https://reqres.in/api/users?page=2";
 //CLAVE con la que se guardan datos en el localstorage
 const CLAVE = "datosUsuarioLocal";
 
-//funcion para poner datos en la tabla del index.HTML
+//funcion para poner datos como cards
 function ponerDatos(arregloUsuario) {
   let datosUsuario = "";
   for (user of arregloUsuario) {
@@ -31,42 +33,43 @@ function ponerDatos(arregloUsuario) {
               </div>
             </div>`;
   }
-
   document.getElementById("datos").innerHTML = datosUsuario;
 }
 
 //se obtienen datos con fetch y se guardan en localstorage
-function apiFetch(url) {
+function apiFetch(url, pagina) {
   fetch(url)
     .then(response => response.json())
     .then(dataJSON => {
-      localStorage.setItem(CLAVE, JSON.stringify({
-        datosArreglo: dataJSON.data,
-        time: Date.now()
-      }));
+      if (pagina == 1) {
+        localStorage.setItem(CLAVE, JSON.stringify({
+          datosArreglo: dataJSON.data,
+          tiempo: Date.now()
+        }));
+      }
       ponerDatos(dataJSON.data);
     })
 }
 
-//acceder a lo datos guardados en localstorage
+//acceder a los datos guardados del localstorage y los mostramos como cards
 function accederLocal() {
   ponerDatos(JSON.parse(localStorage.getItem(CLAVE)).datosArreglo);
 }
-
-function estadoLocal() {
+/* funcion para saber hay algo guardado en el local y si existe hacer que tenga un minuto de expiracion*/
+function estadoLocal(pagina) {
+  if (pagina != 1) return false;
   let datosLocales = localStorage.getItem(CLAVE);
   if (datosLocales != null) {
     let datosUsuario = JSON.parse(datosLocales);
     let tiempoActual = Date.now();
-    let expiracion = 1 * 60 * 1000 + datosUsuario.time;
+    let expiracion = 1 * 60 * 1000 + datosUsuario.tiempo;
     if (tiempoActual < expiracion) return true;
     else localStorage.removeItem("datosUsuario");
   } else return false;
 }
 
-// funcion que lee los datos para y ver si estan en localstorage o no
-function leerDatos() {
-  //url = ;
-  if (estadoLocal()) accederLocal();
-  else apiFetch('https://reqres.in/api/users?delay=3');
+// funcion que lee los datos 
+function leerDatos(url, pagina) {
+  if (estadoLocal(pagina)) accederLocal();
+  else apiFetch(url, pagina);
 }
