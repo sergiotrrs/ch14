@@ -1,0 +1,14 @@
+{
+  "name": "teoria",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchALL"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^28.1.2"
+  }
+}
