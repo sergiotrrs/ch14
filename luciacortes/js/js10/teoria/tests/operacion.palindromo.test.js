@@ -35,3 +35,7 @@ test ("Debería leer el palíndromo al revés", ()=>{
     const palindromo = operacion.palindromo("suerte");
     expect(palindromo).toBe(false);
 });
+test ("Debería leer el palíndromo al revés", ()=>{
+    const palindromo = operacion.palindromo("Isaac no ronca así");
+    expect(palindromo).toBe(false);
+});
