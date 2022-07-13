@@ -1,5 +1,24 @@
-setInvisible(true)
 
+setInvisible(true)
+evaluarYcambiar()
+
+function evaluarYcambiar(){
+    const formulario = document.getElementById("formulario");
+    console.log(anio.value);
+    let anio = formulario.elements["anio"];
+    let mes = formulario.elements["mes"];
+    let dia = formulario.elements["dia"];
+    
+    if(anio.value == false){
+        alert("Ingrese primero el año");
+    }
+    //Evaluar año bisiesto
+    if(anio.value%4 == 0){
+        console.log("Año bisiesto.");
+
+        
+    }
+}
 /**Establecer invisible el botón limpiar */
 function setInvisible(estado){
 
@@ -9,8 +28,8 @@ const formulario = document.getElementById("formulario");
 //formulario.elements["limpiar"].style.visibility = status;
 let status = 'inline';
 if(estado) status = 'none';
-formulario.elements['limpiar'].style.display = status;
-formulario.elements['fecha'].style.display = status;
+formulario.elements['limpiar'].style.display = status;//oculta o muestra el elemento con el id= limpiar
+formulario.elements['fecha'].style.display = status; //oculta o muestra el elemento con el id= fecha
 }
 
 
@@ -18,6 +37,7 @@ formulario.elements['fecha'].style.display = status;
 const form = document.getElementById("formulario");
 form.addEventListener('submit', (event)=>{
     event.preventDefault();
+    //Implementar filtro (pasafiltro (){ calcular fecha, setInvisible(false)})else{Enviar mensaje a usuario}
     console.log(event);
     calcularFecha();
     setInvisible(false);
@@ -39,6 +59,7 @@ const calcularFecha = () =>{
    */  //Se coloca -1 en el mes por el año bisiesto 
     //document.getElementById("fecha").value = definirFecha(dia.getDay()); //Se manda llamar a la función definirFecha 
     const formulario = document.getElementById("formulario");
+
     console.log(formulario.elements["mes"].value);
     const dia = new Date(
         formulario.elements['anio'].value,
