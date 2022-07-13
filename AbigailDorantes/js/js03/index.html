@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario Fechas Laborales</title>
+    <!--se agrega link para trabajar con bootstrap css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+        input {
+            width: calc(60%);
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Se agrega nombre principal y una breve descripción -->
+    <h2 class="text-center " style="background-color:rgb(152, 159, 18) ; height: 60px;" > Calendario Fechas Laborales </h2>
+    <p class="text-center" style="background-color:rgb(74, 135, 170); color:white;"> Escriba la fecha como se solicita y ¡calcule! </p>
+    <!-- Se agregan contenedores para hacer la pagina responsiva para una resolucion <576px -->
+    <div class="container-md">
+        <div class="row">
+            <div class="col order-1">
+                <!-- se agrega primer entrada, dia -->
+                <label for="dia">Día</label>
+                <input id="dia" type="number" placeholder="Inserte dia" >
+            </div>
+            <div class="col order-2">
+                <!-- se agrega segunda entrada, mes -->
+                <label for="mes">Mes</label>
+                <input id="mes" type="number" placeholder="Inserte mes" >
+            </div>
+            <div class="col order-3">
+                <!-- se agrega tercera entrada, año  -->
+                <label for="anio">Año</label>
+                <input id="anio" type="number" placeholder="Inserte año" >
+            </div>
+        </div>
+    </div>
+    <br>
+    <!-- se agregan contenedores para boton y hacer la pagina responsiva -->
+    <div class="container-md">
+        <div class="row w-100 align-items-center">
+            <div class="col text-center">
+                <!--  Se agrega boton con funciones desde js para realizar operacion -->
+                <button onclick="calcularFecha()" type="button" class="btn btn-warning"
+                    style="width:calc(30%); height:55px;">Calcular</button>
+            </div>
+        </div>
+    </div>
+    <br>
+    <!-- se agrega donde se imprimira el resultado  -->
+    <h1 id="result" style="text-align:center;"><em>¿Es día laboral?</em></h1>
+
+    <!--se agrega source para trabajar con archivo externo js-->
+    <script src="script.js"></script>
+    <!--se agrega link para trabajar con bootstrap js-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

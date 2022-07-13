@@ -1,0 +1,30 @@
+h1 {
+    text-align: center;
+}
+
+th{
+    border: 1px solid black;
+}
+table{
+    border:1px solid black;
+    text-align: center;
+    margin: 0 auto;
+    width: 90%;
+}
+th.col-1{
+    width: 25%;
+}
+
+th.col-2{
+    width: 25%;
+}
+
+th.col-3{
+    width: 25%;
+}
+
+.avatar{
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+}
