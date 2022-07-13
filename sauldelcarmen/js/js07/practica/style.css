@@ -1,0 +1,178 @@
+.container1 {
+            display: grid;
+	    grid-template-columns:50% 50%;
+	    margin-top: 0;
+	    margin-left: 5%;
+	    margin-right: 5%;
+	    height: 85px;
+	}
+.container2 {
+            display: grid;
+	    grid-template-columns:50% 50%;
+	    margin-top: 0;
+	    margin-left: 5%;
+	    margin-right: 5%;
+	    height: 105px;
+	}
+img { 
+        width: 60px;
+	height: 60px;
+	border-radius: 50%;
+}
+
+thead, tbody {
+	text-align: center;
+	height: 40px;
+}
+
+table,td,th {
+	border-collapse: collapse;
+}
+th {
+	background-color: #4CAF50;
+	color: white;
+}
+table {
+        top: auto;
+    	border-top: 1px solid #ccc;
+    	border-bottom: 1px solid #ccc;
+	width: 95%;
+ 	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.btton1{
+	background-color: #4b4b4b;
+	color: white;
+	border: none;
+	border-radius: 25px;
+	padding: 10px;
+	font-size: 15px;
+	cursor: pointer;
+	margin-top: 10px;
+	margin-left: 25%;
+	margin-right: 25%;
+        width: 400px;
+        transition: all 0.2s ease-in;
+    }
+.btton2{
+	background-color: #4b4b4b;
+	color: white;
+	border: none;
+	border-radius: 25px;
+	padding: 10px;
+	font-size: 15px;
+	cursor: pointer;
+	margin-top: 10px;
+	margin-left: 25%;
+	margin-right: 25%;
+        width: 400px;
+        transition: all 0.2s ease-in;
+    }
+	
+	
+button:hover {
+    	background-color: #656565;
+        transform: scale(1.02);
+	border-color: #656565;
+
+}
+
+tr{
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+}
+tr:hover{
+	background-color: #cccccc;
+        transform: scale(1.02);
+    }
+
+td {
+        padding: 5px;
+	align: center;
+
+}
+
+
+span {
+	font-size: 1.2em;
+	text-align: center;
+	
+}
+
+h1, h2, h3 {
+	text-align: center;
+}
+
+.input1 {
+    	width: 400px;
+	height: 30px;
+	margin-left: 25%;
+	margin-right: 25%;
+	border-radius: 10px;
+	border: 1px solid #ccc;
+	padding-left: 10px;
+	font-size: 0.8em;
+}
+.input2 {
+    	width: 100px;
+	height: 30px;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+	border-radius: 10px;
+	border: 1px solid #ccc;
+	padding-left: 10px;
+	font-size: 0.8em;
+
+}
+
+div{
+         margin-top: 40px;
+}
+
+@media screen and (max-width: 1010px) {
+    .container1 {
+	    display: grid;
+	    grid-template-columns:100%;
+	    
+	}
+	.btton1{
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		height: 40px;
+	}
+	.btton2{
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		height: 40px;
+	}
+	
+	.input1{
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.input2{
+		width: 19%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 40px;
+	}
+	.container2{
+	    margin-top: 150px;
+
+	}
+
+	div {
+	        width: 95%;
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+}
+
