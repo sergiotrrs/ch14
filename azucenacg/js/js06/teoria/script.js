@@ -3,7 +3,9 @@ console.log("Teoría de la sesión JS06");
 // encontrarPorId();
 //encontrarPorTagName();
 //encontrarPorClase();
-encontrarPorSelector();
+//encontrarPorSelector();
+//crearElemento();
+crearEstilo();
 
 function encontrarPorId(){
     //obtenemos elemento mediante id
@@ -81,3 +83,28 @@ function encontrarPorSelector() {
     elements.forEach(dato=> unirStr+=dato.innerHTML+" ");
     document.getElementById("junta").innerHTML=unirStr;
 }
+
+function crearElemento() {
+    const nuevoElemento =document.createElement("p");
+    nuevoElemento.innerHTML="Este es un nuevo parrafo";
+    //document.body.appendChild(nuevoElemento); 
+    //appendchild porque es hijo de body
+    document.getElementById("titulo").appendChild(nuevoElemento); 
+}
+
+function crearEstilo() {
+    document.getElementById("intro").style.color="salmon";
+    const estilo = document.createElement("style");
+    const texto= document.createTextNode("body {font: 20px verdana; background-color: beige;}");
+    estilo.appendChild(texto);
+    document.head.appendChild(estilo);
+}
+
+/** esto se crea con la función crearestilo
+ * <style>
+ * body{
+ * font =20px verdana; 
+ * background-color: blue;
+ * }
+ * </style>
+ */
