@@ -53,9 +53,11 @@ const calcularFecha = () => {
 
   // document.getElementById("fecha").value = definirFecha(dia.getDay());
   //Se manda llamar a la función definirFecha
-
+  
   const formulario = document.getElementById("formulario");
   console.log(formulario.elements[`mes`].value);
+<<<<<<< HEAD:luismedina/js/js06/practica/script.js
+=======
 
   const dia = new Date(
     formulario.elements[`anio`].value,
@@ -69,11 +71,28 @@ const calcularFecha = () => {
   
   
   // let validarFebrero = anio % 4;
+>>>>>>> cdfae9f07212cca44116f78964729321a614cf02:jorgemontalvo/js/js06/practica/practica/script/scriptmod.js
   // if (dia >= 29) {
   //   alert("Error");
   //   console.log("prueba");
   // }
+<<<<<<< HEAD:luismedina/js/js06/practica/script.js
+  const dia = new Date(
+    formulario.elements[`anio`].value,
+    formulario.elements[`mes`].value - 1,
+    formulario.elements[`dia`].value
+    );
+    let validarFebrero = anio % 4;
+    // if (dia >= 29) {
+    //   alert("Error");
+    //   console.log("prueba");
+    // }
+    
+    
+
+=======
     definirFecha(day, month);
+>>>>>>> cdfae9f07212cca44116f78964729321a614cf02:jorgemontalvo/js/js06/practica/practica/script/scriptmod.js
   formulario.elements[`fecha`].value = definirFecha(dia.getDay());
 };
 

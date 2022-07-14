@@ -15,7 +15,7 @@ const fetchUno = "https://reqres.in/api/users?delay=3";
 const fetchDos = 'https://reqres.in/api/users?page=2';
 //Esta variable identifica que existan o no datos de expiración de localStorage
 const expir = JSON.parse(localStorage.getItem("expirationInfo"));
-
+let datoExpiracion = Date.now() + 1000*45;
 /*Si no existen datos en localStorage descargados,
 la página comienza con un botón rojo (#buttonStart) que al dar click
 descarga y muestra la información en HTML; de lo contrario,
@@ -75,7 +75,7 @@ function fetchInfo(url) {
  * */
 function setExpiration() {
     localStorage.setItem("expirationInfo", JSON.stringify ({
-        expiration: Date.now() + (1000*60)*10,
+        expiration: datoExpiracion,
     }));
 }
 
@@ -100,6 +100,20 @@ function displayInfo() {
      */    
     async function createPagination() {
         document.getElementById("pagination").innerHTML = `               \
+        <nav aria-label="Page navigation" id="pages">
+  <ul class="pagination justify-content-center">
+
+    <li class="page-item" onclick="paginaUno()"><a class="page-link" href="#">1</a></li>
+    <li class="page-item" onclick="paginaDos()"><a class="page-link" href="#">2</a></li>
+    <li class="page-item" onclick="paginaTres()"><a class="page-link" href="#">3</a></li>
+
+    </li>
+  </ul>
+</nav>
+`;
+        
+        
+        /* `               \
     
         <div class="container-fluid m-3 d-flex justify-content-center pt-5" id="pages">\
         <div class="row" class="m-5 p-5 d-flex justify-content-center">\
@@ -130,7 +144,7 @@ function displayInfo() {
           </span>\
         </div>\
       </div>\
-    `;
+    `; */
     }
 
 
