@@ -70,9 +70,23 @@ public class VariablesOperadores {
 		System.out.println("El caracter es: " + caracter);
 		
 		
-		int coquita2lt = 130;
+		int coquita2lt = 512;
 		byte coquitaMini = (byte)coquita2lt;
+		
+		int costo = (int) 9.86;
+		
 		System.out.println("La cantidad de liquido es: " + coquitaMini);
+		
+		costo = 2_5_6_5_8_9;
+		float precio = 5_89_478.785_45f;
+		
+		//costo = 0x0A;
+		costo = 0b1010; // n.10 en decimal
+		costo = 012;
+		System.out.println("Valor de costo: " + costo);
+		
+		
+		
 		
 		
 }
