@@ -86,6 +86,22 @@ public class VariablesOperadores {
 		System.out.println("Valor de costo: " + costo);
 		
 		
+		//Recordar que se puede poner 0-9, A-Z, $, _ 
+		//No se puede inciar con número la variable.
+		
+		int $myVar;
+		int _myVar;
+		
+		
+		/**
+		 * new Class{
+		 * 		atributos_objeto; //fields o non-static fields
+		 * static atributo_clase; //
+		 * 			
+		 * 		}
+		 */
+		
+		
 		
 		
 		
