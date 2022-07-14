@@ -1,4 +1,0 @@
-INDEX VERSION 1.131+C:\generation2\Ch14\ch14ejercicios\ch14\rafaalba\java\.metadata\.plugins\org.eclipse.jdt.core
-1865797976.index
-741346418.index
-1693718360.index
