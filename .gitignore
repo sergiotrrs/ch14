@@ -90,3 +90,6 @@ hs_err_pid*
 .DS_store
 .DS_Store
 .DS_STORE
+
+# Ignora carpeta node_module
+node_modules/
