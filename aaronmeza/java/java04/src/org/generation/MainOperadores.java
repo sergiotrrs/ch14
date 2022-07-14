@@ -102,6 +102,50 @@ public class MainOperadores {
 		System.out.println("!(4>2 && true): " + (!(4>2 && true)));//false
 		
 		
+		int myBits = ~0b0000_0000_0000_0000_0000_1000;
+		System.out.println("Valor negado de 8: " + myBits);
+		System.out.println("Valor negado de 8: " + Integer.toBinaryString(myBits));
+		
+		//Corrimiento de bits a la derecha
+		
+		myBits = 0b0000_0000_0000_0000_1000_0000 >> 2;
+		System.out.println("Corrimiento a la derecha : " + myBits);
+		System.out.println("Corrimiento a la derecha: " + Integer.toBinaryString(myBits));
+		//Corrimiento a la izquierda
+		
+		myBits = 0b0000_0000_0000_0000_1000_0000 << 3;
+		System.out.println("Corrimiento a la derecha : " + myBits);
+		System.out.println("Corrimiento a la derecha: " + Integer.toBinaryString(myBits));
+		
+		//Operador & AND a nivel de bits
+		
+		myBits = 0b0000_0000_0000_0000_1000_1100 & 0b1111_1000;
+		System.out.println("AND a nivel de bits : " + myBits);
+		System.out.println("AND a nivel de bits: " + Integer.toBinaryString(myBits));
+		
+		//Operador | OR a nivel de bits
+		
+		myBits = 0b0000_0000_0000_0000_1000_1100 | 0b1111_1111;
+		System.out.println("OR a nivel de bits : " + myBits);
+		System.out.println("OR a nivel de bits: " + Integer.toBinaryString(myBits));
+		
+		/*
+		 * 
+		 * 
+		 * 
+		 * 
+		 */
+		
+		int x = 8;
+		int y = 3;
+		int z = -5;
+		
+		System.out.println(x*y/z);
+		System.out.println((x*z)%y);
+		System.out.println(2*y + 3*(x-z));
+		System.out.println(x*(y/z));
+		System.out.println(x * (z % y));
+		System.out.println(x - y - z * 2);
 		
 		
 		
