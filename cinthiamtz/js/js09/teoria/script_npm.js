@@ -14,8 +14,12 @@ function adquirirDatos(direccionhttp){
 
 }
 
-adquirirDatos("https://reqres.in/api/users?page=2");
 
+solicitudBtn();
+function solicitudBtn(){
+datos=adquirirDatos("https://reqres.in/api/users?page=2");
+console.log("solicitud BTn" + datos );
+}
 
 
     // .then(function (response) {

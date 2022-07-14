@@ -1,0 +1,156 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users_Api</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <!-- Aqui definimos la navBar con el nombre de la actividad y el ícono -->
+    <nav class="navbar bg-light w-100">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="https://cdn-icons-png.flaticon.com/512/2164/2164832.png" alt="" width="30" height="24">
+            <h1 class="text-center">Datos de usuario</h1>
+          </a>
+        </div>
+      </nav>
+    
+    <br>
+    <br>
+    <!-- Aquí se definen los botones de obtener,  leer información y borrar -->
+    <div class="row align-middle">
+        <div class="col-12 text-center  d-flex justify-content-center align-items-center" >
+                <button onclick="obtenerDatos()"class="btn btn-primary m-3 p-3"  style="font-size:18px ;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                      </svg>
+                    Obtener Datos</button>
+            
+                <button onclick="leerDatos(0)" class="btn btn-primary m-3 p-3"  style="font-size:18px ;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                        <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                      </svg>
+                    Leer Datos
+                
+                </button>
+
+                <button onclick="limpiarDatos()" class="btn btn-primary m-3 p-3"  style="font-size:18px ;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+                        <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
+                      </svg>
+                    Limpiar pantalla
+                
+                </button>
+
+                
+                <br>
+               
+        </div>
+    <!-- <button onclick="obtenerDatos()">Obtener Datos</button>
+    <button onclick="leerDatos()">Leer Datos</button> -->
+    <div class="row d-flex justify-content-center">
+    <div class="spinner-border text-dark col-12" role="status"  id="load" style="display: none">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+    
+    <!-- Cards Aquí se definen las tarjetas donde se muestra la información de los usuarios-->
+   
+
+        <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3">
+                <div class="d-flex justify-content-center ">
+                    <div class="card align-self-center m-3 px-3" style="width: 100%;">
+                        <img  class="rounded-circle h-75 w-75 align-self-center m-3" id="perfil 1">
+                    
+                        <div class="card-body text-center" id="cardbody">
+                            <h3 id="nombre 1"></h3>
+                            <h3 id="apellido 1"></h3>
+                            <h4 id="email 1" style="color:blue"></h4>
+                            <h4 id="id 1"></h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <div class="card align-self-center m-3 px-3" style="width: 100%;">
+                        <img class="rounded-circle h-75 w-75 align-self-center m-3" id="perfil 2">
+                    
+                        <div class="card-body text-center">
+                            <h3 id="nombre 2"></h3>
+                            <h3 id="apellido 2"></h3>
+                            <h4 id="email 2" style="color:blue"></h4>
+                            <h4 id="id 2"></h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <div class="card align-self-center m-3 px-3" style="width: 100%;">
+                        <img class="rounded-circle h-75 w-75 align-self-center m-3" id="perfil 3">
+                    
+                        <div class="card-body text-center">
+                            <h3 id="nombre 3"></h3>
+                            <h3 id="apellido 3"></h3>
+                            <h4 id="email 3" style="color:blue"></h4>
+                            <h4 id="id 3"></h4>
+                        </div>
+                    </div>
+                </div>
+
+        
+                <br><br>
+               
+            
+                <div class="d-flex justify-content-center">
+                    <div class="card align-self-center m-3 px-3" style="width: 100%;">
+                        <img class="rounded-circle h-75 w-75 align-self-center m-3" id="perfil 4">
+                    
+                        <div class="card-body text-center">
+                            <h3 id="nombre 4"></h3>
+                            <h3 id="apellido 4"></h3>
+                            <h4 id="email 4" style="color:blue"></h4>
+                            <h4 id="id 4"></h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="card align-self-center m-3 px-3 " style="width: 100%;">
+                        <img class="rounded-circle h-75 w-75 align-self-center m-3" id="perfil 5">
+                    
+                        <div class="card-body text-center">
+                            <h3 id="nombre 5"></h3>
+                            <h3 id="apellido 5"></h3>
+                            <h4 id="email 5" style="color:blue"></h4>
+                            <h4 id="id 5"></h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="card align-self-center m-3 px-3" style="width: 100%;">
+                        <img class="rounded-circle h-75 w-75 align-self-center m-3" id="perfil 6">
+                    
+                        <div class="card-body text-center">
+                            <h3 id="nombre 6"></h3>
+                            <h3 id="apellido 6"></h3>
+                            <h4 id="email 6" style="color:blue"></h4>
+                            <h4 id="id 6"></h4>
+                        </div>
+                    </div>
+                </div>
+        </div> 
+
+        <footer class="text-center">
+          
+                <h5 class="text-center">Developed by: <a href="https://www.linkedin.com/in/juan-francisco-aguilar-flores-a11b3616a/">Francisco Aguilar</a></h5>
+                <br>
+                <h5>Otros proyectos: <a href="https://faguilar1097calculator.netlify.app">Calculadora</a> <a href="https://workorrest.netlify.app">dias laborables</a> </h5>
+           
+        </footer>
+   
+    <script src="js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

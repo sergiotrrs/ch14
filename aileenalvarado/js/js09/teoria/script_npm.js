@@ -2,15 +2,24 @@ console.log("Sesion tenebrosa de JS09 muajajajaja")
 
 // GET request for remote image in node.js
 function adquirirDatos(direccionhttp){
-    axios({
+   return axios({
         method: 'get',
         url: direccionhttp,
         responseType: 'stream'
       })
         .then((response)=> {
-          console.log(response.data.data);
-        });
+          console.log(response.data.data); 
+        })
+         .catch((error)=>{
+          console.log(error)
+         });
+     
 } 
 
-console.log(adquirirDatos("https://reqres.in/api/users?page=2"));
+solicitudBtn(); 
+function solicitudBtn(){
+  datos = adquirrDatos("https://reqres.in/api/users?page=2");
+  console.log("Solicitud Btn:" + datos)
+}
+//console.log(adquirirDatos("https://reqres.in/api/users?page=2"));
 

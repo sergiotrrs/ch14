@@ -1,0 +1,18 @@
+body{
+    background: url("https://img.freepik.com/free-photo/background-grunge-brick-wall_1154-708.jpg?t=st=1657595632~exp=1657596232~hmac=f1c5949daa3c1fe5882f03eb8d7246291f50bed806eaf1d36ec5295f48224a1e&w=1060");
+    background-repeat:repeat-y;
+    background-size: cover;
+    /* margin: 0;
+    padding: 0;
+    /*height: 100vh; /*100% el viewport*/
+  
+
+    /* background-color: cornflowerblue; */
+}
+a{
+    color: white;
+    
+}
+
+
+

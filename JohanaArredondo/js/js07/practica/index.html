@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Práctica apiFetch</title>
+    <link href="style.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <script src="script.js"></script>
+
+    <div class="container">
+
+      <div class="row align text-center m-3">
+        <h1>Práctica API FETCH</h1>
+      </div>
+
+      <div class="row justify-content-center m-2">
+        <div class="col-1">
+          <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group me-2" role="group" aria-label="First group">
+              <button type="button" class="btn btn-primary btn-lg" onclick="boton1()">1</button>
+              <button type="button" class="btn btn-primary btn-lg" onclick="boton2()">2</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="container">
+      <table class="table table-striped">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">First name</th>
+            <th scope="col">Last name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Photo</th>
+          </tr>
+        </thead>
+        <tbody id="info"></tbody>
+      </table>
+    </div>
+  </body>
+</html>
