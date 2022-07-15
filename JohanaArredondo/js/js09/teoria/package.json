@@ -1,0 +1,19 @@
+{
+  "name": "teoria",
+  "version": "8.11.0",
+  "description": "Uso de NPM",
+  "main": "npm.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "\u001b[A\u001b[B"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "bootstrap": "^5.1.3"
+  }
+}
