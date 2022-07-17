@@ -63,7 +63,40 @@ System.out.println("La edad de abue es: "+ edadEnVidas);
 
 int coquita2lt = 266;
 byte coquitaMini = (byte) coquita2lt;
+
+int costo = (int) 9.86;
+
 System.out.println("La cantidad de lliquido es: " + coquitaMini);
+
+//Para indicar literales de números, se puede hacer uso de_
+//Esto podría ayudar visualmente a la compresión
+//El guión bajo no puede ir al inicio, final o antes o después del punto
+
+costo = 2_5_6_5_8_9;
+float precio = 5_89_478.785_45f;
+
+//costo = 0x0A; //n.10 decimal en representación hexadecimal
+//costo = 0b1010; // n.10 decimal en representación binaria
+costo = 012; //n. 10 decimal en representación octal
+System.out.println("Valor de costo: " + costo);
+
+//VARIABLESRecordar que se puede poner 0-9, a-Z, A-Z, _, $
+//No se puede iniciar con número la variable.
+int $myVar;
+int _myVar;
+//int 1myVar; No se puede inicializar con un número. 
+int $my12V_ar;
+
+/** JS para crear clase y función
+ * new class{
+ *  atributos_objeto; //fields o non-statis fields
+ * static atributos_clase; // static fields
+ * 
+ * 		function accion(parametros){  //Parámetros de entrada
+ * 			 let var // variable
+ * 			}
+ * 		} 
+ */
 
 
 

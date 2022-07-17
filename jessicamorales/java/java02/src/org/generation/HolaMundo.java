@@ -6,7 +6,7 @@ public class HolaMundo {
 		// TODO Auto-generated method stub
 		System.out.println("Hola Mundo Generation 2");
 		System.out.println("Que chido se pone esto");
-		System.out.println("Quiero mas Java");
+		System.out.println("Quiero más Java");
 	}
 
 }
