@@ -110,6 +110,63 @@ public class FlujosDeControl {
 		default: mesTxt = "No tiene registrado";
 	}
 	System.out.println("Mes seleccionado: " + mesTxt);
+	
+	mes = 1;
+	switch (mes) {
+	case 3: 
+	case 4: 
+	case 5:
+		System.out.println("Estamos en primavera");
+		break;
+	case 6: case 7: case 8:
+		System.out.println("Estamos en VERANO");
+		break;
+	case 9: case 10: case 11:
+		System.out.println("Estamos en OTOÑO");
+		break;
+	case 12, 1, 2:
+		System.out.println("Estamos en INVIERNO");
+		System.out.println("Es el mejor mes");
+		break;
+	default: 
+		System.out.println("Error en el mes introducido");
+	}
+	
+	//No mutable Rafa se guarda con un id cuando se llama en jugador vuelve a aparecer
+			//al sustituirse por Emiliano,ya que se guarda en la memoria
+			//por un tiempo, luego Garbage Collector lo borra.
+
+			String nombre = "Rafa";
+			nombre = "Emiliano";
+			String jugador = "Rafa";
+			String apellido = "Dorantes"; //Lo que va a guardar es el ID de la literal "Dorantes" 31 == 21 ID's en memoria
+			
+			String participante = new String("Dorantes");
+				//31 == 32
+			if (apellido == participante) //Se comparan los ID de los 
+				System.out.println("El apellido es de Abi es: " + apellido);
+	
+			if (apellido.equals(participante)) //Se comparan las literales
+				System.out.println("¡El apellido es de Abi!");
+			
+			apellido = new String("Flores");
+			switch(apellido) {
+			case "Ruiz":
+					System.out.println("Apellido de Gerardo");
+					break;
+			case "Dorantes":
+				System.out.println("Apellido de Gerardo");
+				break;
+			case "Flores":
+				System.out.println("Apellido de Maga");
+				break;
+			case "Delgado":
+				System.out.println("Apellido de Sebas");
+				break;
+				default:
+				System.out.println("Debe de ser de Santi");
+			}
+	
 	}
 
 }
