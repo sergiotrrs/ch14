@@ -62,21 +62,52 @@ public class OperacionesTest {
 		 * 
 		 * 
 		 * */
+		//Actividad 1: Checaletras de un String
 		String cadena = "Pepe Pecas pica papas con un pico y un palito";
-		cadena = cadena.toUpperCase();
-		String [] trabalenguas = {cadena};
-		int contador = 0;
-		char letter = 'P';
-		for (int i=0; i<trabalenguas.length; i++) {
-			if (cadena.charAt(i) == letter){
-				System.out.println(i);
-				contador+=1;
-			}
-			System.out.println(i);
-		}
-		System.out.println(contador);
+		char letrita = 'p';
+		Operaciones.checaLetras(cadena, letrita);
+		
+		String otraString = "Camarón caramelo caramelo camarón";
+		char letraDos = 'c';
+		Operaciones.checaLetras(otraString, letraDos);
+		
+		String cancion = "Guapo, ojeroso, cansado y sin ilusiones";
+		char vocalUno = 'a';
+		char vocalDos = 'e';
+		char vocalTres = 'i';
+		char vocalCuatro = 'o';
+		char vocalCinco = 'u';
+		Operaciones.checaLetras(cancion, vocalUno);
+		Operaciones.checaLetras(cancion, vocalDos);
+		Operaciones.checaLetras(cancion, vocalTres);
+		Operaciones.checaLetras(cancion, vocalCuatro);
+		Operaciones.checaLetras(cancion, vocalCinco);
+		
+		String checo = "Tri sta tricet tri stribrnych strikacek strikalo pres tri sta tricet tri strech";
+		char letraCheca = 'r';
+		char titiMePregunto = 't';
+		//vocales
+		Operaciones.checaLetras(checo, vocalUno);
+		Operaciones.checaLetras(checo, vocalDos);
+		Operaciones.checaLetras(checo, vocalTres);
+		Operaciones.checaLetras(checo, vocalCuatro);
+		Operaciones.checaLetras(checo, vocalCinco);
+		
+		Operaciones.checaLetras(checo,  letraCheca);
+		Operaciones.checaLetras(checo,  titiMePregunto);
 		
 		
+		
+		//Actividad 2: Número mayor
+		int [] numberArray = {
+				23, 56, 7, 98, 23, 1, 6
+				};
+		Operaciones.setMaxNumber(numberArray);
+		
+		int [] otroArray = {
+				7, 5, 15, 14, 34, 1, 24, 13, 5, 4, 3, 2, 1, 0, 97, 3				
+		};
+		Operaciones.setMaxNumber(otroArray);
 	}
 
 }
