@@ -79,10 +79,19 @@ public class Ciclos {
 //		
 //			System.out.println("Fin de Banco Banquito, su dinero está seguro");
 //				
-		//CICLO FOR 
+		//CICLO FOR  indicialización / Comparación / finalización / Bloque de codigo 
 //		for (int edad = 25; edad <30; edad++) {
+//			
+//			if ( edad == 28) continue;	//for simple
 //			System.out.println("Eres joven con " + edad + "años");
 //		}	
+		
+			
+	
+	
+	
+	
+	
 	}
 }
 		
