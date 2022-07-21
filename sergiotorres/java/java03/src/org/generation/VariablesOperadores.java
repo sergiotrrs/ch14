@@ -24,7 +24,7 @@ public class VariablesOperadores {
 		System.out.println("Min Int: " + Integer.MIN_VALUE);
 		System.out.println("Max Long: " + Long.MAX_VALUE);
 		System.out.println("Min Long: " + Long.MIN_VALUE);
-
+		
 		//Dato de tipo float, hay que establecer una f al final
 		float datoFloat = 1256.256f;
 		System.out.println("Max Float: " + Float.MAX_VALUE);
@@ -63,11 +63,44 @@ public class VariablesOperadores {
 		int edadEnVidas = edadAbueActual;
 		System.out.println("La edad de abue es: " + edadEnVidas);
 		
-		int coquita2lt = 256;
+		int coquita2lt = 512;
 		byte coquitaMini = (byte) coquita2lt;
+		
+		int costo = (int) 9.86;
 		
 		System.out.println("La cantidad de liquido es: " + coquitaMini);//10
 		
+		//Para indicar literales de números, se puede hacer uso de _
+		//ESto podría ayudar visualmente a la comprensión.
+		//El guión bajo no puede ir al inicio, final o antes o despúes del punto
+		
+		costo = 2_5_6_5_8_9;
+		float precio = 5_89_478.785_45f;
+		
+		//costo = 0x0A; //n.10 decimal en representación hexadecimal
+		//costo = 0b1010; //n.10 decimal en representación binária
+		costo = 012; //n.10 decimal en representacion octal
+		
+		System.out.println("Valor de costo: " + costo);
+		
+		// REcordar que se puede poner 0-9, a-Z, A-Z, _ , $
+		//No se puede iniciar con número la variable.
+		int $myVar;
+		int _myVar;
+		//int 1myVAr; No se puede inicializar con un número
+		int $my12V_ar;
+		
+		/**
+		 *    new Class {
+		 *           atributos_objeto; //fields o non-static fields
+		 *    static atributo_clase;   // static fields
+		 *    
+		 *      function accion(parametros){  //Parámetros de entrada
+		 *         let var //variable
+		 *      }
+		 *    }
+		 * 
+		 */
 		 
 		
 		
