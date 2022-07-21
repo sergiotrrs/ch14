@@ -56,8 +56,11 @@ public class OperacionesText {
 		 * 	Usar una funciónMath. 
 		 * */
 		
+		int numP = Operaciones.pNum("Pepe Pecas pica papas con un pico y un palito");
+		System.out.println("Tiene " + numP + " letras p");
 		
-		
+		int[] myArray2 =  {23,56,7,98,23,6};
+		System.out.println("Num Mayor: " + Operaciones.numMayor(myArray2));
 		
 	
 		

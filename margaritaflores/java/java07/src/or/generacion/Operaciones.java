@@ -43,15 +43,29 @@ public class Operaciones {
 		
 	}
 	
-	static int numero(String text) {
-		int resultado = 0;
-		text = text.toUpperCase();
-		for(int i=0; i<text.length(); i++) {
-			if(text.charAt(i)=='P')
-				resultado++;
-		}
-		return resultado;
-		}
-	}
+
+static int pNum(String textoP) {
+	 textoP = textoP.toUpperCase();
+	 int contador=0;
+	 
+	 for (int i=0; i < textoP.length(); i++) {
+		 if(textoP.charAt(i) == 'P')
+		contador ++;
+	 }
+	 return contador;
+	 }
+
+static int numMayor(int a[]) {
+//	int numeroMayor = 0;
+//	for (int i = 0; i < a.length; i++) {
+//		numeroMayor = Math.max(numeroMayor, a[i]);
+//	}
+	for (int numero: a) numeroMayor = Math.max(numeroMayor, numero);
+	
+	return numeroMayor;
+}
+
+
+}
 	
 
