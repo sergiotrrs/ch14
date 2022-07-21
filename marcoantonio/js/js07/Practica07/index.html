@@ -1,0 +1,106 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+
+    </head>
+
+
+
+<body>
+    <h1 style="text-align:center;"  >Recuperaicón</h1>
+    <br>
+    <br>
+    <div class="row justify-content-center">
+
+        <div class="col-lg-4 col-md-6 col-sm-12 text-center ">
+            <button  style="margin: 10px ;";  type="button" class="btn btn-primary" onclick="obtenerDatos()">Obtener Datos</button>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12 text-center ">
+            <button style="margin: 10px ;" type="button" class="btn btn-primary" onclick="leerDatos()">Recuperar Datos</button>
+        </div>
+    
+    
+  
+    <div class="table-responsive" ></div>
+    <!-- <div class="container-md: 768px"> -->
+     <table class="table">  
+        <tr class="table-primary">
+            <th> <h2>id</h2></th>
+            <th> <h2>Nombre</h2></th>
+            <th> <h2>Apellido</h2></th>
+            <th> <h2>email</h2></th>
+            <th> <h2>Imagen</h2></th>
+         </tr>
+    
+    <tr>
+        <td><h4 id="id 1"></h4></td>
+        <td><h3 id="nombre 1"></h3></td>
+       <td><h3 id="apellido 1"></h3></td>
+       <td> <h4 id="email 1" style="color:greenyellow"></h4></td>
+        <td><img class="rounded-circle align-self-center m-3" id="perfil 1"></td>
+    </tr>
+
+    <tr>
+        <td><h4 id="id 2"></h4></td>
+       <td><h3 id="nombre 2"></h3></td> 
+       <td><h3 id="apellido 2"></h3></td> 
+        <td><h4 id="email 2" style="color:greenyellow"></h4></td> 
+        <td><img class="rounded-circle align-self-center m-3" id="perfil 2"></td> 
+    </tr>
+
+<tr>
+    <td><h4 id="id 3"></h4></td> 
+    <td><h3 id="nombre 3"></h3></td> 
+    <td><h3 id="apellido 3"></h3></td> 
+    <td><h4 id="email 3" style="color:greenyellow"></h4></td> 
+    <td><img class="rounded-circle align-self-center m-3" id="perfil 3"></td> 
+</tr>
+
+<tr></tr>
+    <td><h4 id="id 4"></h4></td> 
+    <td><h3 id="nombre 4"></h3></td> 
+    <td><h3 id="apellido 4"></h3></td> 
+    <td><h4 id="email 4" style="color:greenyellow"></h4></td> 
+    <td><img class="rounded-circle align-self-center m-3" id="perfil 4"></td> 
+</tr>
+
+<tr>
+    <td><h4 id="id 5"></h4></td> 
+    <td> <h3 id="nombre 5"></h3></td> 
+   <td> <h3 id="apellido 5"></h3></td> 
+   <td> <h4 id="email 5" style="color:greenyellow"></h4></td> 
+    <td><img class="rounded-circle align-self-center m-3" id="perfil 5"></td> 
+</tr>
+
+<tr>
+    <td><h4 id="id 6"></h4></td> 
+    <td><h3 id="nombre 6"></h3></td> 
+    <td><h3 id="apellido 6"></h3></td> 
+    <td><h4 id="email 6" style="color:greenyellow"></h4></td> 
+    <td><img class="rounded-circle align-self-center m-3" id="perfil 6"></td> 
+</tr>
+</table>
+
+</div>
+
+<style>
+    th, td {
+        padding: 50px;
+        text-align:center
+
+    }
+
+</style>
+    <script src="apiscript.js"></script>
+</body>
+
+</html>

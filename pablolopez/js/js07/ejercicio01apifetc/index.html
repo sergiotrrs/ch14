@@ -1,0 +1,67 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio JS07 API Fetch</title>
+    <style>
+        img{
+            border-radius: 50%;
+        }
+        h1{
+            background-color: rgb(179, 128, 225);
+            color:bisque;
+        }
+        table{
+          background-color: wheat;
+          margin: 20px;
+        }
+        th{
+          background-color: rgb(174, 140, 195);
+        }
+        button{
+          background-color: wheat;
+          border-radius: 10px;
+          margin: 20px;
+        }
+        
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    <h1 class="text-center" >API Fetch</h1>
+    <div class="table-responsive-sm row justify-content-center">
+      <div class="col-4 col-sm-12 text-center">
+        <button class="button" onclick="boton()">Try It</button>
+        <button class="button" onclick="clear()">Limpiar</button>
+      </div>
+        <div class="col-12 col-sm-4 text-center">
+            <table id="tabla" class="text-center table-bordered table-hover">
+        
+                <tr class="table-info" >
+                  <th>Id</th>  
+                  <th>Nombre</th>
+                  <th>Apellido</th>
+                  <th>Correo</th>
+                  <th>Avatar</th>
+                </tr>
+                
+                <!--<tr id="f1">
+                  <td id="f1">1</td>
+                  <td>Na1</td>
+                  <td>Ap1</td>
+                  <td>Cr1</td>
+                  <td>Av1</td>
+                </tr>-->
+        
+                <tbody id="rw"></tbody>
+                
+                
+              </table>
+        </div>
+    
+    </div> 
+    
+    <script src="script.js"></script>
+</body>
+</html>
