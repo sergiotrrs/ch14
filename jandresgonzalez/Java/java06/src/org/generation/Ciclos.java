@@ -95,32 +95,37 @@ public class Ciclos {
 		
 
 /////////////////////////////////////
-System.out.println("¿De cuántas filas le vendo el árbol?");
-Scanner rowCheck = new Scanner(System.in);
-int rows = rowCheck.nextInt();
-int space = rows;
-int condition = 1;
-char blank = '\u0020';
+//codigo
+		
+//System.out.println("¿De cuántas filas le vendo el árbol?");
+//Scanner rowCheck = new Scanner(System.in);
+//int rows = rowCheck.nextInt();
+//int space = rows;
+//int condition = 1;
+//char blank = '\u0020';
+//
+////Espacios
+//for (int j = space; j >=0; j--) {
+//for (int i = space; i > 0; i--)	System.out.print(blank);
+////Estrellas
+//for (int i=0; i < condition; i++) System.out.print("*");
+////Salto de línea
+//System.out.println("");
+//space -=1;
+//condition +=2;
+//}
+////tronco
+//for (int k=0; k<=2;k++) {
+//for (int i= 0; i <= (rows/2)-1; i++) {
+//System.out.print(blank);
+//}
+//for (int i = 0; i <= rows; i++) {
+//	System.out.print("*");
+//}
+//System.out.println("");}
 
-//Espacios
-for (int j = space; j >=0; j--) {
-for (int i = space; i > 0; i--)	System.out.print(blank);
-//Estrellas
-for (int i=0; i < condition; i++) System.out.print("*");
-//Salto de línea
-System.out.println("");
-space -=1;
-condition +=2;
-}
-//tronco
-for (int k=0; k<=2;k++) {
-for (int i= 0; i <= (rows/2)-1; i++) {
-System.out.print(blank);
-}
-for (int i = 0; i <= rows; i++) {
-	System.out.print("*");
-}
-System.out.println("");}
+//código
+/////////////////////////////////////////////
 //for (int i= 0; i <= (rows/2)-1; i++) {
 //System.out.print(blank);
 //}
@@ -172,6 +177,15 @@ System.out.println("");}
 //}
 
 /////////////////////////////
+		
+		for (int edad=25; edad < 30; edad++) {
+			if (edad%2 != 0 || edad==28) { 
+				System.out.println("Chale, no te digo mi edad, porque es impar, o 28");
+				continue;
+			}
+			System.out.println("Eres joven con " + edad + " años");
+		}
+		
 	}
 
 }

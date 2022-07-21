@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+        body{
+            background: #fffbd5;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to left, #b20a2c, #fffbd5);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to left, #b20a2c, #fffbd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+        table thead{
+            background: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>API-Fetch en JS07</h1>
+    <div class="container mt-4 shadow-lg p-3 mb-5 bg-body rounded"> <!-- -->
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Firts Name</th>
+                    <th>Laste Name</th>
+                    <th>Email</th>
+                    <th>Avatar</th>
+                </tr>
+            </thead>
+            <tbody id="data">
+
+            </tbody>
+        </table>
+
+    </div>
+   <!-- <script>
+        let url = 'https://reqres.in/api/users?page=2' //Definiminos la variable url , referencia al origen de los datos
+        fetch(url)//Solicitud a la url
+          .then(response => response.json()) //Se resulve la promesa , al obtener la respuesta la pasa a un determinado formato (.json)
+          .then(data => console.log(data)) //lee el objeto data y se muestra en consola 
+          .then(error => console.log(error)) //si hay un error lo atrapara con la palabra reservada catch
+
+    </script> -->
+    <script src="apiFetch.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
