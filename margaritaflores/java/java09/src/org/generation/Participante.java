@@ -81,7 +81,12 @@ public class Participante {
 				+ " pero le puedes decir " + sobrenombre ;
 	}
 	
-	
+	int calcularEdad(int anioNaciomiento) {
+		return 25;
+	}
+	int calcularEdad (byte anio) {
+		return 25;
+	}
 	
 	
 }
