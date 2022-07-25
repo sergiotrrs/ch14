@@ -23,7 +23,7 @@
     <!-- Con estas propiedades de grid se ordenan los elementos
     de la página -->
 
-    <div class="container-fluid">
+    <div class="container text-center">
         
         <!-- Fila 1 con 1 columna para título -->
         <div class="row justify-content-md-center m-5">
@@ -32,11 +32,11 @@
 
         <!-- Fila 2 con 4 columnas para dd/mm/aa-->
 
-        <div class="row justify-content-md-center">
+        <div class="row text-center">
             
             <!-- Columna 1 para Entrada de DIA -->
 
-            <div class="col m-auto">
+            <div class="col-12 col-sm-4 my-2">
 
                 <div class="input-group input-group-lg">
                     <div class="input-group-prepend">
@@ -49,8 +49,8 @@
             
             <!-- Columna 2 para Selección de MES -->
 
-            <div class="col m-auto">
-                <div class="input-group">
+            <div class="col-12 col-sm-4 my-2">
+                <div class="input-group justify-content-center">
                     <div class="input-group-prepend">
                       <label class="input-group-text" for="inputGroupSelect01">Mes</label>
                     </div>
@@ -74,13 +74,13 @@
 
             <!-- Columna 3 para Entrada de año -->
 
-            <div class="col m-auto">
+            <div class="col-12 col-sm-2 my-2">
                 
-                <div class="input-group input-group-lg">
+                <div class="input-group float-md-end">
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="inputGroup-sizing-lg">Año</span>
                     </div>
-                    <input type="text" id="año" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                    <input width= "200" type="text" id="año" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
                 </div>
 
             </div>

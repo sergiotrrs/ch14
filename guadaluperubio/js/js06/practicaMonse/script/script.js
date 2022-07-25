@@ -18,13 +18,33 @@ function setInvisible(estado){
 
 }
 
-
 const form = document.getElementById('formulario');
+
+//declaramos la funcion para año bisiesto, Checar y hazla tu solita :(***********************************************************************
+function pasaFiltro(anilo, mes, dia){
+     let bisiesto = anio%4;
+     if (mes ==2 && bisiesto ==0 && dia <=) return(true)
+
+     if (bisiesto == 0){
+
+     }
+}
 
 //generando un evento, form(sobre formulario), 
 form.addEventListener('submit', (event) => {
      event.preventDefault();
      console.log(event);
+          /**
+           * implementar filtro 
+               if(pasa filtro()){
+               calcularFecha();
+               setInvisible(false);
+               }
+            else {
+               //enviar mensaj usurariio
+            }
+           * */
+
      calcularFecha();
      setInvisible(false);
 } )
