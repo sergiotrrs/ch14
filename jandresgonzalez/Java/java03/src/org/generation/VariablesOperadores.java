@@ -75,10 +75,49 @@ public class VariablesOperadores {
 		//int edadEnVidas = edadAbueActual;
 		//System.out.println("La edad es: " + edadEnVidas);
 		
+		//Casting de una variable
+		//Casteo
 		int coca2lt = 127;
 		byte coquita150ml = (byte) coca2lt;
-		
+		int deVuelta = (int) coquita150ml;
+		float costo = 9.86f;
+		double cost = 9.86f;
+		//Se declara la nueva variable y se pone cómo se convierte
 		System.out.println(coquita150ml);
+		System.out.println(deVuelta);
+		System.out.println(cost);
+		
+		//Para indicar literales de números se pueden usar guiones bajos
+		//Ayuda a lo visual
+		//Guión bajo no va al inicio, final o antes o despues de punto
+		costo = 2_5_3_4;
+		System.out.println(costo);
+		float precio = 12_12_478.6534_32f;
+		System.out.println(precio);
+		
+		//Hexadecimal se representa: 0x0__;
+		//costo = 0x0a; //10
+		//Binario: 
+		//costo = 0b1010; //10
+		costo = (int) 012; //n 10 en octal
+		System.out.println(costo);
+		
+		//Se puede poner 0-9, a-z, A-Z,_, $
+		//para nombre de variable
+		//No se puede iniciar con número la variable;
+		int $myVar;
+		int _myVar;
+		//int 1myVar = 124 da error de sintaxis pq no se puede iniciar con núm
+		int my12V__ar;
+		
+		/*
+		new Class {
+			atributos_objeto; //fields o non-static-fields
+			static atributo_clase; //static fields
+			
+			function accion(parametros) {}
+		}
+		*/
 	}
 
 }
