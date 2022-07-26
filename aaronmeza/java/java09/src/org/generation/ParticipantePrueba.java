@@ -3,25 +3,25 @@ package org.generation;
 public class ParticipantePrueba {
 
 	public static void main(String[] args) {
-		Participante abue;
-		abue = new Participante();
-		
-		abue.nombre = "Jorge Andrés";
-		abue.apellido = "Gonzalez";
-		abue.edad = 25;
-		abue.musicaFav = "Happy Funk";
-		
-		System.out.println("Participante: " + abue.datosCompletos());
-		System.out.println("N. total de particpantes: " + Participante.totalPersonas);
-		
-		Participante moi = new Participante();
-		
-		moi.nombre = "Moises Arturo";
-		moi.apellido = "García";
-		moi.edad = 21;
-		moi.musicaFav = "Pop";
-		moi.totalPersonas = 2;
-		System.out.println("Participante: " + moi.datosCompletos());
+//		Participante abue;
+//		abue = new Participante();
+//		
+//		abue.nombre = "Jorge Andrés";
+//		abue.apellido = "Gonzalez";
+//		abue.edad = 25;
+//		abue.musicaFav = "Happy Funk";
+//		
+//		System.out.println("Participante: " + abue.datosCompletos());
+//		System.out.println("N. total de particpantes: " + Participante.totalPersonas);
+//		
+//		Participante moi = new Participante();
+//		
+//		moi.nombre = "Moises Arturo";
+//		moi.apellido = "García";
+//		moi.edad = 21;
+//		moi.musicaFav = "Pop";
+//		moi.totalPersonas = 2;
+//		System.out.println("Participante: " + moi.datosCompletos());
 		//System.out.println("N. total de particpantes: " + abue.totalPersonas);
 		System.out.println("N. total de particpantes: " + Participante.totalPersonas);
 		
@@ -34,7 +34,22 @@ public class ParticipantePrueba {
 		
 		System.out.println("N. total de particpantes: " + Participante.totalPersonas);
 		
-		System.out.println(Participante.booCampCohorte());
+		System.out.println(Participante.bootCampCohorte());
+		
+		
+		//System.out.println("Famosisismo Abue " + abue.datosCompletos("Abue"));
+		Participante abue = new Participante("Jorge Andres","Gonzalez"	, 1996);
+		Participante moi = new Participante("Moises Arturo", "García", 2001);
+		System.out.println("Participante: " + abue.datosCompletos() );
+		System.out.println("Participante: " + moi.datosCompletos() );
+		
+		System.out.println("RFC Abue " + abue.getRfc());
+		
+		
+		
+
+		
+		
 		
 		
 		
