@@ -139,8 +139,7 @@ public class FlujosDeControl {
 				break;
 		case 11:
 			System.out.println("Noviembre");
-				break;
-				
+				break;		
 		case 12:
 			System.out.println("Diciembre");
 				break;
@@ -149,5 +148,66 @@ public class FlujosDeControl {
 			break;
 		}
 		
+		//Otras formas de trabajar con el Break
+		mes = 2;
+		switch(mes) {
+		case 3: 
+		case 4: 
+		case 5:
+			System.out.println("Estamos en primavera");
+			break;
+		case 6: case 7: case 8:
+			System.out.println("Estamos en verano");
+			break;
+		case 9: case 10: case 11:
+			System.out.println("Estamos en otoño");
+			break;
+		case 12, 1, 2:
+			System.out.println("Estamos en invierno");
+			break;
+		default:
+			System.out.println("Error: Elige un mes del 1 - 12");
+			}
+
+		//los valores de las variables son inmutables en memoria
+			String nombre = "Rafa"; // Valores UTF (82,97,102,97) id (identificador único del string (en este caso "Rafa")): 23
+			nombre = "Emiliano"; // id: 32  
+			String jugador = "Rafa"; // id:23  la palabra Rafa se mantuvo en memoria
+		//Garbage collector: detecta elementos que son basura en memoria y los borra	
+			String apellido = "Dorantes"; // la var guarda los ID'S 
+			// 31 == 31 ID'S EN MEMORIA
+			//if(apellido == "Dorantes") //Se comparan los ID'S
+				//System.out.println("El apellido es de Abi");
+			
+			String participante = new String("Dorantes");
+				// 30 == 31 comparación de ID'S
+			if(apellido == participante) //Se comparan los ID'S
+				System.out.println("El apellido es de Abi");
+			else
+				System.out.println("El apellido NO es de Abi (por el ID)");
+			
+			if(apellido.equals(participante))
+				System.out.println("El apellido es de Abi (Comparación correcta de strings)");
+		
+			
+			apellido = new String("Parker");
+			//Switch compara utilizando string.equals para comparar strings
+			switch(apellido) {
+			case "Ruiz":
+				System.out.println("El apellido es de Gerardo");	
+				break;
+			case "Dorantes":
+				System.out.println("El apellido es de Abi");	
+				break;
+			case "Flores":
+				System.out.println("El apellido es de Maga");	
+				break;
+			case "Delgado":
+				System.out.println("El apellido es de Sebas");	
+				break;
+			default:
+				System.out.println("El apellido es de Santi");	
+				break;
+			}
 	}	
 }
