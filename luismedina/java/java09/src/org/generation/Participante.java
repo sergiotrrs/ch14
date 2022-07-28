@@ -2,12 +2,12 @@ package org.generation;
 
 public class Participante {
 	// Definimos atributos de los objetos
-	String nombre;
-	String apellido;
-	int edad;
-	String rfc;
-	int nAmonestacion;
-	String musicaFav;
+	private String nombre;
+	private String apellido;
+	private int edad;
+	private String rfc;
+	private int nAmonestacion;
+	private String musicaFav;
 	// Definimos atributos de la clase
 	static String bootCamp = "Generetion";
 	static String cohorte = "ch14";
@@ -27,9 +27,9 @@ public class Participante {
 	// hay que agregarlo manualmente
 	/**
 	 * 
-	 * @param nombre Nombre del participante
+	 * @param nombre   Nombre del participante
 	 * @param apellido Apellido del participante
-	 * @param anioNac amio de nacimiento del participante
+	 * @param anioNac  amio de nacimiento del participante
 	 */
 	Participante(String nombre, String apellido, int anioNac) {
 		this.nombre = nombre;
@@ -49,8 +49,31 @@ public class Participante {
 		return this.nombre + " " + this.apellido + " edad " + this.edad + "años y RFC " + this.rfc;
 	}
 
-	static String bootCampCohorte() {
-		return bootCamp + " " + cohorte + " con " + totalPersonas+" personas";
+	String datosCompletos(String sobrenombre) {
+		return this.nombre + " " + this.apellido + " edad " + this.edad + "años y RFC " + this.rfc
+				+ " Pero le puedes decir" + sobrenombre;
 	}
+
+	static String bootCampCohorte() {
+		return bootCamp + " " + cohorte + " con " + totalPersonas + " personas";
+	}
+	
+	void setNAmonestacion(int nAmonestacion) {
+		this.nAmonestacion += nAmonestacion;
+	}
+	
+	int getNAmonestacion() {
+		return this.nAmonestacion;
+	}
+
+//	void setRfc(String rfc) {
+//		this.rfc = rfc;
+//	}
+	
+	String getRfc() {
+		return this.rfc;
+	}
+	
+	
 
 }
