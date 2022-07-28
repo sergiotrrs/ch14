@@ -93,7 +93,30 @@ public class FlujosDeControl {
 			mesTxt = "No se tiene registrado";
 		}
 
-		System.err.println("Mes seleccionado: " + mesTxt);
+		System.err.println("Mes seleccionado: " + mesTxt+"\n------");
+		
+		mes = 1;
+		switch (mes) {
+		case 3, 4, 5:
+			System.out.println("Estamos en primavera");
+			break;
+		case 6: case 7: case 8:
+			System.out.println("Estamos en verano");
+			break;
+		case 9: case 10: case 11:
+			System.out.println("Estamos en otoño");
+			break;
+		case 12: case 1: case 2:
+			System.out.println("Estamos en invierno");
+			break;
+			default: 
+				System.out.println("Error en el mes introducido");
+		}
+		
+		String nombre = "Rafa";
+		nombre = "Emiliano";
+		String jugador = "Rafa";
+		
 	}
 //Ctrl Shift F
 }

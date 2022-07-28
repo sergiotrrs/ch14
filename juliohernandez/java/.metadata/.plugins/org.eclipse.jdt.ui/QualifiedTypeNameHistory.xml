@@ -1,2 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.util.HashSet"/>
+    <fullyQualifiedTypeName name="org.generation.Participante"/>
+    <fullyQualifiedTypeName name="org.generation.Helados"/>
+    <fullyQualifiedTypeName name="com.cohorte.Participante"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="org.generation.cohorte.Participantes"/>
+    <fullyQualifiedTypeName name="org.generation.Perrito"/>
+    <fullyQualifiedTypeName name="org.generation.cohorte.Mentor"/>
+    <fullyQualifiedTypeName name="com.gomgom.gomitas.GomitaEnchilada"/>
+    <fullyQualifiedTypeName name="com.gomgom.gomitas.GomitaDulce"/>
+    <fullyQualifiedTypeName name="com.gomgom.gomitas.GomitaBase"/>
+    <fullyQualifiedTypeName name="com.corsarios.producto.ModBolsillo"/>
+    <fullyQualifiedTypeName name="com.corsarios.producto.ModGarrafa"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="com.corsarios.producto.ModRotoplas"/>
+    <fullyQualifiedTypeName name="org.generation.db.ConexionMySQL"/>
+    <fullyQualifiedTypeName name="org.generation.db.ConexionOracle"/>
+</qualifiedTypeNameHistroy>
