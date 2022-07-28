@@ -9,7 +9,7 @@ import org.generation.gelatinas.GelatinasPremium;
 import org.generation.gomitas.GomitasDulces;
 import org.generation.gomitas.GomitasEnchiladas;
 
-public class Grenetina {
+public class GrenetinaAbstract {
 	
 	private String color;
 	private String sabor;
@@ -21,9 +21,8 @@ public class Grenetina {
 	public static HashMap<Integer, GelatinasPremium> gelaPaps = new HashMap<Integer, GelatinasPremium>();
 	public static HashMap<Integer, GelatinasExpress> gelaPronto = new HashMap<Integer, GelatinasExpress>();
 	
-
 	
-	public Grenetina(String color, String sabor, boolean pasoPorCalidad, int numeroProd) {
+	public GrenetinaAbstract(String color, String sabor, boolean pasoPorCalidad, int numeroProd) {
 		this.color = color;
 		this.sabor = sabor;
 		this.controlDeCalidad = pasoPorCalidad;
@@ -39,6 +38,10 @@ public class Grenetina {
 		gelaPaps.put(numeroProd, gelitafresita);
 
 		gomasEnchiladas.forEach(elemento -> System.out.println("¿Trae la gomita salsa chamoy? " + elemento.hasSalsaChamoy()));
+	}
+	
+	public static HashMap<Integer, GomitasDulces> getDulcigomas() {
+		return dulciGomas;
 	}
 	
 	public static void iterateDulcigomas() {
@@ -64,5 +67,6 @@ public class Grenetina {
 			System.out.println(gelaPronto.get(key).greneDatos());
 		}
 	}
+
 
 }
