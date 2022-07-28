@@ -86,12 +86,9 @@ public class Ciclos {
 //			System.out.println("Eres joven con " + edad + "años");
 //		}	
 		
-			
 	
-	
-	
-	
-	
+		
+		
 	}
 }
 		

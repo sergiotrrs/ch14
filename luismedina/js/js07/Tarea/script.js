@@ -86,7 +86,7 @@ function imprimir(usuarios) {
 
 
 function tiempoExpira() {
-    let tiempoAcaba = Date.now() + 5000;
+    let tiempoAcaba = Date.now() + 1000*60;
     localStorage.setItem("expira", JSON.stringify({ expira: tiempoAcaba }));
 }
 
