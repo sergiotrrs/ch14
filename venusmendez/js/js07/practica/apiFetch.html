@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="sp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica Api Fetch</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+</head>
+</head>
+
+<body
+    style="background-image: url(https://img.freepik.com/foto-gratis/fondo-elegante-vacio-espacio-copia_24972-1807.jpg?t=st=1656561368~exp=1656561968~hmac=0f3c96dadf56dcc30c05c08408de738050377f961dee1df0362301f5d5e84d9c&w=740);">
+    <div class="container-fluid; text-center" style="color:rgb(188, 129, 228)" ;>
+        <header>
+            <h1 class="text-center">Api Fetch</h1>
+        </header>
+        <br>
+        <br>
+        <h2>Oprime para obtener la información</h2>
+        <br>
+        <nav class="text-center container-md">
+            <button id="page1B" type="button" class="btn btn-info" style="color:rgba(77, 30, 247, 0.507)">Page1</button>
+            <button id="page2B" type="button" class="btn btn-info" style="color:rgb(77, 30, 247, 0.507)">Page2</button>
+            <div>
+                <br>
+                <button id="clearB" type="button" class="btn btn-info" style="color:rgb(77, 30, 247, 0.507)">Clear</button>
+            </div>
+        </nav>
+        <br>
+        <main>
+            <div class="container-md table-responsive">
+                <table class="table align-middle tableStyle">
+                    <thead>
+                        <tr class="table-light">
+                            <td class="thStyle" id="tableTitle" colspan="5" style="color:white"></td>
+                        </tr>
+                        <tr class="table-dark align-middle">
+                            <th class="tdStyle1 thStyle6" scope="col">ID</th>
+                            <th class="tdStyle2 thStyle6" scope="col">First Name</th>
+                            <th class="tdStyle3 thStyle6" scope="col">Last Name</th>
+                            <th class="tdStyle4 thStyle6" scope="col">Email</th>
+                            <th class="tdStyle5 thStyle6" scope="col">Photo</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="apiFetchScript.js"></script>
+</body>
+
+</html>

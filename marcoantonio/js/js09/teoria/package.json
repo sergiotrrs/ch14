@@ -1,0 +1,17 @@
+{
+  "name": "teoria",
+  "version": "1.0.0",
+  "description": "Niño del cuadrado ",
+  "main": "script_npm.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marco Antonio",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "bootstrap": "^5.1.3",
+    "jest": "^28.1.2"
+  },
+  "devDependencies": {}
+}

@@ -147,3 +147,108 @@ x /= 2 //x = x / 2
 x %= 4 //x = x % 4
 
 x **= 3 //x = x ** 3 
+
+
+/**
+ * Operadores de igualdad ( comparación )
+ */
+//operador igual que
+x = 1 ;
+y = 2;
+x == y; //false
+y = 1;
+x == y; // true
+x = 1;
+y = "1";
+x == y; // true
+console.log("********************************");
+console.log("x == y  " + (x == y));
+
+// diferente de 
+y = "2";
+console.log("********************************");
+console.log("x != y  " + (x != y)); //true x =1 y=2
+console.log("x++ != y  " + (x++ != y)); //true  x= 1 y=2, después x = 2
+console.log("x != y  " + (x != y)); // false x = 2 y = 2
+console.log("++x != y  " + (++x != y)); //true x = 3 y = 2
+
+//Extrictamente igual que === compara el valor y el tipo de dato 
+x = 1;
+y = "1";
+console.log("********************************");
+console.log(" x === 'y'  "+ (x === y)); //falso
+
+//Extrictamente diferente !== compara el valor y el tipo de dato 
+
+console.log("********************************");
+console.log(" x !== 'y'  "+ (x !== y)); //true 
+
+// Operadores lógicos &&
+
+true && true // true
+true && false // false si uno de los dos es false, el resultado sera false
+// false, null, NaN, 0, empty string, undefined son considerados false
+
+//Operadores de corto circuito
+//Si el primer operador es false, el resultado será el primer operador
+//Si el primer operador es true, el resultado es el valor del segundo valor 
+console.log("********************************");
+console.log(" true && NaN = " + (true && NaN));//NaN
+console.log(" false && NaN = " + (false && NaN));//false
+console.log(" true && 'hola' = " + (true && "HOLA"));//HOLA
+console.log(" null && 'hola moi' = " + (null && "HOLA moi"));//null
+console.log(" 'a' && 'hola moi' = " + ('a' && "HOLA moi"));//hola moi
+console.log(" '' && 'hola moi' = " + ('' && "HOLA maga"));// empty: es un string vacío
+
+
+//operador lógico or ||
+true || false //true
+false || true //true
+true || true // true
+// false, null, NaN, 0, empty string, undefined son considerados false
+// Si el primer operador es true, el serusltado es el primer operador
+//Siel primer operador es false, el resultado es el segundo operador
+console.log("********************************");
+console.log("\n Operador lógico or");
+console.log(" true || NaN = " + (true || NaN));//NaN
+console.log(" false || NaN = " + (false || NaN));//false
+console.log(" true || 'hola' = " + (true || "HOLA"));//HOLA
+console.log(" null || 'hola moi' = " + (null || "HOLA moi"));//null
+console.log(" 'a' || 'hola moi' = " + ('a' || "HOLA moi"));//hola moi
+console.log(" '' || 'hola moi' = " + ('' || "HOLA maga"));// empty: es un string vacío
+
+
+//Operador lógico not !
+let nuevoValor = !true // false
+nuevoValor = !false //true 
+// false, null, NaN, 0, empty string, undefined son considerados false
+
+
+console.log("********************************");
+console.log("\n Operador lógico not");
+console.log("!NaN = " + (!NaN));//true
+console.log(" !true = " + (!true));//false
+console.log(" !'hola' = " + (!"HOLA"));//false
+console.log(" !false = " + (!false ));//true
+console.log(" !'a' = " + (!'a'));//false
+console.log(" !''' = " + (!''));// true
+
+// Operador lógico binario ?? nullish coalescing
+//Operador lógico que retorna el operador de la derecha, si el operador 
+// de la izquierda es null o undefined. De lo contrario, retorna el operador de la izquierda.
+
+let asistencia;
+console.log("********************************");
+console.log("\n Operador lógico Nullish Coalescing");
+console.log(" asistencia  = NULL ?? true: " + (asistencia  = null ?? true));//true
+console.log(" asistencia  = 1 ?? true:  " + (asistencia  = 1 ?? true));//1
+x = undefined;
+
+console.log("Asignación de asistencia =x :  " + (asistencia  = x ?? "asiste"));//"Asiste"
+console.log("Asignación de asistencia =x :  " + (asistencia  = "" ?? "asiste"));//""
+console.log("********************************");
+console.log("typeof (undefinde) "+ typeof(undefined)); //UNDEFINED
+console.log("typeof (null) "+ typeof(null)); //OBJECT // DEBERÍA SER UN TIPO DE DATO NULL NO OBJECT ES UN ERROR DE JS
+
+
+

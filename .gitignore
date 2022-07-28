@@ -233,3 +233,6 @@ bin
 /.vscode
 
 .DS_STORE
+
+# Ignora carpeta node_module
+node_modules/
