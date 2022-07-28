@@ -56,6 +56,16 @@ form.addEventListener('sumbit', (event )=> {
     formulario.elements['fecha'].value = definirFecha(dia.getDay());
 }
 
+
+//Determinar si es año bisiesto
+
+function pasaFiltro(anio, mes, dia){
+    let bisiesto = anio % 4;
+    if (mes ==2 && bisiesto==0 && día <=29){
+
+    }
+}
+
 //Función para indicar el día y si es laborable
 /**
  *

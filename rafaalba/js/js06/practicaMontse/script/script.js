@@ -20,6 +20,12 @@ function setInvisible(estado){
 
 const form = document.getElementById('formulario');
 
+// function pasaFiltro(anio, mes, dia) {
+//     let bisiesto = anio%4;
+//     if(mes ===)
+// }
+
+
 form.addEventListener('submit', (event) =>{
     event.preventDefault(); //no me limpia/borra los campos de entrada
     console.log(event);
@@ -45,6 +51,7 @@ const calcularFecha = () =>{
         
         let day = formulario.elements[`dia`].value;
         let month = formulario.elements[`mes`].value - 1;
+        let year = formulario.elements[`anio`].value;
         // console.log("prueba" +day, month);
 
     definirFecha(day, month);
@@ -52,48 +59,48 @@ const calcularFecha = () =>{
     formulario.elements['fecha'].value = definirFecha(dia.getDay());
     // console.log("prueba1");
 
-    let anioBis = anio % 4;
-    switch (month) {
-        case 0: //Enero
-        case 2: //Marzo
-        case 4: //Mayo
-        case 6: //Julio
-        case 7: //Agosto
-        case 9: //
-        case 11: //
-            if (day<1 || day>31){
-                alert("Día invalido. Ingresa un día dentro del rango 1 - 31");
-                document.getElementById("dia").value="";
-            } 
-            break;
-        case 1: //Febrero
-            if (anioBis==0){
-                if (day<1 || day>29){
-                     alert("Día invalido. Ingresa un día dentro del rango 1 - 29");
-                    document.getElementById("dia").value="";
-                } 
-                // alert("El año es bisiesto");
-            } else {
-                if (day<1 || day>28){
-                     alert("Día invalido. Ingresa un día dentro del rango 1 - 28");
-                    document.getElementById("dia").value="";
-                }
-            }
-            break;
-        case 3: //Abril
-        case 5: 
-        case 8:
-        case 10:
-            if (day<1 || day>30){
-                 alert("Día invalido. Ingresa un día dentro del rango 1 - 30");
-                document.getElementById("dia").value="";
-            }  
-            break;
-        default:
-             alert("Dato invalido. Verifica que los datos sean correctos");
-            break;
-    }
-};
+//     let anioBis = anio % 4;
+//     switch (month) {
+//         case 0: //Enero
+//         case 2: //Marzo
+//         case 4: //Mayo
+//         case 6: //Julio
+//         case 7: //Agosto
+//         case 9: //
+//         case 11: //
+//             if (day<1 || day>31){
+//                 alert("Día invalido. Ingresa un día dentro del rango 1 - 31");
+//                 document.getElementById("dia").value="";
+//             } 
+//             break;
+//         case 1: //Febrero
+//             if (anioBis==0){
+//                 if (day<1 || day>29){
+//                      alert("Día invalido. Ingresa un día dentro del rango 1 - 29");
+//                     document.getElementById("dia").value="";
+//                 } 
+//                 // alert("El año es bisiesto");
+//             } else {
+//                 if (day<1 || day>28){
+//                      alert("Día invalido. Ingresa un día dentro del rango 1 - 28");
+//                     document.getElementById("dia").value="";
+//                 }
+//             }
+//             break;
+//         case 3: //Abril
+//         case 5: 
+//         case 8:
+//         case 10:
+//             if (day<1 || day>30){
+//                  alert("Día invalido. Ingresa un día dentro del rango 1 - 30");
+//                 document.getElementById("dia").value="";
+//             }  
+//             break;
+//         default:
+//              alert("Dato invalido. Verifica que los datos sean correctos");
+//             break;
+//     }
+// };
 
 /**
  * Función para indicar el día y si es laborable
@@ -130,55 +137,53 @@ function definirFecha(dia){
     }
 }
 
-// function definirMeses(day, month){
-//     // let status = "inline";
-//     let anioBis = anio % 4;
-//     switch (month) {
-//         case 0: //Enero
-//         case 2: //Marzo
-//         case 4: //Mayo
-//         case 6: //Julio
-//         case 7: //Agosto
-//         case 9: //
-//         case 11: //
-//             if (day<1 || day>31){
-//                 alert("Día invalido. Ingresa un día dentro del rango 1 - 31");
-//                 document.getElementById("dia").value="";
 
-//             } 
-//             break;
-//         case 1: //Febrero
-//             if (anioBis==0){
-//                 if (day<1 || day>29){
-//                      alert("Día invalido. Ingresa un día dentro del rango 1 - 29");
-//                     document.getElementById("dia").value="";
-
-//                 } 
-//                 // alert("El año es bisiesto");
-//             } else {
-//                 if (day<1 || day>28){
-//                      alert("Día invalido. Ingresa un día dentro del rango 1 - 28");
-//                     document.getElementById("dia").value="";
-
-//             }
-//             break;
-//         case 3: //Abril
-//         case 5: 
-//         case 8:
-//         case 10:
-//             if (day<1 || day>30){
-//                  alert("Día invalido. Ingresa un día dentro del rango 1 - 30");
-//                 document.getElementById("dia").value="";
-
-//             }  
-//             break;
-//         default:
-//              alert("Dato invalido. Verifica que los datos sean correctos");
-
-//             break;
-//     }
-// }
-    
-// }
-
-//ole guacamole
+function definirMeses(year, month, day){
+    let anioBis = year % 4;
+    // console.log(year, month, day);
+    switch (month) {
+        case 0: //Enero
+        case 2: //Marzo
+        case 4: //Mayo
+        case 6: //Julio
+        case 7: //Agosto
+        case 9: //
+        case 11: //
+            if (day<1 || day>31){
+                alert("Día invalido. Ingresa un día dentro del rango 1 - 31");
+                document.getElementById("dia").value="";
+                return null;
+            } 
+            break;
+        case 1: //Febrero
+            if (anioBis==0 && (day<1 || day>29)){
+                     alert("Día invalido. Ingresa un día dentro del rango 1 - 29");
+                    document.getElementById("dia").value="";
+                    return null;
+                } 
+                // alert("El año es bisiesto");
+            }
+            if (day<1 || day>28){
+                alert("Día invalido. Ingresa un día dentro del rango 1 - 28");
+                document.getElementById("dia").value="";
+                return null;
+            }
+            break;
+        case 3: //Abril
+        case 5: //Junio
+        case 8: //
+        case 10: //
+            if (day<1 || day>30){
+                 alert("Día invalido. Ingresa un día dentro del rango 1 - 30");
+                document.getElementById("dia").value="";
+                return null;
+            }  
+            break;
+        default:
+             alert("Dato invalido. Verifica que los datos sean correctos");
+             return null;
+            break;
+        }
+    }
+}
+}
