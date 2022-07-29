@@ -14,6 +14,14 @@ formulario.elements['fecha'].style.display = status; //oculta o muestra el eleme
 }
 
 
+//Esta funcion solo deberia verificar el mes de febrero
+//Tendria que retornar un true o false
+/*function pasaFiltro (anio, mes, dia) {
+    let bisiesto = anio % 4;
+    if (mes === 2 && bisiesto == 0 && dia <= 29) {
+
+    }
+}*/
 
 const form = document.getElementById("formulario");
 form.addEventListener('submit', (event)=>{
