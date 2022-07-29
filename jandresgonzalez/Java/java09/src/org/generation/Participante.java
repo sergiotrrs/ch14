@@ -3,12 +3,16 @@ package org.generation;
 public class Participante {
 	
 	//Non-static fields (objetos)
-	String nombre;
-	String apellido;
-	int edad;
-	String llaveGen;
-	int nAmonestaciones;
-	String musicaFav;
+	//Access modifiers. Con private, se encapsula para la clase
+	//Con default se encapsula para clase y package
+	//Con protected se encapsula hasta subclase
+	//Con public se accede de cualquier lado
+	private String nombre;
+	private String apellido;
+	private int edad;
+	private String llaveGen;
+	private int nAmonestaciones;
+	private String musicaFav;
 	
 	//Static fields (classes)
 	static String bootCamp = "Generation: ";
@@ -51,6 +55,7 @@ public class Participante {
 		this.edad = 2022-anio;
 		this.llaveGen = apellido.substring(0,3) + nombre.substring(0, 2) + anio;
 		totalPersonas++;
+		System.out.println(nombre + apellido + edad + llaveGen);
 
 	}
 	
@@ -64,11 +69,39 @@ public class Participante {
 		return this.nombre+ " " +
 				this.apellido +" edad "+ this.edad+ " años y RFC:  "+ this.llaveGen;
 	}
+	String datosCompletos(String sobrenombre) {
+		return this.nombre+ " " +
+				this.apellido +" edad "+ this.edad+ " años y RFC:  "+ this.llaveGen +
+				" y le puedes decir... " + sobrenombre;
+	}
 
 	
 	static String bootcampCohorte() {
 		return bootCamp + " " + cohorte + " con " + totalPersonas + " personas.";
 	}
+	
+	
+	void setNAmonestacion(int nAmonestaciones) {
+		this.nAmonestaciones += nAmonestaciones;
+	}
+	
+	int getNAmonestacion() {
+		return this.nAmonestaciones;
+				
+	}
+//	void setRFC(String newRFC) {
+//		this.llaveGen = newRFC;
+//	}
+	
+	String getRFC() {
+		return this.llaveGen;
+	}
+	
+	
+	
+//	static void ENESimaClase() {
+//		System.out.println("Armé una clase que va en la ENES, cuida perritxs y es vegana");
+//	}
 	
 	
 
