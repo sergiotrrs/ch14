@@ -1,6 +1,7 @@
 package org.generation;
 
 import java.util.Iterator;
+import java.util.Scanner;
 
 public class OperacionesTest {
 
@@ -108,6 +109,25 @@ public class OperacionesTest {
 				7, 5, 15, 14, 34, 1, 24, 13, 5, 4, 3, 2, 1, 0, 97, 3				
 		};
 		Operaciones.setMaxNumber(otroArray);
+		
+//		Scanner sc = new Scanner(System.in);
+//		System.out.println("Voy a tomar la primera letra que me des");
+//		System.out.println("para revisar cuántas veces aparece en una frase");
+//		String paraLetra = sc.next();
+//		char laLetra = paraLetra.charAt(0);
+//		
+//		
+//		String cuerda = ((Object)laLetra).getClass().getSimpleName();
+//		System.out.println(cuerda);
+//		String revisor = "Character";
+//		if (cuerda.equals(revisor)) {
+//			System.out.println(laLetra);
+//		}
+//		else {
+//			System.out.println("No es cuerdita");
+//		}
+		
+		
 	}
 
 }

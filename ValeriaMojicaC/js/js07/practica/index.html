@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>usuarios practica</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300&display=swap" rel="stylesheet">
+
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <h1 class="text-center">Tabla de Usuarios</h1>
+    <br>
+    <div id="botones" class="row text-center">
+        <div class="col-lg-3">
+            <button id="paginaUno" type="button" class="btn">Pagina Uno</button>
+        </div>
+
+        <div class="col-lg-3">
+            <button id="paginaDos" type="button" class="btn">Pagina Dos</button>
+        </div>
+
+        <div class="col-lg-3">
+            <button id="paginaTres" type="button" class="btn">Pagina Tres</button>
+        </div>
+
+        <div class="col-lg-3">
+            <button id="borrar" type="button" class="btn">Borrar</button>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <table class="table text-center">
+            <thead>
+              <tr class="tablaTitulo">
+                <th class="id">ID</th>
+                <th class="nombre">Nombre Completo</th>
+                <th class="email" >Email</th>
+                <th class="avatar">Avatar</th>
+              </tr>
+
+              <tr>
+                <td id="titulo"></td>
+              </tr>
+            </thead>
+
+
+            <tbody id="tablaUsuarios">
+             
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
