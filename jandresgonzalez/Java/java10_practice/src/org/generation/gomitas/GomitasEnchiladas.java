@@ -97,6 +97,6 @@ public class GomitasEnchiladas {
 		String chamoy = this.salsaChamoy ? "\n Con chamoy ¡pika! pikachu" : "\n Sin chamoysito sad";
 		return "Características de la gomita: \n Color: " + this.color + " \n Forma: " + this.forma + " \n En: " + this.presentacion+ " \n Sabor: " +this.sabor+ "\n Con salsa: " +this.salsaExtra+ "" + chamoy;
 	}
-	
+
 	
 }

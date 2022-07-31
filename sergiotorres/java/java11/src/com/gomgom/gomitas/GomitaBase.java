@@ -5,14 +5,28 @@ public class GomitaBase {
 	private int color;
 	private String sabor;
 	private double precio;
+	public static int nGomitas;
+	
+	public GomitaBase() {
+		nGomitas++;
+	}
 
 	public GomitaBase(String nombre, int color, String sabor, double precio) {
-		super();
+		this();
 		this.nombre = nombre;
 		this.color = color;
 		this.sabor = sabor;
 		this.precio = precio;
+		
 	}
+	
+//	public GomitaBase(String nombre) {	
+//		this();
+//		this.nombre = nombre;
+//		
+//	}
+	
+	
 	public String getNombre() {
 		return nombre;
 	}
