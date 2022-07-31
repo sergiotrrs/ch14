@@ -5,9 +5,9 @@ public class HarryPotterPrueba {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-	//Maga Maga
-//		HarryPotter maga;
-//		maga = new HarryPotter();
+		//Maga Maga
+		//	HarryPotter maga;
+		//	maga = new HarryPotter();
 		
 		
 		HarryPotter maga = new HarryPotter ("Margarita Flores", "Maga Sirius", 1995);
