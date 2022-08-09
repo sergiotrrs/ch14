@@ -20,7 +20,10 @@ public class GomitaEnchilada extends GomitaBase {
 	 * @param tajin si o no  
 	 */
 	public GomitaEnchilada( String nombre, int color, String sabor, double precio, int nivelPicor, boolean tajin) {
-		super(color, sabor, nombre, precio);//Super siempre debe ser la primera línea del constructor hijo 
+		
+		//Super siempre debe ser la primera línea del constructor hijo 
+		//Super hace referencia a los atributos de la clase superior
+		super(color, sabor, nombre, precio);
 		this.nivelPicor = nivelPicor;
 		this.tajin = tajin;
 	}
