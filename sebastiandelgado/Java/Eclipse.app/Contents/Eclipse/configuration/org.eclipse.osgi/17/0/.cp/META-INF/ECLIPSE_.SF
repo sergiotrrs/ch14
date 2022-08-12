@@ -1,0 +1,40 @@
+Signature-Version: 1.0
+Created-By: 11.0.11 (AdoptOpenJDK)
+SHA-256-Digest-Manifest: bpshL1kipX5gONug4LPwaT+fxBDTfpl7Zeuxx1S5ejM=
+SHA-256-Digest-Manifest-Main-Attributes: tgKyjsQ1uX1GO4Nn7y9LOy46nXQusOh
+ yOBQG13sDRjI=
+
+Name: about.html
+SHA-256-Digest: +bdC1XsHOeYE6TSEmU+wmUvvKZUdwGecB+Pm48N+drs=
+
+Name: META-INF/maven/org.eclipse.orbit.bundles/javax.inject/pom.properti
+ es
+SHA-256-Digest: p14ZI863aRoObhhCwX+2IIo5U+M87znuXFwbj2NJvbk=
+
+Name: javax/inject/Inject.class
+SHA-256-Digest: zmtHFAZgTUcIuRE3iYYWVVVnB5G2kEvsICUaG0ISxj8=
+
+Name: javax/inject/Named.class
+SHA-256-Digest: lyqzV+q74Gxqx5S8tnox6HztXz3j1BOZqDImzbZOGho=
+
+Name: javax/inject/Scope.class
+SHA-256-Digest: ue2ee9+3o0wshyL4V0qJSOEklU6cMSrlWE/J9ycbogE=
+
+Name: javax/inject/Provider.class
+SHA-256-Digest: ESbOpHRwAt2+6hFiWynWqwGwu5HALEaYwW6M6aYpqic=
+
+Name: META-INF/maven/org.eclipse.orbit.bundles/javax.inject/pom.xml
+SHA-256-Digest: yZXHZivTMB6xO4hQ9NweDsg/MooYF77DS3hWaNbjx1g=
+
+Name: javax/inject/Singleton.class
+SHA-256-Digest: f0qNUJqlyXHtDcONM0gw2Q00dcADWkcEpfEUyu2W6Ik=
+
+Name: OSGI-INF/l10n/bundle.properties
+SHA-256-Digest: gnqZgq74svXjsJ2YPrgBbeEVeFpAzLo5lsdyJgZXMhU=
+
+Name: javax/inject/Qualifier.class
+SHA-256-Digest: 9D3beCwQ4MaHCxlH1PJ36dlkBiHHIXuI+1AGVCUXAxk=
+
+Name: about_files/THE_APACHE_SOFTWARE_LICENSE__VERSION_2.0.html
+SHA-256-Digest: CKcEDMgJ/1vbtJE473AA4rvR7XgzDUYwOSkCmJQvqww=
+
