@@ -12,7 +12,7 @@ import lombok.Data;
 @Entity
 @Data
 @Table(name="customer_data")
-public class Customer implements Serializable{
+public class Customer implements Serializable{ 
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -24,8 +24,8 @@ public class Customer implements Serializable{
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	private Role role;
 	
-	@OneToMany
-	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-	private List<Order> orders;
+//	@OneToMany
+//	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+//	private List<Order> orders;
 	
 }
