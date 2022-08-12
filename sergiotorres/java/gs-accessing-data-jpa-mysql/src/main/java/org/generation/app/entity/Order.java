@@ -31,9 +31,6 @@ public class Order implements Serializable {
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	private Customer customer;
 	
-	
-	
-	
 	@ManyToMany(fetch=FetchType.LAZY)
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})	
 	private List<Product> products;
