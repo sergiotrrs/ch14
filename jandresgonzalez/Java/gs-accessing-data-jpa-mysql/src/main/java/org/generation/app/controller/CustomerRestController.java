@@ -6,8 +6,14 @@ import org.generation.app.entity.Customer;
 import org.generation.app.service.ICustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(path="/api") //empieza a mapear desde api en
@@ -24,9 +30,24 @@ public class CustomerRestController {
 		return customerService.findAllCustomers();
 	};
 	
-	@GetMapping("../")
-	public String indice() {
-		return "Hola, este es el index";
+	@GetMapping("/customers/{id}")
+	public Customer customerById(@PathVariable Long id) {
+		return customerService.findCustomerById(id);
+	};
+	
+	@PostMapping("/customers")
+	public Customer newCustomer(@RequestBody Customer customer) {
+		return customerService.saveCustomer(customer);
+	}
+	
+	@PutMapping("/customers")
+	public Customer updCustomer(@RequestBody Customer customer) {
+		return customerService.saveCustomer(customer);	
+	}
+	
+	@DeleteMapping("customers/{id}")
+	public Customer byeCustomer(@PathVariable Long id) {
+		return customerService.deleteCustomerById(id);
 	}
 
 }

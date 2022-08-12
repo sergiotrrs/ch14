@@ -26,9 +26,12 @@ public class CustomerServiceImp implements ICustomerService {
 	}
 
 	@Override
-	public void deleteCustomerById(Long id) {
+	public Customer deleteCustomerById(Long id) {
+		Customer customer =findCustomerById(id);
 		customerRepository.deleteById(id);
+		return customer;
 	}
+	
 
 	@Override
 	public Customer findCustomerById(Long id) {

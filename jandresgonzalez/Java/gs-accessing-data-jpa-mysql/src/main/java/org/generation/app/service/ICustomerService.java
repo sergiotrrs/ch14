@@ -21,8 +21,9 @@ public interface ICustomerService {
 	 * Elimina un cliente de la base de datos
 	 * según su id
 	 * @param id : número de id del cliente a eliminar
+	 * @return 
 	 */
-	public void deleteCustomerById(Long id);
+	public Customer deleteCustomerById(Long id);
 	
 	
 	/**
