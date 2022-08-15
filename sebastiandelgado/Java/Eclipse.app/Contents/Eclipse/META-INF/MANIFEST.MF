@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Created-By: 11.0.15 (Eclipse Adoptium)
+
+Name: license.txt
+SHA-256-Digest: sLkPmfcJKnlgb+KxHHYANEMYi2REKvOLeYql416fDEo=
+
