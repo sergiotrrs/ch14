@@ -1,0 +1,14 @@
+package org.generation.holamundo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class HolamundoApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(HolamundoApplication.class, args);
+		// Al ejecutar, se crea un puerto: Tomcat initialized with port(s): 8080 (http)
+	}
+
+}

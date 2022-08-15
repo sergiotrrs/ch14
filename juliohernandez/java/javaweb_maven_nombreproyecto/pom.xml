@@ -1,0 +1,20 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.generation_urlalreves</groupId>
+	<artifactId>javaweb_maven_nombreproyecto</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+	
+	<!-- Se descargan las depencias dentro de la etiqueta dependencies -->
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<!--El de arriba es el nombre de la pagina-->
+			<artifactId>mysql-connector-java</artifactId>
+			<!--Artifact es el nombre-->
+			<version>8.0.28</version>
+		</dependency>
+	</dependencies>
+	<!-- Si se borran se eliminan las dependencias-->
+</project>
