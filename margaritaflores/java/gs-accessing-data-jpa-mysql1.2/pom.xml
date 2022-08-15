@@ -12,9 +12,9 @@
 	<artifactId>gs-accessing-data-jpa-mysql</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>gs-accessing-data-jpa-mysql</name>
-	<description>Uso JPA y MySQL</description>
+	<description>Uso de JPA y MySQL</description>
 	<properties>
-		<java.version>1.8</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
