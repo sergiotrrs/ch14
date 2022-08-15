@@ -16,6 +16,7 @@ public class GomitaEnchilada extends GomitaBase {
 	 */
 	public GomitaEnchilada(String nombre, int color, String sabor, double precio, int nivelPicor, boolean tajin) {
 		super(nombre, color, sabor, precio);
+		//super(nombre);
 		this.nivelPicor = nivelPicor;
 		this.tajin = tajin;
 	}

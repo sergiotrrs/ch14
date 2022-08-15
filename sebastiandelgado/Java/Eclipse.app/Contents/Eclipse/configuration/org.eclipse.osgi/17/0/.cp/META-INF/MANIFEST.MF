@@ -1,0 +1,46 @@
+Manifest-Version: 1.0
+Created-By: Eclipse Bundle Recipe Maven Plug-in
+Build-Jdk-Spec: 11
+Automatic-Module-Name: javax.inject
+Bundle-ManifestVersion: 2
+Bundle-Name: %bundleName
+Bundle-SymbolicName: javax.inject
+Bundle-Vendor: %bundleVendor
+Bundle-Version: 1.0.0.v20220405-0441
+Export-Package: javax.inject;version="1.0.0"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.5))"
+
+Name: about.html
+SHA-256-Digest: XBWPzVPiq3hTl5ApWiwAUpoSeJ6NKpb7lta2BlT1ZbU=
+
+Name: META-INF/maven/org.eclipse.orbit.bundles/javax.inject/pom.properti
+ es
+SHA-256-Digest: 2ie8zrv5aBoYOEwb7+7kGKggrn0G0hdLrXK3/qoygL4=
+
+Name: javax/inject/Inject.class
+SHA-256-Digest: h4lZcb6Smml44fjxlwoU+jyazV/vM/i3KMxE2uo4AQI=
+
+Name: javax/inject/Named.class
+SHA-256-Digest: Bgf7rcewThwDOE42iRHIqqNzQLpiBgNpSn3CY+tz+wI=
+
+Name: javax/inject/Scope.class
+SHA-256-Digest: OdPuSLb82poDw4w1HcphtAOgjWiM8s2vGrG2SasdOXg=
+
+Name: javax/inject/Provider.class
+SHA-256-Digest: avK/X5GPAup37BylmFIty4ejX9Zf/3RCJCP7mWfBLR8=
+
+Name: META-INF/maven/org.eclipse.orbit.bundles/javax.inject/pom.xml
+SHA-256-Digest: yckJ6GLKtUeqSCNfKbCfRnvfnYIrHUMy0IDKr+ZqHI0=
+
+Name: javax/inject/Singleton.class
+SHA-256-Digest: v2cWtUHmJKWo5mGcyk+CzFB0ZAypwfGVocdArQHDZL8=
+
+Name: OSGI-INF/l10n/bundle.properties
+SHA-256-Digest: eWEPFB0rIooa0mjkukTVCVPlA7VWMXYWs61J2pDgvlg=
+
+Name: javax/inject/Qualifier.class
+SHA-256-Digest: u8u8mqtB8/JA1mb1aPUGQZ01K9CxZ1FAP6wF25rh2qo=
+
+Name: about_files/THE_APACHE_SOFTWARE_LICENSE__VERSION_2.0.html
+SHA-256-Digest: WDt7nRfoAuManRp6yZmvR18BrNbjYnaVc0s3Ax7Q01U=
+

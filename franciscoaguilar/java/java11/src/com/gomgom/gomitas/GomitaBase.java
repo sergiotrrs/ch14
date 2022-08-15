@@ -1,17 +1,33 @@
 package com.gomgom.gomitas;
 
 public class GomitaBase {
+	private String nombre;
 	private int color;
 	private String sabor;
-	private String nombre;
 	private double precio;
+	public static int nGomitas;
+	
+	
+	public GomitaBase () {
+		nGomitas++;
+		
+	}
+	
+	
 	public GomitaBase(int color, String sabor, String nombre, double precio) {
-		super();
+		//super();//Super invoca al método constructor de la clase superior
+		this(nombre);//invoca a los constructores de mi misma clase, este invoca el constructor con el atributo nombre
 		this.color = color;
 		this.sabor = sabor;
-		this.nombre = nombre;
+		//this.nombre = nombre;
 		this.precio = precio;
 	}
+	
+	public GomitaBase (String nombre) {
+		this();
+		this.nombre = nombre;
+	}
+	
 	public int getColor() {
 		return color;
 	}
@@ -43,6 +59,16 @@ public class GomitaBase {
 	@Override
 	public String toString() {
 		return "GomitaBase [color=" + color + ", sabor=" + sabor + ", nombre=" + nombre + ", precio=" + precio + "]";
+	}
+
+
+	public static int getnGomitas() {
+		return nGomitas;
+	}
+
+
+	public static void setnGomitas(int nGomitas) {
+		GomitaBase.nGomitas = nGomitas;
 	}
 	
 //	@Override

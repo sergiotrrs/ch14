@@ -1,5 +1,6 @@
 package org.generation;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import org.generation.cohorte.*;
@@ -52,7 +53,6 @@ public class Test {
 		 * 
 		 *  nota: las clases deben estar encapsuladas.
 		 */
-		
 		
 
 	}

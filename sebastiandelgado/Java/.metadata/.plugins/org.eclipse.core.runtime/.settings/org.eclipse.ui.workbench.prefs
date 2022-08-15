@@ -15,6 +15,7 @@ org.eclipse.jdt.ui.PropertiesFileEditor.textfont=1|Menlo|14.0|0|COCOA|1|;
 org.eclipse.jdt.ui.editors.textfont=1|Menlo|14.0|0|COCOA|1|;
 org.eclipse.jface.textfont=1|Menlo|14.0|0|COCOA|1|;
 org.eclipse.mylyn.wikitext.ui.presentation.textFont=1|Menlo|14.0|0|COCOA|1|;
+org.eclipse.ui.commands=<?xml version\="1.0" encoding\="UTF-8"?>\n<org.eclipse.ui.commands/>
 org.eclipse.ui.workbench.ACTIVE_NOFOCUS_TAB_BG_END=41,41,41
 org.eclipse.ui.workbench.ACTIVE_NOFOCUS_TAB_BG_START=43,44,45
 org.eclipse.ui.workbench.ACTIVE_NOFOCUS_TAB_TEXT_COLOR=204,204,204

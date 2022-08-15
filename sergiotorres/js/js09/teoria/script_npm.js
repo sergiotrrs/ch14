@@ -11,7 +11,7 @@ async function adquirirDatos(proveedor = "Axios", direccionhttp) {
       })
         .then((usuarios) => {
           //console.log("Axios: "+JSON.stringify(usuarios));
-          resolve(usuarios.data.data);
+          resolve(usuarios);
         })
         .catch((error) => {
           console.log(error);
@@ -24,7 +24,7 @@ async function adquirirDatos(proveedor = "Axios", direccionhttp) {
         .then((responseJSON) => responseJSON.json())
         .then((usuarios) => {
           //console.log("Fetch: "+JSON.stringify(usuarios));
-          resolve(usuarios.data)
+          resolve(usuarios)
         })
         .catch((error) => {
           console.log(error);
@@ -38,7 +38,7 @@ async function adquirirDatos(proveedor = "Axios", direccionhttp) {
         .then((responseJSON) => responseJSON.json())
         .then((usuarios) => {
           //console.log("Json: "+JSON.stringify(usuarios));
-          resolve(usuarios.data.data)}
+          resolve(usuarios)}
           )
         .catch((error) => {
           console.log(error);
@@ -50,9 +50,9 @@ async function adquirirDatos(proveedor = "Axios", direccionhttp) {
 
 solicitudBtn();
 async function solicitudBtn() {
-  datos = await adquirirDatos("Axios", "https://reqres.in/api/users?delay=3");
+  datos = await adquirirDatos("Axios", "http://localhost:8080/api/orders");
   console.log("Solicitud Axios:" + JSON.stringify(datos));
-  datos = await adquirirDatos("Fetch", "https://reqres.in/api/users?delay=3");
+  datos = await adquirirDatos("Fetch", "http://localhost:8080/api/customers");
   console.log("Solicitud Fetch:" + JSON.stringify(datos));
   datos = await adquirirDatos("Json", "./assets/json/users.json");
   console.log("Solicitud Json:" + JSON.stringify(datos));
