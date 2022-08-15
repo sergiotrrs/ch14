@@ -14,33 +14,25 @@ public class CustomerServiceImp implements ICustomerService {
 	ICustomerRepository customerRepository;
 	
 	@Override
-	public List<Customer> findAllCustomers() {
-	
+	public List<Customer> findAllCustomers() {		
 		return (List<Customer>) customerRepository.findAll();
 	}
 
 	@Override
-	public Customer saveCustomer(Customer customer) {
-		
+	public Customer saveCustomer(Customer customer) {		
 		return customerRepository.save(customer);
 	}
+
 	@Override
 	public Customer deleteCustomerById(Long id) {
 		Customer customer= findCustomerById(id);
 		customerRepository.deleteById(id);
 		return customer;
 	}
-	
-	@Override
-	public Customer findCustomerById(Long Id) {
-	
-		return customerRepository.findById(Id).orElse(null);
-	}
 
 	@Override
-	public void deleteCustomer(Long Id) {
-		// TODO Auto-generated method stub
-		
+	public Customer findCustomerById(Long id) {
+		return customerRepository.findById(id).orElse(null);
 	}
-	
+
 }
