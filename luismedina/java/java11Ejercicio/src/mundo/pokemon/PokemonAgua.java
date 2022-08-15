@@ -2,42 +2,43 @@ package mundo.pokemon;
 
 public class PokemonAgua extends Pokemon {
 
-	public int movimientos;
+	private int movimientosA;
 
 	public PokemonAgua(String nombre, int tamaño, String evolucion, int movimientos) {
 		super(nombre, tamaño, evolucion);
-		this.movimientos = movimientos;
+		this.movimientosA = movimientos;
 		// TODO Auto-generated constructor stub
 	}
 
-	public int getMovimientos() {
-		return movimientos;
+	public int getMovimientosA() {
+		return movimientosA;
 	}
 
-	public void setMovimientos(int movimientos) {
-		this.movimientos = movimientos;
+	public void setMovimientosA(int movimientos) {
+		this.movimientosA = movimientos;
 	}
-	
+
 	public String nMovimientos() {
 		String txt;
-		switch (this.movimientos) {
+		switch (this.movimientosA) {
 		case 1:
-			txt="Pistola Agua";
+			txt = "Pistola Agua.";
 			break;
 		case 2:
-			txt="Hiperchorro";
+			txt = "Hiperchorro.";
 			break;
 		case 3:
-			txt="Bolas de agua";
+			txt = "Bolas de agua.";
 			break;
 		case 4:
-			txt="chisgetes";
+			txt = "chisgetes.";
 			break;
 
-		default: txt="No tenemos registro de ese movimiento";
+		default:
+			txt = "No tenemos registro de ese movimiento.";
 			break;
 		}
-		return "El movimiento que aplicaste fue: "+txt+" del pokemon "+super.getNombre();
+		return "el movimiento que aplicaste fue: " + txt;
 	}
 
 	@Override
@@ -51,8 +52,10 @@ public class PokemonAgua extends Pokemon {
 		// TODO Auto-generated method stub
 		return 0;
 	}
-	
-	
-	
+
+	public String datos() {
+		return "El Pokemon " + super.getNombre() + " mide " + super.getTamaño() + " cm, evoluciona en "
+				+ super.getEvolucion() + " y " + nMovimientos();
+	}
 
 }

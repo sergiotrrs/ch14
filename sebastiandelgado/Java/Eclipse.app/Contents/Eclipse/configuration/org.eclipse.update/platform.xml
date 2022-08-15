@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<config date="1657813179341" transient="false">
-	<site updateable="true" url="file:/Users/uadec/.p2/pool/" enabled="true" policy="MANAGED-ONLY">
+<config date="1660066074807" transient="false">
+	<site updateable="true" url="../../../../../../../../../.p2/pool/" enabled="true" policy="MANAGED-ONLY">
 		<feature id="org.eclipse.tm.terminal.control.feature" version="10.7.0.202204200013" url="features/org.eclipse.tm.terminal.control.feature_10.7.0.202204200013/" plugin-identifier="org.eclipse.tm.terminal.control">
 		</feature>
 		<feature id="org.eclipse.oomph.setup" version="1.26.0.v20220622-0423" url="features/org.eclipse.oomph.setup_1.26.0.v20220622-0423/">
+		</feature>
+		<feature id="org.springframework.tooling.boot.ls.feature" version="4.15.2.202208030652" url="features/org.springframework.tooling.boot.ls.feature_4.15.2.202208030652/">
 		</feature>
 		<feature id="org.eclipse.mylyn.wikitext.editors_feature" version="3.0.42.202201072301" url="features/org.eclipse.mylyn.wikitext.editors_feature_3.0.42.202201072301/" plugin-identifier="org.eclipse.mylyn.wikitext">
 		</feature>
@@ -24,6 +26,8 @@
 		<feature id="org.eclipse.equinox.p2.extras.feature" version="1.4.1600.v20220518-1326" url="features/org.eclipse.equinox.p2.extras.feature_1.4.1600.v20220518-1326/">
 		</feature>
 		<feature id="org.eclipse.epp.mpc" version="1.10.0.v20220502-0731" url="features/org.eclipse.epp.mpc_1.10.0.v20220502-0731/" plugin-identifier="org.eclipse.epp.mpc.ui">
+		</feature>
+		<feature id="org.springframework.boot.ide.main.feature" version="4.15.2.202208030730" url="features/org.springframework.boot.ide.main.feature_4.15.2.202208030730/">
 		</feature>
 		<feature id="org.eclipse.ecf.filetransfer.feature" version="3.14.1800.v20220215-0126" url="features/org.eclipse.ecf.filetransfer.feature_3.14.1800.v20220215-0126/">
 		</feature>
@@ -54,6 +58,10 @@
 		<feature id="org.eclipse.tm.terminal.connector.local.feature" version="10.7.0.202204200013" url="features/org.eclipse.tm.terminal.connector.local.feature_10.7.0.202204200013/">
 		</feature>
 		<feature id="org.eclipse.ecf.core.feature" version="1.6.1.v20211005-1944" url="features/org.eclipse.ecf.core.feature_1.6.1.v20211005-1944/">
+		</feature>
+		<feature id="org.springframework.ide.eclipse.boot.dash.feature" version="4.15.2.202208030730" url="features/org.springframework.ide.eclipse.boot.dash.feature_4.15.2.202208030730/" plugin-identifier="org.springframework.ide.eclipse">
+		</feature>
+		<feature id="org.springframework.ide.eclipse.xml.namespaces.feature" version="4.15.2.202208030730" url="features/org.springframework.ide.eclipse.xml.namespaces.feature_4.15.2.202208030730/" plugin-identifier="org.springframework.ide.eclipse">
 		</feature>
 		<feature id="org.eclipse.buildship" version="3.1.6.v20220511-1359" url="features/org.eclipse.buildship_3.1.6.v20220511-1359/" plugin-identifier="org.eclipse.buildship.branding">
 		</feature>
@@ -86,6 +94,10 @@
 		<feature id="org.eclipse.jgit" version="6.2.0.202206071550-r" url="features/org.eclipse.jgit_6.2.0.202206071550-r/">
 		</feature>
 		<feature id="org.eclipse.userstorage" version="1.2.0.v20210517-0327" url="features/org.eclipse.userstorage_1.2.0.v20210517-0327/">
+		</feature>
+	</site>
+	<site updateable="true" url="file:../../../../../../../../../.p2/pool/" enabled="true" policy="MANAGED-ONLY">
+		<feature id="org.projectlombok.feature" version="1.18.24" url="features/org.projectlombok.feature_1.18.24/">
 		</feature>
 	</site>
 </config>

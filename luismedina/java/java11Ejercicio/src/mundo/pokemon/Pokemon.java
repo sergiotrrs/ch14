@@ -1,6 +1,6 @@
 package mundo.pokemon;
 
-public abstract class Pokemon {
+public abstract class Pokemon extends PokeBalls {
 private String nombre;
 private int tamaño;
 private String evolucion;
