@@ -75,3 +75,37 @@ x = 23 - 45 - y;
 
 //operador  de división
 x = 23 - 45 - y;
+
+//operador igual que 
+x = 1;
+y= 2;
+x == y; //false
+y = 1;
+x == y; //true
+y = "1";
+x == y; //true 
+
+//Operador diferente que !=
+x = 1 ;
+y = "2";
+console.log("x != 'y' "+ (x != y ));//true x= 1 y=2
+console.log("x != 'y' "+ (x++ != y ));//true  x= 1 y=2
+console.log("x != 'y' "+ (x != y ));//false  x= 2 y=2
+console.log("x != 'y' "+ (++x != y )); // true x= 3 y=2
+
+//Operador estricatemente igual que ===
+x = 1;
+y = "1";
+console.log("x === y "+ (x===y));
+
+console.log("x !== y "+ (x!==y));
+
+//Operadores Lógicos &&, || , !
+true && true; // true
+true && false ; //true
+//False, null, NaN, 0 emptry string o undefined son considerador valor false.
+
+console.log(" true && NaN = " + (true && NaN));//NaN
+console.log( " false && NaN = ")+(false && NaN);//false
+
+console.log(` "" && "Hola Maga" = ${"" && "Hola Maga"}`); //String vacion

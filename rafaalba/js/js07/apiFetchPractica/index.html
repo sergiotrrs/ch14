@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Practica Api Fetch </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <h1 class="text-center">Datos de Usuarios</h1>
+
+    <!-- Botones -->
+    <div class="container text-center mt-4 shadow-lg p-3 mb-5 bg-body rounded">
+
+        <!-- <button onclick="boton()">Recuperar</button>
+        <button onclick="pasa()">Siguiente</button>
+        <button onclick="regresa()">Anterior</button>
+        <button onclick="guardarDatos()">Guardar Datos</button> -->
+
+        <button class="bg-dark text-white rounded-5" onclick="obtenerDatos()">Obtener Datos</button>
+        <button class="bg-dark text-white rounded-5" onclick="leerDatos()">Recuperar Datos</button>
+
+    </div>
+
+    <!-- Encabezado -->
+    <!-- <form id="formulario">
+      <div class="container mt-4 shadow-lg p3 mb-5 bg-body rounded">
+        <table class="table  table-striped">
+            <thead>
+                <tr class="row text-center">
+                  
+                    <th class="col-2">AVATAR</th>
+                    <th class="col-2">ID</th>
+                    <th class="col-2">NAME</th>
+                    <th class="col-2">LAST NAME</th>
+                    <th class="col-2">EMAIL</th>
+                  
+                </tr>
+            </thead>
+            <tbody id="data">
+
+            </tbody>
+        </table>
+    </div>
+    </form> -->
+    
+    <!-- <br> -->
+    <!-- ------------------------------------ -->
+
+    <div class="container-card">
+        <!-- <div class="row justify-content-center"> -->
+            <!-- 0 George Bluth -->
+            <div class="card justify-content-center shadow-lg mx-5 my-2 h-25">
+                <div class="row contenido-card align-content-center text-center">
+                    <table>
+                        <tr class="">
+                            <td rowspan="2"><img  class=" img-responsive col-3 my-2 mx-4" style="border-radius: 100%;" id="imagen0"/></td>
+                            <td><p class="col-1 mx-1 my-2 h2" id="id0"></p></td>
+                            <td><p class="col-4 mx-1 my-2 h2" id="name0"></p></td>
+                            <td><p class="col-4 mx-1 my-2 h2" id="lastName0"></p></td>
+                        </tr>
+                        <tr>    
+                            <td colspan="3"><p  class="col-9 mx-1 h2" id="email0"></p></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 1 Janet Weaver -->
+            <div class="card justify-content-center shadow-lg mx-5 my-2 h-25">
+                <div class="row contenido-card align-content-center text-center">
+                    <img class="img-responsive col-2 my-3 mx-5" style="border-radius: 100%;" id="imagen1"/>
+                    <p class="col-1 mx-1 h2" id="id1"></p>
+                    <p class="col-2 mx-1 h2" id="name1"></p>
+                    <p class="col-2 mx-1 h2" id="lastName1"></p>
+                    <p class="col-3 mx-1 h2" id="email1"></p>
+                </div>
+            </div>
+            <!-- 2 Emma Wong -->
+            <div class="card justify-content-center shadow-lg mx-5 my-2 h-25">
+                <div class="row contenido-card align-content-center text-center">
+                    <img class="img-responsive col-2 my-3 mx-5" style="border-radius: 100%;" id="imagen2"/>
+                    <p class="col-1 mx-1 h2" id="id2"></p>
+                    <p class="col-2 mx-1 h2" id="name2"></p>
+                    <p class="col-2 mx-1 h2" id="lastName2"></p>
+                    <p class="col-3 mx-1 h2" id="email2"></p>
+                </div>
+            </div>
+            <!-- 3 Eve Holt -->
+            <div class="card justify-content-center shadow-lg mx-5 my-2 h-25">
+                <div class="row contenido-card align-content-center text-center">
+                    <img class="img-responsive col-2 my-3 mx-5" style="border-radius: 100%;" id="imagen3"/>
+                    <p class="col-1 mx-1 h2" id="id3"></p>
+                    <p class="col-2 mx-1 h2" id="name3"></p>
+                    <p class="col-2 mx-1 h2" id="lastName3"></p>
+                    <p class="col-3 mx-1 h2" id="email3"></p>
+                </div>
+            </div>
+            <!-- 4 Charles Morris -->
+            <div class="card justify-content-center shadow-lg mx-5 my-2 h-25">
+                <div class="row contenido-card align-content-center text-center">
+                    <img class="img-responsive col-2 my-3 mx-5" style="border-radius: 100%;" id="imagen4"/>
+                    <p class="col-1 mx-1 h2" id="id4"></p>
+                    <p class="col-2 mx-1 h2" id="name4"></p>
+                    <p class="col-2 mx-1 h2" id="lastName4"></p>
+                    <p class="col-3 mx-1 h2" id="email4"></p>
+                </div>
+            </div>
+            <!-- 5 Tracey Ramos -->
+            <div class="card justify-content-center shadow-lg mx-5 my-2 h-25">
+                <div class="row contenido-card align-content-center text-center">
+                    <img class="img-responsive col-2 my-3 mx-5" style="border-radius: 100%;" id="imagen5"/>
+                    <p class="col-1 mx-1 h2" id="id5"></p>
+                    <p class="col-2 mx-1 h2" id="name5"></p>
+                    <p class="col-2 mx-1 h2" id="lastName5"></p>
+                    <p class="col-3 mx-1 h2" id="email5"></p>
+                </div>
+            </div>
+            <!-- Terminan primeros 6 -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>

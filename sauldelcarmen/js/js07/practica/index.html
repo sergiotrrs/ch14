@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    
+    <title>Document</title>
+</head>
+<body>
+    <h1>Prueba una API</h1> 
+
+    <div class="container1" >
+    <div>	
+    <input type="text" class="input1" id="api" placeholder="API">
+    <br>
+    <button onclick="apiUrl()" class="btton1">Probar</button>
+     </div>
+
+
+     <div>
+     <input type="text" class="input2" id="dato1" placeholder="Nombre">
+    <input type="text" class="input2" id="dato2" placeholder="Apellido">
+    <input type="text" class="input2" id="dato3" placeholder="Email">
+    <input type="text" class="input2" id="dato4" placeholder="Id">
+    <input type="text" class="input2" id="dato5" placeholder="Avatar">
+    <button onclick="apiUrl2()" class="btton2">Probar</button>
+     </div>
+     </div>
+	 <div class="container2">
+     <div><button onclick="borrarData()" class="btton1">Borrar Datos</button></div>
+     <div><button onclick="limpiarTabla()" class="btton2">Limpiar Tabla</button></div>
+	 </div>
+
+<div>
+     <h3 style="margin-top:30px;">Usuarios registrados</h3>
+<table>
+    <thead>
+		<tr>
+			<th style="width:25%;">Nombre</th>
+			<th style="width:25%;">Apellido</th>
+			<th style="width:30%;">Email</th>
+			<th style="width:10%;">Id</th>
+			<th style="width:10%;">Avatar</th>
+		</tr>
+    </thead>
+    <tbody id="data"> 
+
+<!--		<tr>
+		        <td><span id="nombre"></span></td>
+		        <td><span id="apellido"></span></td>
+			<td><span id="id"></span></td>			<td><span id="avatar"></span></td>			<th style="widt:30%;">Apellido</th>h
+		</tr-->
+    </tbody>
+</table>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
