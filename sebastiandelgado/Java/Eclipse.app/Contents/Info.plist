@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<plist version="1.0">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><plist version="1.0">
   
   <dict>
     	
@@ -72,6 +71,25 @@
     
     <key>CFBundleDisplayName</key>
     <string>Eclipse</string>
-  </dict>
+  	<key>CFBundleURLTypes</key>
+		<array>
+			<dict>
+				<key>CFBundleURLName</key>
+					<string>Eclipse command</string>
+				<key>CFBundleURLSchemes</key>
+					<array>
+						<string>eclipse+command</string>
+					</array>
+			</dict>
+			<dict>
+				<key>CFBundleURLName</key>
+					<string>Eclipse Marketplace</string>
+				<key>CFBundleURLSchemes</key>
+					<array>
+						<string>eclipse+mpc</string>
+					</array>
+			</dict>
+		</array>
+</dict>
   
 </plist>
