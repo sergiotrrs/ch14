@@ -1,20 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.util.HashMap"/>
-    <fullyQualifiedTypeName name="org.generation.cohorte.Participantes"/>
-    <fullyQualifiedTypeName name="org.generation.Perrito"/>
-    <fullyQualifiedTypeName name="org.generation.cohorte.Mentor"/>
-    <fullyQualifiedTypeName name="com.gomgom.gomitas.GomitaEnchilada"/>
-    <fullyQualifiedTypeName name="com.gomgom.gomitas.GomitaDulce"/>
-    <fullyQualifiedTypeName name="com.gomgom.gomitas.GomitaBase"/>
     <fullyQualifiedTypeName name="com.corsarios.producto.ModBolsillo"/>
     <fullyQualifiedTypeName name="com.corsarios.producto.ModGarrafa"/>
     <fullyQualifiedTypeName name="com.corsarios.producto.ModRotoplas"/>
     <fullyQualifiedTypeName name="org.generation.db.ConexionMySQL"/>
     <fullyQualifiedTypeName name="org.generation.db.ConexionOracle"/>
     <fullyQualifiedTypeName name="org.generation.aritmetica.Aritmetica"/>
-    <fullyQualifiedTypeName name="org.junit.jupiter.api.BeforeEach"/>
-    <fullyQualifiedTypeName name="org.junit.jupiter.api.DisplayName"/>
     <fullyQualifiedTypeName name="org.junit.platform.suite.api.Suite"/>
     <fullyQualifiedTypeName name="org.junit.platform.suite.api.SuiteDisplayName"/>
     <fullyQualifiedTypeName name="org.junit.platform.suite.api.SelectClasses"/>
@@ -56,8 +47,17 @@
     <fullyQualifiedTypeName name="javax.persistence.GenerationType"/>
     <fullyQualifiedTypeName name="javax.persistence.Id"/>
     <fullyQualifiedTypeName name="com.fasterxml.jackson.annotation.JsonIgnoreProperties"/>
-    <fullyQualifiedTypeName name="lombok.Data"/>
     <fullyQualifiedTypeName name="javax.persistence.Entity"/>
     <fullyQualifiedTypeName name="java.io.Serializable"/>
     <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="lombok.Data"/>
+    <fullyQualifiedTypeName name="org.junit.jupiter.api.Test"/>
+    <fullyQualifiedTypeName name="org.generation.app.service.TipoDeCambio"/>
+    <fullyQualifiedTypeName name="org.generation.app.controls.DivisasEnum"/>
+    <fullyQualifiedTypeName name="org.generation.app.entity.Dollar"/>
+    <fullyQualifiedTypeName name="org.generation.app.util.ConvertirToDolar"/>
+    <fullyQualifiedTypeName name="org.junit.jupiter.api.DisplayName"/>
+    <fullyQualifiedTypeName name="org.junit.jupiter.api.BeforeEach"/>
+    <fullyQualifiedTypeName name="org.mockito.Mockito"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
 </qualifiedTypeNameHistroy>

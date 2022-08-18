@@ -1,6 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<typeInfoHistroy>
-    <typeInfo handle="=gs-accessing-data-jpa-mysql/C:\/Users\/LENOVO\/.m2\/repository\/org\/springframework\/data\/spring-data-commons\/2.7.2\/spring-data-commons-2.7.2.jar=/maven.pomderived=/true=/=/maven.groupId=/org.springframework.data=/=/maven.artifactId=/spring-data-commons=/=/maven.version=/2.7.2=/=/maven.scope=/compile=/=/maven.pomderived=/true=/&lt;org.springframework.data.repository(CrudRepository.class[CrudRepository" modifiers="1537" timestamp="1660160636967"/>
-    <typeInfo handle="=gs-accessing-data-jpa-mysql/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;org.generation.app.repository{ICustomerRepository.java[ICustomerRepository" modifiers="513" timestamp="1660237029814"/>
-    <typeInfo handle="=gs-accessing-data-jpa-mysql/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;org.generation.app.service{ICustomerService.java[ICustomerService" modifiers="513" timestamp="1660253096014"/>
-</typeInfoHistroy>
+<typeInfoHistroy/>

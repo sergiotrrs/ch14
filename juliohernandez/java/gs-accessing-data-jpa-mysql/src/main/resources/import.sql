@@ -1,4 +1,5 @@
 /* Se insertan los siguientes registros en la tabla */
+
 INSERT INTO customer_db.customer_data (first_name, last_name) VALUES('Benito', 'Bodoque');
 INSERT INTO customer_db.customer_data (first_name, last_name) VALUES('Reese', 'Wilkerson');
 INSERT INTO customer_db.customer_data (first_name, last_name) VALUES('Nelson', 'Montz');
