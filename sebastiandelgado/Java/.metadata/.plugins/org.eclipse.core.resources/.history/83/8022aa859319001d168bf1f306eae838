@@ -1,0 +1,17 @@
+package org.generation.app.entity;
+
+import javax.persistence.*;
+
+import lombok.Data;
+
+@Entity
+@Data
+public class Customer {
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private Long idCustomer;
+	private String firstName;
+	private String lastName;
+	
+}

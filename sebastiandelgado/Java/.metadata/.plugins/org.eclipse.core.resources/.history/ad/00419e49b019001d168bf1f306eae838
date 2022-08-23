@@ -1,0 +1,22 @@
+package org.generation.app.entity;
+
+import javax.persistence.*;
+
+import lombok.Data;
+
+@Entity
+@Data
+@Table(name="customer_data")
+public class Customer {
+
+	//Se configura el primer dato id
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY) //indica con IDENTITY que es auntoincrementable
+	private Long idCustomer;
+	//Si quiero ver cómo se va a guardar
+	@Column(name="first_name")  // Se cambia el nombre de la columna
+	private String firstName; //firstName
+	private String lastName;
+	private Role role;
+	
+}

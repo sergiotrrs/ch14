@@ -1,0 +1,15 @@
+package org.generation.app.entity;
+
+import javax.persistence.Entity;
+
+import lombok.Data;
+
+@Entity
+@Data
+public class Customer {
+
+	private Long idCustomer;
+	private String firstName;
+	private String lastName;
+	
+}

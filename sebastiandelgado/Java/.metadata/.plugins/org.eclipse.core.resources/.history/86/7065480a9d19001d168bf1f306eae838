@@ -1,0 +1,5 @@
+package org.generation.app.repository;
+
+public interface CustomerRepository {
+
+}

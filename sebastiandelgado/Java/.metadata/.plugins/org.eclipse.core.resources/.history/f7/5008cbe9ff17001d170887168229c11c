@@ -1,0 +1,12 @@
+package org.generation.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class controlador {
+	@GetMapping("http://localhost:8080/greeting") //LocalHost:Puerto/
+	public String inicio(){
+		return "usuarios"; //qué vista deseo usar
+	}
+}

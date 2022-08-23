@@ -1,0 +1,23 @@
+
+public class Participante {
+
+	
+	
+	//Definimos atributos de los objetos
+	
+	String nombre;
+	String apellido;
+	int edad;
+	String rfc;
+	int nAmonestacion;
+	String musicaFav;
+	//Definimos atributos de la clase
+	static String bootcamp = "Generation";
+	static String cohorte = "ch14";
+	static int totalPersonas;
+	
+	String nombreCompleto() {
+		//This hace referencia al atributo
+		return this.nombre + " "+ apellido;
+	}
+}

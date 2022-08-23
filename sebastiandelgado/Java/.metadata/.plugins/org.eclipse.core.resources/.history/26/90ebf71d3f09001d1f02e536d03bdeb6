@@ -1,0 +1,26 @@
+
+public class ParticipantePrueba {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Participante abue = new Participante();
+		abue.nombre ="Jorge Andrés";
+		abue.apellido="Gonzalez";
+		abue.edad=25;
+		abue.musicaFav ="Happu Punk";
+		
+		System.out.println("Participante: " + abue.nombreCompleto());
+		
+		Participante moi = new Participante();
+		moi.nombre ="Moises Arturo";
+		moi.apellido ="García";
+		moi.edad =21;
+		moi.musicaFav ="Pop";
+		
+		System.out.println("Participante: " + moi.nombreCompleto());
+		
+		
+		
+	}
+
+}

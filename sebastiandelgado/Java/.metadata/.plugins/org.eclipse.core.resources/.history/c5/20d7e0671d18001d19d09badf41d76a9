@@ -1,0 +1,23 @@
+package org.generation.app.controller;
+
+import java.util.List;
+
+import org.generation.app.model.AdminUser;
+import org.generation.app.service.IAmUserService;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class AppController {
+
+	// private AdminUserService adminUserService; Uso directo a la clase
+	private IAmUserService adminUserService;
+	
+	@GetMapping("/")
+	public String indexController() {
+		List<AdminUser> users;
+		users = adminUserService.Users(); // me entrega el listado de usuarios
+		return "index";
+	}
+	
+}

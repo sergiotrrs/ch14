@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;Compra.java&apos; to &apos;Java10Práctica/src/org.ventas&apos;&#x0A;- Original project: &apos;Java10Práctica&apos;&#x0A;- Destination element: &apos;Java10Práctica/src/org.ventas&apos;&#x0A;- Original element: &apos;org.trabajadores.Compra.java&apos;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src&lt;org.ventas" element1="/src&lt;org.trabajadores{Compra.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1658788282828" units="1" version="1.0"/>
+</session>

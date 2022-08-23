@@ -1,0 +1,5 @@
+package org.generation.app.service;
+
+public class IAmUserService {
+
+}

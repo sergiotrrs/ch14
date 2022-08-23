@@ -1,0 +1,5 @@
+package org.generation.app.entity;
+
+public class Customer {
+
+}

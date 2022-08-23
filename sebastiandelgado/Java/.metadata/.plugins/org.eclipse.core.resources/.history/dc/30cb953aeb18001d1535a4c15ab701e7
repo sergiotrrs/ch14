@@ -1,0 +1,5 @@
+package org.generation.app.initializer;
+
+public class InitDb {
+
+}
